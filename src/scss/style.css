@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+.headerTop {
+  height: 15vh;
+  width: 100%;
+  background-color: #242833;
+}
+
+.headerTop h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: "Catamaran", sans-serif;
+  text-transform: uppercase;
+  color: #e9e8e8;
+  text-align: center;
+  letter-spacing: 4px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.searchBar {
+  position: relative;
+  width: 100%;
+  margin-top: 10vh;
+  margin-bottom: 12vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.searchBar select {
+  color: #1a2c31;
+  top: -3rem;
+  padding: 0.4rem 0.8rem;
+  font-family: "Raleway", sans-serif;
+  border: 0;
+  position: absolute;
+  background-color: #d9e0f3;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.searchBar .search {
+  position: relative;
+}
+
+.searchBar .search .error {
+  position: absolute;
+  width: 300px;
+  left: 380px;
+  top: 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.85rem;
+  color: #e03535;
+}
+
+.searchBar .search label {
+  pointer-events: none;
+  color: #80a3ad;
+  left: 0.5rem;
+  top: 1rem;
+  position: absolute;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.searchBar .search input:focus + label,
+.searchBar .search input:not(:placeholder-shown) + label {
+  -webkit-transform: scale(0.9) translateY(-2.5rem);
+          transform: scale(0.9) translateY(-2.5rem);
+  opacity: 1;
+}
+
+.searchBar .search input::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.searchBar .search input:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.searchBar .search input::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.searchBar .search input::placeholder {
+  opacity: 0;
+}
+
+.searchBar input {
+  background-color: #d9e0f3;
+  position: relative;
+  color: #17404b;
+  font-size: 1.3rem;
+  padding: 0.6rem 0.8rem;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border: none;
+  width: 300px;
+  letter-spacing: 1px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.searchBar input:focus {
+  border-radius: 0.2rem;
+  background-color: #d9e0f3;
+  border: none;
+}
+
+.searchBar button {
+  font-size: 1rem;
+  background-color: #7ab1d6;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 0.4rem 1.2rem;
+  border: none;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.searchBar button i {
+  color: #305772;
+}
+
+.searchBar button:hover {
+  background-color: #5b91b6;
+}
+
+.searchBar > label {
+  font-size: 0.85rem;
+  top: 3.5rem;
+  position: absolute;
+  color: #578592;
+}
+
+.paginationButtons {
+  position: relative;
+  width: 80%;
+  height: 40px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10vh auto;
+  z-index: 20;
+}
+
+.paginationButtons a {
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 5px;
+  border: 1px solid #2b2eff;
+  color: #2b2eff;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.paginationButtons a:hover {
+  background-color: #2b2eff;
+  color: white;
+}
+
+.paginationButtons .paginationActive a {
+  background-color: #2b2eff;
+  color: white;
+}
+
+.paginationButtons .paginationDisabled a {
+  background-color: #d4d1d1;
+  border: 1px solid #4a4a4b;
+  color: black;
+  cursor: no-drop;
+}
+
+.paginationButtons .paginationDisabled a:hover {
+  background-color: none;
+}
+
+.App {
+  position: relative;
+}
+
+.App > .displayPets {
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(230px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-column-gap: 50px;
+  grid-row-gap: 100px;
+  grid-auto-rows: 1fr;
+  min-height: 350px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.App > .displayPets .selected {
+  background-color: aqua;
+  -webkit-transform: scale3d(1.3, 1.3, 1.3);
+          transform: scale3d(1.3, 1.3, 1.3);
+  color: #0f0505;
+}
+
+.App > .displayPets .zoomOutPet {
+  position: absolute;
+  height: 100vh;
+  width: 100vh;
+  z-index: 0;
+}
+
+.App > .displayPets .elemental {
+  animation: glowElemental 2s infinite alternate-reverse;
+  background: -webkit-gradient(linear, left bottom, left top, from(#700d0d), to(black));
+  background: linear-gradient(0deg, #700d0d 0%, black);
+  border: 1px solid #581c1c;
+  color: white;
+}
+
+@-webkit-keyframes glowElemental {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 0px #801e1e;
+            box-shadow: 0px 0px 0px 0px #801e1e;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 10px 0px #831b1b;
+            box-shadow: 0px 0px 10px 0px #831b1b;
+  }
+}
+
+@keyframes glowElemental {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 0px #801e1e;
+            box-shadow: 0px 0px 0px 0px #801e1e;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 10px 0px #831b1b;
+            box-shadow: 0px 0px 10px 0px #831b1b;
+  }
+}
+
+@-webkit-keyframes glowCritter {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 0px #99922a;
+            box-shadow: 0px 0px 0px 0px #99922a;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 10px 0px #99922a;
+            box-shadow: 0px 0px 10px 0px #99922a;
+  }
+}
+
+@keyframes glowCritter {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 0px #99922a;
+            box-shadow: 0px 0px 0px 0px #99922a;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 10px 0px #99922a;
+            box-shadow: 0px 0px 10px 0px #99922a;
+  }
+}
+
+.App > .displayPets .critter {
+  animation: glowCritter 2s infinite alternate-reverse;
+  background: -webkit-gradient(linear, left bottom, left top, from(#643a18), to(#f5e65e));
+  background: linear-gradient(0deg, #643a18, #f5e65e);
+  border: 1px solid #4b4021;
+}
+
+.App > .displayPets .aquatic {
+  background: -webkit-gradient(linear, left bottom, left top, from(#185186), to(#0d212e));
+  background: linear-gradient(0deg, #185186, #0d212e);
+  border: 1px solid #192f42;
+  -webkit-box-shadow: 2px 2px 10px 1px black;
+          box-shadow: 2px 2px 10px 1px black;
+}
+
+.App > .displayPets .magic {
+  background: -webkit-gradient(linear, left bottom, left top, from(#633b15), to(#5c062a));
+  background: linear-gradient(0deg, #633b15, #5c062a);
+  border: 1px solid #192f42;
+  -webkit-box-shadow: 2px 2px 15px 3px black;
+          box-shadow: 2px 2px 15px 3px black;
+}
+
+.App > .displayPets .beast {
+  background: -webkit-gradient(linear, left bottom, left top, from(#acb431), to(#47430b));
+  background: linear-gradient(0deg, #acb431, #47430b);
+  border: 1px solid #192f42;
+  -webkit-box-shadow: 2px 2px 15px 3px black;
+          box-shadow: 2px 2px 15px 3px black;
+}
+
+.App > .displayPets li {
+  background-color: #f0f0f0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #dfdfdf;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 4rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+}
+
+.App > .displayPets li .glare-wrapper {
+  cursor: pointer !important;
+}
+
+.App > .displayPets li p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+}
+
+.App > .displayPets li .fireIcon {
+  background-image: url(".././assets/fireIcon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 70px;
+  width: 95px;
+  top: 0px;
+  right: 0px;
+  z-index: 25;
+  -webkit-transform: translate3d(20%, 50%, 0px);
+          transform: translate3d(20%, 50%, 0px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.App > .displayPets li .swipe {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 40px;
+  background-color: #dadada;
+  -webkit-clip-path: polygon(0 18%, 24% 26%, 43% 30%, 55% 32%, 54% 35%, 49% 44%, 44% 46%, 40% 54%, 29% 67%, 0 81%);
+          clip-path: polygon(0 18%, 24% 26%, 43% 30%, 55% 32%, 54% 35%, 49% 44%, 44% 46%, 40% 54%, 29% 67%, 0 81%);
+}
+
+.App > .displayPets li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.App > .displayPets li .iconPet img {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+/*# sourceMappingURL=style.css.map */

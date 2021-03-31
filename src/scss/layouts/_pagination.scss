@@ -1,0 +1,39 @@
+@import "../abstracts/fonts";
+
+.paginationButtons {
+  position: relative;
+  width: 80%;
+  height: 40px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 10vh auto;
+  z-index: 20;
+  a {
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 5px;
+    border: 1px solid #2b2eff;
+    color: #2b2eff;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      background-color: #2b2eff;
+      color: white;
+    }
+  }
+
+  .paginationActive a {
+    background-color: #2b2eff;
+    color: white;
+  }
+  .paginationDisabled a {
+    background-color: rgb(212, 209, 209);
+    border: 1px solid #4a4a4b;
+    color: black;
+    cursor: no-drop;
+    &:hover {
+      background-color: none;
+    }
+  }
+}
