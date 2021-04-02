@@ -4,9 +4,12 @@ const clientID = "f684f07f82ac41aaabafaa42fa9a067f";
 const clientSecret = "eUE5pg86dF2V0vz1iubJv84ecWMNDTNd";
 
 var formData = new FormData();
+
 formData.append("grant_type", "client_credentials");
 formData.append("redirect_uri", "http://localhost:3000/");
+formData.append("scope", "wow.profile");
 formData.append("client_id", clientID);
+
 export const retriveToken = async () => {
   return await axios
     .post("https://eu.battle.net/oauth/token", formData, {
@@ -52,6 +55,76 @@ export const servers = async () => {
     .catch((error) => {
       console.log(error.response.data);
       return error;
+    });
+};
+
+export const profileChar = async (character) => {
+  console.log(character);
+  const token = localStorage.getItem("token");
+  return await axios
+    .get(
+      "https://" +
+        character.region.toLowerCase() +
+        ".api.blizzard.com/profile/wow/character/" +
+        character.server.toLowerCase() +
+        "/" +
+        character.char.toLowerCase() +
+        "/character-media?namespace=profile-" +
+        character.region.toLowerCase() +
+        "&locale=en_" +
+        character.region.toUpperCase() +
+        "&access_token=" +
+        token,
+      {
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
+    .then((response) => {
+      console.log(response.data);
+      return response.data;
+    })
+
+    .catch((error) => {
+      console.log("aici");
+      console.log(error.message);
+      return { error: error.message };
+    });
+};
+
+export const retriveProfileChar = async (character, idChar, idServer) => {
+  const token = localStorage.getItem("token");
+  return await axios
+    .get(
+      "https://eu.api.blizzard.com/profile/user/wow/protected-character/" +
+        idChar +
+        "-" +
+        idServer +
+        "?namespace=profile-" +
+        character.region.toLowerCase() +
+        "&locale=en_" +
+        character.region +
+        "&access_token=" +
+        token,
+
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
+    .then((response) => {
+      console.log(response.data);
+      return response.data;
+    })
+
+    .catch((error) => {
+      console.log("aici");
+      console.log(error.message);
+      return { error: error.message };
     });
 };
 

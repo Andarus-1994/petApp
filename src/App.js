@@ -2,11 +2,20 @@ import "./scss/style.css";
 import ReactPaginate from "react-paginate";
 import { useEffect, useState } from "react";
 import Tilt from "react-parallax-tilt";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAngleLeft,
+  faAngleRight,
+  faHeart,
+  faBolt,
+  faMeteor,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   auth,
   imgPet,
   petInfo,
   retriveToken,
+  profileChar,
 } from "./components/functions/serverFunctions.js";
 import HeaderTop from "./components/headerTop.js";
 import SearchBar from "./components/searchBar.js";
@@ -17,12 +26,14 @@ function App() {
   const [img, setPetImg] = useState([]);
   const [find, setFind] = useState("belfu");
   const [searchError, setSearchError] = useState("");
+  const [charRealmId, setCharRealmId] = useState({ charId: "", realmId: "" });
   const [region, setRegion] = useState("EU");
   const [characterData, setCharacterData] = useState({
     char: "belfu",
     server: "balnazzar",
     region: "EU",
   });
+  const [profile, setProfile] = useState();
   const [pets, setPets] = useState({ loading: true, pets: [], errors: "" });
   const [pageNumber, setPageNumber] = useState(0);
   const petsPerPage = 10;
@@ -38,14 +49,18 @@ function App() {
 
   function importPets(character) {
     if (find)
-      auth(character).then((response) => {
-        if (!response.error) {
-          setPets({ loading: false, pets: response.pets, errors: "" });
-
-          return setLoad(false);
-        }
-        setPets({ loading: true, pets: [], errors: response.error });
+      profileChar(character).then((resp) => {
+        console.log(resp);
+        if (!resp.error) setProfile(resp);
       });
+    auth(character).then((response) => {
+      if (!response.error) {
+        setPets({ loading: false, pets: response.pets, errors: "" });
+
+        return setLoad(false);
+      }
+      setPets({ loading: true, pets: [], errors: response.error });
+    });
   }
 
   const displayPets = pets.pets
@@ -72,10 +87,21 @@ function App() {
                     <div className="iconPet">
                       <img key={index} src={imagePet.icon} alt="noImg"></img>
                     </div>
-                    {imagePet.name} <p>{pet.level}</p>
-                    <p>Health: {pet.stats.health}</p>
-                    <p>Power: {pet.stats.power}</p>
-                    <p>Speed: {pet.stats.speed}</p>
+                    <div className="petName">{imagePet.name}</div>{" "}
+                    <p>Level: {pet.level}</p>
+                    <br></br>
+                    <p>
+                      Health: {pet.stats.health}{" "}
+                      <FontAwesomeIcon className="health" icon={faHeart} />
+                    </p>
+                    <p>
+                      Power: {pet.stats.power}{" "}
+                      <FontAwesomeIcon className="power" icon={faMeteor} />
+                    </p>
+                    <p>
+                      Speed: {pet.stats.speed}{" "}
+                      <FontAwesomeIcon className="speed" icon={faBolt} />
+                    </p>
                     <p>Type:{imagePet.battle_pet_type.type}</p>
                     {imagePet.battle_pet_type.type === "BEAST" ? (
                       <div className="swipe"></div>
@@ -84,6 +110,15 @@ function App() {
                     )}
                     {imagePet.battle_pet_type.type === "ELEMENTAL" ? (
                       <div className="fireIcon"></div>
+                    ) : (
+                      ""
+                    )}
+                    {imagePet.battle_pet_type.type === "AQUATIC" ? (
+                      <div>
+                        <div className="waterDrop1"></div>
+                        <div className="waterDrop2"></div>
+                        <div className="waterDrop3"></div>
+                      </div>
                     ) : (
                       ""
                     )}
@@ -110,6 +145,9 @@ function App() {
     }
     if (type.toLowerCase() === "beast") {
       return "beast";
+    }
+    if (type.toLowerCase() === "dragonkin") {
+      return "dragonkin";
     }
   }
 
@@ -145,7 +183,7 @@ function App() {
     retriveToken().then((response) => {
       console.log(response);
       if (localStorage.token !== undefined) {
-        if (pets.pets.length === 0 && !pets.errors) {
+        if (pets.pets.length === 0 && !pets.errors && !searchError) {
           importPets(characterData);
         }
 
@@ -153,7 +191,9 @@ function App() {
           getPetDetails(pets.pets, 0);
       }
 
-      if (search) {
+      if (search && !searchError) {
+        console.log(pageNumber);
+        setPageNumber(0);
         importPets(characterData);
         getPetDetails(pets.pets, 0);
         setSearch(false);
@@ -182,6 +222,8 @@ function App() {
   function findCharacter(char, region) {
     setFind(char);
     setRegion(region);
+    setLoad(true);
+    setProfile(null);
     console.log(char, region);
     var [charName, server] = separateString(char);
     if (!charName || !server)
@@ -192,7 +234,6 @@ function App() {
     setPets({ loading: true, pets: [], errors: "" });
     console.log(pets);
     console.log(charName, server);
-
     setSearch(true);
   }
 
@@ -207,9 +248,24 @@ function App() {
   return (
     <div className="App">
       <HeaderTop />
+      {profile ? (
+        <div className="profile">
+          <img src={profile.assets[0].value} alt="noProfileImg"></img>
+          <div>
+            {profile.character.name} - <h2>{profile.character.realm.slug}</h2>
+          </div>{" "}
+        </div>
+      ) : load ? (
+        "Loading"
+      ) : (
+        ""
+      )}
       <SearchBar find={findCharacter} findError={searchError} />
       {pets.errors ? (
-        <div className="error">Your search bring no results</div>
+        <div className="error">
+          <p>404 !</p>
+          Your search bring no results!
+        </div>
       ) : (
         ""
       )}
@@ -227,17 +283,22 @@ function App() {
       ) : (
         "loading"
       )}
-      <ReactPaginate
-        previousLabel={"Previous"}
-        nextLabel={"Next"}
-        pageCount={pageCount}
-        onPageChange={changePage}
-        containerClassName={"paginationButtons"}
-        previousLinkClassName={"previousButton"}
-        nextLinkClassName={"nextButton"}
-        disabledClassName={"paginationDisabled"}
-        activeClassName={"paginationActive"}
-      />
+      {!searchError && !pets.errors ? (
+        <ReactPaginate
+          pageCount={pageCount}
+          onPageChange={changePage}
+          containerClassName={"paginationButtons"}
+          previousLinkClassName={"previousButton"}
+          nextLinkClassName={"nextButton"}
+          forcePage={pageNumber}
+          nextLabel={<FontAwesomeIcon icon={faAngleRight} />}
+          previousLabel={<FontAwesomeIcon icon={faAngleLeft} />}
+          disabledClassName={"paginationDisabled"}
+          activeClassName={"paginationActive"}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 }

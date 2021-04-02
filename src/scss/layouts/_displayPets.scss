@@ -2,6 +2,49 @@
 @import "../mixins/animationCards";
 .App {
   position: relative;
+  .profile {
+    position: absolute;
+    top: 8vh;
+    left: 10%;
+    img {
+      position: relative;
+      border-radius: 0.5rem;
+    }
+    div {
+      display: flex;
+      font-family: $Raleway;
+      font-size: 1.5rem;
+      color: rgb(0, 0, 0);
+      position: absolute;
+      width: 250px;
+      top: 90px;
+      left: -40px;
+      h2 {
+        font-size: 1.2rem;
+        padding: 5px 0;
+        font-weight: 300;
+        margin-left: 8px;
+        color: rgb(0, 0, 0);
+        &::first-letter {
+          display: inline;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .error {
+    color: black;
+    font-family: $Raleway;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    p {
+      color: rgb(30, 43, 59);
+      font-size: 7rem;
+
+      margin-bottom: 5vh;
+    }
+  }
   & > .displayPets {
     list-style-type: none;
     display: grid;
@@ -38,20 +81,45 @@
     }
 
     .aquatic {
-      background: linear-gradient(0deg, rgb(24, 81, 134), rgb(13, 33, 46));
-      border: 1px solid rgb(25, 47, 66);
-      box-shadow: 2px 2px 10px 1px black;
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+      background: rgb(179, 220, 237); /* Old browsers */
+      background: -moz-linear-gradient(
+        top,
+        rgba(179, 220, 237, 1) 0%,
+        rgba(41, 184, 229, 1) 50%,
+        rgba(188, 224, 238, 1) 100%
+      ); /* FF3.6-15 */
+      background: -webkit-linear-gradient(
+        top,
+        rgba(179, 220, 237, 1) 0%,
+        rgba(41, 184, 229, 1) 50%,
+        rgba(188, 224, 238, 1) 100%
+      ); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(
+        to bottom,
+        rgba(179, 220, 237, 1) 0%,
+        rgba(41, 184, 229, 1) 50%,
+        rgba(188, 224, 238, 1) 100%
+      ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=0 ); /* IE6-9 */
+      box-shadow: 2px 2px 8px 3px black;
     }
 
     .magic {
       background: linear-gradient(0deg, rgb(99, 59, 21), rgb(92, 6, 42));
-      border: 1px solid rgb(25, 47, 66);
+
       box-shadow: 2px 2px 15px 3px black;
     }
     .beast {
-      background: linear-gradient(0deg, rgb(172, 180, 49), rgb(71, 67, 11));
-      border: 1px solid rgb(25, 47, 66);
+      background: linear-gradient(0deg, rgb(73, 56, 20), rgb(71, 67, 11));
+
       box-shadow: 2px 2px 15px 3px black;
+    }
+
+    .dragonkin {
+      background: linear-gradient(0deg, rgb(87, 121, 80), rgb(190, 186, 121));
+
+      box-shadow: 2px 2px 8px 5px rgb(218, 218, 218);
     }
 
     li {
@@ -67,12 +135,34 @@
       transition: 1s;
       line-height: 1.9rem;
       z-index: 10;
-      .glare-wrapper {
-        cursor: pointer !important;
+
+      .petName {
+        font-family: $Roboto;
       }
       p {
+        margin-left: 30px;
+        text-align: left;
+
         font-family: $Raleway;
         font-size: 1.5rem;
+        svg {
+          margin-right: 5px;
+        }
+        .health {
+          color: rgb(233, 50, 50);
+          font-size: 1.5rem;
+          padding: 3px 0;
+        }
+        .power {
+          color: rgb(233, 146, 64);
+          font-size: 1.5rem;
+          padding: 3px 0;
+        }
+        .speed {
+          color: rgb(219, 209, 59);
+          font-size: 1.5rem;
+          padding: 3px 0;
+        }
       }
       .fireIcon {
         background-image: url(".././assets/fireIcon.png");
@@ -90,7 +180,7 @@
       }
       .swipe {
         position: absolute;
-        left: 0;
+        left: 0px;
         width: 50px;
         height: 40px;
         background-color: rgb(218, 218, 218);
@@ -106,6 +196,70 @@
           29% 67%,
           0 81%
         );
+      }
+
+      .waterDrop1 {
+        position: absolute;
+        right: 10%;
+        top: 30%;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(93, 147, 209);
+        clip-path: polygon(
+          56% 12%,
+          70% 25%,
+          74% 48%,
+          65% 69%,
+          58% 85%,
+          50% 100%,
+          35% 80%,
+          26% 60%,
+          25% 35%,
+          34% 19%
+        );
+        transform: rotateZ(10deg);
+      }
+      .waterDrop2 {
+        position: absolute;
+        right: 30%;
+        bottom: 10%;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(93, 147, 209);
+        clip-path: polygon(
+          56% 12%,
+          70% 25%,
+          74% 48%,
+          65% 69%,
+          58% 85%,
+          50% 100%,
+          35% 80%,
+          26% 60%,
+          25% 35%,
+          34% 19%
+        );
+        transform: rotateZ(20deg);
+      }
+      .waterDrop3 {
+        position: absolute;
+        left: 10%;
+        top: 20%;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(93, 147, 209);
+        clip-path: polygon(
+          56% 12%,
+          70% 25%,
+          74% 48%,
+          65% 69%,
+          58% 85%,
+          50% 100%,
+          35% 80%,
+          26% 60%,
+          25% 35%,
+          34% 19%
+        );
+        transform: rotateZ(320deg);
       }
       .iconPet {
         position: relative;

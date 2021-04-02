@@ -1,36 +1,57 @@
 @import "../abstracts/fonts";
 
 .paginationButtons {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 4px 0px black;
   position: relative;
-  width: 80%;
-  height: 40px;
+  width: fit-content;
+  min-width: fit-content;
+  padding: 20px 15px;
+  border-radius: 7px;
   list-style-type: none;
   display: flex;
   justify-content: center;
   margin: 10vh auto;
   z-index: 20;
+  @media only screen and (max-width: 720px) {
+    flex-wrap: wrap;
+  }
   a {
-    padding: 0.5rem;
+    padding: 0.5rem 0.7rem;
     margin: 1rem;
     border-radius: 5px;
-    border: 1px solid #2b2eff;
-    color: #2b2eff;
+    font-family: $Roboto;
+    color: #414163;
     cursor: pointer;
     transition: 0.4s;
     &:hover {
-      background-color: #2b2eff;
+      background-color: #28485e;
       color: white;
     }
   }
 
   .paginationActive a {
-    background-color: #2b2eff;
+    position: relative;
+    background-color: #28485e;
     color: white;
+
+    &::after {
+      overflow: hidden;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      content: "";
+      width: 70%;
+      height: 30px;
+      border-bottom-left-radius: 3px;
+      background-color: #bddcf5;
+      clip-path: polygon(0 64%, 0% 100%, 100% 100%);
+    }
   }
   .paginationDisabled a {
-    background-color: rgb(212, 209, 209);
+    background-color: rgb(66, 65, 65);
     border: 1px solid #4a4a4b;
-    color: black;
+    color: rgb(153, 153, 153);
     cursor: no-drop;
     &:hover {
       background-color: none;

@@ -1,17 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 .headerTop {
   height: 15vh;
+  min-height: 100px;
   width: 100%;
   background-color: #242833;
 }
@@ -122,6 +127,8 @@
 .searchBar input:focus {
   border-radius: 0.2rem;
   background-color: #d9e0f3;
+  -webkit-box-shadow: 0px 0px 4px 0px black;
+          box-shadow: 0px 0px 4px 0px black;
   border: none;
 }
 
@@ -133,8 +140,8 @@
   cursor: pointer;
   padding: 0.4rem 1.2rem;
   border: none;
-  border-top-right-radius: 0.4rem;
-  border-bottom-right-radius: 0.4rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -155,9 +162,18 @@
 }
 
 .paginationButtons {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 4px 0px black;
+          box-shadow: 0px 0px 4px 0px black;
   position: relative;
-  width: 80%;
-  height: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  padding: 20px 15px;
+  border-radius: 7px;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,31 +185,53 @@
   z-index: 20;
 }
 
+@media only screen and (max-width: 720px) {
+  .paginationButtons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .paginationButtons a {
-  padding: 0.5rem;
+  padding: 0.5rem 0.7rem;
   margin: 1rem;
   border-radius: 5px;
-  border: 1px solid #2b2eff;
-  color: #2b2eff;
+  font-family: "Roboto", sans-serif;
+  color: #414163;
   cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .paginationButtons a:hover {
-  background-color: #2b2eff;
+  background-color: #28485e;
   color: white;
 }
 
 .paginationButtons .paginationActive a {
-  background-color: #2b2eff;
+  position: relative;
+  background-color: #28485e;
   color: white;
 }
 
+.paginationButtons .paginationActive a::after {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  content: "";
+  width: 70%;
+  height: 30px;
+  border-bottom-left-radius: 3px;
+  background-color: #bddcf5;
+  -webkit-clip-path: polygon(0 64%, 0% 100%, 100% 100%);
+          clip-path: polygon(0 64%, 0% 100%, 100% 100%);
+}
+
 .paginationButtons .paginationDisabled a {
-  background-color: #d4d1d1;
+  background-color: #424141;
   border: 1px solid #4a4a4b;
-  color: black;
+  color: #999999;
   cursor: no-drop;
 }
 
@@ -203,6 +241,57 @@
 
 .App {
   position: relative;
+}
+
+.App .profile {
+  position: absolute;
+  top: 8vh;
+  left: 10%;
+}
+
+.App .profile img {
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.App .profile div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  position: absolute;
+  width: 250px;
+  top: 90px;
+  left: -40px;
+}
+
+.App .profile div h2 {
+  font-size: 1.2rem;
+  padding: 5px 0;
+  font-weight: 300;
+  margin-left: 8px;
+  color: black;
+}
+
+.App .profile div h2::first-letter {
+  display: inline;
+  text-transform: uppercase;
+}
+
+.App .error {
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.App .error p {
+  color: #1e2b3b;
+  font-size: 7rem;
+  margin-bottom: 5vh;
 }
 
 .App > .displayPets {
@@ -293,27 +382,39 @@
 }
 
 .App > .displayPets .aquatic {
-  background: -webkit-gradient(linear, left bottom, left top, from(#185186), to(#0d212e));
-  background: linear-gradient(0deg, #185186, #0d212e);
-  border: 1px solid #192f42;
-  -webkit-box-shadow: 2px 2px 10px 1px black;
-          box-shadow: 2px 2px 10px 1px black;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+  background: #b3dced;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#b3dced), color-stop(50%, #29b8e5), to(#bce0ee));
+  background: linear-gradient(to bottom, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=0 );
+  /* IE6-9 */
+  -webkit-box-shadow: 2px 2px 8px 3px black;
+          box-shadow: 2px 2px 8px 3px black;
 }
 
 .App > .displayPets .magic {
   background: -webkit-gradient(linear, left bottom, left top, from(#633b15), to(#5c062a));
   background: linear-gradient(0deg, #633b15, #5c062a);
-  border: 1px solid #192f42;
   -webkit-box-shadow: 2px 2px 15px 3px black;
           box-shadow: 2px 2px 15px 3px black;
 }
 
 .App > .displayPets .beast {
-  background: -webkit-gradient(linear, left bottom, left top, from(#acb431), to(#47430b));
-  background: linear-gradient(0deg, #acb431, #47430b);
-  border: 1px solid #192f42;
+  background: -webkit-gradient(linear, left bottom, left top, from(#493814), to(#47430b));
+  background: linear-gradient(0deg, #493814, #47430b);
   -webkit-box-shadow: 2px 2px 15px 3px black;
           box-shadow: 2px 2px 15px 3px black;
+}
+
+.App > .displayPets .dragonkin {
+  background: -webkit-gradient(linear, left bottom, left top, from(#577950), to(#beba79));
+  background: linear-gradient(0deg, #577950, #beba79);
+  -webkit-box-shadow: 2px 2px 8px 5px #dadada;
+          box-shadow: 2px 2px 8px 5px #dadada;
 }
 
 .App > .displayPets li {
@@ -337,13 +438,37 @@
   z-index: 10;
 }
 
-.App > .displayPets li .glare-wrapper {
-  cursor: pointer !important;
+.App > .displayPets li .petName {
+  font-family: "Roboto", sans-serif;
 }
 
 .App > .displayPets li p {
+  margin-left: 30px;
+  text-align: left;
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
+}
+
+.App > .displayPets li p svg {
+  margin-right: 5px;
+}
+
+.App > .displayPets li p .health {
+  color: #e93232;
+  font-size: 1.5rem;
+  padding: 3px 0;
+}
+
+.App > .displayPets li p .power {
+  color: #e99240;
+  font-size: 1.5rem;
+  padding: 3px 0;
+}
+
+.App > .displayPets li p .speed {
+  color: #dbd13b;
+  font-size: 1.5rem;
+  padding: 3px 0;
 }
 
 .App > .displayPets li .fireIcon {
@@ -365,12 +490,51 @@
 
 .App > .displayPets li .swipe {
   position: absolute;
-  left: 0;
+  left: 0px;
   width: 50px;
   height: 40px;
   background-color: #dadada;
   -webkit-clip-path: polygon(0 18%, 24% 26%, 43% 30%, 55% 32%, 54% 35%, 49% 44%, 44% 46%, 40% 54%, 29% 67%, 0 81%);
           clip-path: polygon(0 18%, 24% 26%, 43% 30%, 55% 32%, 54% 35%, 49% 44%, 44% 46%, 40% 54%, 29% 67%, 0 81%);
+}
+
+.App > .displayPets li .waterDrop1 {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  width: 20px;
+  height: 20px;
+  background-color: #5d93d1;
+  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+  -webkit-transform: rotateZ(10deg);
+          transform: rotateZ(10deg);
+}
+
+.App > .displayPets li .waterDrop2 {
+  position: absolute;
+  right: 30%;
+  bottom: 10%;
+  width: 20px;
+  height: 20px;
+  background-color: #5d93d1;
+  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
+}
+
+.App > .displayPets li .waterDrop3 {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  width: 20px;
+  height: 20px;
+  background-color: #5d93d1;
+  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+  -webkit-transform: rotateZ(320deg);
+          transform: rotateZ(320deg);
 }
 
 .App > .displayPets li .iconPet {
