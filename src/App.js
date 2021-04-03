@@ -9,6 +9,8 @@ import {
   faHeart,
   faBolt,
   faMeteor,
+  faSkull,
+  faPaw,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   auth,
@@ -88,13 +90,15 @@ function App() {
                       <img key={index} src={imagePet.icon} alt="noImg"></img>
                     </div>
                     <div className="petName">{imagePet.name}</div>{" "}
-                    <p>Level: {pet.level}</p>
+                    <p className="level">Level {pet.level}</p>
                     <br></br>
                     <p>
+                      {" "}
                       Health: {pet.stats.health}{" "}
                       <FontAwesomeIcon className="health" icon={faHeart} />
                     </p>
                     <p>
+                      {" "}
                       Power: {pet.stats.power}{" "}
                       <FontAwesomeIcon className="power" icon={faMeteor} />
                     </p>
@@ -102,14 +106,32 @@ function App() {
                       Speed: {pet.stats.speed}{" "}
                       <FontAwesomeIcon className="speed" icon={faBolt} />
                     </p>
-                    <p>Type:{imagePet.battle_pet_type.type}</p>
+                    <p className="type">- {imagePet.battle_pet_type.type} -</p>
                     {imagePet.battle_pet_type.type === "BEAST" ? (
                       <div className="swipe"></div>
                     ) : (
                       ""
                     )}
+                    {imagePet.battle_pet_type.type === "BEAST" ? (
+                      <FontAwesomeIcon className="paw" icon={faPaw} />
+                    ) : (
+                      ""
+                    )}
                     {imagePet.battle_pet_type.type === "ELEMENTAL" ? (
                       <div className="fireIcon"></div>
+                    ) : (
+                      ""
+                    )}
+                    {imagePet.battle_pet_type.type === "UNDEAD" ? (
+                      <div>
+                        <FontAwesomeIcon
+                          className="skull"
+                          icon={faSkull}
+                          style={{ top: 3.5 * pet.level + "%" }}
+                        />
+                        <FontAwesomeIcon className="skull1" icon={faSkull} />
+                        <FontAwesomeIcon className="skull2" icon={faSkull} />
+                      </div>
                     ) : (
                       ""
                     )}
@@ -148,6 +170,9 @@ function App() {
     }
     if (type.toLowerCase() === "dragonkin") {
       return "dragonkin";
+    }
+    if (type.toLowerCase() === "undead") {
+      return "undead";
     }
   }
 

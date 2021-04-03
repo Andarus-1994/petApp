@@ -15,7 +15,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 .headerTop {
-  height: 15vh;
+  height: 120px;
   min-height: 100px;
   width: 100%;
   background-color: #242833;
@@ -115,8 +115,8 @@
   color: #17404b;
   font-size: 1.3rem;
   padding: 0.6rem 0.8rem;
-  border-top-left-radius: 0.4rem;
-  border-bottom-left-radius: 0.4rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
   border: none;
   width: 300px;
   letter-spacing: 1px;
@@ -125,10 +125,12 @@
 }
 
 .searchBar input:focus {
-  border-radius: 0.2rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
   background-color: #d9e0f3;
   -webkit-box-shadow: 0px 0px 4px 0px black;
           box-shadow: 0px 0px 4px 0px black;
+  outline: none;
   border: none;
 }
 
@@ -245,7 +247,7 @@
 
 .App .profile {
   position: absolute;
-  top: 8vh;
+  top: 60px;
   left: 10%;
 }
 
@@ -323,11 +325,58 @@
 }
 
 .App > .displayPets .elemental {
-  animation: glowElemental 2s infinite alternate-reverse;
-  background: -webkit-gradient(linear, left bottom, left top, from(#700d0d), to(black));
-  background: linear-gradient(0deg, #700d0d 0%, black);
-  border: 1px solid #581c1c;
+  background: -webkit-gradient(linear, left bottom, left top, from(#2c0b0b), to(#921717));
+  background: linear-gradient(0deg, #2c0b0b 0%, #921717);
   color: white;
+  border: none;
+  -webkit-box-shadow: 2px 2px 10px 3px #474747;
+          box-shadow: 2px 2px 10px 3px #474747;
+}
+
+.App > .displayPets .elemental .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.App > .displayPets .undead {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(#555454));
+  background: linear-gradient(0deg, black 0%, #555454);
+  color: white;
+  border: none;
+  -webkit-box-shadow: 2px 2px 10px 3px #474747;
+          box-shadow: 2px 2px 10px 3px #474747;
+}
+
+.App > .displayPets .undead .skull {
+  position: absolute;
+  color: #525151;
+  left: 10%;
+  top: 30%;
+}
+
+.App > .displayPets .undead .skull1 {
+  position: absolute;
+  color: #525151;
+  left: 27%;
+  bottom: 13%;
+}
+
+.App > .displayPets .undead .skull2 {
+  position: absolute;
+  color: #525151;
+  right: 13%;
+  top: 40%;
+}
+
+.App > .displayPets .undead .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
 }
 
 @-webkit-keyframes glowElemental {
@@ -381,19 +430,36 @@
   border: 1px solid #4b4021;
 }
 
+.App > .displayPets .critter .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.App > .displayPets .critter .power {
+  color: #86592e;
+}
+
 .App > .displayPets .aquatic {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
-  background: #b3dced;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, from(#b3dced), color-stop(50%, #29b8e5), to(#bce0ee));
-  background: linear-gradient(to bottom, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=0 );
-  /* IE6-9 */
+  background: -webkit-gradient(linear, left bottom, left top, from(#1c3c94), to(#3e7dcf));
+  background: linear-gradient(0deg, #1c3c94, #3e7dcf);
   -webkit-box-shadow: 2px 2px 8px 3px black;
           box-shadow: 2px 2px 8px 3px black;
+  border: none;
+}
+
+.App > .displayPets .aquatic .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.App > .displayPets .aquatic .speed {
+  color: #f0f06e;
 }
 
 .App > .displayPets .magic {
@@ -403,6 +469,14 @@
           box-shadow: 2px 2px 15px 3px black;
 }
 
+.App > .displayPets .magic .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
 .App > .displayPets .beast {
   background: -webkit-gradient(linear, left bottom, left top, from(#493814), to(#47430b));
   background: linear-gradient(0deg, #493814, #47430b);
@@ -410,11 +484,31 @@
           box-shadow: 2px 2px 15px 3px black;
 }
 
+.App > .displayPets .beast .paw {
+  color: #6e5725;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 17%;
+  right: 17%;
+}
+
+.App > .displayPets .beast .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
 .App > .displayPets .dragonkin {
   background: -webkit-gradient(linear, left bottom, left top, from(#577950), to(#beba79));
   background: linear-gradient(0deg, #577950, #beba79);
-  -webkit-box-shadow: 2px 2px 8px 5px #dadada;
-          box-shadow: 2px 2px 8px 5px #dadada;
+  -webkit-box-shadow: 2px 2px 10px 2px #a09f9f;
+          box-shadow: 2px 2px 10px 2px #a09f9f;
+}
+
+.App > .displayPets .dragonkin .power {
+  color: #86592e;
 }
 
 .App > .displayPets li {
@@ -430,7 +524,7 @@
   border: 1px solid #dfdfdf;
   text-align: center;
   padding: 0.8rem 0;
-  padding-bottom: 4rem;
+  padding-bottom: 0rem;
   border-radius: 0.8rem;
   -webkit-transition: 1s;
   transition: 1s;
@@ -440,35 +534,43 @@
 
 .App > .displayPets li .petName {
   font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.App > .displayPets li .level {
+  margin-bottom: 40px;
+}
+
+.App > .displayPets li .type {
+  margin: 0 auto;
+  margin-top: 40px;
+  color: #1b1b1b;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
 }
 
 .App > .displayPets li p {
-  margin-left: 30px;
-  text-align: left;
+  text-align: center;
+  margin: 0 auto;
+  min-width: 110px;
   font-family: "Raleway", sans-serif;
-  font-size: 1.5rem;
-}
-
-.App > .displayPets li p svg {
-  margin-right: 5px;
+  font-size: 0.95rem;
 }
 
 .App > .displayPets li p .health {
-  color: #e93232;
-  font-size: 1.5rem;
-  padding: 3px 0;
+  color: #c22f2f;
+  font-size: 1rem;
 }
 
 .App > .displayPets li p .power {
-  color: #e99240;
-  font-size: 1.5rem;
-  padding: 3px 0;
+  color: #c9792f;
+  font-size: 1rem;
 }
 
 .App > .displayPets li p .speed {
-  color: #dbd13b;
-  font-size: 1.5rem;
-  padding: 3px 0;
+  color: #ada531;
+  font-size: 1rem;
 }
 
 .App > .displayPets li .fireIcon {
@@ -477,10 +579,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  height: 70px;
-  width: 95px;
-  top: 0px;
-  right: 0px;
+  height: 20px;
+  width: 35px;
+  top: 17px;
+  right: 3%;
   z-index: 25;
   -webkit-transform: translate3d(20%, 50%, 0px);
           transform: translate3d(20%, 50%, 0px);
@@ -540,7 +642,7 @@
 .App > .displayPets li .iconPet {
   position: relative;
   width: 100%;
-  height: 50px;
+  height: 10px;
 }
 
 .App > .displayPets li .iconPet img {

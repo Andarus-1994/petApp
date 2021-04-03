@@ -4,7 +4,7 @@
   position: relative;
   .profile {
     position: absolute;
-    top: 8vh;
+    top: 60px;
     left: 10%;
     img {
       position: relative;
@@ -67,10 +67,48 @@
       z-index: 0;
     }
     .elemental {
-      animation: glowElemental 2s infinite alternate-reverse;
-      background: linear-gradient(0deg, rgb(112, 13, 13) 0%, rgb(0, 0, 0));
-      border: 1px solid rgb(88, 28, 28);
+      background: linear-gradient(0deg, rgb(44, 11, 11) 0%, rgb(146, 23, 23));
       color: white;
+      border: none;
+      box-shadow: 2px 2px 10px 3px rgb(71, 71, 71);
+      .type {
+        margin: 0 auto;
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+        margin-top: 40px;
+        color: rgb(214, 208, 208);
+      }
+    }
+    .undead {
+      background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(85, 84, 84));
+      color: white;
+      border: none;
+      box-shadow: 2px 2px 10px 3px rgb(71, 71, 71);
+      .skull {
+        position: absolute;
+        color: rgb(82, 81, 81);
+        left: 10%;
+        top: 30%;
+      }
+      .skull1 {
+        position: absolute;
+        color: rgb(82, 81, 81);
+        left: 27%;
+        bottom: 13%;
+      }
+      .skull2 {
+        position: absolute;
+        color: rgb(82, 81, 81);
+        right: 13%;
+        top: 40%;
+      }
+      .type {
+        margin: 0 auto;
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+        margin-top: 40px;
+        color: rgb(214, 208, 208);
+      }
     }
     @include glowAnimations("elemental");
     @include glowAnimations("critter");
@@ -78,48 +116,72 @@
       animation: glowCritter 2s infinite alternate-reverse;
       background: linear-gradient(0deg, rgb(100, 58, 24), rgb(245, 230, 94));
       border: 1px solid rgb(75, 64, 33);
+      .type {
+        margin: 0 auto;
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+        margin-top: 40px;
+        color: rgb(214, 208, 208);
+      }
+      .power {
+        color: rgb(134, 89, 46);
+      }
     }
 
     .aquatic {
-      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
-      background: rgb(179, 220, 237); /* Old browsers */
-      background: -moz-linear-gradient(
-        top,
-        rgba(179, 220, 237, 1) 0%,
-        rgba(41, 184, 229, 1) 50%,
-        rgba(188, 224, 238, 1) 100%
-      ); /* FF3.6-15 */
-      background: -webkit-linear-gradient(
-        top,
-        rgba(179, 220, 237, 1) 0%,
-        rgba(41, 184, 229, 1) 50%,
-        rgba(188, 224, 238, 1) 100%
-      ); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(
-        to bottom,
-        rgba(179, 220, 237, 1) 0%,
-        rgba(41, 184, 229, 1) 50%,
-        rgba(188, 224, 238, 1) 100%
-      ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=0 ); /* IE6-9 */
+      background: linear-gradient(0deg, rgb(28, 60, 148), rgb(62, 125, 207));
       box-shadow: 2px 2px 8px 3px black;
+      border: none;
+      .type {
+        margin: 0 auto;
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+        margin-top: 40px;
+        color: rgb(214, 208, 208);
+      }
+      .speed {
+        color: rgb(240, 240, 110);
+      }
     }
 
     .magic {
       background: linear-gradient(0deg, rgb(99, 59, 21), rgb(92, 6, 42));
 
       box-shadow: 2px 2px 15px 3px black;
+      .type {
+        margin: 0 auto;
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+        margin-top: 40px;
+        color: rgb(214, 208, 208);
+      }
     }
     .beast {
       background: linear-gradient(0deg, rgb(73, 56, 20), rgb(71, 67, 11));
-
       box-shadow: 2px 2px 15px 3px black;
+      .paw {
+        color: rgb(110, 87, 37);
+        font-size: 2rem;
+        position: absolute;
+        bottom: 17%;
+        right: 17%;
+      }
+      .type {
+        margin: 0 auto;
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+        margin-top: 40px;
+        color: rgb(214, 208, 208);
+      }
     }
 
     .dragonkin {
       background: linear-gradient(0deg, rgb(87, 121, 80), rgb(190, 186, 121));
+      box-shadow: 2px 2px 10px 2px rgb(160, 159, 159);
 
-      box-shadow: 2px 2px 8px 5px rgb(218, 218, 218);
+      .power {
+        color: rgb(134, 89, 46);
+      }
     }
 
     li {
@@ -130,7 +192,7 @@
       border: 1px solid rgb(223, 223, 223);
       text-align: center;
       padding: 0.8rem 0;
-      padding-bottom: 4rem;
+      padding-bottom: 0rem;
       border-radius: 0.8rem;
       transition: 1s;
       line-height: 1.9rem;
@@ -138,30 +200,39 @@
 
       .petName {
         font-family: $Roboto;
+        font-size: 1rem;
+        margin-bottom: 5px;
       }
-      p {
-        margin-left: 30px;
-        text-align: left;
+      .level {
+        margin-bottom: 40px;
+      }
+      .type {
+        margin: 0 auto;
+        margin-top: 40px;
+        color: rgb(27, 27, 27);
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+      }
 
+      p {
+        text-align: center;
+        margin: 0 auto;
+        min-width: 110px;
         font-family: $Raleway;
-        font-size: 1.5rem;
-        svg {
-          margin-right: 5px;
-        }
+        font-size: 0.95rem;
+
         .health {
-          color: rgb(233, 50, 50);
-          font-size: 1.5rem;
-          padding: 3px 0;
+          color: rgb(194, 47, 47);
+          font-size: 1rem;
         }
         .power {
-          color: rgb(233, 146, 64);
-          font-size: 1.5rem;
-          padding: 3px 0;
+          color: rgb(201, 121, 47);
+
+          font-size: 1rem;
         }
         .speed {
-          color: rgb(219, 209, 59);
-          font-size: 1.5rem;
-          padding: 3px 0;
+          color: rgb(173, 165, 49);
+          font-size: 1rem;
         }
       }
       .fireIcon {
@@ -170,10 +241,10 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
-        height: 70px;
-        width: 95px;
-        top: 0px;
-        right: 0px;
+        height: 20px;
+        width: 35px;
+        top: 17px;
+        right: 3%;
         z-index: 25;
         transform: translate3d(20%, 50%, 0px);
         transform-style: preserve-3d;
@@ -264,7 +335,7 @@
       .iconPet {
         position: relative;
         width: 100%;
-        height: 50px;
+        height: 10px;
 
         img {
           position: absolute;
