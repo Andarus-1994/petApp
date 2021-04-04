@@ -11,6 +11,8 @@ import {
   faMeteor,
   faSkull,
   faPaw,
+  faFeatherAlt,
+  faFrog,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   auth,
@@ -21,6 +23,7 @@ import {
 } from "./components/functions/serverFunctions.js";
 import HeaderTop from "./components/headerTop.js";
 import SearchBar from "./components/searchBar.js";
+import ModalPet from "./components/modalPet.js";
 
 function App() {
   const [load, setLoad] = useState(true);
@@ -37,16 +40,19 @@ function App() {
   });
   const [profile, setProfile] = useState();
   const [pets, setPets] = useState({ loading: true, pets: [], errors: "" });
+  const [curentPet, setCurentPet] = useState({ id: null, pet: {} });
   const [pageNumber, setPageNumber] = useState(0);
   const petsPerPage = 10;
   const pagesVisited = pageNumber * petsPerPage;
   const pageCount = Math.ceil(pets.pets.length / petsPerPage);
   const [activeCard, setActiveCard] = useState(null);
   const [search, setSearch] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const changePage = ({ selected }) => {
     setPageNumber(selected);
     setLoadPetImage(false);
     getPetDetails(pets.pets, selected);
+    window.scrollTo(0, 0);
   };
 
   function importPets(character) {
@@ -65,26 +71,28 @@ function App() {
     });
   }
 
+  function displayModal() {
+    setShowModal(!showModal);
+  }
+
   const displayPets = pets.pets
     .slice(pagesVisited, pagesVisited + petsPerPage)
-    .map((pet, index) => {
+    .map((pet, ind) => {
       {
         return (
-          <Tilt key={index} scale={1.1} transitionSpeed={800}>
+          <Tilt key={ind} scale={1.1} transitionSpeed={800}>
             {img.map(
               (imagePet, index) =>
                 imagePet.id === pet.species.id && (
                   <li
                     onClick={() => {
                       setActiveCard(pet.id);
+                      setShowModal(true);
+                      setCurentPet({ id: pet.id, pet: imagePet });
                       console.log(activeCard);
                     }}
-                    className={[
-                      activeCard === pet.id
-                        ? "selected"
-                        : "" + checkType(imagePet.battle_pet_type.type),
-                    ]}
-                    key={index}
+                    className={[checkType(imagePet.battle_pet_type.type)]}
+                    style={{ animationDuration: 0.6 + index * 0.05 + "s" }}
                   >
                     <div className="iconPet">
                       <img key={index} src={imagePet.icon} alt="noImg"></img>
@@ -127,10 +135,37 @@ function App() {
                         <FontAwesomeIcon
                           className="skull"
                           icon={faSkull}
-                          style={{ top: 3.5 * pet.level + "%" }}
+                          style={{ top: 3 * pet.level + "%" }}
                         />
                         <FontAwesomeIcon className="skull1" icon={faSkull} />
                         <FontAwesomeIcon className="skull2" icon={faSkull} />
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                    {imagePet.battle_pet_type.type === "FLYING" ? (
+                      <div>
+                        <FontAwesomeIcon
+                          className="feather"
+                          style={{
+                            top: pet.stats.speed > 10 ? "17%" : "40%",
+                          }}
+                          icon={faFeatherAlt}
+                        />
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                    {imagePet.battle_pet_type.type === "CRITTER" ? (
+                      <div>
+                        <FontAwesomeIcon
+                          className="frog"
+                          style={{
+                            bottom: pet.stats.speed > 10 ? "17%" : "10%",
+                            left: pet.stats.speed > 10 ? "17%" : "5%",
+                          }}
+                          icon={faFrog}
+                        />
                       </div>
                     ) : (
                       ""
@@ -140,6 +175,13 @@ function App() {
                         <div className="waterDrop1"></div>
                         <div className="waterDrop2"></div>
                         <div className="waterDrop3"></div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                    {imagePet.battle_pet_type.type === "DRAGONKIN" ? (
+                      <div>
+                        <div className="dragonSign1"></div>
                       </div>
                     ) : (
                       ""
@@ -173,6 +215,9 @@ function App() {
     }
     if (type.toLowerCase() === "undead") {
       return "undead";
+    }
+    if (type.toLowerCase() === "flying") {
+      return "flying";
     }
   }
 
@@ -273,6 +318,11 @@ function App() {
   return (
     <div className="App">
       <HeaderTop />
+      {showModal ? (
+        <ModalPet pet={curentPet.pet} closeModal={displayModal}></ModalPet>
+      ) : (
+        ""
+      )}
       {profile ? (
         <div className="profile">
           <img src={profile.assets[0].value} alt="noProfileImg"></img>

@@ -14,6 +14,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 .headerTop {
   height: 120px;
   min-height: 100px;
@@ -342,6 +346,8 @@
 }
 
 .App > .displayPets .undead {
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
   background: -webkit-gradient(linear, left bottom, left top, from(black), to(#555454));
   background: linear-gradient(0deg, black 0%, #555454);
   color: white;
@@ -361,14 +367,14 @@
   position: absolute;
   color: #525151;
   left: 27%;
-  bottom: 13%;
+  bottom: 15%;
 }
 
 .App > .displayPets .undead .skull2 {
   position: absolute;
   color: #525151;
   right: 13%;
-  top: 40%;
+  top: 30%;
 }
 
 .App > .displayPets .undead .type {
@@ -424,7 +430,8 @@
 }
 
 .App > .displayPets .critter {
-  animation: glowCritter 2s infinite alternate-reverse;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
   background: -webkit-gradient(linear, left bottom, left top, from(#643a18), to(#f5e65e));
   background: linear-gradient(0deg, #643a18, #f5e65e);
   border: 1px solid #4b4021;
@@ -440,6 +447,12 @@
 
 .App > .displayPets .critter .power {
   color: #86592e;
+}
+
+.App > .displayPets .critter .frog {
+  position: absolute;
+  color: #9a9e61;
+  bottom: 10%;
 }
 
 .App > .displayPets .aquatic {
@@ -500,6 +513,22 @@
   color: #d6d0d0;
 }
 
+.App > .displayPets .flying {
+  background: -webkit-gradient(linear, left bottom, left top, from(#bebe93), to(#beba79));
+  background: linear-gradient(0deg, #bebe93, #beba79);
+  -webkit-box-shadow: 2px 2px 10px 2px #a09f9f;
+          box-shadow: 2px 2px 10px 2px #a09f9f;
+  -webkit-animation: flyIn 0.8s;
+          animation: flyIn 0.8s;
+}
+
+.App > .displayPets .flying .feather {
+  color: #646446;
+  position: absolute;
+  top: 25%;
+  right: 15%;
+}
+
 .App > .displayPets .dragonkin {
   background: -webkit-gradient(linear, left bottom, left top, from(#577950), to(#beba79));
   background: linear-gradient(0deg, #577950, #beba79);
@@ -511,7 +540,19 @@
   color: #86592e;
 }
 
+.App > .displayPets .dragonkin .dragonSign1 {
+  position: absolute;
+  top: 35%;
+  right: 0%;
+  background-color: #bad6b3;
+  width: 20px;
+  height: 20px;
+  -webkit-clip-path: polygon(35% 39%, 49% 30%, 100% 8%, 100% 100%, 56% 84%, 37% 71%, 18% 66%, 0 67%, 9% 57%, 20% 49%);
+          clip-path: polygon(35% 39%, 49% 30%, 100% 8%, 100% 100%, 56% 84%, 37% 71%, 18% 66%, 0 67%, 9% 57%, 20% 49%);
+}
+
 .App > .displayPets li {
+  position: relative;
   background-color: #f0f0f0;
   cursor: pointer;
   display: -webkit-box;
@@ -530,6 +571,8 @@
   transition: 1s;
   line-height: 1.9rem;
   z-index: 10;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
 }
 
 .App > .displayPets li .petName {
@@ -658,5 +701,229 @@
           transform-style: preserve-3d;
   -webkit-transform: translate3d(-50%, -50%, 0px);
           transform: translate3d(-50%, -50%, 0px);
+}
+
+@-webkit-keyframes enterTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes enterTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes flyIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(40px, 80px);
+            transform: translate(40px, 80px);
+  }
+  50% {
+    -webkit-transform: translate(-20px, 40px);
+            transform: translate(-20px, 40px);
+  }
+  75% {
+    -webkit-transform: translate(8px, 20px);
+            transform: translate(8px, 20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes flyIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(40px, 80px);
+            transform: translate(40px, 80px);
+  }
+  50% {
+    -webkit-transform: translate(-20px, 40px);
+            transform: translate(-20px, 40px);
+  }
+  75% {
+    -webkit-transform: translate(8px, 20px);
+            transform: translate(8px, 20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+.behindModal {
+  background-color: rgba(10, 10, 10, 0.322);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+
+.modalPet {
+  background: linear-gradient(60deg, #e7e7e7, #e3e6e6);
+  color: black;
+  border-radius: 2rem;
+  border: 1px solid white;
+  position: fixed;
+  max-width: 400px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: 450px;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 20;
+  -webkit-box-shadow: 0px 0px 8px 3px #292828;
+          box-shadow: 0px 0px 8px 3px #292828;
+  -webkit-animation: 1.5s fadeIn;
+          animation: 1.5s fadeIn;
+}
+
+.modalPet .icon {
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+
+.modalPet .icon img {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modalPet h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+}
+
+.modalPet h2 {
+  font-family: "Raleway", sans-serif;
+  color: #252525;
+  margin-bottom: 50px;
+}
+
+.modalPet .type {
+  color: #222222;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-animation: 1.5s enterLeft;
+          animation: 1.5s enterLeft;
+}
+
+.modalPet .source {
+  -webkit-animation: 1.5s enterRight;
+          animation: 1.5s enterRight;
+}
+
+.modalPet p {
+  width: 250px;
+  margin: 0 auto;
+  font-family: "Raleway", sans-serif;
+  -webkit-animation: 1.5s enterTop;
+          animation: 1.5s enterTop;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes enterLeft {
+  0% {
+    -webkit-transform: translateX(-120px);
+            transform: translateX(-120px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes enterLeft {
+  0% {
+    -webkit-transform: translateX(-120px);
+            transform: translateX(-120px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes enterRight {
+  0% {
+    -webkit-transform: translateX(120px);
+            transform: translateX(120px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes enterRight {
+  0% {
+    -webkit-transform: translateX(120px);
+            transform: translateX(120px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes enterTop {
+  0% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */

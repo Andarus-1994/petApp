@@ -2,7 +2,7 @@ import "../scss/style.css";
 
 import { useEffect, useState } from "react";
 
-function App() {
+function HeaderTop() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {});
@@ -13,4 +13,4 @@ function App() {
   );
 }
 
-export default App;
+export default HeaderTop;

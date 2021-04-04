@@ -1,0 +1,101 @@
+@import "../abstracts/fonts";
+
+.behindModal {
+  background-color: rgba(10, 10, 10, 0.322);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+.modalPet {
+  background: linear-gradient(60deg, rgb(231, 231, 231), rgb(227, 230, 230));
+  color: rgb(0, 0, 0);
+  border-radius: 2rem;
+  border: 1px solid white;
+  position: fixed;
+  max-width: 400px;
+  min-width: fit-content;
+  height: 450px;
+  min-height: fit-content;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 20;
+  box-shadow: 0px 0px 8px 3px rgb(41, 40, 40);
+  animation: 1.5s fadeIn;
+  .icon {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    img {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  h1 {
+    font-family: $Roboto;
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-family: $Raleway;
+    color: rgb(37, 37, 37);
+    margin-bottom: 50px;
+  }
+  .type {
+    color: rgb(34, 34, 34);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    animation: 1.5s enterLeft;
+  }
+  .source {
+    animation: 1.5s enterRight;
+  }
+  p {
+    width: 250px;
+    margin: 0 auto;
+    font-family: $Raleway;
+    animation: 1.5s enterTop;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes enterLeft {
+    0% {
+      transform: translateX(-120px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes enterRight {
+    0% {
+      transform: translateX(120px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes enterTop {
+    0% {
+      transform: translateY(40px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
