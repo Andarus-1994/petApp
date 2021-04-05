@@ -259,3 +259,29 @@ export const petInfo2 = async () => {
       return error;
     });
 };
+
+export const petAbility = async (ability) => {
+  const token = localStorage.getItem("token");
+  console.log(ability);
+  return await axios
+    .get(
+      "https://eu.api.blizzard.com/data/wow/media/pet-ability/" +
+        ability.ability.id +
+        "?namespace=static-9.0.5_37760-eu&access_token=" +
+        token,
+
+      {
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+        },
+      }
+    )
+    .then((response) => {
+      console.log(response.data);
+      return response.data;
+    })
+
+    .catch((error) => {
+      return error;
+    });
+};

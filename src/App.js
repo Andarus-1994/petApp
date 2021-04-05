@@ -27,6 +27,7 @@ import ModalPet from "./components/modalPet.js";
 
 function App() {
   const [load, setLoad] = useState(true);
+  const [loadProfile, setLoadProfile] = useState(true);
   const [loadPetImage, setLoadPetImage] = useState(true);
   const [img, setPetImg] = useState([]);
   const [find, setFind] = useState("belfu");
@@ -51,6 +52,7 @@ function App() {
   const changePage = ({ selected }) => {
     setPageNumber(selected);
     setLoadPetImage(false);
+    setLoad(true);
     getPetDetails(pets.pets, selected);
     window.scrollTo(0, 0);
   };
@@ -59,7 +61,10 @@ function App() {
     if (find)
       profileChar(character).then((resp) => {
         console.log(resp);
-        if (!resp.error) setProfile(resp);
+        if (!resp.error) {
+          setProfile(resp);
+          setLoadProfile(false);
+        }
       });
     auth(character).then((response) => {
       if (!response.error) {
@@ -223,11 +228,12 @@ function App() {
 
   function getPetDetails(pet, page) {
     setLoadPetImage(true);
+
     petInfo(pet, page * 10).then((response) => {
       if (response) {
         console.log("aici");
         console.log(response);
-
+        setLoad(false);
         let nonDuplicate = response.filter(
           (ele, ind) =>
             ind ===
@@ -292,6 +298,7 @@ function App() {
   function findCharacter(char, region) {
     setFind(char);
     setRegion(region);
+    setLoadProfile(true);
     setLoad(true);
     setProfile(null);
     console.log(char, region);
@@ -330,8 +337,8 @@ function App() {
             {profile.character.name} - <h2>{profile.character.realm.slug}</h2>
           </div>{" "}
         </div>
-      ) : load ? (
-        "Loading"
+      ) : loadProfile ? (
+        <div className="spinnerProfile-1"></div>
       ) : (
         ""
       )}
@@ -353,7 +360,11 @@ function App() {
               setActiveCard(null);
             }}
           ></div>
-          {load ? "Loading" : !pets.loading && displayPets}
+          {load ? (
+            <div className="spinnerPets-1"></div>
+          ) : (
+            !pets.loading && displayPets
+          )}
         </ul>
       ) : (
         "loading"

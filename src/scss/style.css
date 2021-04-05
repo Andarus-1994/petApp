@@ -771,8 +771,57 @@
   }
 }
 
+.spinnerProfile-1 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  top: 20px;
+  left: 10%;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+  border: 3px solid lightgray;
+  border-top-color: #312d2b;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.spinnerPets-1 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  top: 20px;
+  left: 50%;
+  right: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: 3px solid lightgray;
+  border-top-color: #312d2b;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .behindModal {
-  background-color: rgba(10, 10, 10, 0.322);
+  background-color: rgba(10, 10, 10, 0.507);
   position: fixed;
   top: 0;
   left: 0;
@@ -782,7 +831,7 @@
 }
 
 .modalPet {
-  background: linear-gradient(60deg, #e7e7e7, #e3e6e6);
+  background: linear-gradient(120deg, #dbd385, #5f8888);
   color: black;
   border-radius: 2rem;
   border: 1px solid white;
@@ -791,18 +840,19 @@
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
-  height: 450px;
+  padding: 0 10px 10px 10px;
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
   text-align: center;
+  top: 10%;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   z-index: 20;
-  -webkit-box-shadow: 0px 0px 8px 3px #292828;
-          box-shadow: 0px 0px 8px 3px #292828;
+  -webkit-box-shadow: 0px 0px 8px 3px black;
+          box-shadow: 0px 0px 8px 3px black;
   -webkit-animation: 1.5s fadeIn;
           animation: 1.5s fadeIn;
 }
@@ -824,34 +874,64 @@
 
 .modalPet h1 {
   font-family: "Roboto", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .modalPet h2 {
   font-family: "Raleway", sans-serif;
+  font-size: 1rem;
   color: #252525;
+  margin-top: 20px;
   margin-bottom: 50px;
+}
+
+.modalPet .trade {
+  color: #222222;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-animation: 0.8s enterLeft;
+          animation: 0.8s enterLeft;
+  text-align: center;
 }
 
 .modalPet .type {
   color: #222222;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  -webkit-animation: 1.5s enterLeft;
-          animation: 1.5s enterLeft;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-animation: 0.8s enterLeft;
+          animation: 0.8s enterLeft;
+  text-align: center;
 }
 
 .modalPet .source {
-  -webkit-animation: 1.5s enterRight;
-          animation: 1.5s enterRight;
+  -webkit-animation: 0.8s enterRight;
+          animation: 0.8s enterRight;
+  text-align: center;
 }
 
 .modalPet p {
-  width: 250px;
+  width: 300px;
+  text-align: left;
   margin: 0 auto;
   font-family: "Raleway", sans-serif;
-  -webkit-animation: 1.5s enterTop;
-          animation: 1.5s enterTop;
+  -webkit-animation: 1s enterTop;
+          animation: 1s enterTop;
+}
+
+.modalPet ul {
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-auto-rows: 110px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
 @-webkit-keyframes fadeIn {

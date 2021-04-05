@@ -1,7 +1,7 @@
 @import "../abstracts/fonts";
-
+@import "../mixins/loader";
 .behindModal {
-  background-color: rgba(10, 10, 10, 0.322);
+  background-color: rgba(10, 10, 10, 0.507);
   position: fixed;
   top: 0;
   left: 0;
@@ -10,22 +10,23 @@
   z-index: 10;
 }
 .modalPet {
-  background: linear-gradient(60deg, rgb(231, 231, 231), rgb(227, 230, 230));
+  background: linear-gradient(120deg, rgb(219, 211, 133), rgb(95, 136, 136));
   color: rgb(0, 0, 0);
   border-radius: 2rem;
   border: 1px solid white;
   position: fixed;
   max-width: 400px;
   min-width: fit-content;
-  height: 450px;
+  padding: 0 10px 10px 10px;
   min-height: fit-content;
   text-align: center;
+  top: 10%;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   z-index: 20;
-  box-shadow: 0px 0px 8px 3px rgb(41, 40, 40);
+  box-shadow: 0px 0px 8px 3px rgb(0, 0, 0);
   animation: 1.5s fadeIn;
   .icon {
     position: relative;
@@ -42,27 +43,53 @@
   }
   h1 {
     font-family: $Roboto;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    width: 70%;
+    margin: 0 auto;
   }
   h2 {
     font-family: $Raleway;
+    font-size: 1rem;
     color: rgb(37, 37, 37);
+    margin-top: 20px;
     margin-bottom: 50px;
+  }
+  .trade {
+    color: rgb(34, 34, 34);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    animation: 0.8s enterLeft;
+    text-align: center;
   }
   .type {
     color: rgb(34, 34, 34);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    animation: 1.5s enterLeft;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    animation: 0.8s enterLeft;
+    text-align: center;
   }
   .source {
-    animation: 1.5s enterRight;
+    animation: 0.8s enterRight;
+    text-align: center;
   }
   p {
-    width: 250px;
+    width: 300px;
+    text-align: left;
     margin: 0 auto;
     font-family: $Raleway;
-    animation: 1.5s enterTop;
+    animation: 1s enterTop;
+  }
+
+  ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-auto-rows: 110px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
   }
   @keyframes fadeIn {
     0% {
