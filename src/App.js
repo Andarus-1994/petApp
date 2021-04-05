@@ -97,7 +97,7 @@ function App() {
                       console.log(activeCard);
                     }}
                     className={[checkType(imagePet.battle_pet_type.type)]}
-                    style={{ animationDuration: 0.6 + index * 0.05 + "s" }}
+                    style={{ animationDuration: 0.6 + index * 0.12 + "s" }}
                   >
                     <div className="iconPet">
                       <img key={index} src={imagePet.icon} alt="noImg"></img>

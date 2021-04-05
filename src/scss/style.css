@@ -304,8 +304,8 @@
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(230px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   grid-column-gap: 50px;
   grid-row-gap: 100px;
   grid-auto-rows: 1fr;
@@ -326,63 +326,6 @@
   height: 100vh;
   width: 100vh;
   z-index: 0;
-}
-
-.App > .displayPets .elemental {
-  background: -webkit-gradient(linear, left bottom, left top, from(#2c0b0b), to(#921717));
-  background: linear-gradient(0deg, #2c0b0b 0%, #921717);
-  color: white;
-  border: none;
-  -webkit-box-shadow: 2px 2px 10px 3px #474747;
-          box-shadow: 2px 2px 10px 3px #474747;
-}
-
-.App > .displayPets .elemental .type {
-  margin: 0 auto;
-  font-size: 0.65rem;
-  letter-spacing: 1.5px;
-  margin-top: 40px;
-  color: #d6d0d0;
-}
-
-.App > .displayPets .undead {
-  -webkit-animation-duration: 2.2s;
-          animation-duration: 2.2s;
-  background: -webkit-gradient(linear, left bottom, left top, from(black), to(#555454));
-  background: linear-gradient(0deg, black 0%, #555454);
-  color: white;
-  border: none;
-  -webkit-box-shadow: 2px 2px 10px 3px #474747;
-          box-shadow: 2px 2px 10px 3px #474747;
-}
-
-.App > .displayPets .undead .skull {
-  position: absolute;
-  color: #525151;
-  left: 10%;
-  top: 30%;
-}
-
-.App > .displayPets .undead .skull1 {
-  position: absolute;
-  color: #525151;
-  left: 27%;
-  bottom: 15%;
-}
-
-.App > .displayPets .undead .skull2 {
-  position: absolute;
-  color: #525151;
-  right: 13%;
-  top: 30%;
-}
-
-.App > .displayPets .undead .type {
-  margin: 0 auto;
-  font-size: 0.65rem;
-  letter-spacing: 1.5px;
-  margin-top: 40px;
-  color: #d6d0d0;
 }
 
 @-webkit-keyframes glowElemental {
@@ -427,6 +370,67 @@
     -webkit-box-shadow: 0px 0px 10px 0px #99922a;
             box-shadow: 0px 0px 10px 0px #99922a;
   }
+}
+
+.App > .displayPets .elemental {
+  background: -webkit-gradient(linear, left bottom, left top, from(#2c0b0b), to(#921717));
+  background: linear-gradient(0deg, #2c0b0b 0%, #921717);
+  color: white;
+  border: none;
+  -webkit-box-shadow: 2px 2px 10px 3px #474747;
+          box-shadow: 2px 2px 10px 3px #474747;
+}
+
+.App > .displayPets .elemental .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.App > .displayPets .elemental li {
+  color: white;
+}
+
+.App > .displayPets .undead {
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(#555454));
+  background: linear-gradient(0deg, black 0%, #555454);
+  color: white;
+  border: none;
+  -webkit-box-shadow: 2px 2px 10px 3px #474747;
+          box-shadow: 2px 2px 10px 3px #474747;
+}
+
+.App > .displayPets .undead .skull {
+  position: absolute;
+  color: #525151;
+  left: 10%;
+  top: 30%;
+}
+
+.App > .displayPets .undead .skull1 {
+  position: absolute;
+  color: #525151;
+  left: 27%;
+  bottom: 15%;
+}
+
+.App > .displayPets .undead .skull2 {
+  position: absolute;
+  color: #525151;
+  right: 13%;
+  top: 30%;
+}
+
+.App > .displayPets .undead .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
 }
 
 .App > .displayPets .critter {
@@ -551,6 +555,73 @@
           clip-path: polygon(35% 39%, 49% 30%, 100% 8%, 100% 100%, 56% 84%, 37% 71%, 18% 66%, 0 67%, 9% 57%, 20% 49%);
 }
 
+.App > .displayPets .fireIcon {
+  background-image: url(".././assets/fireIcon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 20px;
+  width: 35px;
+  top: 17px;
+  right: 3%;
+  z-index: 25;
+  -webkit-transform: translate3d(20%, 50%, 0px);
+          transform: translate3d(20%, 50%, 0px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.App > .displayPets .swipe {
+  position: absolute;
+  top: 10%;
+  left: 0px;
+  width: 50px;
+  height: 40px;
+  background-color: #dadada;
+  -webkit-clip-path: polygon(0 18%, 24% 26%, 43% 30%, 55% 32%, 54% 35%, 49% 44%, 44% 46%, 40% 54%, 29% 67%, 0 81%);
+          clip-path: polygon(0 18%, 24% 26%, 43% 30%, 55% 32%, 54% 35%, 49% 44%, 44% 46%, 40% 54%, 29% 67%, 0 81%);
+}
+
+.App > .displayPets .waterDrop1 {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  width: 20px;
+  height: 20px;
+  background-color: #5d93d1;
+  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+  -webkit-transform: rotateZ(10deg);
+          transform: rotateZ(10deg);
+}
+
+.App > .displayPets .waterDrop2 {
+  position: absolute;
+  right: 30%;
+  bottom: 10%;
+  width: 20px;
+  height: 20px;
+  background-color: #5d93d1;
+  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
+}
+
+.App > .displayPets .waterDrop3 {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  width: 20px;
+  height: 20px;
+  background-color: #5d93d1;
+  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+  -webkit-transform: rotateZ(320deg);
+          transform: rotateZ(320deg);
+}
+
 .App > .displayPets li {
   position: relative;
   background-color: #f0f0f0;
@@ -571,8 +642,8 @@
   transition: 1s;
   line-height: 1.9rem;
   z-index: 10;
-  -webkit-animation: enterTop 1s;
-          animation: enterTop 1s;
+  -webkit-animation: enterTop;
+          animation: enterTop;
 }
 
 .App > .displayPets li .petName {
@@ -616,72 +687,6 @@
   font-size: 1rem;
 }
 
-.App > .displayPets li .fireIcon {
-  background-image: url(".././assets/fireIcon.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  height: 20px;
-  width: 35px;
-  top: 17px;
-  right: 3%;
-  z-index: 25;
-  -webkit-transform: translate3d(20%, 50%, 0px);
-          transform: translate3d(20%, 50%, 0px);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-.App > .displayPets li .swipe {
-  position: absolute;
-  left: 0px;
-  width: 50px;
-  height: 40px;
-  background-color: #dadada;
-  -webkit-clip-path: polygon(0 18%, 24% 26%, 43% 30%, 55% 32%, 54% 35%, 49% 44%, 44% 46%, 40% 54%, 29% 67%, 0 81%);
-          clip-path: polygon(0 18%, 24% 26%, 43% 30%, 55% 32%, 54% 35%, 49% 44%, 44% 46%, 40% 54%, 29% 67%, 0 81%);
-}
-
-.App > .displayPets li .waterDrop1 {
-  position: absolute;
-  right: 10%;
-  top: 30%;
-  width: 20px;
-  height: 20px;
-  background-color: #5d93d1;
-  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
-          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
-  -webkit-transform: rotateZ(10deg);
-          transform: rotateZ(10deg);
-}
-
-.App > .displayPets li .waterDrop2 {
-  position: absolute;
-  right: 30%;
-  bottom: 10%;
-  width: 20px;
-  height: 20px;
-  background-color: #5d93d1;
-  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
-          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
-  -webkit-transform: rotateZ(20deg);
-          transform: rotateZ(20deg);
-}
-
-.App > .displayPets li .waterDrop3 {
-  position: absolute;
-  left: 10%;
-  top: 20%;
-  width: 20px;
-  height: 20px;
-  background-color: #5d93d1;
-  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
-          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
-  -webkit-transform: rotateZ(320deg);
-          transform: rotateZ(320deg);
-}
-
 .App > .displayPets li .iconPet {
   position: relative;
   width: 100%;
@@ -706,26 +711,26 @@
 @-webkit-keyframes enterTop {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(40px);
-            transform: translateY(40px);
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes enterTop {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(40px);
-            transform: translateY(40px);
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -827,12 +832,260 @@
   left: 0;
   height: 100vh;
   width: 100%;
-  z-index: 10;
+  z-index: 25;
+}
+
+.elemental {
+  background: -webkit-gradient(linear, left bottom, left top, from(#2c0b0b), to(#921717));
+  background: linear-gradient(0deg, #2c0b0b 0%, #921717);
+  color: white;
+  border: none;
+  -webkit-box-shadow: 2px 2px 10px 3px #474747;
+          box-shadow: 2px 2px 10px 3px #474747;
+}
+
+.elemental .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.elemental li {
+  color: white;
+}
+
+.undead {
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(#555454));
+  background: linear-gradient(0deg, black 0%, #555454);
+  color: white;
+  border: none;
+  -webkit-box-shadow: 2px 2px 10px 3px #474747;
+          box-shadow: 2px 2px 10px 3px #474747;
+}
+
+.undead .skull {
+  position: absolute;
+  color: #525151;
+  left: 10%;
+  top: 30%;
+}
+
+.undead .skull1 {
+  position: absolute;
+  color: #525151;
+  left: 27%;
+  bottom: 15%;
+}
+
+.undead .skull2 {
+  position: absolute;
+  color: #525151;
+  right: 13%;
+  top: 30%;
+}
+
+.undead .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.critter {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  background: -webkit-gradient(linear, left bottom, left top, from(#643a18), to(#f5e65e));
+  background: linear-gradient(0deg, #643a18, #f5e65e);
+  border: 1px solid #4b4021;
+}
+
+.critter .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.critter .power {
+  color: #86592e;
+}
+
+.critter .frog {
+  position: absolute;
+  color: #9a9e61;
+  bottom: 10%;
+}
+
+.aquatic {
+  background: -webkit-gradient(linear, left bottom, left top, from(#1c3c94), to(#3e7dcf));
+  background: linear-gradient(0deg, #1c3c94, #3e7dcf);
+  -webkit-box-shadow: 2px 2px 8px 3px black;
+          box-shadow: 2px 2px 8px 3px black;
+  border: none;
+}
+
+.aquatic .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.aquatic .speed {
+  color: #f0f06e;
+}
+
+.magic {
+  background: -webkit-gradient(linear, left bottom, left top, from(#633b15), to(#5c062a));
+  background: linear-gradient(0deg, #633b15, #5c062a);
+  -webkit-box-shadow: 2px 2px 15px 3px black;
+          box-shadow: 2px 2px 15px 3px black;
+}
+
+.magic .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.beast {
+  background: -webkit-gradient(linear, left bottom, left top, from(#493814), to(#47430b));
+  background: linear-gradient(0deg, #493814, #47430b);
+  -webkit-box-shadow: 2px 2px 15px 3px black;
+          box-shadow: 2px 2px 15px 3px black;
+}
+
+.beast .paw {
+  color: #6e5725;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 17%;
+  right: 17%;
+}
+
+.beast .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.flying {
+  background: -webkit-gradient(linear, left bottom, left top, from(#bebe93), to(#beba79));
+  background: linear-gradient(0deg, #bebe93, #beba79);
+  -webkit-box-shadow: 2px 2px 10px 2px #a09f9f;
+          box-shadow: 2px 2px 10px 2px #a09f9f;
+  -webkit-animation: flyIn 0.8s;
+          animation: flyIn 0.8s;
+}
+
+.flying .feather {
+  color: #646446;
+  position: absolute;
+  top: 25%;
+  right: 15%;
+}
+
+.dragonkin {
+  background: -webkit-gradient(linear, left bottom, left top, from(#577950), to(#beba79));
+  background: linear-gradient(0deg, #577950, #beba79);
+  -webkit-box-shadow: 2px 2px 10px 2px #a09f9f;
+          box-shadow: 2px 2px 10px 2px #a09f9f;
+}
+
+.dragonkin .power {
+  color: #86592e;
+}
+
+.dragonkin .dragonSign1 {
+  position: absolute;
+  top: 35%;
+  right: 0%;
+  background-color: #bad6b3;
+  width: 20px;
+  height: 20px;
+  -webkit-clip-path: polygon(35% 39%, 49% 30%, 100% 8%, 100% 100%, 56% 84%, 37% 71%, 18% 66%, 0 67%, 9% 57%, 20% 49%);
+          clip-path: polygon(35% 39%, 49% 30%, 100% 8%, 100% 100%, 56% 84%, 37% 71%, 18% 66%, 0 67%, 9% 57%, 20% 49%);
+}
+
+.fireIcon {
+  background-image: url(".././assets/fireIcon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 20px;
+  width: 35px;
+  top: 17px;
+  right: 3%;
+  z-index: 25;
+  -webkit-transform: translate3d(20%, 50%, 0px);
+          transform: translate3d(20%, 50%, 0px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.swipe {
+  position: absolute;
+  top: 10%;
+  left: 0px;
+  width: 50px;
+  height: 40px;
+  background-color: #dadada;
+  -webkit-clip-path: polygon(0 18%, 24% 26%, 43% 30%, 55% 32%, 54% 35%, 49% 44%, 44% 46%, 40% 54%, 29% 67%, 0 81%);
+          clip-path: polygon(0 18%, 24% 26%, 43% 30%, 55% 32%, 54% 35%, 49% 44%, 44% 46%, 40% 54%, 29% 67%, 0 81%);
+}
+
+.waterDrop1 {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  width: 20px;
+  height: 20px;
+  background-color: #5d93d1;
+  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+  -webkit-transform: rotateZ(10deg);
+          transform: rotateZ(10deg);
+}
+
+.waterDrop2 {
+  position: absolute;
+  right: 30%;
+  bottom: 10%;
+  width: 20px;
+  height: 20px;
+  background-color: #5d93d1;
+  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
+}
+
+.waterDrop3 {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  width: 20px;
+  height: 20px;
+  background-color: #5d93d1;
+  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+  -webkit-transform: rotateZ(320deg);
+          transform: rotateZ(320deg);
 }
 
 .modalPet {
-  background: linear-gradient(120deg, #dbd385, #5f8888);
-  color: black;
   border-radius: 2rem;
   border: 1px solid white;
   position: fixed;
@@ -840,17 +1093,17 @@
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
-  padding: 0 10px 10px 10px;
+  padding: 0 20px 10px 20px;
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
   text-align: center;
-  top: 10%;
+  top: 15%;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  z-index: 20;
+  z-index: 40;
   -webkit-box-shadow: 0px 0px 8px 3px black;
           box-shadow: 0px 0px 8px 3px black;
   -webkit-animation: 1.5s fadeIn;
@@ -859,13 +1112,13 @@
 
 .modalPet .icon {
   position: relative;
-  height: 50px;
+  height: 40px;
   width: 100%;
 }
 
 .modalPet .icon img {
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -882,13 +1135,11 @@
 .modalPet h2 {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
-  color: #252525;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .modalPet .trade {
-  color: #222222;
   margin-top: 10px;
   margin-bottom: 10px;
   -webkit-animation: 0.8s enterLeft;
@@ -897,7 +1148,6 @@
 }
 
 .modalPet .type {
-  color: #222222;
   margin-top: 10px;
   margin-bottom: 10px;
   -webkit-animation: 0.8s enterLeft;
@@ -912,15 +1162,18 @@
 }
 
 .modalPet p {
+  position: relative;
   width: 300px;
-  text-align: left;
+  text-align: justify;
   margin: 0 auto;
   font-family: "Raleway", sans-serif;
   -webkit-animation: 1s enterTop;
           animation: 1s enterTop;
+  z-index: 10;
 }
 
 .modalPet ul {
+  position: relative;
   list-style-type: none;
   display: -ms-grid;
   display: grid;
@@ -932,23 +1185,32 @@
   width: 100%;
   margin: 0 auto;
   margin-top: 15px;
+  z-index: 10;
 }
 
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
+    -webkit-transform: translate(-40px, 240px) rotate(-5deg);
+            transform: translate(-40px, 240px) rotate(-5deg);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
   }
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
+    -webkit-transform: translate(-40px, 240px) rotate(-5deg);
+            transform: translate(-40px, 240px) rotate(-5deg);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
   }
 }
 

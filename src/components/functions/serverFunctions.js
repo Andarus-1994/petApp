@@ -282,6 +282,6 @@ export const petAbility = async (ability) => {
     })
 
     .catch((error) => {
-      return error;
+      return { error: error };
     });
 };
