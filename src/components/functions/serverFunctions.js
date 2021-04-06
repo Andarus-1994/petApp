@@ -133,7 +133,9 @@ export const auth = async (character) => {
   const token = localStorage.getItem("token");
   return await axios
     .get(
-      "https://eu.api.blizzard.com/profile/wow/character/" +
+      "https://" +
+        character.region.toLowerCase() +
+        ".api.blizzard.com/profile/wow/character/" +
         character.server +
         "/" +
         character.char.toLowerCase() +

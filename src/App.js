@@ -13,6 +13,8 @@ import {
   faPaw,
   faFeatherAlt,
   faFrog,
+  faCogs,
+  faCog,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   auth,
@@ -90,6 +92,7 @@ function App() {
               (imagePet, index) =>
                 imagePet.id === pet.species.id && (
                   <li
+                    key={index}
                     onClick={() => {
                       setActiveCard(pet.id);
                       setShowModal(true);
@@ -175,6 +178,14 @@ function App() {
                     ) : (
                       ""
                     )}
+                    {imagePet.battle_pet_type.type === "MECHANICAL" ? (
+                      <div>
+                        <FontAwesomeIcon className="cogs" icon={faCogs} />
+                        <FontAwesomeIcon className="cog" icon={faCog} />
+                      </div>
+                    ) : (
+                      ""
+                    )}
                     {imagePet.battle_pet_type.type === "AQUATIC" ? (
                       <div>
                         <div className="waterDrop1"></div>
@@ -224,6 +235,9 @@ function App() {
     if (type.toLowerCase() === "flying") {
       return "flying";
     }
+    if (type.toLowerCase() === "mechanical") {
+      return "mechanical";
+    }
   }
 
   function getPetDetails(pet, page) {
@@ -266,6 +280,7 @@ function App() {
         if (pets.pets.length > 0 && img.length === 0)
           getPetDetails(pets.pets, 0);
       }
+      if (pets.errors) setLoadProfile(false);
 
       if (search && !searchError) {
         console.log(pageNumber);

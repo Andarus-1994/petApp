@@ -245,6 +245,20 @@
   background-color: none;
 }
 
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .App {
   position: relative;
 }
@@ -268,7 +282,7 @@
   font-size: 1.5rem;
   color: black;
   position: absolute;
-  width: 250px;
+  min-width: 350px;
   top: 90px;
   left: -40px;
 }
@@ -301,6 +315,7 @@
 }
 
 .App > .displayPets {
+  position: relative;
   list-style-type: none;
   display: -ms-grid;
   display: grid;
@@ -312,13 +327,6 @@
   min-height: 350px;
   width: 80%;
   margin: 0 auto;
-}
-
-.App > .displayPets .selected {
-  background-color: aqua;
-  -webkit-transform: scale3d(1.3, 1.3, 1.3);
-          transform: scale3d(1.3, 1.3, 1.3);
-  color: #0f0505;
 }
 
 .App > .displayPets .zoomOutPet {
@@ -482,6 +490,7 @@
 .App > .displayPets .magic {
   background: -webkit-gradient(linear, left bottom, left top, from(#633b15), to(#5c062a));
   background: linear-gradient(0deg, #633b15, #5c062a);
+  color: white;
   -webkit-box-shadow: 2px 2px 15px 3px black;
           box-shadow: 2px 2px 15px 3px black;
 }
@@ -499,6 +508,7 @@
   background: linear-gradient(0deg, #493814, #47430b);
   -webkit-box-shadow: 2px 2px 15px 3px black;
           box-shadow: 2px 2px 15px 3px black;
+  color: #d6d2d2;
 }
 
 .App > .displayPets .beast .paw {
@@ -514,7 +524,7 @@
   font-size: 0.65rem;
   letter-spacing: 1.5px;
   margin-top: 40px;
-  color: #d6d0d0;
+  color: #aaa8a8;
 }
 
 .App > .displayPets .flying {
@@ -533,6 +543,48 @@
   right: 15%;
 }
 
+.App > .displayPets .flying .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #2c2b2b;
+}
+
+.App > .displayPets .mechanical {
+  background: linear-gradient(60deg, #757573, #cecece);
+  -webkit-box-shadow: 2px 2px 10px 2px #383737;
+          box-shadow: 2px 2px 10px 2px #383737;
+  -webkit-animation: flyIn 0.8s;
+          animation: flyIn 0.8s;
+}
+
+.App > .displayPets .mechanical .cogs {
+  color: #252523;
+  position: absolute;
+  font-size: 2rem;
+  bottom: 12%;
+  right: 10%;
+}
+
+.App > .displayPets .mechanical .cog {
+  color: #252523;
+  position: absolute;
+  font-size: 1.5rem;
+  top: 20%;
+  left: 10%;
+  -webkit-animation: spinner 3.5s linear infinite;
+          animation: spinner 3.5s linear infinite;
+}
+
+.App > .displayPets .mechanical .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #2e2d2d;
+}
+
 .App > .displayPets .dragonkin {
   background: -webkit-gradient(linear, left bottom, left top, from(#577950), to(#beba79));
   background: linear-gradient(0deg, #577950, #beba79);
@@ -542,6 +594,14 @@
 
 .App > .displayPets .dragonkin .power {
   color: #86592e;
+}
+
+.App > .displayPets .dragonkin .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #2e2d2d;
 }
 
 .App > .displayPets .dragonkin .dragonSign1 {
@@ -796,10 +856,10 @@
 .spinnerPets-1 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  position: relative;
+  position: absolute;
   top: 20px;
-  left: 50%;
-  right: 50%;
+  left: 0;
+  right: 0;
   width: 60px;
   height: 60px;
   margin-left: auto;
@@ -811,7 +871,7 @@
           animation: spinner 0.7s linear infinite;
 }
 
-@-webkit-keyframes spinner {
+@keyframes spinner {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -945,6 +1005,7 @@
 .magic {
   background: -webkit-gradient(linear, left bottom, left top, from(#633b15), to(#5c062a));
   background: linear-gradient(0deg, #633b15, #5c062a);
+  color: white;
   -webkit-box-shadow: 2px 2px 15px 3px black;
           box-shadow: 2px 2px 15px 3px black;
 }
@@ -962,6 +1023,7 @@
   background: linear-gradient(0deg, #493814, #47430b);
   -webkit-box-shadow: 2px 2px 15px 3px black;
           box-shadow: 2px 2px 15px 3px black;
+  color: #d6d2d2;
 }
 
 .beast .paw {
@@ -977,7 +1039,7 @@
   font-size: 0.65rem;
   letter-spacing: 1.5px;
   margin-top: 40px;
-  color: #d6d0d0;
+  color: #aaa8a8;
 }
 
 .flying {
@@ -996,6 +1058,48 @@
   right: 15%;
 }
 
+.flying .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #2c2b2b;
+}
+
+.mechanical {
+  background: linear-gradient(60deg, #757573, #cecece);
+  -webkit-box-shadow: 2px 2px 10px 2px #383737;
+          box-shadow: 2px 2px 10px 2px #383737;
+  -webkit-animation: flyIn 0.8s;
+          animation: flyIn 0.8s;
+}
+
+.mechanical .cogs {
+  color: #252523;
+  position: absolute;
+  font-size: 2rem;
+  bottom: 12%;
+  right: 10%;
+}
+
+.mechanical .cog {
+  color: #252523;
+  position: absolute;
+  font-size: 1.5rem;
+  top: 20%;
+  left: 10%;
+  -webkit-animation: spinner 3.5s linear infinite;
+          animation: spinner 3.5s linear infinite;
+}
+
+.mechanical .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #2e2d2d;
+}
+
 .dragonkin {
   background: -webkit-gradient(linear, left bottom, left top, from(#577950), to(#beba79));
   background: linear-gradient(0deg, #577950, #beba79);
@@ -1005,6 +1109,14 @@
 
 .dragonkin .power {
   color: #86592e;
+}
+
+.dragonkin .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #2e2d2d;
 }
 
 .dragonkin .dragonSign1 {
@@ -1086,14 +1198,14 @@
 }
 
 .modalPet {
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   border: 1px solid white;
   position: fixed;
-  max-width: 400px;
+  max-width: 450px;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
-  padding: 0 20px 10px 20px;
+  padding: 0 30px 10px 30px;
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
@@ -1106,8 +1218,8 @@
   z-index: 40;
   -webkit-box-shadow: 0px 0px 8px 3px black;
           box-shadow: 0px 0px 8px 3px black;
-  -webkit-animation: 1.5s fadeIn;
-          animation: 1.5s fadeIn;
+  -webkit-animation: 1s fadeIn cubic-bezier(0.075, 0.12, 0.165, 0.8);
+          animation: 1s fadeIn cubic-bezier(0.075, 0.12, 0.165, 0.8);
 }
 
 .modalPet .icon {
@@ -1164,8 +1276,11 @@
 .modalPet p {
   position: relative;
   width: 300px;
-  text-align: justify;
+  text-align: left;
+  letter-spacing: 2px;
+  line-height: 17px;
   margin: 0 auto;
+  font-size: 0.75rem;
   font-family: "Raleway", sans-serif;
   -webkit-animation: 1s enterTop;
           animation: 1s enterTop;
@@ -1183,9 +1298,37 @@
   grid-row-gap: 10px;
   grid-auto-rows: 110px;
   width: 100%;
+  min-height: 200px;
   margin: 0 auto;
   margin-top: 15px;
   z-index: 10;
+}
+
+.modalPet .loadingAbilities {
+  position: absolute;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  top: 50%;
+  bottom: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @-webkit-keyframes fadeIn {

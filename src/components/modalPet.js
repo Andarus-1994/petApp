@@ -12,24 +12,23 @@ import {
   faPaw,
   faFeatherAlt,
   faFrog,
+  faCog,
+  faCogs,
 } from "@fortawesome/free-solid-svg-icons";
 
 function ModalPet({ pet, closeModal }) {
   const [petAbilities, setPetAbilities] = useState([]);
   const [loadAbilities, setLoadAbilities] = useState(true);
-  console.log(pet);
+
   useEffect(() => {
     if (petAbilities.length < 6) {
-      console.log("intra");
-
       petAbility(pet.abilities[petAbilities.length]).then((resp) => {
         if (!resp.error)
           setPetAbilities([...petAbilities, resp.assets[0].value]);
       });
       if (petAbilities.length === 5) setLoadAbilities(false);
     }
-    console.log(petAbilities);
-  }, [petAbilities]);
+  }, [petAbilities, pet]);
 
   function checkType(type) {
     if (type.toLowerCase() === "elemental") {
@@ -56,6 +55,9 @@ function ModalPet({ pet, closeModal }) {
     if (type.toLowerCase() === "flying") {
       return "flying";
     }
+    if (type.toLowerCase() === "mechanical") {
+      return "mechanical";
+    }
   }
 
   return (
@@ -63,20 +65,22 @@ function ModalPet({ pet, closeModal }) {
       <div className="behindModal" onClick={closeModal}></div>
       <div className={"modalPet " + checkType(pet.battle_pet_type.name)}>
         <div className="icon">
-          <img src={pet.icon}></img>
+          <img src={pet.icon} alt="NoIcon"></img>
         </div>
         <h1>{pet.creature.name}</h1>
         <h2> {pet.battle_pet_type.name}</h2>
         <p>"{pet.description}"</p>
         <ul>
-          {!loadAbilities
-            ? petAbilities.map((ability, index) => (
-                <li key={index}>
-                  <img src={ability}></img>
-                  <h2>{pet.abilities[index].ability.name}</h2>
-                </li>
-              ))
-            : ""}
+          {!loadAbilities ? (
+            petAbilities.map((ability, index) => (
+              <li key={index}>
+                <img src={ability}></img>
+                <h2>{pet.abilities[index].ability.name}</h2>
+              </li>
+            ))
+          ) : (
+            <div className="loadingAbilities"></div>
+          )}
         </ul>
         <p className="trade">{pet.is_tradable ? "Tradable" : "Non-tradable"}</p>
         <p className="type">{pet.source.type}</p>
@@ -90,6 +94,14 @@ function ModalPet({ pet, closeModal }) {
             />
             <FontAwesomeIcon className="skull1" icon={faSkull} />
             <FontAwesomeIcon className="skull2" icon={faSkull} />
+          </div>
+        ) : (
+          ""
+        )}
+        {pet.battle_pet_type.type === "MECHANICAL" ? (
+          <div>
+            <FontAwesomeIcon className="cogs" icon={faCogs} />
+            <FontAwesomeIcon className="cog" icon={faCog} />
           </div>
         ) : (
           ""

@@ -88,7 +88,7 @@
 
   .magic {
     background: linear-gradient(0deg, rgb(99, 59, 21), rgb(92, 6, 42));
-
+    color: white;
     box-shadow: 2px 2px 15px 3px black;
     .type {
       margin: 0 auto;
@@ -102,6 +102,7 @@
   .beast {
     background: linear-gradient(0deg, rgb(73, 56, 20), rgb(71, 67, 11));
     box-shadow: 2px 2px 15px 3px black;
+    color: rgb(214, 210, 210);
     .paw {
       color: rgb(110, 87, 37);
       font-size: 2rem;
@@ -114,7 +115,7 @@
       font-size: 0.65rem;
       letter-spacing: 1.5px;
       margin-top: 40px;
-      color: rgb(214, 208, 208);
+      color: rgb(170, 168, 168);
     }
   }
 
@@ -128,6 +129,40 @@
       top: 25%;
       right: 15%;
     }
+    .type {
+      margin: 0 auto;
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      margin-top: 40px;
+      color: rgb(44, 43, 43);
+    }
+  }
+  .mechanical {
+    background: linear-gradient(60deg, rgb(117, 117, 115), rgb(206, 206, 206));
+    box-shadow: 2px 2px 10px 2px rgb(56, 55, 55);
+    animation: flyIn 0.8s;
+    .cogs {
+      color: rgb(37, 37, 35);
+      position: absolute;
+      font-size: 2rem;
+      bottom: 12%;
+      right: 10%;
+    }
+    .cog {
+      color: rgb(37, 37, 35);
+      position: absolute;
+      font-size: 1.5rem;
+      top: 20%;
+      left: 10%;
+      animation: spinner 3.5s linear infinite;
+    }
+    .type {
+      margin: 0 auto;
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      margin-top: 40px;
+      color: rgb(46, 45, 45);
+    }
   }
 
   .dragonkin {
@@ -137,6 +172,15 @@
     .power {
       color: rgb(134, 89, 46);
     }
+
+    .type {
+      margin: 0 auto;
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      margin-top: 40px;
+      color: rgb(46, 45, 45);
+    }
+
     .dragonSign1 {
       position: absolute;
       top: 35%;
@@ -256,5 +300,11 @@
       34% 19%
     );
     transform: rotateZ(320deg);
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
   }
 }

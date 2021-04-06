@@ -13,12 +13,12 @@
 @include petTypes;
 
 .modalPet {
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   border: 1px solid white;
   position: fixed;
-  max-width: 400px;
+  max-width: 450px;
   min-width: fit-content;
-  padding: 0 20px 10px 20px;
+  padding: 0 30px 10px 30px;
   min-height: fit-content;
   text-align: center;
   top: 15%;
@@ -28,7 +28,7 @@
   margin-right: auto;
   z-index: 40;
   box-shadow: 0px 0px 8px 3px rgb(0, 0, 0);
-  animation: 1.5s fadeIn;
+  animation: 1s fadeIn cubic-bezier(0.075, 0.12, 0.165, 0.8);
   .icon {
     position: relative;
     height: 40px;
@@ -74,8 +74,11 @@
   p {
     position: relative;
     width: 300px;
-    text-align: justify;
+    text-align: left;
+    letter-spacing: 2px;
+    line-height: 17px;
     margin: 0 auto;
+    font-size: 0.75rem;
     font-family: $Raleway;
     animation: 1s enterTop;
     z-index: 10;
@@ -90,9 +93,36 @@
     grid-row-gap: 10px;
     grid-auto-rows: 110px;
     width: 100%;
+    min-height: 200px;
     margin: 0 auto;
     margin-top: 15px;
     z-index: 10;
+  }
+
+  .loadingAbilities {
+    position: absolute;
+
+    border: 3px solid rgb(165, 28, 28);
+    border-top: 1px solid rgb(226, 224, 224);
+    border-right: 0px;
+    border-radius: 50%;
+    top: 50%;
+    bottom: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40px;
+    height: 40px;
+    animation: spinner 0.7s linear infinite;
+  }
+
+  @keyframes spinner {
+    to {
+      transform: rotate(360deg);
+    }
   }
   @keyframes fadeIn {
     0% {
