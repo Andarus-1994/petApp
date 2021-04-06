@@ -146,7 +146,7 @@
   @keyframes enterTop {
     0% {
       opacity: 0;
-      transform: translateY(-500px);
+      transform: translateY(200px);
     }
     100% {
       opacity: 1;
@@ -159,10 +159,10 @@
       transform: translate(40px, 80px);
     }
     50% {
-      transform: translate(-20px, 40px);
+      transform: translate(-50px, 20px);
     }
     75% {
-      transform: translate(8px, 20px);
+      transform: translate(0px, 0px);
     }
 
     100% {

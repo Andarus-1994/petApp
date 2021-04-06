@@ -259,6 +259,42 @@
   }
 }
 
+@-webkit-keyframes skullColorChange {
+  0% {
+    color: #525151;
+  }
+  100% {
+    color: #a09e9e;
+  }
+}
+
+@keyframes skullColorChange {
+  0% {
+    color: #525151;
+  }
+  100% {
+    color: #a09e9e;
+  }
+}
+
+@-webkit-keyframes magicalColors {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #e0d476;
+  }
+}
+
+@keyframes magicalColors {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #e0d476;
+  }
+}
+
 .App {
   position: relative;
 }
@@ -381,12 +417,11 @@
 }
 
 .App > .displayPets .elemental {
-  background: -webkit-gradient(linear, left bottom, left top, from(#2c0b0b), to(#921717));
-  background: linear-gradient(0deg, #2c0b0b 0%, #921717);
+  background: linear-gradient(150deg, #921717 20%, #380505 50%, #921717);
   color: white;
-  border: none;
-  -webkit-box-shadow: 2px 2px 10px 3px #474747;
-          box-shadow: 2px 2px 10px 3px #474747;
+  border: 1px solid #dfd9d9;
+  -webkit-box-shadow: 0px 0px 10px 5px #666565;
+          box-shadow: 0px 0px 10px 5px #666565;
 }
 
 .App > .displayPets .elemental .type {
@@ -397,6 +432,18 @@
   color: #d6d0d0;
 }
 
+.App > .displayPets .elemental .health {
+  color: red;
+}
+
+.App > .displayPets .elemental .speed {
+  color: yellow;
+}
+
+.App > .displayPets .elemental .power {
+  color: orange;
+}
+
 .App > .displayPets .elemental li {
   color: white;
 }
@@ -404,10 +451,9 @@
 .App > .displayPets .undead {
   -webkit-animation-duration: 2.2s;
           animation-duration: 2.2s;
-  background: -webkit-gradient(linear, left bottom, left top, from(black), to(#555454));
-  background: linear-gradient(0deg, black 0%, #555454);
+  background: linear-gradient(20deg, #272323, black 0%, #444242, black);
   color: white;
-  border: none;
+  border: 1px solid silver;
   -webkit-box-shadow: 2px 2px 10px 3px #474747;
           box-shadow: 2px 2px 10px 3px #474747;
 }
@@ -417,6 +463,9 @@
   color: #525151;
   left: 10%;
   top: 30%;
+  -webkit-transform: rotateZ(-10deg);
+          transform: rotateZ(-10deg);
+  animation: skullColorChange 2s alternate-reverse infinite;
 }
 
 .App > .displayPets .undead .skull1 {
@@ -424,6 +473,9 @@
   color: #525151;
   left: 27%;
   bottom: 15%;
+  -webkit-transform: rotateZ(-5deg);
+          transform: rotateZ(-5deg);
+  animation: skullColorChange 1s alternate-reverse infinite;
 }
 
 .App > .displayPets .undead .skull2 {
@@ -431,6 +483,9 @@
   color: #525151;
   right: 13%;
   top: 30%;
+  -webkit-transform: rotateZ(10deg);
+          transform: rotateZ(10deg);
+  animation: skullColorChange 4s alternate-reverse infinite;
 }
 
 .App > .displayPets .undead .type {
@@ -444,9 +499,9 @@
 .App > .displayPets .critter {
   -webkit-animation-duration: 1.2s;
           animation-duration: 1.2s;
-  background: -webkit-gradient(linear, left bottom, left top, from(#643a18), to(#f5e65e));
-  background: linear-gradient(0deg, #643a18, #f5e65e);
-  border: 1px solid #4b4021;
+  background: linear-gradient(10deg, #643a18, #f5e65e);
+  border: 1px solid #b4a270;
+  color: #1f1e1e;
 }
 
 .App > .displayPets .critter .type {
@@ -458,12 +513,17 @@
 }
 
 .App > .displayPets .critter .power {
-  color: #86592e;
+  color: #724318;
+}
+
+.App > .displayPets .critter .speed {
+  color: #f0f016;
 }
 
 .App > .displayPets .critter .frog {
   position: absolute;
-  color: #9a9e61;
+  color: #abaf73;
+  left: 20%;
   bottom: 10%;
 }
 
@@ -488,11 +548,12 @@
 }
 
 .App > .displayPets .magic {
-  background: -webkit-gradient(linear, left bottom, left top, from(#633b15), to(#5c062a));
-  background: linear-gradient(0deg, #633b15, #5c062a);
-  color: white;
-  -webkit-box-shadow: 2px 2px 15px 3px black;
-          box-shadow: 2px 2px 15px 3px black;
+  background: linear-gradient(30deg, #155363, #5c062a);
+  color: #e0d476;
+  border: 1px solid #5dcc8c;
+  -webkit-box-shadow: 2px 2px 15px 3px #2d6a72;
+          box-shadow: 2px 2px 15px 3px #2d6a72;
+  animation: magicalColors 4s infinite alternate-reverse;
 }
 
 .App > .displayPets .magic .type {
@@ -532,8 +593,8 @@
   background: linear-gradient(0deg, #bebe93, #beba79);
   -webkit-box-shadow: 2px 2px 10px 2px #a09f9f;
           box-shadow: 2px 2px 10px 2px #a09f9f;
-  -webkit-animation: flyIn 0.8s;
-          animation: flyIn 0.8s;
+  -webkit-animation: flyIn ease-in 0.6s;
+          animation: flyIn ease-in 0.6s;
 }
 
 .App > .displayPets .flying .feather {
@@ -555,8 +616,6 @@
   background: linear-gradient(60deg, #757573, #cecece);
   -webkit-box-shadow: 2px 2px 10px 2px #383737;
           box-shadow: 2px 2px 10px 2px #383737;
-  -webkit-animation: flyIn 0.8s;
-          animation: flyIn 0.8s;
 }
 
 .App > .displayPets .mechanical .cogs {
@@ -771,8 +830,8 @@
 @-webkit-keyframes enterTop {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
   }
   100% {
     opacity: 1;
@@ -784,8 +843,8 @@
 @keyframes enterTop {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
   }
   100% {
     opacity: 1;
@@ -801,12 +860,12 @@
             transform: translate(40px, 80px);
   }
   50% {
-    -webkit-transform: translate(-20px, 40px);
-            transform: translate(-20px, 40px);
+    -webkit-transform: translate(-50px, 20px);
+            transform: translate(-50px, 20px);
   }
   75% {
-    -webkit-transform: translate(8px, 20px);
-            transform: translate(8px, 20px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
   100% {
     opacity: 1;
@@ -822,12 +881,12 @@
             transform: translate(40px, 80px);
   }
   50% {
-    -webkit-transform: translate(-20px, 40px);
-            transform: translate(-20px, 40px);
+    -webkit-transform: translate(-50px, 20px);
+            transform: translate(-50px, 20px);
   }
   75% {
-    -webkit-transform: translate(8px, 20px);
-            transform: translate(8px, 20px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
   100% {
     opacity: 1;
@@ -885,6 +944,24 @@
   }
 }
 
+@keyframes skullColorChange {
+  0% {
+    color: #525151;
+  }
+  100% {
+    color: #a09e9e;
+  }
+}
+
+@keyframes magicalColors {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #e0d476;
+  }
+}
+
 .behindModal {
   background-color: rgba(10, 10, 10, 0.507);
   position: fixed;
@@ -896,12 +973,11 @@
 }
 
 .elemental {
-  background: -webkit-gradient(linear, left bottom, left top, from(#2c0b0b), to(#921717));
-  background: linear-gradient(0deg, #2c0b0b 0%, #921717);
+  background: linear-gradient(150deg, #921717 20%, #380505 50%, #921717);
   color: white;
-  border: none;
-  -webkit-box-shadow: 2px 2px 10px 3px #474747;
-          box-shadow: 2px 2px 10px 3px #474747;
+  border: 1px solid #dfd9d9;
+  -webkit-box-shadow: 0px 0px 10px 5px #666565;
+          box-shadow: 0px 0px 10px 5px #666565;
 }
 
 .elemental .type {
@@ -912,6 +988,18 @@
   color: #d6d0d0;
 }
 
+.elemental .health {
+  color: red;
+}
+
+.elemental .speed {
+  color: yellow;
+}
+
+.elemental .power {
+  color: orange;
+}
+
 .elemental li {
   color: white;
 }
@@ -919,10 +1007,9 @@
 .undead {
   -webkit-animation-duration: 2.2s;
           animation-duration: 2.2s;
-  background: -webkit-gradient(linear, left bottom, left top, from(black), to(#555454));
-  background: linear-gradient(0deg, black 0%, #555454);
+  background: linear-gradient(20deg, #272323, black 0%, #444242, black);
   color: white;
-  border: none;
+  border: 1px solid silver;
   -webkit-box-shadow: 2px 2px 10px 3px #474747;
           box-shadow: 2px 2px 10px 3px #474747;
 }
@@ -932,6 +1019,9 @@
   color: #525151;
   left: 10%;
   top: 30%;
+  -webkit-transform: rotateZ(-10deg);
+          transform: rotateZ(-10deg);
+  animation: skullColorChange 2s alternate-reverse infinite;
 }
 
 .undead .skull1 {
@@ -939,6 +1029,9 @@
   color: #525151;
   left: 27%;
   bottom: 15%;
+  -webkit-transform: rotateZ(-5deg);
+          transform: rotateZ(-5deg);
+  animation: skullColorChange 1s alternate-reverse infinite;
 }
 
 .undead .skull2 {
@@ -946,6 +1039,9 @@
   color: #525151;
   right: 13%;
   top: 30%;
+  -webkit-transform: rotateZ(10deg);
+          transform: rotateZ(10deg);
+  animation: skullColorChange 4s alternate-reverse infinite;
 }
 
 .undead .type {
@@ -959,9 +1055,9 @@
 .critter {
   -webkit-animation-duration: 1.2s;
           animation-duration: 1.2s;
-  background: -webkit-gradient(linear, left bottom, left top, from(#643a18), to(#f5e65e));
-  background: linear-gradient(0deg, #643a18, #f5e65e);
-  border: 1px solid #4b4021;
+  background: linear-gradient(10deg, #643a18, #f5e65e);
+  border: 1px solid #b4a270;
+  color: #1f1e1e;
 }
 
 .critter .type {
@@ -973,12 +1069,17 @@
 }
 
 .critter .power {
-  color: #86592e;
+  color: #724318;
+}
+
+.critter .speed {
+  color: #f0f016;
 }
 
 .critter .frog {
   position: absolute;
-  color: #9a9e61;
+  color: #abaf73;
+  left: 20%;
   bottom: 10%;
 }
 
@@ -1003,11 +1104,12 @@
 }
 
 .magic {
-  background: -webkit-gradient(linear, left bottom, left top, from(#633b15), to(#5c062a));
-  background: linear-gradient(0deg, #633b15, #5c062a);
-  color: white;
-  -webkit-box-shadow: 2px 2px 15px 3px black;
-          box-shadow: 2px 2px 15px 3px black;
+  background: linear-gradient(30deg, #155363, #5c062a);
+  color: #e0d476;
+  border: 1px solid #5dcc8c;
+  -webkit-box-shadow: 2px 2px 15px 3px #2d6a72;
+          box-shadow: 2px 2px 15px 3px #2d6a72;
+  animation: magicalColors 4s infinite alternate-reverse;
 }
 
 .magic .type {
@@ -1047,8 +1149,8 @@
   background: linear-gradient(0deg, #bebe93, #beba79);
   -webkit-box-shadow: 2px 2px 10px 2px #a09f9f;
           box-shadow: 2px 2px 10px 2px #a09f9f;
-  -webkit-animation: flyIn 0.8s;
-          animation: flyIn 0.8s;
+  -webkit-animation: flyIn ease-in 0.6s;
+          animation: flyIn ease-in 0.6s;
 }
 
 .flying .feather {
@@ -1070,8 +1172,6 @@
   background: linear-gradient(60deg, #757573, #cecece);
   -webkit-box-shadow: 2px 2px 10px 2px #383737;
           box-shadow: 2px 2px 10px 2px #383737;
-  -webkit-animation: flyIn 0.8s;
-          animation: flyIn 0.8s;
 }
 
 .mechanical .cogs {
