@@ -299,6 +299,28 @@
   position: relative;
 }
 
+.App .rememberChar {
+  cursor: pointer;
+  background-color: #c03737;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  padding: 10px 14px;
+  top: 220px;
+  left: 8%;
+  z-index: 5;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.App .rememberChar:hover {
+  background-color: #912222;
+}
+
+.App .rememberChar:active {
+  top: 215px;
+}
+
 .App .profile {
   position: absolute;
   top: 60px;
@@ -308,6 +330,19 @@
 .App .profile img {
   position: relative;
   border-radius: 0.5rem;
+}
+
+.App .profile:hover .hoverProfile {
+  opacity: 1;
+}
+
+.App .profile .hoverProfile {
+  position: absolute;
+  left: 100px;
+  top: -20px;
+  opacity: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .App .profile div {
@@ -355,8 +390,9 @@
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(240px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  -ms-grid-columns: (minmax(min-content, 250px))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(-webkit-min-content, 250px));
+      grid-template-columns: repeat(auto-fill, minmax(min-content, 250px));
   grid-column-gap: 50px;
   grid-row-gap: 100px;
   grid-auto-rows: 1fr;
@@ -424,6 +460,10 @@
           box-shadow: 0px 0px 10px 5px #666565;
 }
 
+.App > .displayPets .elemental .blue {
+  color: #5387d6;
+}
+
 .App > .displayPets .elemental .type {
   margin: 0 auto;
   font-size: 0.65rem;
@@ -456,6 +496,14 @@
   border: 1px solid silver;
   -webkit-box-shadow: 2px 2px 10px 3px #474747;
           box-shadow: 2px 2px 10px 3px #474747;
+}
+
+.App > .displayPets .undead .blue {
+  color: #2a6080;
+}
+
+.App > .displayPets .undead .blue::first-letter {
+  text-transform: uppercase;
 }
 
 .App > .displayPets .undead .skull {
@@ -501,7 +549,17 @@
           animation-duration: 1.2s;
   background: linear-gradient(10deg, #643a18, #f5e65e);
   border: 1px solid #b4a270;
+  -webkit-box-shadow: 6px 8px 8px 1px #967722;
+          box-shadow: 6px 8px 8px 1px #967722;
   color: #1f1e1e;
+}
+
+.App > .displayPets .critter .grey {
+  color: #616060;
+}
+
+.App > .displayPets .critter .green {
+  color: green;
 }
 
 .App > .displayPets .critter .type {
@@ -533,6 +591,11 @@
   -webkit-box-shadow: 2px 2px 8px 3px black;
           box-shadow: 2px 2px 8px 3px black;
   border: none;
+  color: #e2e1e1;
+}
+
+.App > .displayPets .aquatic .blue {
+  color: #142444;
 }
 
 .App > .displayPets .aquatic .type {
@@ -547,6 +610,37 @@
   color: #f0f06e;
 }
 
+.App > .displayPets .humanoid {
+  background: -webkit-gradient(linear, left bottom, left top, from(#66634a), to(#928933));
+  background: linear-gradient(0deg, #66634a, #928933);
+  -webkit-box-shadow: 2px 2px 8px 3px black;
+          box-shadow: 2px 2px 8px 3px black;
+  border: none;
+  color: #d1d0d0;
+}
+
+.App > .displayPets .humanoid .mask {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  color: #f1f1f1;
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
+}
+
+.App > .displayPets .humanoid .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.App > .displayPets .humanoid .speed {
+  color: #f0f06e;
+}
+
 .App > .displayPets .magic {
   background: linear-gradient(30deg, #155363, #5c062a);
   color: #e0d476;
@@ -554,6 +648,10 @@
   -webkit-box-shadow: 2px 2px 15px 3px #2d6a72;
           box-shadow: 2px 2px 15px 3px #2d6a72;
   animation: magicalColors 4s infinite alternate-reverse;
+}
+
+.App > .displayPets .magic .blue {
+  color: #2d8399;
 }
 
 .App > .displayPets .magic .type {
@@ -595,6 +693,14 @@
           box-shadow: 2px 2px 10px 2px #a09f9f;
   -webkit-animation: flyIn ease-in 0.6s;
           animation: flyIn ease-in 0.6s;
+}
+
+.App > .displayPets .flying .green {
+  color: #046904;
+}
+
+.App > .displayPets .flying .grey {
+  color: #525050;
 }
 
 .App > .displayPets .flying .feather {
@@ -661,6 +767,38 @@
   letter-spacing: 1.5px;
   margin-top: 40px;
   color: #2e2d2d;
+}
+
+.App > .displayPets .dragonkin .blue {
+  color: #1c1c81;
+}
+
+.App > .displayPets .dragonkin .blue::first-letter {
+  text-transform: uppercase;
+}
+
+.App > .displayPets .dragonkin .green {
+  color: #5d8b31;
+}
+
+.App > .displayPets .dragonkin .green::first-letter {
+  text-transform: uppercase;
+}
+
+.App > .displayPets .dragonkin .white {
+  color: #e7ecdc;
+}
+
+.App > .displayPets .dragonkin .white::first-letter {
+  text-transform: uppercase;
+}
+
+.App > .displayPets .dragonkin .grey {
+  color: #a7a8a5;
+}
+
+.App > .displayPets .dragonkin .grey::first-letter {
+  text-transform: uppercase;
 }
 
 .App > .displayPets .dragonkin .dragonSign1 {
@@ -765,14 +903,56 @@
           animation: enterTop;
 }
 
+.App > .displayPets li .blue {
+  color: #1c1c81;
+  font-size: 0.85rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.App > .displayPets li .blue::first-letter {
+  text-transform: uppercase;
+}
+
+.App > .displayPets li .green {
+  color: #69a530;
+  font-size: 0.85rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.App > .displayPets li .green::first-letter {
+  text-transform: uppercase;
+}
+
+.App > .displayPets li .white {
+  color: #f0f1ee;
+  font-size: 0.85rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.App > .displayPets li .white::first-letter {
+  text-transform: uppercase;
+}
+
+.App > .displayPets li .grey {
+  color: #a7a8a5;
+  font-size: 0.85rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.App > .displayPets li .grey::first-letter {
+  text-transform: uppercase;
+}
+
 .App > .displayPets li .petName {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  margin-bottom: 5px;
+  line-height: 18px;
+  min-height: 33px;
+  margin-bottom: 0px;
 }
 
 .App > .displayPets li .level {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .App > .displayPets li .type {
@@ -856,42 +1036,26 @@
 @-webkit-keyframes flyIn {
   0% {
     opacity: 0;
-    -webkit-transform: translate(40px, 80px);
-            transform: translate(40px, 80px);
-  }
-  50% {
-    -webkit-transform: translate(-50px, 20px);
-            transform: translate(-50px, 20px);
-  }
-  75% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes flyIn {
   0% {
     opacity: 0;
-    -webkit-transform: translate(40px, 80px);
-            transform: translate(40px, 80px);
-  }
-  50% {
-    -webkit-transform: translate(-50px, 20px);
-            transform: translate(-50px, 20px);
-  }
-  75% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -980,6 +1144,10 @@
           box-shadow: 0px 0px 10px 5px #666565;
 }
 
+.elemental .blue {
+  color: #5387d6;
+}
+
 .elemental .type {
   margin: 0 auto;
   font-size: 0.65rem;
@@ -1012,6 +1180,14 @@
   border: 1px solid silver;
   -webkit-box-shadow: 2px 2px 10px 3px #474747;
           box-shadow: 2px 2px 10px 3px #474747;
+}
+
+.undead .blue {
+  color: #2a6080;
+}
+
+.undead .blue::first-letter {
+  text-transform: uppercase;
 }
 
 .undead .skull {
@@ -1057,7 +1233,17 @@
           animation-duration: 1.2s;
   background: linear-gradient(10deg, #643a18, #f5e65e);
   border: 1px solid #b4a270;
+  -webkit-box-shadow: 6px 8px 8px 1px #967722;
+          box-shadow: 6px 8px 8px 1px #967722;
   color: #1f1e1e;
+}
+
+.critter .grey {
+  color: #616060;
+}
+
+.critter .green {
+  color: green;
 }
 
 .critter .type {
@@ -1089,6 +1275,11 @@
   -webkit-box-shadow: 2px 2px 8px 3px black;
           box-shadow: 2px 2px 8px 3px black;
   border: none;
+  color: #e2e1e1;
+}
+
+.aquatic .blue {
+  color: #142444;
 }
 
 .aquatic .type {
@@ -1103,6 +1294,37 @@
   color: #f0f06e;
 }
 
+.humanoid {
+  background: -webkit-gradient(linear, left bottom, left top, from(#66634a), to(#928933));
+  background: linear-gradient(0deg, #66634a, #928933);
+  -webkit-box-shadow: 2px 2px 8px 3px black;
+          box-shadow: 2px 2px 8px 3px black;
+  border: none;
+  color: #d1d0d0;
+}
+
+.humanoid .mask {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  color: #f1f1f1;
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
+}
+
+.humanoid .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.humanoid .speed {
+  color: #f0f06e;
+}
+
 .magic {
   background: linear-gradient(30deg, #155363, #5c062a);
   color: #e0d476;
@@ -1110,6 +1332,10 @@
   -webkit-box-shadow: 2px 2px 15px 3px #2d6a72;
           box-shadow: 2px 2px 15px 3px #2d6a72;
   animation: magicalColors 4s infinite alternate-reverse;
+}
+
+.magic .blue {
+  color: #2d8399;
 }
 
 .magic .type {
@@ -1151,6 +1377,14 @@
           box-shadow: 2px 2px 10px 2px #a09f9f;
   -webkit-animation: flyIn ease-in 0.6s;
           animation: flyIn ease-in 0.6s;
+}
+
+.flying .green {
+  color: #046904;
+}
+
+.flying .grey {
+  color: #525050;
 }
 
 .flying .feather {
@@ -1217,6 +1451,38 @@
   letter-spacing: 1.5px;
   margin-top: 40px;
   color: #2e2d2d;
+}
+
+.dragonkin .blue {
+  color: #1c1c81;
+}
+
+.dragonkin .blue::first-letter {
+  text-transform: uppercase;
+}
+
+.dragonkin .green {
+  color: #5d8b31;
+}
+
+.dragonkin .green::first-letter {
+  text-transform: uppercase;
+}
+
+.dragonkin .white {
+  color: #e7ecdc;
+}
+
+.dragonkin .white::first-letter {
+  text-transform: uppercase;
+}
+
+.dragonkin .grey {
+  color: #a7a8a5;
+}
+
+.dragonkin .grey::first-letter {
+  text-transform: uppercase;
 }
 
 .dragonkin .dragonSign1 {

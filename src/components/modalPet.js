@@ -3,17 +3,13 @@ import { petAbility } from "./functions/serverFunctions.js";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faAngleLeft,
-  faAngleRight,
-  faHeart,
-  faBolt,
-  faMeteor,
   faSkull,
   faPaw,
   faFeatherAlt,
   faFrog,
   faCog,
   faCogs,
+  faMask,
 } from "@fortawesome/free-solid-svg-icons";
 
 function ModalPet({ pet, closeModal }) {
@@ -58,6 +54,9 @@ function ModalPet({ pet, closeModal }) {
     if (type.toLowerCase() === "mechanical") {
       return "mechanical";
     }
+    if (type.toLowerCase() === "humanoid") {
+      return "humanoid";
+    }
   }
 
   return (
@@ -74,7 +73,7 @@ function ModalPet({ pet, closeModal }) {
           {!loadAbilities ? (
             petAbilities.map((ability, index) => (
               <li key={index}>
-                <img src={ability}></img>
+                <img src={ability} alt="noIcon"></img>
                 <h2>{pet.abilities[index].ability.name}</h2>
               </li>
             ))
@@ -136,6 +135,13 @@ function ModalPet({ pet, closeModal }) {
         )}
         {pet.battle_pet_type.type === "BEAST" ? (
           <FontAwesomeIcon className="paw" icon={faPaw} />
+        ) : (
+          ""
+        )}
+        {pet.battle_pet_type.type === "HUMANOID" ? (
+          <div>
+            <FontAwesomeIcon className="mask" icon={faMask} />
+          </div>
         ) : (
           ""
         )}

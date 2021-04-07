@@ -15,6 +15,7 @@ import {
   faFrog,
   faCogs,
   faCog,
+  faMask,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   auth,
@@ -106,6 +107,9 @@ function App() {
                       <img key={index} src={imagePet.icon} alt="noImg"></img>
                     </div>
                     <div className="petName">{imagePet.name}</div>{" "}
+                    <div className={checkRarity(pet.quality.type)}>
+                      {pet.quality.type.toLowerCase()}
+                    </div>
                     <p className="level">Level {pet.level}</p>
                     <br></br>
                     <p>
@@ -186,6 +190,13 @@ function App() {
                     ) : (
                       ""
                     )}
+                    {imagePet.battle_pet_type.type === "HUMANOID" ? (
+                      <div>
+                        <FontAwesomeIcon className="mask" icon={faMask} />
+                      </div>
+                    ) : (
+                      ""
+                    )}
                     {imagePet.battle_pet_type.type === "AQUATIC" ? (
                       <div>
                         <div className="waterDrop1"></div>
@@ -209,6 +220,21 @@ function App() {
         );
       }
     });
+
+  function checkRarity(rare) {
+    if (rare.toLowerCase() === "poor") {
+      return "grey";
+    }
+    if (rare.toLowerCase() === "common") {
+      return "white";
+    }
+    if (rare.toLowerCase() === "uncommon") {
+      return "green";
+    }
+    if (rare.toLowerCase() === "rare") {
+      return "blue";
+    }
+  }
 
   function checkType(type) {
     if (type.toLowerCase() === "elemental") {
@@ -238,6 +264,14 @@ function App() {
     if (type.toLowerCase() === "mechanical") {
       return "mechanical";
     }
+    if (type.toLowerCase() === "humanoid") {
+      return "humanoid";
+    }
+  }
+
+  function favoriteCharacter(charData) {
+    console.log(charData);
+    localStorage.setItem("favChar", JSON.stringify(charData));
   }
 
   function getPetDetails(pet, page) {
@@ -249,12 +283,12 @@ function App() {
         console.log(response);
         setLoad(false);
         let nonDuplicate = response.filter(
-          (ele, ind) =>
-            ind ===
-            response.findIndex(
-              (elem) => elem.id === ele.id && elem.id === ele.id
-            )
+          (ele, ind) => ind === response.findIndex((elem) => elem.id === ele.id)
         );
+        let nonUndead = nonDuplicate.filter(
+          (ele, ind) => ele.battle_pet_type.name.toLowerCase() === "undead"
+        );
+
         setPetImg(nonDuplicate);
 
         console.log(img);
@@ -274,7 +308,9 @@ function App() {
       console.log(response);
       if (localStorage.token !== undefined) {
         if (pets.pets.length === 0 && !pets.errors && !searchError) {
-          importPets(characterData);
+          if (localStorage.favChar && find === "belfu")
+            importPets(JSON.parse(localStorage.favChar));
+          else importPets(characterData);
         }
 
         if (pets.pets.length > 0 && img.length === 0)
@@ -346,11 +382,27 @@ function App() {
         ""
       )}
       {profile ? (
-        <div className="profile">
-          <img src={profile.assets[0].value} alt="noProfileImg"></img>
-          <div>
-            {profile.character.name} - <h2>{profile.character.realm.slug}</h2>
-          </div>{" "}
+        <div>
+          <div className="profile">
+            <img src={profile.assets[0].value} alt="noProfileImg"></img>
+            <img
+              src={profile.assets[1].value}
+              alt="noProfileImg"
+              className="hoverProfile"
+            ></img>
+            <div>
+              {profile.character.name} - <h2>{profile.character.realm.slug}</h2>
+            </div>{" "}
+          </div>
+          <div
+            className="rememberChar"
+            onClick={() => {
+              favoriteCharacter(characterData);
+            }}
+          >
+            Favorite Character
+            <p className="favCharText"></p>
+          </div>
         </div>
       ) : loadProfile ? (
         <div className="spinnerProfile-1"></div>

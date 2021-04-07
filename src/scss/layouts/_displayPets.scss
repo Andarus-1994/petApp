@@ -3,6 +3,26 @@
 @import "../mixins/petTypeStyle";
 .App {
   position: relative;
+  .rememberChar {
+    cursor: pointer;
+    background-color: rgb(192, 55, 55);
+    color: white;
+    font-family: $Roboto;
+    position: absolute;
+    padding: 10px 14px;
+    top: 220px;
+    left: 8%;
+    z-index: 5;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: rgb(145, 34, 34);
+    }
+    &:active {
+      top: 215px;
+    }
+  }
+
   .profile {
     position: absolute;
     top: 60px;
@@ -10,6 +30,18 @@
     img {
       position: relative;
       border-radius: 0.5rem;
+    }
+
+    &:hover .hoverProfile {
+      opacity: 1;
+    }
+
+    .hoverProfile {
+      position: absolute;
+      left: 100px;
+      top: -20px;
+      opacity: 0;
+      transition: 0.4s ease-in-out;
     }
     div {
       display: flex;
@@ -50,12 +82,14 @@
     position: relative;
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 250px));
     grid-column-gap: 50px;
     grid-row-gap: 100px;
     grid-auto-rows: 1fr;
+
     min-height: 350px;
     width: 80%;
+
     margin: 0 auto;
 
     .zoomOutPet {
@@ -84,14 +118,47 @@
       line-height: 1.9rem;
       z-index: 10;
       animation: enterTop;
-
+      .blue {
+        color: rgb(28, 28, 129);
+        font-size: 0.85rem;
+        font-family: $Raleway;
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+      .green {
+        color: rgb(105, 165, 48);
+        font-size: 0.85rem;
+        font-family: $Raleway;
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+      .white {
+        color: rgb(240, 241, 238);
+        font-size: 0.85rem;
+        font-family: $Raleway;
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+      .grey {
+        color: rgb(167, 168, 165);
+        font-size: 0.85rem;
+        font-family: $Raleway;
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
       .petName {
         font-family: $Roboto;
         font-size: 1rem;
-        margin-bottom: 5px;
+        line-height: 18px;
+        min-height: 33px;
+        margin-bottom: 0px;
       }
       .level {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
       }
       .type {
         margin: 0 auto;
@@ -156,18 +223,11 @@
   @keyframes flyIn {
     0% {
       opacity: 0;
-      transform: translate(40px, 80px);
+      transform: translateY(100px);
     }
-    50% {
-      transform: translate(-50px, 20px);
-    }
-    75% {
-      transform: translate(0px, 0px);
-    }
-
     100% {
       opacity: 1;
-      transform: translate(0);
+      transform: translateY(0);
     }
   }
 }
