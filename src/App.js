@@ -42,6 +42,7 @@ function App() {
     server: "balnazzar",
     region: "EU",
   });
+
   const [profile, setProfile] = useState();
   const [pets, setPets] = useState({ loading: true, pets: [], errors: "" });
   const [curentPet, setCurentPet] = useState({ id: null, pet: {} });
@@ -271,6 +272,7 @@ function App() {
 
   function favoriteCharacter(charData) {
     console.log(charData);
+
     localStorage.setItem("favChar", JSON.stringify(charData));
   }
 
@@ -308,9 +310,14 @@ function App() {
       console.log(response);
       if (localStorage.token !== undefined) {
         if (pets.pets.length === 0 && !pets.errors && !searchError) {
-          if (localStorage.favChar && find === "belfu")
+          if (localStorage.favChar && find === "belfu") {
+            setCharacter(
+              JSON.parse(localStorage.favChar).char,
+              JSON.parse(localStorage.favChar).server,
+              JSON.parse(localStorage.favChar).region
+            );
             importPets(JSON.parse(localStorage.favChar));
-          else importPets(characterData);
+          } else importPets(characterData);
         }
 
         if (pets.pets.length > 0 && img.length === 0)
@@ -381,6 +388,7 @@ function App() {
       ) : (
         ""
       )}
+
       {profile ? (
         <div>
           <div className="profile">
@@ -395,12 +403,25 @@ function App() {
             </div>{" "}
           </div>
           <div
-            className="rememberChar"
+            className={
+              localStorage.favChar &&
+              JSON.parse(localStorage.favChar).char === characterData.char &&
+              JSON.parse(localStorage.favChar).server ===
+                characterData.server &&
+              JSON.parse(localStorage.favChar).region === characterData.region
+                ? "rememberChar favored"
+                : "rememberChar"
+            }
             onClick={() => {
               favoriteCharacter(characterData);
             }}
           >
-            Favorite Character
+            {localStorage.favChar &&
+            JSON.parse(localStorage.favChar).char === characterData.char &&
+            JSON.parse(localStorage.favChar).server === characterData.server &&
+            JSON.parse(localStorage.favChar).region === characterData.region
+              ? "Favored"
+              : "Favorite Character"}
             <p className="favCharText"></p>
           </div>
         </div>

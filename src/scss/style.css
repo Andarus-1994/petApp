@@ -318,7 +318,20 @@
 }
 
 .App .rememberChar:active {
-  top: 215px;
+  top: 217px;
+}
+
+.App .favored {
+  cursor: auto;
+  color: #fafafa;
+  background-color: #912222;
+  -webkit-box-shadow: inset 0px 0px 8px 2px #313131;
+          box-shadow: inset 0px 0px 8px 2px #313131;
+  left: 10%;
+}
+
+.App .favored:active {
+  top: 220px;
 }
 
 .App .profile {
@@ -691,8 +704,8 @@
   background: linear-gradient(0deg, #bebe93, #beba79);
   -webkit-box-shadow: 2px 2px 10px 2px #a09f9f;
           box-shadow: 2px 2px 10px 2px #a09f9f;
-  -webkit-animation: flyIn ease-in 0.6s;
-          animation: flyIn ease-in 0.6s;
+  -webkit-animation: flyIn 0.6s;
+          animation: flyIn 0.6s;
 }
 
 .App > .displayPets .flying .green {
@@ -1036,8 +1049,8 @@
 @-webkit-keyframes flyIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
   }
   100% {
     opacity: 1;
@@ -1049,8 +1062,8 @@
 @keyframes flyIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
   }
   100% {
     opacity: 1;
@@ -1375,8 +1388,8 @@
   background: linear-gradient(0deg, #bebe93, #beba79);
   -webkit-box-shadow: 2px 2px 10px 2px #a09f9f;
           box-shadow: 2px 2px 10px 2px #a09f9f;
-  -webkit-animation: flyIn ease-in 0.6s;
-          animation: flyIn ease-in 0.6s;
+  -webkit-animation: flyIn 0.6s;
+          animation: flyIn 0.6s;
 }
 
 .flying .green {

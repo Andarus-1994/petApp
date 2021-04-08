@@ -204,7 +204,7 @@
   .flying {
     background: linear-gradient(0deg, rgb(190, 190, 147), rgb(190, 186, 121));
     box-shadow: 2px 2px 10px 2px rgb(160, 159, 159);
-    animation: flyIn ease-in 0.6s;
+    animation: flyIn 0.6s;
     .green {
       color: rgb(4, 105, 4);
     }
