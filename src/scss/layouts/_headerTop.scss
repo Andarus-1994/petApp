@@ -1,6 +1,7 @@
 @import "../mixins/alignMiddle";
 @import "../abstracts/fonts";
 .headerTop {
+  position: relative;
   height: 120px;
   min-height: 100px;
   width: 100%;

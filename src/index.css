@@ -6,9 +6,8 @@
 
 body {
   background-color: rgb(247, 244, 244);
-
+  position: relative;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  min-height: 120vh;
 }

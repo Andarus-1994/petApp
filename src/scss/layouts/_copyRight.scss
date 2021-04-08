@@ -1,0 +1,16 @@
+@import "../abstracts/fonts";
+
+.copyRight {
+  background-color: #303544;
+  width: 100%;
+  margin-top: 30vh;
+  padding: 10px 0;
+  text-align: center;
+  font-family: $Raleway;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: black;
+  span {
+    color: #3e7070;
+  }
+}

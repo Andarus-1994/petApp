@@ -2,8 +2,6 @@
 @import "../mixins/animationCards";
 @import "../mixins/petTypeStyle";
 .App {
-  position: relative;
-
   .rememberChar {
     cursor: pointer;
     background-color: rgb(192, 55, 55);
@@ -96,12 +94,11 @@
     grid-column-gap: 50px;
     grid-row-gap: 100px;
     grid-auto-rows: 1fr;
-
     min-height: 350px;
-    width: 80%;
-
+    justify-content: center;
+    width: 90%;
     margin: 0 auto;
-
+    margin-top: 15vh;
     .zoomOutPet {
       position: absolute;
       height: 100vh;

@@ -18,7 +18,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 .headerTop {
+  position: relative;
   height: 120px;
   min-height: 100px;
   width: 100%;
@@ -42,7 +51,7 @@
 .searchBar {
   position: relative;
   width: 100%;
-  margin-top: 10vh;
+  margin-top: 150px;
   margin-bottom: 12vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,10 +304,6 @@
   }
 }
 
-.App {
-  position: relative;
-}
-
 .App .rememberChar {
   cursor: pointer;
   background-color: #c03737;
@@ -410,8 +415,12 @@
   grid-row-gap: 100px;
   grid-auto-rows: 1fr;
   min-height: 350px;
-  width: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
   margin: 0 auto;
+  margin-top: 15vh;
 }
 
 .App > .displayPets .zoomOutPet {
@@ -1789,5 +1798,61 @@
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+}
+
+.copyRight {
+  background-color: #303544;
+  width: 100%;
+  margin-top: 30vh;
+  padding: 10px 0;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: black;
+}
+
+.copyRight span {
+  color: #3e7070;
+}
+
+nav {
+  position: absolute;
+  bottom: 0;
+  right: 4%;
+  z-index: 10;
+  width: 300px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav ul a {
+  background-color: #554f4f;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: "Raleway", sans-serif;
+  color: #e2e2e2;
+  padding: 10px 10px;
+  margin: 0 8px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+nav ul a:hover {
+  background-color: #f7f4f4;
+  color: black;
+}
+
+nav ul .active {
+  color: black;
+  background-color: #f7f4f4;
 }
 /*# sourceMappingURL=style.css.map */
