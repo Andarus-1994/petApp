@@ -1,25 +1,72 @@
 import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { searchChar, retriveMediaProfile, getPetsCharacter } from "./actions";
 import "../scss/style.css";
 
 function SearchBar(props) {
   const [user, setUser] = useState("");
   const [region, setRegion] = useState("EU");
+  const searchedChar = useSelector((state) => state.foundChar);
+  const dispatch = useDispatch();
   function handleChange(e) {
     setUser(e.target.value);
   }
   function hitEnter(e) {
     if (e.charCode === 13) {
-      props.find(user, region);
+      const [character, server] = separateString(user);
+
+      // props.find(user, region);
+      if (character && server && region) {
+        props.setLoading();
+        props.setError("");
+        dispatch(
+          searchChar({
+            char: character,
+            server: server,
+            region: region,
+          })
+        );
+      } else props.setError("*You didn't add a character name or a server");
     }
   }
+
+  function separateString(str) {
+    /*str = str.replace(/\s/g, "-");*/
+
+    var period = str.lastIndexOf("-");
+    str = str.replace(/ /g, "-");
+    var charName = str.substring(0, period);
+    var server = str.substring(period + 1);
+
+    return [charName.toLowerCase(), server.toLowerCase()];
+  }
+
   function changeRegion(e) {
     setRegion(e.target.value);
   }
   function searchUserPets() {
-    props.find(user, region);
+    const [character, server] = separateString(user);
+
+    // props.find(user, region);
+    if (character && server && region) {
+      props.setLoading();
+      props.setError("");
+      dispatch(
+        searchChar({
+          char: character,
+          server: server,
+          region: region,
+        })
+      );
+    } else props.setError("*You didn't add a character name or a server");
   }
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (!searchedChar.loading) {
+      dispatch(retriveMediaProfile(searchedChar.character));
+      dispatch(getPetsCharacter(searchedChar.character));
+    }
+  }, [searchedChar.character, searchedChar.loading]);
 
   return (
     <div className="searchBar">

@@ -171,7 +171,7 @@ export const imgPet = async (pet) => {
   console.log("aici");
   console.log(pet);
   const petImages = [];
-  for (var i = 0; i < 50; i++) {
+  for (var i = 0; i < 10; i++) {
     var idPet = pet[i].species.id;
 
     console.log("idPet" + idPet);
@@ -239,6 +239,33 @@ export const petInfo = async (pet, page) => {
   return petDetails;
 };
 
+export const singlePetInfo = async (pet) => {
+  const token = localStorage.getItem("token");
+  const idPet = pet.id;
+  return await axios
+    .get(
+      "https://eu.api.blizzard.com/data/wow/pet/" +
+        idPet +
+        "?namespace=static-eu&locale=en_US&access_token=" +
+        token,
+
+      {
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+        },
+      }
+    )
+    .then((response) => {
+      console.log(response.data.description);
+
+      return response.data;
+    })
+
+    .catch((error) => {
+      return error;
+    });
+};
+
 export const petInfo2 = async () => {
   const token = localStorage.getItem("token");
   return await axios
@@ -264,7 +291,7 @@ export const petInfo2 = async () => {
 
 export const petAbility = async (ability) => {
   const token = localStorage.getItem("token");
-  console.log(ability);
+  // console.log(ability);
   return await axios
     .get(
       "https://eu.api.blizzard.com/data/wow/media/pet-ability/" +
@@ -279,7 +306,7 @@ export const petAbility = async (ability) => {
       }
     )
     .then((response) => {
-      console.log(response.data);
+      //  console.log(response.data);
       return response.data;
     })
 

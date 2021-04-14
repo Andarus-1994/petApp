@@ -17,7 +17,7 @@
   border: 1px solid white;
   position: fixed;
   max-width: 450px;
-  min-width: fit-content;
+
   padding: 0 30px 10px 30px;
   min-height: fit-content;
   text-align: center;
@@ -31,7 +31,7 @@
   animation: 1s fadeIn cubic-bezier(0.075, 0.12, 0.165, 0.8);
   .icon {
     position: relative;
-    height: 40px;
+    height: 60px;
     width: 100%;
     img {
       position: absolute;
@@ -44,7 +44,7 @@
   }
   h1 {
     font-family: $Roboto;
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 70%;
     margin: 0 auto;
   }
@@ -52,7 +52,7 @@
     font-family: $Raleway;
     font-size: 1rem;
 
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 30px;
   }
   .trade {
@@ -154,7 +154,7 @@
 
   @keyframes enterTop {
     0% {
-      transform: translateY(40px);
+      transform: translateY(100px);
     }
     100% {
       transform: translateX(0);

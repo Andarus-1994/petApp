@@ -7,11 +7,11 @@
   width: 100%;
   background-color: #242833;
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 900;
-    font-family: $HeaderFont;
+    font-family: $Sans;
     text-transform: uppercase;
-    color: rgb(233, 232, 232);
+    color: rgb(255, 255, 255);
     text-align: center;
     letter-spacing: 4px;
     @include middle;

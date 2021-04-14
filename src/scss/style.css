@@ -2,30 +2,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 .headerTop {
   position: relative;
   height: 120px;
@@ -35,11 +48,11 @@
 }
 
 .headerTop h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 900;
-  font-family: "Catamaran", sans-serif;
+  font-family: "PT Sans", sans-serif;
   text-transform: uppercase;
-  color: #e9e8e8;
+  color: white;
   text-align: center;
   letter-spacing: 4px;
   position: relative;
@@ -309,6 +322,7 @@
   background-color: #c03737;
   color: white;
   font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
   position: absolute;
   padding: 10px 14px;
   top: 220px;
@@ -328,15 +342,41 @@
 
 .App .favored {
   cursor: auto;
-  color: #fafafa;
-  background-color: #912222;
-  -webkit-box-shadow: inset 0px 0px 8px 2px #313131;
-          box-shadow: inset 0px 0px 8px 2px #313131;
+  color: white;
+  background-color: #812323;
+  -webkit-box-shadow: inset 0px 0px 8px 4px #313131;
+          box-shadow: inset 0px 0px 8px 4px #313131;
   left: 10%;
 }
 
 .App .favored:active {
   top: 220px;
+}
+
+.App .favored:hover {
+  pointer-events: none;
+  background-color: #812323;
+}
+
+.App .noFavorite {
+  position: absolute;
+  top: 60px;
+  left: 10%;
+  background: linear-gradient(60deg, #9c9c97, #d1d0d0);
+  border: 1px solid #020202;
+  border-radius: 0.5rem;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Raleway", sans-serif;
 }
 
 .App .profile {
@@ -605,6 +645,10 @@
   color: #abaf73;
   left: 20%;
   bottom: 10%;
+}
+
+.App > .displayPets .critter h1 {
+  color: #222222;
 }
 
 .App > .displayPets .aquatic {
@@ -970,11 +1014,11 @@
   font-size: 1rem;
   line-height: 18px;
   min-height: 33px;
-  margin-bottom: 0px;
+  margin-top: 10px;
 }
 
 .App > .displayPets li .level {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .App > .displayPets li .type {
@@ -1291,6 +1335,10 @@
   bottom: 10%;
 }
 
+.critter h1 {
+  color: #222222;
+}
+
 .aquatic {
   background: -webkit-gradient(linear, left bottom, left top, from(#1c3c94), to(#3e7dcf));
   background: linear-gradient(0deg, #1c3c94, #3e7dcf);
@@ -1590,9 +1638,6 @@
   border: 1px solid white;
   position: fixed;
   max-width: 450px;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
   padding: 0 30px 10px 30px;
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
@@ -1612,7 +1657,7 @@
 
 .modalPet .icon {
   position: relative;
-  height: 40px;
+  height: 60px;
   width: 100%;
 }
 
@@ -1627,7 +1672,7 @@
 
 .modalPet h1 {
   font-family: "Roboto", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: 70%;
   margin: 0 auto;
 }
@@ -1635,7 +1680,7 @@
 .modalPet h2 {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 30px;
 }
 
@@ -1791,8 +1836,8 @@
 
 @keyframes enterTop {
   0% {
-    -webkit-transform: translateY(40px);
-            transform: translateY(40px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -1803,7 +1848,7 @@
 .copyRight {
   background-color: #303544;
   width: 100%;
-  margin-top: 30vh;
+  margin-top: 35vh;
   padding: 10px 0;
   text-align: center;
   font-family: "Raleway", sans-serif;
@@ -1816,15 +1861,15 @@
   color: #3e7070;
 }
 
-nav {
+.Routes > nav {
   position: absolute;
-  bottom: 0;
+  top: 83px;
   right: 4%;
   z-index: 10;
   width: 300px;
 }
 
-nav ul {
+.Routes > nav ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1834,25 +1879,815 @@ nav ul {
           justify-content: center;
 }
 
-nav ul a {
-  background-color: #554f4f;
+.Routes > nav ul a {
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-family: "Raleway", sans-serif;
-  color: #e2e2e2;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #707886;
   padding: 10px 10px;
   margin: 0 8px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-nav ul a:hover {
+.Routes > nav ul a:hover {
   background-color: #f7f4f4;
   color: black;
 }
 
-nav ul .active {
+.Routes > nav ul .active {
   color: black;
   background-color: #f7f4f4;
+}
+
+.notFound {
+  position: relative;
+  margin-top: 15vh;
+  text-align: center;
+}
+
+.notFound h1 {
+  color: #812727;
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: "Raleway", sans-serif;
+  margin-top: 10vh;
+}
+
+.notFound h2 {
+  color: #324774;
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: "Raleway", sans-serif;
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes skullColorChange {
+  0% {
+    color: #525151;
+  }
+  100% {
+    color: #a09e9e;
+  }
+}
+
+@keyframes magicalColors {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #e0d476;
+  }
+}
+
+.levelingGuide {
+  padding-top: 80px;
+}
+
+.levelingGuide > .containerLevelingGuide {
+  width: 95%;
+  margin: 0 auto;
+  min-height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.levelingGuide > .containerLevelingGuide nav {
+  background: #242833;
+  position: relative;
+  height: 100%;
+  width: 250px;
+}
+
+.levelingGuide > .containerLevelingGuide nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.levelingGuide > .containerLevelingGuide nav ul a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #d1d6db;
+  padding: 10px 5px;
+  border-bottom: 1px solid black;
+  text-align: center;
+  margin: 0 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.levelingGuide > .containerLevelingGuide nav ul a:hover {
+  background-color: #3a4058;
+  color: black;
+}
+
+.levelingGuide > .containerLevelingGuide nav ul .active {
+  pointer-events: none;
+  color: black;
+  background-color: #2d3246;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions {
+  width: 100%;
+  max-width: 1000px;
+  background: #202530;
+  border: 1px solid black;
+  color: #f1eded;
+  margin-top: 50px;
+  padding: 40px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 400px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions h1 {
+  color: white;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn {
+  background: #1c2027;
+  padding: 10px 5px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: "Roboto", sans-serif;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn p {
+  text-align: left;
+  min-width: 85px;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn p:nth-child(1) {
+  margin-right: 5px;
+  max-width: 85px;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn p span {
+  color: #408499;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn .important {
+  color: yellow;
+}
+
+.shadowmoonDraenorLevelGuide {
+  text-align: center;
+  width: 100%;
+}
+
+.shadowmoonDraenorLevelGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.shadowmoonDraenorLevelGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.shadowmoonDraenorLevelGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.shadowmoonDraenorLevelGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 95%;
+  background-color: #37a733;
+}
+
+.shadowmoonDraenorLevelGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.shadowmoonDraenorLevelGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.shadowmoonDraenorLevelGuide ul .anyPet {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.shadowmoonDraenorLevelGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.shadowmoonDraenorLevelGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.shadowmoonDraenorLevelGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.shadowmoonDraenorLevelGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+  margin-top: 0px;
+}
+
+.shadowmoonDraenorLevelGuide ul li .space {
+  height: 50px;
+}
+
+.shadowmoonDraenorLevelGuide ul li .level {
+  margin-bottom: 5px;
+}
+
+.shadowmoonDraenorLevelGuide ul li .type {
+  margin: 0 auto;
+  margin-top: 17px;
+  color: #1b1b1b;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.shadowmoonDraenorLevelGuide ul li .owned {
+  color: #0d520d;
+  margin-top: 10px;
+}
+
+.shadowmoonDraenorLevelGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.shadowmoonDraenorLevelGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.shadowmoonDraenorLevelGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.shadowmoonDraenorLevelGuide ul li .stats {
+  margin-bottom: 20px;
+}
+
+.shadowmoonDraenorLevelGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 20px;
+  min-width: 110px;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+}
+
+.shadowmoonDraenorLevelGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.shadowmoonDraenorLevelGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.shadowmoonDraenorLevelGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.shadowmoonDraenorLevelGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 220px;
+  margin: 0 auto;
+  margin-top: 0px;
+  z-index: 10;
+}
+
+.shadowmoonDraenorLevelGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+}
+
+.shadowmoonDraenorLevelGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.shadowmoonDraenorLevelGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+
+.shadowmoonDraenorLevelGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.shadowmoonDraenorLevelGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.shadowmoonDraenorLevelGuide .containerShadowmoonDraenorLevel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shadowmoonDraenorLevelGuide .containerShadowmoonDraenorLevel .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 600px;
+}
+
+.shadowmoonDraenorLevelGuide .containerShadowmoonDraenorLevel .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+}
+
+.shadowmoonDraenorLevelGuide .containerShadowmoonDraenorLevel .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.frostFireDraenorLevelGuide {
+  text-align: center;
+  width: 100%;
+}
+
+.frostFireDraenorLevelGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.frostFireDraenorLevelGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.frostFireDraenorLevelGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.frostFireDraenorLevelGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 75%;
+  background-color: #37a733;
+}
+
+.frostFireDraenorLevelGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.frostFireDraenorLevelGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.frostFireDraenorLevelGuide ul .anyPet {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.frostFireDraenorLevelGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.frostFireDraenorLevelGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.frostFireDraenorLevelGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.frostFireDraenorLevelGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+  margin-top: 0px;
+}
+
+.frostFireDraenorLevelGuide ul li .space {
+  height: 50px;
+}
+
+.frostFireDraenorLevelGuide ul li .level {
+  margin-bottom: 5px;
+}
+
+.frostFireDraenorLevelGuide ul li .type {
+  margin: 0 auto;
+  margin-top: 17px;
+  color: #1b1b1b;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.frostFireDraenorLevelGuide ul li .owned {
+  color: #0d520d;
+  margin-top: 10px;
+}
+
+.frostFireDraenorLevelGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.frostFireDraenorLevelGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.frostFireDraenorLevelGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.frostFireDraenorLevelGuide ul li .stats {
+  margin-bottom: 20px;
+}
+
+.frostFireDraenorLevelGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 20px;
+  min-width: 110px;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+}
+
+.frostFireDraenorLevelGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.frostFireDraenorLevelGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.frostFireDraenorLevelGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.frostFireDraenorLevelGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 220px;
+  margin: 0 auto;
+  margin-top: 0px;
+  z-index: 10;
+}
+
+.frostFireDraenorLevelGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+}
+
+.frostFireDraenorLevelGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.frostFireDraenorLevelGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+
+.frostFireDraenorLevelGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.frostFireDraenorLevelGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.frostFireDraenorLevelGuide .containerFrostFireRidgeLevel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.frostFireDraenorLevelGuide .containerFrostFireRidgeLevel .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 600px;
+}
+
+.frostFireDraenorLevelGuide .containerFrostFireRidgeLevel .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+}
+
+.frostFireDraenorLevelGuide .containerFrostFireRidgeLevel .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.defaultLevelGuide {
+  width: 100%;
+  text-align: center;
+}
+
+.defaultLevelGuide > h1 {
+  color: #2b312b;
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-bottom: 4vh;
+}
+
+.defaultLevelGuide > h2 {
+  font-family: "Raleway", sans-serif;
+  color: #060806;
 }
 /*# sourceMappingURL=style.css.map */

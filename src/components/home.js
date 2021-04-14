@@ -1,6 +1,8 @@
 import "../scss/style.css";
 import ReactPaginate from "react-paginate";
 import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getPetsCharacter } from "./actions";
 import Tilt from "react-parallax-tilt";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,76 +18,52 @@ import {
   faCogs,
   faCog,
   faMask,
+  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  auth,
-  imgPet,
-  petInfo,
-  retriveToken,
-  profileChar,
-} from "./functions/serverFunctions.js";
-import HeaderTop from "./headerTop.js";
+import { petInfo } from "./functions/serverFunctions.js";
 import SearchBar from "./searchBar.js";
 import ModalPet from "./modalPet.js";
 import CopyRight from "./copyright.js";
+import ReactGa from "react-ga";
 
 function Home() {
+  const dispatch = useDispatch();
+  const profileTop = useSelector((state) => state.profile);
+  const searchedChar = useSelector((state) => state.foundChar);
+  const petsChar = useSelector((state) => state.pets);
+  const [fav, setFav] = useState(false);
   const [load, setLoad] = useState(true);
-  const [loadProfile, setLoadProfile] = useState(true);
   const [loadPetImage, setLoadPetImage] = useState(true);
   const [img, setPetImg] = useState([]);
-  const [find, setFind] = useState("belfu");
   const [searchError, setSearchError] = useState("");
-  const [charRealmId, setCharRealmId] = useState({ charId: "", realmId: "" });
-  const [region, setRegion] = useState("EU");
-  const [characterData, setCharacterData] = useState({
-    char: "belfu",
-    server: "balnazzar",
-    region: "EU",
-  });
-
-  const [profile, setProfile] = useState();
-  const [pets, setPets] = useState({ loading: true, pets: [], errors: "" });
   const [curentPet, setCurentPet] = useState({ id: null, pet: {} });
   const [pageNumber, setPageNumber] = useState(0);
   const petsPerPage = 10;
   const pagesVisited = pageNumber * petsPerPage;
-  const pageCount = Math.ceil(pets.pets.length / petsPerPage);
-  const [activeCard, setActiveCard] = useState(null);
-  const [search, setSearch] = useState(false);
+  const pageCount = Math.ceil(petsChar.pets.pets.length / petsPerPage);
   const [showModal, setShowModal] = useState(false);
   const changePage = ({ selected }) => {
     setPageNumber(selected);
     setLoadPetImage(false);
     setLoad(true);
-    getPetDetails(pets.pets, selected);
+    getPetDetails(petsChar.pets.pets, selected);
     window.scrollTo(0, 0);
   };
-
-  function importPets(character) {
-    if (find)
-      profileChar(character).then((resp) => {
-        console.log(resp);
-        if (!resp.error) {
-          setProfile(resp);
-          setLoadProfile(false);
-        }
-      });
-    auth(character).then((response) => {
-      if (!response.error) {
-        setPets({ loading: false, pets: response.pets, errors: "" });
-
-        return setLoad(false);
-      }
-      setPets({ loading: true, pets: [], errors: response.error });
-    });
-  }
 
   function displayModal() {
     setShowModal(!showModal);
   }
 
-  const displayPets = pets.pets
+  function makeFavorite() {
+    ReactGa.event({
+      category: "Favorite Button",
+      action: "Made favorite his char",
+    });
+    setFav(true);
+    localStorage.setItem("favChar", JSON.stringify(searchedChar.character));
+  }
+
+  const displayPets = petsChar.pets.pets
     .slice(pagesVisited, pagesVisited + petsPerPage)
     .map((pet, ind) => {
       {
@@ -97,10 +75,8 @@ function Home() {
                   <li
                     key={index}
                     onClick={() => {
-                      setActiveCard(pet.id);
                       setShowModal(true);
                       setCurentPet({ id: pet.id, pet: imagePet });
-                      console.log(activeCard);
                     }}
                     className={[checkType(imagePet.battle_pet_type.type)]}
                     style={{ animationDuration: 0.6 + index * 0.12 + "s" }}
@@ -271,12 +247,6 @@ function Home() {
     }
   }
 
-  function favoriteCharacter(charData) {
-    console.log(charData);
-
-    localStorage.setItem("favChar", JSON.stringify(charData));
-  }
-
   function getPetDetails(pet, page) {
     setLoadPetImage(true);
 
@@ -288,150 +258,89 @@ function Home() {
         let nonDuplicate = response.filter(
           (ele, ind) => ind === response.findIndex((elem) => elem.id === ele.id)
         );
-        let nonUndead = nonDuplicate.filter(
-          (ele, ind) => ele.battle_pet_type.name.toLowerCase() === "undead"
-        );
 
         setPetImg(nonDuplicate);
-
-        console.log(img);
-        /*
-        console.log(response.assets[0].value);
-        
-        setPetImg([...img, response.assets[0].value]);
-        setLoadPet(false);
-        return response.assets[0].value;
-        */
       }
     });
   }
 
   useEffect(() => {
-    retriveToken().then((response) => {
-      console.log(response);
-      if (localStorage.token !== undefined) {
-        if (pets.pets.length === 0 && !pets.errors && !searchError) {
-          if (localStorage.favChar && find === "belfu") {
-            setCharacter(
-              JSON.parse(localStorage.favChar).char,
-              JSON.parse(localStorage.favChar).server,
-              JSON.parse(localStorage.favChar).region
-            );
-            importPets(JSON.parse(localStorage.favChar));
-          } else importPets(characterData);
-        }
+    console.log(searchedChar);
+    if (!searchedChar.loading && petsChar.pets.length === 0)
+      dispatch(getPetsCharacter(searchedChar.character));
+    if (petsChar.pets.pets.length > 0 && img.length === 0)
+      getPetDetails(petsChar.pets.pets, 0);
 
-        if (pets.pets.length > 0 && img.length === 0)
-          getPetDetails(pets.pets, 0);
-      }
-      if (pets.errors) setLoadProfile(false);
+    if (searchedChar && !searchedChar.error) {
+      console.log(pageNumber);
+      setPageNumber(0);
+      getPetDetails(petsChar.pets.pets, 0);
+    }
+  }, [
+    searchedChar.character,
+    petsChar.pets.pets,
+    petsChar.loading,
+    petsChar.error,
+    searchedChar.loading,
+  ]);
 
-      if (search && !searchError) {
-        console.log(pageNumber);
-        setPageNumber(0);
-        importPets(characterData);
-        getPetDetails(pets.pets, 0);
-        setSearch(false);
-      }
-    });
-
-    /* if (pets.pets.length > 0)
-      petInfo(pets.pets).then((response) => {
-        if (response) {
-          console.log(response);
-        }
-      });
-      */
-  }, [pets, img]);
-
-  function separateString(str) {
-    /*str = str.replace(/\s/g, "-");*/
-
-    var period = str.lastIndexOf("-");
-    str = str.replace(/ /g, "-");
-    var charName = str.substring(0, period);
-    var server = str.substring(period + 1);
-
-    return [charName.toLowerCase(), server.toLowerCase()];
+  function setError(error) {
+    setSearchError(error);
   }
-  function findCharacter(char, region) {
-    setFind(char);
-    setRegion(region);
-    setLoadProfile(true);
+
+  function loadingOnDisplayPets() {
     setLoad(true);
-    setProfile(null);
-    console.log(char, region);
-    var [charName, server] = separateString(char);
-    if (!charName || !server)
-      setSearchError("*You didn't add a character name or a server");
-    if (charName && server) setSearchError("");
-    setCharacter(charName, server, region);
-    console.log(characterData);
-    setPets({ loading: true, pets: [], errors: "" });
-    console.log(pets);
-    console.log(charName, server);
-    setSearch(true);
-  }
-
-  function setCharacter(char, server, region) {
-    setCharacterData({
-      char: char,
-      server: server,
-      region: region,
-    });
   }
 
   return (
     <div className="App">
+      {profileTop.profile && !profileTop.loading && !profileTop.error ? (
+        <div
+          className={
+            fav ||
+            (localStorage.favChar &&
+              JSON.parse(localStorage.favChar).char ===
+                searchedChar.character.char &&
+              JSON.parse(localStorage.favChar).server ===
+                searchedChar.character.server &&
+              JSON.parse(localStorage.favChar).region ===
+                searchedChar.character.region)
+              ? "rememberChar favored"
+              : "rememberChar"
+          }
+          onClick={() => makeFavorite()}
+        >
+          {fav ||
+          (localStorage.favChar &&
+            JSON.parse(localStorage.favChar).char ===
+              searchedChar.character.char &&
+            JSON.parse(localStorage.favChar).server ===
+              searchedChar.character.server &&
+            JSON.parse(localStorage.favChar).region ===
+              searchedChar.character.region) ? (
+            <div>
+              Favored <FontAwesomeIcon icon={faCheck} />{" "}
+            </div>
+          ) : (
+            "Favorite Character"
+          )}
+        </div>
+      ) : (
+        ""
+      )}
+
       {showModal ? (
         <ModalPet pet={curentPet.pet} closeModal={displayModal}></ModalPet>
       ) : (
         ""
       )}
 
-      {profile ? (
-        <div>
-          <div className="profile">
-            <img src={profile.assets[0].value} alt="noProfileImg"></img>
-            <img
-              src={profile.assets[1].value}
-              alt="noProfileImg"
-              className="hoverProfile"
-            ></img>
-            <div>
-              {profile.character.name} - <h2>{profile.character.realm.slug}</h2>
-            </div>{" "}
-          </div>
-          <div
-            className={
-              localStorage.favChar &&
-              JSON.parse(localStorage.favChar).char === characterData.char &&
-              JSON.parse(localStorage.favChar).server ===
-                characterData.server &&
-              JSON.parse(localStorage.favChar).region === characterData.region
-                ? "rememberChar favored"
-                : "rememberChar"
-            }
-            onClick={() => {
-              favoriteCharacter(characterData);
-            }}
-          >
-            {localStorage.favChar &&
-            JSON.parse(localStorage.favChar).char === characterData.char &&
-            JSON.parse(localStorage.favChar).server === characterData.server &&
-            JSON.parse(localStorage.favChar).region === characterData.region
-              ? "Favored"
-              : "Favorite Character"}
-            <p className="favCharText"></p>
-          </div>
-        </div>
-      ) : loadProfile ? (
-        <div className="spinnerProfile-1"></div>
-      ) : (
-        ""
-      )}
-      <SearchBar find={findCharacter} findError={searchError} />
-      {pets.errors ? (
+      <SearchBar
+        setError={setError}
+        setLoading={loadingOnDisplayPets}
+        findError={searchError}
+      />
+      {petsChar.error ? (
         <div className="error">
           <p>404 !</p>
           Your search bring no results!
@@ -442,22 +351,16 @@ function Home() {
 
       {loadPetImage ? (
         <ul className="displayPets">
-          <div
-            className="zoomOutPet"
-            onClick={() => {
-              setActiveCard(null);
-            }}
-          ></div>
           {load ? (
             <div className="spinnerPets-1"></div>
           ) : (
-            !pets.loading && displayPets
+            !petsChar.loading && petsChar.pets.pets && displayPets
           )}
         </ul>
       ) : (
         "loading"
       )}
-      {!searchError && !pets.errors ? (
+      {!searchedChar.error && !petsChar.error && !petsChar.loading ? (
         <ReactPaginate
           pageCount={pageCount}
           onPageChange={changePage}

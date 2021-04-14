@@ -1,33 +1,37 @@
 @import "../abstracts/fonts";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 
-nav {
-  position: absolute;
-  bottom: 0;
-  right: 4%;
-  z-index: 10;
-  width: 300px;
-  ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
+.Routes {
+  & > nav {
+    position: absolute;
+    top: 83px;
+    right: 4%;
+    z-index: 10;
+    width: 300px;
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
 
-    a {
-      background-color: rgb(85, 79, 79);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-family: $Raleway;
-      color: rgb(226, 226, 226);
-      padding: 10px 10px;
-      margin: 0 8px;
-      transition: 0.4s;
-      &:hover {
-        background-color: rgb(247, 244, 244);
-        color: black;
+      a {
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-family: $Raleway;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        color: rgb(112, 120, 134);
+        padding: 10px 10px;
+        margin: 0 8px;
+        transition: 0.4s;
+        &:hover {
+          background-color: rgb(247, 244, 244);
+          color: black;
+        }
       }
-    }
-    .active {
-      color: rgb(0, 0, 0);
-      background-color: rgb(247, 244, 244);
+      .active {
+        color: rgb(0, 0, 0);
+        background-color: rgb(247, 244, 244);
+      }
     }
   }
 }
