@@ -3,42 +3,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 .headerTop {
   position: relative;
   height: 120px;
@@ -48,17 +56,20 @@
 }
 
 .headerTop h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
   font-family: "PT Sans", sans-serif;
-  text-transform: uppercase;
+  padding-top: 10px;
   color: white;
   text-align: center;
-  letter-spacing: 4px;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  letter-spacing: 3px;
+}
+
+.headerTop h1 span {
+  color: #f5f5f5;
+  -webkit-text-stroke: 1px #333338;
+  text-transform: uppercase;
+  font-size: 2.9rem;
 }
 
 .searchBar {
@@ -379,6 +390,42 @@
   font-family: "Raleway", sans-serif;
 }
 
+.App .emptyBarTotalPets {
+  position: absolute;
+  top: 108px;
+  left: 17%;
+  border: 1px solid #74748b;
+  border-radius: 10px;
+  width: 120px;
+  height: 10px;
+}
+
+.App .emptyBarTotalPets p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  text-align: center;
+  color: #161b16;
+  width: 170px;
+  margin-top: 5px;
+  margin-left: -10px;
+}
+
+.App .emptyBarTotalPets .fillBarOwnedPets {
+  background: linear-gradient(120deg, #3ac952, #248018);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 9px;
+}
+
+.App .emptyBarTotalPets h3 {
+  position: absolute;
+  top: -25px;
+  left: 17%;
+  color: #6b975b;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
 .App .profile {
   position: absolute;
   top: 60px;
@@ -390,17 +437,15 @@
   border-radius: 0.5rem;
 }
 
-.App .profile:hover .hoverProfile {
-  opacity: 1;
+.App .profile:hover:not(h2) .hoverProfile {
+  display: inline;
 }
 
 .App .profile .hoverProfile {
   position: absolute;
-  left: 100px;
+  left: 89px;
   top: -20px;
-  opacity: 0;
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
+  display: none;
 }
 
 .App .profile div {
@@ -1123,6 +1168,126 @@
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+.contact {
+  overflow: hidden;
+}
+
+.contact .containerContact {
+  background-color: #2f3442;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-top: 120px;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+
+.contact h1 {
+  color: #d6ddd6;
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-size: 2.7rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.contact h2 {
+  color: #000000;
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  font-family: "Raleway", sans-serif;
+  margin-top: 50px;
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40vh;
+  min-width: 300px;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact label {
+  color: #e2e1e1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+
+.contact input {
+  background: #454c5e;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #f8f7f7;
+  padding: 5px 5px;
+  border: none;
+}
+
+.contact textarea {
+  background: #454c5e;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  padding: 5px 5px;
+  color: #f8f7f7;
+  border: none;
+  height: 100px;
+  max-width: 500px;
+  max-height: 200px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.contact textarea:focus {
+  outline: none;
+  background: #454c5f;
+}
+
+.contact button {
+  cursor: pointer;
+  background: #3b4153;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  border: 0;
+  padding: 10px 15px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 30px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.contact button:hover {
+  background: #5a637e;
+}
+
+.success {
+  text-align: center;
+}
+
+.success h1 {
+  font-family: "Raleway", sans-serif;
+  color: #2c2424;
+  font-size: 2.5rem;
+  margin-top: 200px;
+}
+
+.success p {
+  font-size: 1.3rem;
+  font-family: "Raleway", sans-serif;
+  color: #2c2424;
+  margin-top: 50px;
 }
 
 .spinnerProfile-1 {
@@ -1866,7 +2031,9 @@
   top: 83px;
   right: 4%;
   z-index: 10;
-  width: 300px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .Routes > nav ul {
@@ -1880,6 +2047,7 @@
 }
 
 .Routes > nav ul a {
+  position: relative;
   text-decoration: none;
   font-size: 0.95rem;
   font-family: "Raleway", sans-serif;
@@ -1895,6 +2063,20 @@
 .Routes > nav ul a:hover {
   background-color: #f7f4f4;
   color: black;
+}
+
+.Routes > nav ul a .new {
+  position: relative;
+  top: 0;
+}
+
+.Routes > nav ul a .new::after {
+  content: "*";
+  position: absolute;
+  font-size: 1.8rem;
+  color: #d62525;
+  top: -8px;
+  right: -5px;
 }
 
 .Routes > nav ul .active {
@@ -1953,7 +2135,7 @@
 }
 
 .levelingGuide > .containerLevelingGuide {
-  width: 95%;
+  width: 99%;
   margin: 0 auto;
   min-height: 40vh;
   display: -webkit-box;
@@ -2005,7 +2187,12 @@
 .levelingGuide > .containerLevelingGuide nav ul .active {
   pointer-events: none;
   color: black;
-  background-color: #2d3246;
+  background-color: #3b415c;
+}
+
+.levelingGuide > .containerLevelingGuide nav ul .label {
+  background-color: #17181f;
+  color: #ece7e7;
 }
 
 .levelingGuide > .containerLevelingGuide .FightRequirements {
@@ -2016,15 +2203,92 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 90%;
+  width: 98%;
+  max-width: 1200px;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements > .stratAviable {
+  background: #77b842;
+  cursor: pointer;
+  max-width: 200px;
+  margin-right: 50px;
+  margin-top: 5px;
+  padding: 5px 7px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 0.8rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: none;
+  border-radius: 25px;
+  color: #070707;
+  -webkit-box-shadow: 0px 0px 10px 2px #92b681;
+          box-shadow: 0px 0px 10px 2px #92b681;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements > .stratAviable svg {
+  -webkit-animation: spinner 1.8s linear infinite;
+          animation: spinner 1.8s linear infinite;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements > .stratAviable:hover {
+  background: #487027;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements > .stratAviable:hover svg {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements > h3 {
+  color: black;
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements > h3 > span {
+  position: relative;
+  color: #3b683b;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements > h3 > span::after {
+  display: none;
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  content: "Reward from [Taming the World] achivement.";
+  min-width: 300px;
+  padding: 10px 3px;
+  font-size: 0.85rem;
+  border-radius: 9px;
+  background-color: rgba(18, 30, 43, 0.658);
+  top: -40px;
+  left: -80px;
+  -webkit-animation: fade 0.8s;
+          animation: fade 0.8s;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements > h3 > span:hover {
+  cursor: default;
+  opacity: 1;
+  color: #317c31;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements > h3 > span:hover::after {
+  display: inline;
 }
 
 .levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions {
-  width: 100%;
-  max-width: 1000px;
+  width: 98%;
+  max-width: 900px;
   background: #202530;
   border: 1px solid black;
   color: #f1eded;
+  margin: 0 auto;
   margin-top: 50px;
   padding: 40px 30px;
   display: -webkit-box;
@@ -2045,12 +2309,26 @@
   font-size: 2.5rem;
 }
 
+.levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions h3 {
+  color: #3f4b64;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 100;
+  margin-top: 50px;
+  font-size: 0.95rem;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .tip {
+  margin-top: 5px;
+  font-family: "Roboto", sans-serif;
+  color: #596774;
+}
+
 .levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn {
   background: #1c2027;
   padding: 10px 5px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2058,17 +2336,25 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn:nth-child(2n) {
+  background: #131822;
 }
 
 .levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn p {
   text-align: left;
-  min-width: 85px;
+  min-width: 95px;
 }
 
 .levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn p:nth-child(1) {
   margin-right: 5px;
   max-width: 85px;
+}
+
+.levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn p .hero {
+  color: brown;
 }
 
 .levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn p span {
@@ -2077,6 +2363,32 @@
 
 .levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn .important {
   color: yellow;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 .shadowmoonDraenorLevelGuide {
@@ -2139,8 +2451,8 @@
 }
 
 .shadowmoonDraenorLevelGuide ul .anyPet {
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
   background: linear-gradient(10deg, #303541, #111220);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
@@ -2162,6 +2474,10 @@
   margin: 0 auto;
   -webkit-animation: spinner 0.7s linear infinite;
           animation: spinner 0.7s linear infinite;
+}
+
+.shadowmoonDraenorLevelGuide ul .undead .type {
+  color: #dbd7d7;
 }
 
 .shadowmoonDraenorLevelGuide ul li {
@@ -2195,12 +2511,17 @@
   margin-top: 0px;
 }
 
+.shadowmoonDraenorLevelGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
 .shadowmoonDraenorLevelGuide ul li .space {
   height: 50px;
 }
 
 .shadowmoonDraenorLevelGuide ul li .level {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .shadowmoonDraenorLevelGuide ul li .type {
@@ -2213,13 +2534,14 @@
 
 .shadowmoonDraenorLevelGuide ul li .owned {
   color: #0d520d;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .shadowmoonDraenorLevelGuide ul li .check {
   color: #208b20;
   font-size: 2rem;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .shadowmoonDraenorLevelGuide ul li .notOwned {
@@ -2233,7 +2555,7 @@
 }
 
 .shadowmoonDraenorLevelGuide ul li .stats {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .shadowmoonDraenorLevelGuide ul li p {
@@ -2241,7 +2563,7 @@
   margin: 0 auto;
   line-height: 20px;
   min-width: 110px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-size: 0.8rem;
 }
 
@@ -2260,6 +2582,10 @@
   font-size: 1rem;
 }
 
+.shadowmoonDraenorLevelGuide ul li .spaceOwned {
+  margin-bottom: 80px;
+}
+
 .shadowmoonDraenorLevelGuide ul li .abilities {
   position: relative;
   list-style-type: none;
@@ -2271,7 +2597,8 @@
   grid-row-gap: 0px;
   width: 220px;
   margin: 0 auto;
-  margin-top: 0px;
+  margin-top: 20px;
+  margin-bottom: 0px;
   z-index: 10;
 }
 
@@ -2287,7 +2614,7 @@
   margin: 0 auto;
   font-size: 0.85rem;
   font-family: "Roboto", sans-serif;
-  line-height: 20px;
+  line-height: 15px;
 }
 
 .shadowmoonDraenorLevelGuide ul li .abilities > div img {
@@ -2341,6 +2668,19 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
 .shadowmoonDraenorLevelGuide .containerShadowmoonDraenorLevel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2355,7 +2695,28 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 600px;
+  width: 400px;
+  z-index: 20;
+}
+
+.shadowmoonDraenorLevelGuide .containerShadowmoonDraenorLevel .locationImages button {
+  background-color: #ececdd;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.shadowmoonDraenorLevelGuide .containerShadowmoonDraenorLevel .locationImages button:hover {
+  background-color: #cacaa3;
 }
 
 .shadowmoonDraenorLevelGuide .containerShadowmoonDraenorLevel .locationImages img {
@@ -2436,8 +2797,8 @@
 }
 
 .frostFireDraenorLevelGuide ul .anyPet {
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
   background: linear-gradient(10deg, #303541, #111220);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
@@ -2459,6 +2820,10 @@
   margin: 0 auto;
   -webkit-animation: spinner 0.7s linear infinite;
           animation: spinner 0.7s linear infinite;
+}
+
+.frostFireDraenorLevelGuide ul .undead .type {
+  color: #dbd7d7;
 }
 
 .frostFireDraenorLevelGuide ul li {
@@ -2492,12 +2857,17 @@
   margin-top: 0px;
 }
 
+.frostFireDraenorLevelGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
 .frostFireDraenorLevelGuide ul li .space {
   height: 50px;
 }
 
 .frostFireDraenorLevelGuide ul li .level {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .frostFireDraenorLevelGuide ul li .type {
@@ -2510,13 +2880,14 @@
 
 .frostFireDraenorLevelGuide ul li .owned {
   color: #0d520d;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .frostFireDraenorLevelGuide ul li .check {
   color: #208b20;
   font-size: 2rem;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .frostFireDraenorLevelGuide ul li .notOwned {
@@ -2530,7 +2901,7 @@
 }
 
 .frostFireDraenorLevelGuide ul li .stats {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .frostFireDraenorLevelGuide ul li p {
@@ -2538,7 +2909,7 @@
   margin: 0 auto;
   line-height: 20px;
   min-width: 110px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-size: 0.8rem;
 }
 
@@ -2557,6 +2928,10 @@
   font-size: 1rem;
 }
 
+.frostFireDraenorLevelGuide ul li .spaceOwned {
+  margin-bottom: 80px;
+}
+
 .frostFireDraenorLevelGuide ul li .abilities {
   position: relative;
   list-style-type: none;
@@ -2568,7 +2943,8 @@
   grid-row-gap: 0px;
   width: 220px;
   margin: 0 auto;
-  margin-top: 0px;
+  margin-top: 20px;
+  margin-bottom: 0px;
   z-index: 10;
 }
 
@@ -2584,7 +2960,7 @@
   margin: 0 auto;
   font-size: 0.85rem;
   font-family: "Roboto", sans-serif;
-  line-height: 20px;
+  line-height: 15px;
 }
 
 .frostFireDraenorLevelGuide ul li .abilities > div img {
@@ -2638,6 +3014,19 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
 .frostFireDraenorLevelGuide .containerFrostFireRidgeLevel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2652,7 +3041,28 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 600px;
+  width: 400px;
+  z-index: 20;
+}
+
+.frostFireDraenorLevelGuide .containerFrostFireRidgeLevel .locationImages button {
+  background-color: #ececdd;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.frostFireDraenorLevelGuide .containerFrostFireRidgeLevel .locationImages button:hover {
+  background-color: #cacaa3;
 }
 
 .frostFireDraenorLevelGuide .containerFrostFireRidgeLevel .locationImages img {
@@ -2673,6 +3083,1390 @@
           transform: scale(1.3);
 }
 
+.nagrandDraenorLevelGuide {
+  text-align: center;
+  width: 100%;
+}
+
+.nagrandDraenorLevelGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.nagrandDraenorLevelGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.nagrandDraenorLevelGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.nagrandDraenorLevelGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 90%;
+  background-color: #37a733;
+}
+
+.nagrandDraenorLevelGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.nagrandDraenorLevelGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.nagrandDraenorLevelGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.nagrandDraenorLevelGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.nagrandDraenorLevelGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.nagrandDraenorLevelGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.nagrandDraenorLevelGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.nagrandDraenorLevelGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+  margin-top: 0px;
+}
+
+.nagrandDraenorLevelGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.nagrandDraenorLevelGuide ul li .space {
+  height: 50px;
+}
+
+.nagrandDraenorLevelGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.nagrandDraenorLevelGuide ul li .type {
+  margin: 0 auto;
+  margin-top: 17px;
+  color: #1b1b1b;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.nagrandDraenorLevelGuide ul li .owned {
+  color: #0d520d;
+  margin-top: 0px;
+}
+
+.nagrandDraenorLevelGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.nagrandDraenorLevelGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.nagrandDraenorLevelGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.nagrandDraenorLevelGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.nagrandDraenorLevelGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 20px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.nagrandDraenorLevelGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.nagrandDraenorLevelGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.nagrandDraenorLevelGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.nagrandDraenorLevelGuide ul li .spaceOwned {
+  margin-bottom: 80px;
+}
+
+.nagrandDraenorLevelGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 220px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.nagrandDraenorLevelGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.nagrandDraenorLevelGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.nagrandDraenorLevelGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+
+.nagrandDraenorLevelGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.nagrandDraenorLevelGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.nagrandDraenorLevelGuide .containerNagrandLevel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nagrandDraenorLevelGuide .containerNagrandLevel .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.nagrandDraenorLevelGuide .containerNagrandLevel .locationImages button {
+  background-color: #ececdd;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.nagrandDraenorLevelGuide .containerNagrandLevel .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.nagrandDraenorLevelGuide .containerNagrandLevel .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.nagrandDraenorLevelGuide .containerNagrandLevel .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.YonKunLaiLevelGuide {
+  text-align: center;
+  width: 100%;
+}
+
+.YonKunLaiLevelGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.YonKunLaiLevelGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.YonKunLaiLevelGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.YonKunLaiLevelGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 95%;
+  background-color: #37a733;
+}
+
+.YonKunLaiLevelGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.YonKunLaiLevelGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.YonKunLaiLevelGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.YonKunLaiLevelGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.YonKunLaiLevelGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.YonKunLaiLevelGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.YonKunLaiLevelGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.YonKunLaiLevelGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+  margin-top: 0px;
+}
+
+.YonKunLaiLevelGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.YonKunLaiLevelGuide ul li .space {
+  height: 50px;
+}
+
+.YonKunLaiLevelGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.YonKunLaiLevelGuide ul li .type {
+  margin: 0 auto;
+  margin-top: 17px;
+  color: #1b1b1b;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.YonKunLaiLevelGuide ul li .owned {
+  color: #0d520d;
+  margin-top: 0px;
+}
+
+.YonKunLaiLevelGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.YonKunLaiLevelGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.YonKunLaiLevelGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.YonKunLaiLevelGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.YonKunLaiLevelGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 20px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.YonKunLaiLevelGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.YonKunLaiLevelGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.YonKunLaiLevelGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.YonKunLaiLevelGuide ul li .spaceOwned {
+  margin-bottom: 80px;
+}
+
+.YonKunLaiLevelGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 220px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.YonKunLaiLevelGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.YonKunLaiLevelGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.YonKunLaiLevelGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+
+.YonKunLaiLevelGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.YonKunLaiLevelGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.YonKunLaiLevelGuide .containerYonPandariaLevel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.YonKunLaiLevelGuide .containerYonPandariaLevel .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+}
+
+.YonKunLaiLevelGuide .containerYonPandariaLevel .locationImages button {
+  background-color: #ececdd;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.YonKunLaiLevelGuide .containerYonPandariaLevel .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.YonKunLaiLevelGuide .containerYonPandariaLevel .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+}
+
+.YonKunLaiLevelGuide .containerYonPandariaLevel .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.ThunderingPSKunLaiLevelGuide {
+  text-align: center;
+  width: 100%;
+}
+
+.ThunderingPSKunLaiLevelGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.ThunderingPSKunLaiLevelGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.ThunderingPSKunLaiLevelGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.ThunderingPSKunLaiLevelGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 70%;
+  background-color: #37a733;
+}
+
+.ThunderingPSKunLaiLevelGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.ThunderingPSKunLaiLevelGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.ThunderingPSKunLaiLevelGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.ThunderingPSKunLaiLevelGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.ThunderingPSKunLaiLevelGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.ThunderingPSKunLaiLevelGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+  margin-top: 0px;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .space {
+  height: 50px;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .type {
+  margin: 0 auto;
+  margin-top: 17px;
+  color: #1b1b1b;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .owned {
+  color: #0d520d;
+  margin-top: 0px;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 20px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .spaceOwned {
+  margin-bottom: 80px;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 220px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.ThunderingPSKunLaiLevelGuide .containerThunderingPSPandariaLevel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ThunderingPSKunLaiLevelGuide .containerThunderingPSPandariaLevel .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 350px;
+  z-index: 20;
+}
+
+.ThunderingPSKunLaiLevelGuide .containerThunderingPSPandariaLevel .locationImages button {
+  background-color: #ececdd;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.ThunderingPSKunLaiLevelGuide .containerThunderingPSPandariaLevel .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.ThunderingPSKunLaiLevelGuide .containerThunderingPSPandariaLevel .locationImages img {
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+}
+
+.ThunderingPSKunLaiLevelGuide .containerThunderingPSPandariaLevel .locationImages img:hover {
+  -webkit-transform: scale(1.3) translateX(-40px);
+          transform: scale(1.3) translateX(-40px);
+}
+
+.WhisperingPSJadeForestLevelGuide {
+  text-align: center;
+  width: 100%;
+}
+
+.WhisperingPSJadeForestLevelGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.WhisperingPSJadeForestLevelGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.WhisperingPSJadeForestLevelGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.WhisperingPSJadeForestLevelGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 92%;
+  background-color: #37a733;
+}
+
+.WhisperingPSJadeForestLevelGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.WhisperingPSJadeForestLevelGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.WhisperingPSJadeForestLevelGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.WhisperingPSJadeForestLevelGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.WhisperingPSJadeForestLevelGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.WhisperingPSJadeForestLevelGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+  margin-top: 0px;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .space {
+  height: 50px;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .type {
+  margin: 0 auto;
+  margin-top: 17px;
+  color: #1b1b1b;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .owned {
+  color: #0d520d;
+  margin-top: 0px;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 20px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .spaceOwned {
+  margin-bottom: 80px;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 220px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.WhisperingPSJadeForestLevelGuide .containerWhisperingPSPandariaLevel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.WhisperingPSJadeForestLevelGuide .containerWhisperingPSPandariaLevel .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 350px;
+  z-index: 20;
+}
+
+.WhisperingPSJadeForestLevelGuide .containerWhisperingPSPandariaLevel .locationImages button {
+  background-color: #ececdd;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.WhisperingPSJadeForestLevelGuide .containerWhisperingPSPandariaLevel .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.WhisperingPSJadeForestLevelGuide .containerWhisperingPSPandariaLevel .locationImages img {
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+}
+
+.WhisperingPSJadeForestLevelGuide .containerWhisperingPSPandariaLevel .locationImages img:hover {
+  -webkit-transform: scale(1.3) translateX(-40px);
+          transform: scale(1.3) translateX(-40px);
+}
+
 .defaultLevelGuide {
   width: 100%;
   text-align: center;
@@ -2688,6 +4482,1163 @@
 
 .defaultLevelGuide > h2 {
   font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  color: #11110c;
+}
+
+.defaultLevelGuide > h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  font-size: 1.5rem;
+  margin-top: 50px;
   color: #060806;
+}
+
+.defaultLevelGuide > p {
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 100;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-indent: 2rem;
+  text-align: left;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #373e37;
+}
+
+.defaultLevelGuide > ul {
+  background-color: #202b36;
+  background: linear-gradient(10deg, #283f4e, #182129);
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (170px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 170px);
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  grid-auto-rows: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  min-height: 400px;
+  padding: 30px 20px;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.defaultLevelGuide > ul .defaultPet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 35px 15px;
+  color: green;
+  z-index: 10;
+}
+
+.defaultLevelGuide > ul .defaultPet img {
+  width: 40px;
+  height: 40px;
+}
+
+.defaultLevelGuide > ul .defaultPet span {
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  color: lightgray;
+}
+
+.shadowlands {
+  padding-top: 4rem;
+  min-height: 110vh;
+}
+
+.shadowlands > h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  color: #1a1d1a;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.shadowlands .containerShadowlands {
+  min-height: 80vh;
+}
+
+.containerNavSL {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  grid-column-gap: 50px;
+  grid-row-gap: 0px;
+  width: 100%;
+}
+
+.containerNavSL .bigImage {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 5vh;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  padding: 0;
+}
+
+.containerNavSL .bigImage .overlayImage {
+  background-color: rgba(0, 139, 139, 0.171);
+  position: absolute;
+  width: 550px;
+  height: 400px;
+  top: -200px;
+  left: 0;
+  right: 0;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  -webkit-box-shadow: inset 0 0 30px 20px rgba(0, 0, 0, 0.664);
+          box-shadow: inset 0 0 30px 20px rgba(0, 0, 0, 0.664);
+  z-index: 10;
+  -webkit-animation: fadeInImageMiddle 2.8s;
+          animation: fadeInImageMiddle 2.8s;
+}
+
+.containerNavSL .bigImage .overlayImage::after {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 400px;
+  top: 0px;
+  left: 0;
+  right: 0;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  -webkit-box-shadow: 80px -80px 80px -60px #630c1d;
+          box-shadow: 80px -80px 80px -60px #630c1d;
+  z-index: 10;
+}
+
+.containerNavSL .bigImage .overlayImage::before {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 400px;
+  top: 0px;
+  left: 0;
+  right: 0;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  -webkit-box-shadow: -80px -80px 80px -60px #cfc278;
+          box-shadow: -80px -80px 80px -60px #cfc278;
+  z-index: 10;
+}
+
+.containerNavSL .bigImage .overlayImage2 {
+  background-color: rgba(0, 139, 139, 0.171);
+  position: absolute;
+  width: 550px;
+  height: 400px;
+  top: -200px;
+  left: 0;
+  right: 0;
+  border-radius: 100px;
+  margin: 0 auto;
+  -webkit-animation: fadeInImageMiddle 2.8s;
+          animation: fadeInImageMiddle 2.8s;
+}
+
+.containerNavSL .bigImage .overlayImage2::after {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 400px;
+  top: 0px;
+  left: 0;
+  right: 0;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  -webkit-box-shadow: -90px 90px 80px -60px #352da5;
+          box-shadow: -90px 90px 80px -60px #352da5;
+  z-index: 10;
+}
+
+.containerNavSL .bigImage .overlayImage2::before {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 400px;
+  top: 0px;
+  left: 0;
+  right: 0;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  -webkit-box-shadow: 80px 80px 80px -60px #207e57;
+          box-shadow: 80px 80px 80px -60px #207e57;
+  z-index: 10;
+}
+
+.containerNavSL .bigImage img {
+  position: absolute;
+  width: 550px;
+  height: 400px;
+  top: -200px;
+  left: 0;
+  right: 0;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  -webkit-animation: fadeInImageMiddle 3s;
+          animation: fadeInImageMiddle 3s;
+}
+
+.containerNavSL nav {
+  width: 100%;
+  height: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.containerNavSL nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containerNavSL nav ul h1 {
+  color: #2b312b;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+  -webkit-animation: fadeInImageMiddle 2.2s;
+          animation: fadeInImageMiddle 2.2s;
+}
+
+.containerNavSL nav ul .disabled {
+  pointer-events: none;
+  background-color: #6e6969 !important;
+}
+
+.containerNavSL nav ul a {
+  background-color: crimson;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 10px 17px;
+  color: #2b4b2b;
+  border-radius: 0px;
+  font-family: "Raleway", sans-serif;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-animation: fadeInImageMiddle 2.2s;
+          animation: fadeInImageMiddle 2.2s;
+}
+
+.containerNavSL nav:nth-child(1) {
+  background-image: url("./../assets/Shadowlands/bastion.jpg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 25px;
+  -webkit-animation: fadeInFromLeftTop 2s;
+          animation: fadeInFromLeftTop 2s;
+}
+
+.containerNavSL nav:nth-child(1) a {
+  background-color: #326283;
+  color: #fdfdfd;
+}
+
+.containerNavSL nav:nth-child(1) a:hover {
+  background-color: #5191bd;
+}
+
+.containerNavSL nav:nth-child(4) {
+  background-image: url("./../assets/Shadowlands/ardenweald.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 25px;
+  -webkit-animation: fadeInFromleftBottom 2s;
+          animation: fadeInFromleftBottom 2s;
+}
+
+.containerNavSL nav:nth-child(4) h1 {
+  color: #fcfcfc;
+}
+
+.containerNavSL nav:nth-child(4) a {
+  background-color: #30406d;
+  color: #fcfcfc;
+}
+
+.containerNavSL nav:nth-child(4) a:hover {
+  background-color: #555aa3;
+}
+
+.containerNavSL nav:nth-child(2) {
+  background-image: url("./../assets/Shadowlands/revendreth.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 25px;
+  -webkit-animation: fadeInFromRightTop 2s;
+          animation: fadeInFromRightTop 2s;
+}
+
+.containerNavSL nav:nth-child(2) h1 {
+  color: #fcfcfc;
+}
+
+.containerNavSL nav:nth-child(2) a {
+  color: #fcfcfc;
+}
+
+.containerNavSL nav:nth-child(2) a:hover {
+  background-color: #cc3e56;
+}
+
+.containerNavSL nav:nth-child(2) ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin-left: auto;
+  right: 0;
+}
+
+.containerNavSL nav:nth-child(5) {
+  background-image: url("./../assets/Shadowlands/mald.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 25px;
+  -webkit-animation: fadeInFromRightBottom 2s;
+          animation: fadeInFromRightBottom 2s;
+}
+
+.containerNavSL nav:nth-child(5) h1 {
+  color: #fcfcfc;
+}
+
+.containerNavSL nav:nth-child(5) a {
+  background-color: #103030;
+  color: #fcfcfc;
+}
+
+.containerNavSL nav:nth-child(5) a:hover {
+  background-color: #2a5858;
+}
+
+.containerNavSL nav:nth-child(5) ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin-left: auto;
+  right: 0;
+}
+
+.containerNavSL .first {
+  width: 100%;
+}
+
+@-webkit-keyframes fadeInImageMiddle {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInImageMiddle {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInFromLeftTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-120px, -120px);
+            transform: translate(-120px, -120px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+@keyframes fadeInFromLeftTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-120px, -120px);
+            transform: translate(-120px, -120px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+@-webkit-keyframes fadeInFromRightTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(120px, -120px);
+            transform: translate(120px, -120px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+@keyframes fadeInFromRightTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(120px, -120px);
+            transform: translate(120px, -120px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+@-webkit-keyframes fadeInFromleftBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-120px, 120px);
+            transform: translate(-120px, 120px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+@keyframes fadeInFromleftBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-120px, 120px);
+            transform: translate(-120px, 120px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+@-webkit-keyframes fadeInFromRightBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(120px, 120px);
+            transform: translate(120px, 120px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+@keyframes fadeInFromRightBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(120px, 120px);
+            transform: translate(120px, 120px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+.navArdenwealdWQs {
+  width: 250px;
+}
+
+.navArdenwealdWQs nav {
+  background-image: url("./../assets/Shadowlands/shadowNav.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 250px;
+  margin-top: 90px;
+}
+
+.navArdenwealdWQs nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navArdenwealdWQs nav ul a {
+  background-color: rgba(7, 7, 7, 0.274);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #f8f8f8;
+  padding: 10px 5px;
+  border-bottom: 1px solid black;
+  text-align: center;
+  margin: 0 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.navArdenwealdWQs nav ul a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.navArdenwealdWQs nav ul .active {
+  pointer-events: none;
+  color: #ada8a8;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.navArdenwealdWQs nav ul .label {
+  background-color: #17181f;
+  color: #ece7e7;
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes skullColorChange {
+  0% {
+    color: #525151;
+  }
+  100% {
+    color: #a09e9e;
+  }
+}
+
+@keyframes magicalColors {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #e0d476;
+  }
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs {
+  width: 99%;
+  margin: 0 auto;
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 98%;
+  max-width: 1200px;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements > .stratAviable {
+  background: #77b842;
+  cursor: pointer;
+  max-width: 200px;
+  margin-right: 50px;
+  margin-top: 5px;
+  padding: 5px 7px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 0.8rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: none;
+  border-radius: 25px;
+  color: #070707;
+  -webkit-box-shadow: 0px 0px 10px 2px #92b681;
+          box-shadow: 0px 0px 10px 2px #92b681;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements > .stratAviable svg {
+  -webkit-animation: spinner 1.8s linear infinite;
+          animation: spinner 1.8s linear infinite;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements > .stratAviable:hover {
+  background: #487027;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements > .stratAviable:hover svg {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements > h3 {
+  color: black;
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements > h3 > span {
+  position: relative;
+  color: #3b683b;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements > h3 > span::after {
+  display: none;
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  content: "Reward from [Taming the World] achivement.";
+  min-width: 300px;
+  padding: 10px 3px;
+  font-size: 0.85rem;
+  border-radius: 9px;
+  background-color: rgba(18, 30, 43, 0.658);
+  top: -40px;
+  left: -80px;
+  -webkit-animation: fade 0.8s;
+          animation: fade 0.8s;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements > h3 > span:hover {
+  cursor: default;
+  opacity: 1;
+  color: #317c31;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements > h3 > span:hover::after {
+  display: inline;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements .FightInstructions {
+  width: 98%;
+  max-width: 900px;
+  background: #202530;
+  border: 1px solid black;
+  color: #f1eded;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 40px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 400px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements .FightInstructions h1 {
+  color: white;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements .FightInstructions h3 {
+  color: #3f4b64;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 100;
+  margin-top: 50px;
+  font-size: 0.95rem;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements .FightInstructions .tip {
+  margin-top: 5px;
+  font-family: "Roboto", sans-serif;
+  color: #596774;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements .FightInstructions .turn {
+  background: #1c2027;
+  padding: 10px 5px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements .FightInstructions .turn:nth-child(2n) {
+  background: #131822;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements .FightInstructions .turn p {
+  text-align: left;
+  min-width: 95px;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements .FightInstructions .turn p:nth-child(1) {
+  margin-right: 5px;
+  max-width: 85px;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements .FightInstructions .turn p .hero {
+  color: brown;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements .FightInstructions .turn p span {
+  color: #408499;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .FightRequirements .FightInstructions .turn .important {
+  display: block;
+  color: yellow;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.farylWQGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.farylWQGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.farylWQGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.farylWQGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.farylWQGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 90%;
+  background-color: #37a733;
+}
+
+.farylWQGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.farylWQGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.farylWQGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.farylWQGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.farylWQGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.farylWQGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.farylWQGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.farylWQGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+  margin-top: 0px;
+}
+
+.farylWQGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.farylWQGuide ul li .space {
+  height: 50px;
+}
+
+.farylWQGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.farylWQGuide ul li .type {
+  margin: 0 auto;
+  margin-top: 17px;
+  color: #1b1b1b;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.farylWQGuide ul li .owned {
+  color: #0d520d;
+  margin-top: 0px;
+}
+
+.farylWQGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.farylWQGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.farylWQGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.farylWQGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.farylWQGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 20px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.farylWQGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.farylWQGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.farylWQGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.farylWQGuide ul li .spaceOwned {
+  margin-bottom: 80px;
+}
+
+.farylWQGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 220px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.farylWQGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.farylWQGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.farylWQGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+
+.farylWQGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.farylWQGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.farylWQGuide .containerFarylWQ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.farylWQGuide .containerFarylWQ .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.farylWQGuide .containerFarylWQ .locationImages button {
+  background-color: #ececdd;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.farylWQGuide .containerFarylWQ .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.farylWQGuide .containerFarylWQ .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.farylWQGuide .containerFarylWQ .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 /*# sourceMappingURL=style.css.map */

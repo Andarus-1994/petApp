@@ -1,0 +1,159 @@
+@import "../../mixins/petTypeStyle";
+
+.ardenwealdWQs {
+  & > .containerArdenwealdWQs {
+    width: 99%;
+    margin: 0 auto;
+
+    min-height: 50vh;
+    display: flex;
+    flex-direction: row;
+
+    .FightRequirements {
+      display: flex;
+      flex-direction: column;
+      width: 98%;
+      max-width: 1200px;
+      > .stratAviable {
+        background: #77b842;
+        cursor: pointer;
+        max-width: 200px;
+        margin-right: 50px;
+        margin-top: 5px;
+        padding: 5px 7px;
+        font-family: $Roboto;
+        font-weight: 100;
+        font-size: 0.8rem;
+        align-self: flex-end;
+        border: none;
+        border-radius: 25px;
+        color: rgb(7, 7, 7);
+        box-shadow: 0px 0px 10px 2px rgb(146, 182, 129);
+        transition: 0.4s;
+        svg {
+          animation: spinner 1.8s linear infinite;
+        }
+        &:hover {
+          background: #487027;
+
+          svg {
+            animation-play-state: paused;
+          }
+        }
+      }
+      > h3 {
+        color: black;
+        font-family: $Raleway;
+        margin-top: 10px;
+        & > span {
+          position: relative;
+          color: rgb(59, 104, 59);
+          transition: 0.6s;
+          &::after {
+            display: none;
+            position: absolute;
+            font-family: $Roboto;
+            font-weight: 300;
+            content: "Reward from [Taming the World] achivement.";
+            min-width: 300px;
+            padding: 10px 3px;
+            font-size: 0.85rem;
+            border-radius: 9px;
+            background-color: rgba(18, 30, 43, 0.658);
+            top: -40px;
+            left: -80px;
+            animation: fade 0.8s;
+          }
+          &:hover {
+            cursor: default;
+            opacity: 1;
+            color: rgb(49, 124, 49);
+
+            &::after {
+              display: inline;
+            }
+          }
+        }
+      }
+
+      .FightInstructions {
+        width: 98%;
+        max-width: 900px;
+        background: rgb(32, 37, 48);
+        border: 1px solid black;
+
+        color: rgb(241, 237, 237);
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 40px 30px;
+        display: flex;
+        min-height: 400px;
+        flex-direction: column;
+        animation: fadeIn 1s;
+
+        h1 {
+          color: white;
+          margin-bottom: 50px;
+          font-size: 2.5rem;
+        }
+
+        h3 {
+          color: rgb(63, 75, 100);
+          font-family: $Merri;
+          font-weight: 100;
+          margin-top: 50px;
+          font-size: 0.95rem;
+        }
+
+        .tip {
+          margin-top: 5px;
+          font-family: $Roboto;
+          color: rgb(89, 103, 116);
+        }
+        .turn {
+          background: rgb(28, 32, 39);
+          padding: 10px 5px;
+          width: 90%;
+          margin: 0 auto;
+          margin-top: 5px;
+          display: flex;
+          flex-direction: row;
+          font-family: $Merri;
+          &:nth-child(2n) {
+            background: rgb(19, 24, 34);
+          }
+
+          p {
+            &:nth-child(1) {
+              margin-right: 5px;
+              max-width: 85px;
+            }
+            .hero {
+              color: brown;
+            }
+            span {
+              color: rgb(64, 132, 153);
+            }
+            text-align: left;
+            min-width: 95px;
+          }
+          .important {
+            display: block;
+            color: yellow;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

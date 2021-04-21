@@ -121,6 +121,13 @@ function ModalPet({ pet, closeModal }) {
         ) : (
           ""
         )}
+        {pet.battle_pet_type.type === "FLYING" ? (
+          <div>
+            <FontAwesomeIcon className="feather" icon={faFeatherAlt} />
+          </div>
+        ) : (
+          ""
+        )}
         {pet.battle_pet_type.type === "DRAGONKIN" ? (
           <div>
             <div className="dragonSign1"></div>

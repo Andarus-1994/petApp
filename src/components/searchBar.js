@@ -66,7 +66,7 @@ function SearchBar(props) {
       dispatch(retriveMediaProfile(searchedChar.character));
       dispatch(getPetsCharacter(searchedChar.character));
     }
-  }, [searchedChar.character, searchedChar.loading]);
+  }, [searchedChar.character, searchedChar.loading, dispatch]);
 
   return (
     <div className="searchBar">

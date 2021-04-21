@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { singlePetInfo, petAbility } from "../functions/serverFunctions.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClipboard } from "@fortawesome/free-solid-svg-icons";
 import Pet from "./pet.js";
 import location3 from "../../assets/Ashlei/Ashlei.jpg";
 import location from "../../assets/Ashlei/ashleiDraenorMap.jpg";
@@ -8,23 +10,25 @@ import location2 from "../../assets/Ashlei/ashleiSMmap.jpg";
 
 function ShadowmoonDraenor() {
   const petsChar = useSelector((state) => state.pets);
+  const [coords] = useState("/way ShadowMoon Valley 50, 31");
   //const pet = { id: 844 };
   const [pet, setPet] = useState({
     id: 844,
     owned: false,
     abilities: { 1: 0, 2: 1, 3: 5 },
+    speed: null,
+    rarity: "rare",
   });
   const [requiredPetOne, setRequiredPetOne] = useState({
     pets: {},
     petAbilities: [],
     loading: true,
   });
-  const [owned, setOwned] = useState(false);
 
   useEffect(() => {
     if (requiredPetOne.loading) getPetDetails();
     setPet({ ...pet, id: 844, owned: checkOwnedPet(pet.id) });
-    console.log(owned);
+
     if (requiredPetOne.petAbilities.length < 6 && !requiredPetOne.loading) {
       petAbility(
         requiredPetOne.pets.abilities[requiredPetOne.petAbilities.length]
@@ -40,7 +44,7 @@ function ShadowmoonDraenor() {
       });
       // if (petAbilities.length === 5) setLoadAbilities(false);
     }
-  }, [petsChar, requiredPetOne.loading, requiredPetOne.petAbilities]);
+  }, [petsChar, requiredPetOne.petAbilities]);
 
   async function getPetDetails() {
     await singlePetInfo(pet).then((res) => {
@@ -68,12 +72,7 @@ function ShadowmoonDraenor() {
         <div className="FightRequirements">
           <ul>
             {!requiredPetOne.loading && requiredPetOne.pets ? (
-              <Pet
-                pet={requiredPetOne}
-                idPet={pet.id}
-                ownedPet={pet.owned}
-                abilities={pet.abilities}
-              />
+              <Pet pet={requiredPetOne} petOwned={pet} />
             ) : (
               "loading"
             )}
@@ -128,19 +127,29 @@ function ShadowmoonDraenor() {
               </p>
             </div>
           </div>
+          <h3>
+            TIP: Use the <span>[Safari Hat]</span> toy for 10% increased XP.
+          </h3>
         </div>
         <div className="locationImages">
           <h1>Localization: </h1>
-          <a href={location} target="_blank">
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText(coords);
+            }}
+          >
+            Copy Coordinates <FontAwesomeIcon icon={faClipboard} />
+          </button>
+          <a href={location} target="_blank" rel="noreferrer">
             {" "}
             <img src={location} alt="noImg"></img>
           </a>
 
-          <a href={location2} target="_blank">
+          <a href={location2} target="_blank" rel="noreferrer">
             {" "}
             <img src={location2} alt="noImg"></img>
           </a>
-          <a href={location3} target="_blank">
+          <a href={location3} target="_blank" rel="noreferrer">
             {" "}
             <img src={location3} alt="noImg"></img>
           </a>

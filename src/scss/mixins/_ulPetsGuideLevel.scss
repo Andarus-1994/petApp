@@ -14,7 +14,7 @@ ul {
   margin-top: 5vh;
 
   .anyPet {
-    animation-duration: 1.2s;
+    animation-duration: 0.8s;
     background: linear-gradient(10deg, rgb(48, 53, 65), rgb(17, 18, 32));
 
     box-shadow: 0px 0px 8px 1px rgb(19, 16, 10);
@@ -36,6 +36,12 @@ ul {
     height: 40px;
     margin: 0 auto;
     animation: spinner 0.7s linear infinite;
+  }
+
+  .undead {
+    .type {
+      color: rgb(219, 215, 215);
+    }
   }
 
   li {
@@ -60,11 +66,15 @@ ul {
       min-height: 33px;
       margin-top: 0px;
     }
+    .required {
+      color: red;
+      margin-bottom: 0 !important;
+    }
     .space {
       height: 50px;
     }
     .level {
-      margin-bottom: 5px;
+      margin-bottom: 0px;
     }
     .type {
       margin: 0 auto;
@@ -76,12 +86,13 @@ ul {
 
     .owned {
       color: rgb(13, 82, 13);
-      margin-top: 10px;
+      margin-top: 0px;
     }
     .check {
       color: rgb(32, 139, 32);
       font-size: 2rem;
       margin: 0 auto;
+      margin-bottom: 20px;
     }
     .notOwned {
       color: rgb(207, 29, 29);
@@ -92,7 +103,7 @@ ul {
       margin: 0 auto;
     }
     .stats {
-      margin-bottom: 20px;
+      margin-bottom: 0px;
     }
 
     p {
@@ -100,7 +111,7 @@ ul {
       margin: 0 auto;
       line-height: 20px;
       min-width: 110px;
-      font-family: $Raleway;
+      font-family: $Merri;
       font-size: 0.8rem;
 
       .health {
@@ -118,6 +129,10 @@ ul {
       }
     }
 
+    .spaceOwned {
+      margin-bottom: 80px;
+    }
+
     .abilities {
       position: relative;
       list-style-type: none;
@@ -129,7 +144,8 @@ ul {
       width: 220px;
 
       margin: 0 auto;
-      margin-top: 0px;
+      margin-top: 20px;
+      margin-bottom: 0px;
       z-index: 10;
       & > div {
         display: flex;
@@ -138,7 +154,7 @@ ul {
         margin: 0 auto;
         font-size: 0.85rem;
         font-family: $Roboto;
-        line-height: 20px;
+        line-height: 15px;
         img {
           width: 30px;
           margin: 0 auto;
@@ -185,5 +201,16 @@ ul {
 @keyframes spinner {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px) rotate(0);
   }
 }

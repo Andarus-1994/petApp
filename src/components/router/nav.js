@@ -16,8 +16,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { retriveMediaProfile, searchChar, getPetsCharacter } from "../actions";
 import Profile from "../profileHeaderTop.js";
 import LevelGuide from "../PetLevelGuideComponents/levelGuide.js";
-
+import Contact from "../contact.js";
+import Success from "../success.js";
+import NavMenuShadowLands from "./../ShadowLandsComponents/navShadowLands.js";
+import ArdenwealdWQs from "../ShadowLandsComponents/ardenwealdWQs.js";
 function Nav() {
+  const petsChar = useSelector((state) => state.pets);
   const profile = useSelector((state) => state.profile);
   const favChar = JSON.parse(localStorage.getItem("favChar"));
   const searchedChar = useSelector((state) => state.foundChar);
@@ -26,6 +30,7 @@ function Nav() {
   useEffect(() => {
     dispatch(retriveToken());
     console.log(searchedChar);
+
     if (favChar && Object.keys(searchedChar.character).length === 0) {
       dispatch(retriveMediaProfile(favChar));
       dispatch(searchChar(favChar));
@@ -40,12 +45,15 @@ function Nav() {
     if (!favChar && Object.keys(searchedChar.character).length === 0) {
       dispatch(retriveMediaProfile({ char: "", server: "", region: "" }));
     }
+    console.log(petsChar.pets);
   }, [searchedChar.character, searchedChar.error]);
 
   return (
     <div className="Routes">
       <div className="headerTop">
-        <h1>Petopia of Warcraft</h1>
+        <h1>
+          <span>PlaceHolder</span>, Pet Guides of Warcraft
+        </h1>
         <Profile />
       </div>
       <Router>
@@ -61,14 +69,40 @@ function Nav() {
             >
               <li> Pet Leveling Guide</li>
             </NavLink>
+            <NavLink
+              to="/shadowlands/default"
+              activeClassName="active"
+              className="inactive"
+            >
+              <li className="new">Shadowlands</li>
+            </NavLink>
+            <NavLink
+              to="/contact"
+              activeClassName="active"
+              className="inactive"
+            >
+              <li> Contact</li>
+            </NavLink>
           </ul>
         </nav>
         <ScrollTop>
           <Switch>
+            <Route path="/shadowlands/default">
+              <NavMenuShadowLands />
+            </Route>
+            <Route path="/shadowlands/ardenwealdWQ">
+              <ArdenwealdWQs />
+            </Route>
+
             <Route path="/guidepetlevel">
               <LevelGuide />
             </Route>
-
+            <Route exact path="/success">
+              <Success />
+            </Route>
+            <Route exact path="/contact">
+              <Contact />
+            </Route>
             <Route exact path="/">
               <Home />
             </Route>

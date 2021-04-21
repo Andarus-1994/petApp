@@ -239,6 +239,41 @@ export const petInfo = async (pet, page) => {
   return petDetails;
 };
 
+export const petsInfo = async (pet, number) => {
+  const token = localStorage.getItem("token");
+
+  const petDetails = [];
+
+  for (var i = 0; i < number; i++) {
+    if (pet[i]) {
+      var idPet = pet[i].id;
+
+      await axios
+        .get(
+          "https://eu.api.blizzard.com/data/wow/pet/" +
+            idPet +
+            "?namespace=static-eu&locale=en_US&access_token=" +
+            token,
+
+          {
+            headers: {
+              "Content-Type": "application/json; charset=utf-8",
+            },
+          }
+        )
+        .then((response) => {
+          petDetails.push(response.data);
+          return response.data;
+        })
+
+        .catch((error) => {
+          return error;
+        });
+    }
+  }
+  return petDetails;
+};
+
 export const singlePetInfo = async (pet) => {
   const token = localStorage.getItem("token");
   const idPet = pet.id;
@@ -270,7 +305,7 @@ export const petInfo2 = async () => {
   const token = localStorage.getItem("token");
   return await axios
     .get(
-      "https://eu.api.blizzard.com/data/wow/pet/142?namespace=static-eu&locale=en_EU&access_token=" +
+      "https://eu.api.blizzard.com/data/wow/pet/index?namespace=static-eu&locale=en_EU&access_token=" +
         token,
 
       {
@@ -280,7 +315,6 @@ export const petInfo2 = async () => {
       }
     )
     .then((response) => {
-      console.log(response.data);
       return response.data;
     })
 
@@ -313,4 +347,35 @@ export const petAbility = async (ability) => {
     .catch((error) => {
       return { error: error };
     });
+};
+
+export const petAbilities = async (ability) => {
+  const token = localStorage.getItem("token");
+  const abilities = [];
+  console.log(ability);
+  for (var i = 0; i < 6; i++) {
+    await axios
+      .get(
+        "https://eu.api.blizzard.com/data/wow/media/pet-ability/" +
+          ability[i].ability.id +
+          "?namespace=static-9.0.5_37760-eu&access_token=" +
+          token,
+
+        {
+          headers: {
+            "Content-Type": "application/json; charset=utf-8",
+          },
+        }
+      )
+      .then((response) => {
+        //  console.log(response.data);
+        abilities.push(response.data);
+        return;
+      })
+
+      .catch((error) => {
+        return { error: error };
+      });
+  }
+  return abilities;
 };

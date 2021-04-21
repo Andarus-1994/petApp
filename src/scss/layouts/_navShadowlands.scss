@@ -1,0 +1,303 @@
+@import "../mixins/alignMiddle";
+
+.containerNavSL {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 50px;
+  grid-row-gap: 0px;
+  width: 100%;
+
+  .bigImage {
+    position: relative;
+    display: flex;
+
+    width: 100%;
+    height: 5vh;
+    grid-column: 1/3;
+    grid-row: 2;
+    padding: 0;
+    .overlayImage {
+      background-color: rgba(0, 139, 139, 0.171);
+      position: absolute;
+      width: 550px;
+      height: 400px;
+      top: -200px;
+      left: 0;
+      right: 0;
+      border-radius: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      margin: 0 auto;
+      box-shadow: inset 0 0 30px 20px rgba(0, 0, 0, 0.664);
+      z-index: 10;
+      animation: fadeInImageMiddle 2.8s;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 550px;
+        height: 400px;
+        top: 0px;
+        left: 0;
+        right: 0;
+        border-radius: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0 auto;
+        box-shadow: 80px -80px 80px -60px rgb(99, 12, 29);
+        z-index: 10;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 550px;
+        height: 400px;
+        top: 0px;
+        left: 0;
+        right: 0;
+        border-radius: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0 auto;
+        box-shadow: -80px -80px 80px -60px rgb(207, 194, 120);
+        z-index: 10;
+      }
+    }
+
+    .overlayImage2 {
+      background-color: rgba(0, 139, 139, 0.171);
+      position: absolute;
+      width: 550px;
+      height: 400px;
+      top: -200px;
+      left: 0;
+      right: 0;
+      border-radius: 100px;
+      margin: 0 auto;
+      animation: fadeInImageMiddle 2.8s;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 550px;
+        height: 400px;
+        top: 0px;
+        left: 0;
+        right: 0;
+        border-radius: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0 auto;
+        box-shadow: -90px 90px 80px -60px rgb(53, 45, 165);
+        z-index: 10;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 550px;
+        height: 400px;
+        top: 0px;
+        left: 0;
+        right: 0;
+        border-radius: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0 auto;
+        box-shadow: 80px 80px 80px -60px rgb(32, 126, 87);
+        z-index: 10;
+      }
+    }
+
+    img {
+      position: absolute;
+      width: 550px;
+      height: 400px;
+      top: -200px;
+      left: 0;
+      right: 0;
+      border-radius: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      margin: 0 auto;
+      animation: fadeInImageMiddle 3s;
+    }
+  }
+  nav {
+    width: 100%;
+    height: 370px;
+    display: flex;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      align-items: center;
+      h1 {
+        color: #2b312b;
+        font-family: $Roboto;
+        font-weight: 100;
+        font-size: 3rem;
+        letter-spacing: 1px;
+        margin-bottom: 60px;
+        animation: fadeInImageMiddle 2.2s;
+      }
+      .disabled {
+        pointer-events: none;
+        background-color: rgb(110, 105, 105) !important;
+      }
+      a {
+        background-color: crimson;
+        margin-top: 10px;
+        text-decoration: none;
+        padding: 10px 17px;
+        color: rgb(43, 75, 43);
+        border-radius: 0px;
+        font-family: $Raleway;
+        transition: 0.6s;
+        animation: fadeInImageMiddle 2.2s;
+      }
+    }
+    &:nth-child(1) {
+      background-image: url("./../assets/Shadowlands/bastion.jpg");
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 25px;
+      animation: fadeInFromLeftTop 2s;
+      a {
+        background-color: rgb(50, 98, 131);
+        color: rgb(253, 253, 253);
+        &:hover {
+          background-color: rgb(81, 145, 189);
+        }
+      }
+    }
+    &:nth-child(4) {
+      background-image: url("./../assets/Shadowlands/ardenweald.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 25px;
+      animation: fadeInFromleftBottom 2s;
+      h1 {
+        color: #fcfcfc;
+      }
+      a {
+        background-color: rgb(48, 64, 109);
+        color: #fcfcfc;
+        &:hover {
+          background-color: rgb(85, 90, 163);
+        }
+      }
+    }
+    &:nth-child(2) {
+      background-image: url("./../assets/Shadowlands/revendreth.jpg");
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 25px;
+      animation: fadeInFromRightTop 2s;
+      h1 {
+        color: #fcfcfc;
+      }
+      a {
+        color: #fcfcfc;
+        &:hover {
+          background-color: rgb(204, 62, 86);
+        }
+      }
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-left: auto;
+        right: 0;
+      }
+    }
+    &:nth-child(5) {
+      background-image: url("./../assets/Shadowlands/mald.jpg");
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 25px;
+      animation: fadeInFromRightBottom 2s;
+      h1 {
+        color: #fcfcfc;
+      }
+      a {
+        background-color: rgb(16, 48, 48);
+        color: #fcfcfc;
+        &:hover {
+          background-color: rgb(42, 88, 88);
+        }
+      }
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-left: auto;
+        right: 0;
+      }
+    }
+  }
+  .first {
+    width: 100%;
+  }
+}
+
+@keyframes fadeInImageMiddle {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromLeftTop {
+  0% {
+    opacity: 0;
+    transform: translate(-120px, -120px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes fadeInFromRightTop {
+  0% {
+    opacity: 0;
+    transform: translate(120px, -120px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes fadeInFromleftBottom {
+  0% {
+    opacity: 0;
+    transform: translate(-120px, 120px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes fadeInFromRightBottom {
+  0% {
+    opacity: 0;
+    transform: translate(120px, 120px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}

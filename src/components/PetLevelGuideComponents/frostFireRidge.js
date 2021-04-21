@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { singlePetInfo, petAbility } from "../functions/serverFunctions.js";
+import { useSelector } from "react-redux";
+import { singlePetInfo } from "../functions/serverFunctions.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClipboard } from "@fortawesome/free-solid-svg-icons";
 import Pet from "./pet.js";
 import location3 from "../../assets/Gargra/gargraFrostFireRidge.jpg";
 import location from "../../assets/Gargra/gargraDraenorMap.jpg";
@@ -8,28 +10,44 @@ import location2 from "../../assets/Gargra/gargraFrostFireMap.jpg";
 
 function FrostFireRidge() {
   const petsChar = useSelector((state) => state.pets);
+  const [renderOnce, setRenderOnce] = useState(false);
+  const [coords] = useState("/way FrostFire Ridge 68, 65");
   const [pet, setPet] = useState({
     id: 1387,
     owned: false,
     abilities: { 1: 0, 2: 4, 3: 5 },
+    speed: null,
+    rarity: "rare",
   });
   const [slot3pet2, setslot3pet2] = useState({
     id: 1672,
     owned: false,
     abilities: { 1: 0, 2: 1, 3: 5 },
+    loading: true,
+    speed: null,
+    rarity: "rare",
   });
 
   const [slot3pet3, setslot3pet3] = useState({
     id: 1531,
     owned: false,
-    abilities: { 1: 0, 2: 1, 3: 5 },
+    abilities: { 1: 0, 2: 1, 3: 2 },
+    loading: true,
+    speed: null,
+    rarity: "rare",
   });
   const [slot3pet4, setslot3pet4] = useState({
     id: 1233,
     owned: false,
-    abilities: { 1: 0, 2: 1, 3: 5 },
+    abilities: { 1: 0, 2: 1, 3: 2 },
+    loading: true,
+    speed: null,
+    rarity: "rare",
   });
-  const [curentActiveSlot3, setCurentActiveSlot3] = useState(1672);
+  const [curentActiveSlot3, setCurentActiveSlot3] = useState({
+    id: null,
+    found: false,
+  });
 
   const [requiredPetOne, setRequiredPetOne] = useState({
     pets: {},
@@ -53,140 +71,106 @@ function FrostFireRidge() {
   });
 
   useEffect(() => {
-    if (requiredPetOne.loading && requiredPetTwoSlot3.loading) getPetDetails();
+    console.log(petsChar.pets);
+    if (
+      requiredPetOne.loading ||
+      (curentActiveSlot3.id === slot3pet2.id && requiredPetTwoSlot3.loading) ||
+      (curentActiveSlot3.id === slot3pet3.id &&
+        requiredPetThreeSlot3.loading) ||
+      (curentActiveSlot3.id === slot3pet4.id && requiredPetFourSlot3.loading)
+    )
+      getPetDetails();
 
     setPet({
-      id: 1387,
-      abilities: { 1: 0, 2: 4, 3: 5 },
+      ...pet,
       owned: checkOwnedPet(pet.id),
     });
     setslot3pet2({
-      id: 1672,
-      abilities: { 1: 0, 2: 1, 3: 5 },
+      ...slot3pet2,
       owned: checkOwnedPet(slot3pet2.id),
+      loading: false,
     });
     setslot3pet3({
-      id: 1531,
-      abilities: { 1: 0, 2: 1, 3: 5 },
+      ...slot3pet3,
       owned: checkOwnedPet(slot3pet3.id),
+      loading: false,
     });
     setslot3pet4({
-      id: 1233,
-      abilities: { 1: 0, 2: 1, 3: 5 },
+      ...slot3pet4,
       owned: checkOwnedPet(slot3pet4.id),
+      loading: false,
     });
-
-    if (requiredPetOne.petAbilities.length < 6 && !requiredPetOne.loading) {
-      petAbility(
-        requiredPetOne.pets.abilities[requiredPetOne.petAbilities.length]
-      ).then((resp) => {
-        if (!resp.error)
-          setRequiredPetOne({
-            ...requiredPetOne,
-            petAbilities: [
-              ...requiredPetOne.petAbilities,
-              resp.assets[0].value,
-            ],
-          });
-      });
-    }
-
+    console.log(renderOnce);
     if (
-      requiredPetTwoSlot3.petAbilities.length < 6 &&
-      !requiredPetTwoSlot3.loading &&
-      curentActiveSlot3 === slot3pet2.id
+      renderOnce &&
+      !curentActiveSlot3.found &&
+      curentActiveSlot3.id === null
     ) {
-      petAbility(
-        requiredPetTwoSlot3.pets.abilities[
-          requiredPetTwoSlot3.petAbilities.length
-        ]
-      ).then((resp) => {
-        if (!resp.error)
-          setRequiredPetTwoSlot3({
-            ...requiredPetTwoSlot3,
-            petAbilities: [
-              ...requiredPetTwoSlot3.petAbilities,
-              resp.assets[0].value,
-            ],
-          });
-      });
-    }
-
-    if (
-      requiredPetThreeSlot3.petAbilities.length < 6 &&
-      !requiredPetThreeSlot3.loading &&
-      curentActiveSlot3 === slot3pet3.id
-    ) {
-      petAbility(
-        requiredPetThreeSlot3.pets.abilities[
-          requiredPetThreeSlot3.petAbilities.length
-        ]
-      ).then((resp) => {
-        if (!resp.error)
-          setRequiredPetThreeSlot3({
-            ...requiredPetThreeSlot3,
-            petAbilities: [
-              ...requiredPetThreeSlot3.petAbilities,
-              resp.assets[0].value,
-            ],
-          });
-      });
-    }
-    if (
-      requiredPetFourSlot3.petAbilities.length < 6 &&
-      !requiredPetFourSlot3.loading &&
-      curentActiveSlot3 === slot3pet4.id
-    ) {
-      petAbility(
-        requiredPetFourSlot3.pets.abilities[
-          requiredPetFourSlot3.petAbilities.length
-        ]
-      ).then((resp) => {
-        if (!resp.error)
-          setRequiredPetFourSlot3({
-            ...requiredPetFourSlot3,
-            petAbilities: [
-              ...requiredPetFourSlot3.petAbilities,
-              resp.assets[0].value,
-            ],
-          });
-      });
-    }
-    if (
-      curentActiveSlot3 === "1672" &&
-      !slot3pet2.owned &&
-      (slot3pet3.owned || slot3pet4.owned)
-    )
       ActivePetSlot3();
+    }
+
+    // if I find a pet in collection for slot 3
+
+    // if I don't find any pet in collection for slot 3
+    setRenderOnce(true);
+    console.log(curentActiveSlot3.found);
   }, [
     petsChar,
-    requiredPetOne.petAbilities,
-    requiredPetTwoSlot3.petAbilities,
-    requiredPetThreeSlot3.petAbilities,
-    requiredPetFourSlot3.petAbilities,
+    slot3pet4.owned,
+    slot3pet3.owned,
+    slot3pet2.owned,
+    renderOnce,
     curentActiveSlot3,
   ]);
 
   function ActivePetSlot3() {
-    const array = [slot3pet2.id, slot3pet3.id, slot3pet4.id];
-    if (slot3pet2.owned) return setCurentActiveSlot3(slot3pet2.id);
-    if (slot3pet3.owned) return setCurentActiveSlot3(slot3pet3.id);
-    if (slot3pet4.owned) return setCurentActiveSlot3(slot3pet4.id);
+    console.log("activeaza pet slot");
 
-    const randomElement = array[Math.floor(Math.random() * array.length)];
-    return setCurentActiveSlot3(randomElement);
+    if (slot3pet2.owned && checkPetLevel25(slot3pet2.id)) {
+      return setCurentActiveSlot3({ id: slot3pet2.id, found: true });
+    }
+    if (slot3pet3.owned && checkPetLevel25(slot3pet3.id)) {
+      return setCurentActiveSlot3({ id: slot3pet3.id, found: true });
+    }
+    if (slot3pet4.owned && checkPetLevel25(slot3pet4.id)) {
+      return setCurentActiveSlot3({ id: slot3pet4.id, found: true });
+    }
+    if (slot3pet2.owned) {
+      return setCurentActiveSlot3({ id: slot3pet2.id, found: true });
+    }
+    if (slot3pet3.owned) {
+      return setCurentActiveSlot3({ id: slot3pet3.id, found: true });
+    }
+    if (slot3pet4.owned) {
+      return setCurentActiveSlot3({ id: slot3pet4.id, found: true });
+    }
+  }
+
+  function checkPetLevel25(id) {
+    if (
+      petsChar.pets.pets.find(
+        (pet) => pet.species.id === id && pet.level === 25
+      )
+    ) {
+      console.log("merge aici da");
+      return true;
+    } else return false;
+  }
+
+  function defaultPetSlot3() {
+    return setCurentActiveSlot3({ id: slot3pet2.id, found: true });
   }
 
   function getPetDetails() {
     singlePetInfo(pet).then((res) => {
       setRequiredPetOne({ pets: res, petAbilities: [], loading: false });
     });
-    if (curentActiveSlot3 === slot3pet2.id) {
+    if (curentActiveSlot3.id === slot3pet2.id) {
       singlePetInfo(slot3pet2).then((res) => {
         setRequiredPetTwoSlot3({ pets: res, petAbilities: [], loading: false });
       });
     }
-    if (curentActiveSlot3 === slot3pet3.id) {
+    if (curentActiveSlot3.id === slot3pet3.id) {
       singlePetInfo(slot3pet3).then((res) => {
         setRequiredPetThreeSlot3({
           pets: res,
@@ -195,13 +179,18 @@ function FrostFireRidge() {
         });
       });
     }
-    if (curentActiveSlot3 === slot3pet4.id) {
+    if (curentActiveSlot3.id === slot3pet4.id) {
       singlePetInfo(slot3pet4).then((res) => {
         setRequiredPetFourSlot3({
           pets: res,
           petAbilities: [],
           loading: false,
         });
+      });
+    }
+    if (curentActiveSlot3.id === null) {
+      singlePetInfo(slot3pet2).then((res) => {
+        setRequiredPetTwoSlot3({ pets: res, petAbilities: [], loading: false });
       });
     }
   }
@@ -226,12 +215,7 @@ function FrostFireRidge() {
         <div className="FightRequirements">
           <ul>
             {!requiredPetOne.loading && requiredPetOne.pets ? (
-              <Pet
-                pet={requiredPetOne}
-                idPet={pet.id}
-                ownedPet={pet.owned}
-                abilities={pet.abilities}
-              />
+              <Pet pet={requiredPetOne} petOwned={pet} />
             ) : (
               ""
             )}
@@ -244,33 +228,27 @@ function FrostFireRidge() {
               <p className="level">Any level </p>
             </li>
             {!requiredPetTwoSlot3.loading && requiredPetTwoSlot3.pets
-              ? curentActiveSlot3 === slot3pet2.id && (
-                  <Pet
-                    pet={requiredPetTwoSlot3}
-                    idPet={slot3pet2.id}
-                    ownedPet={slot3pet2.owned}
-                    abilities={slot3pet2.abilities}
-                  />
+              ? curentActiveSlot3.id === slot3pet2.id && (
+                  <Pet pet={requiredPetTwoSlot3} petOwned={slot3pet2} />
                 )
               : ""}
-            {!requiredPetThreeSlot3.loading && requiredPetThreeSlot3.pets
-              ? curentActiveSlot3 === slot3pet3.id && (
-                  <Pet
-                    pet={requiredPetThreeSlot3}
-                    idPet={slot3pet3.id}
-                    ownedPet={slot3pet3.owned}
-                    abilities={slot3pet3.abilities}
-                  />
-                )
-              : ""}
+            {!requiredPetThreeSlot3.loading && requiredPetThreeSlot3.pets ? (
+              curentActiveSlot3.id === slot3pet3.id ? (
+                <Pet pet={requiredPetThreeSlot3} petOwned={slot3pet3} />
+              ) : (
+                "not"
+              )
+            ) : (
+              ""
+            )}
             {!requiredPetFourSlot3.loading && requiredPetFourSlot3.pets
-              ? curentActiveSlot3 === slot3pet4.id && (
-                  <Pet
-                    pet={requiredPetFourSlot3}
-                    idPet={slot3pet4.id}
-                    ownedPet={slot3pet4.owned}
-                    abilities={slot3pet4.abilities}
-                  />
+              ? curentActiveSlot3.id === slot3pet4.id && (
+                  <Pet pet={requiredPetFourSlot3} petOwned={slot3pet4} />
+                )
+              : ""}
+            {!requiredPetTwoSlot3.loading && requiredPetTwoSlot3.pets
+              ? curentActiveSlot3.id === null && (
+                  <Pet pet={requiredPetTwoSlot3} petOwned={slot3pet2} />
                 )
               : ""}
           </ul>
@@ -287,7 +265,7 @@ function FrostFireRidge() {
               {" "}
               <p>Turn 2 </p>
               <p>
-                Use <span>Wind Up</span>
+                Use <span>Wind Up</span>.
               </p>
             </div>
             <div className="turn">
@@ -308,11 +286,11 @@ function FrostFireRidge() {
               {" "}
               <p>Turn 5</p>
               <p>
-                Use <span>Toxic Smoke</span> if isn't dead already.
-                <div className="important">
+                Use <span>Toxic Smoke</span> if isn't dead already.<br></br>
+                <span className="important">
                   (It has 30% chance to dodge, so if he does just restart the
                   fight)
-                </div>
+                </span>
               </p>
             </div>
             <div className="turn">
@@ -335,19 +313,29 @@ function FrostFireRidge() {
               </p>
             </div>
           </div>
+          <h3>
+            TIP: Use the <span>[Safari Hat]</span> toy for 10% increased XP.
+          </h3>
         </div>
         <div className="locationImages">
           <h1>Localization: </h1>
-          <a href={location} target="_blank">
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText(coords);
+            }}
+          >
+            Copy Coordinates <FontAwesomeIcon icon={faClipboard} />
+          </button>
+          <a href={location} target="_blank" rel="noreferrer">
             {" "}
             <img src={location} alt="noImg"></img>
           </a>
 
-          <a href={location2} target="_blank">
+          <a href={location2} target="_blank" rel="noreferrer">
             {" "}
             <img src={location2} alt="noImg"></img>
           </a>
-          <a href={location3} target="_blank">
+          <a href={location3} target="_blank" rel="noreferrer">
             {" "}
             <img src={location3} alt="noImg"></img>
           </a>

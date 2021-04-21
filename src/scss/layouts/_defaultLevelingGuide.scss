@@ -10,6 +10,68 @@
   }
   & > h2 {
     font-family: $Raleway;
+    font-size: 1.5rem;
+    color: rgb(17, 17, 12);
+  }
+
+  & > h3 {
+    font-family: $Raleway;
+    font-weight: 100;
+    font-size: 1.5rem;
+    margin-top: 50px;
     color: rgb(6, 8, 6);
+  }
+
+  & > p {
+    font-family: $Merri;
+    font-weight: 100;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-indent: 2rem;
+    text-align: left;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: hsl(120, 6%, 23%);
+  }
+
+  & > ul {
+    background-color: rgb(32, 43, 54);
+    background: linear-gradient(10deg, rgb(40, 63, 78), rgb(24, 33, 41));
+    position: relative;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 170px);
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+    grid-auto-rows: 40px;
+    justify-content: center;
+    width: 80%;
+    min-height: 400px;
+    padding: 30px 20px;
+    margin: 0 auto;
+    margin-top: 5vh;
+
+    .defaultPet {
+      display: flex;
+      font-weight: 100;
+      font-family: $Roboto;
+      font-size: 0.85rem;
+      align-items: center;
+
+      padding: 35px 15px;
+      color: green;
+      z-index: 10;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      span {
+        width: 100px;
+        margin: 0 auto;
+        text-align: center;
+        color: rgb(211, 211, 211);
+      }
+    }
   }
 }

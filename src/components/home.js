@@ -66,137 +66,135 @@ function Home() {
   const displayPets = petsChar.pets.pets
     .slice(pagesVisited, pagesVisited + petsPerPage)
     .map((pet, ind) => {
-      {
-        return (
-          <Tilt key={ind} scale={1.1} transitionSpeed={800}>
-            {img.map(
-              (imagePet, index) =>
-                imagePet.id === pet.species.id && (
-                  <li
-                    key={index}
-                    onClick={() => {
-                      setShowModal(true);
-                      setCurentPet({ id: pet.id, pet: imagePet });
-                    }}
-                    className={[checkType(imagePet.battle_pet_type.type)]}
-                    style={{ animationDuration: 0.6 + index * 0.12 + "s" }}
-                  >
-                    <div className="iconPet">
-                      <img key={index} src={imagePet.icon} alt="noImg"></img>
+      return (
+        <Tilt key={ind} scale={1.1} transitionSpeed={800}>
+          {img.map(
+            (imagePet, index) =>
+              imagePet.id === pet.species.id && (
+                <li
+                  key={index}
+                  onClick={() => {
+                    setShowModal(true);
+                    setCurentPet({ id: pet.id, pet: imagePet });
+                  }}
+                  className={[checkType(imagePet.battle_pet_type.type)]}
+                  style={{ animationDuration: 0.6 + index * 0.12 + "s" }}
+                >
+                  <div className="iconPet">
+                    <img key={index} src={imagePet.icon} alt="noImg"></img>
+                  </div>
+                  <div className="petName">{imagePet.name}</div>{" "}
+                  <div className={checkRarity(pet.quality.type)}>
+                    {pet.quality.type.toLowerCase()}
+                  </div>
+                  <p className="level">Level {pet.level}</p>
+                  <br></br>
+                  <p>
+                    {" "}
+                    Health: {pet.stats.health}{" "}
+                    <FontAwesomeIcon className="health" icon={faHeart} />
+                  </p>
+                  <p>
+                    {" "}
+                    Power: {pet.stats.power}{" "}
+                    <FontAwesomeIcon className="power" icon={faMeteor} />
+                  </p>
+                  <p>
+                    Speed: {pet.stats.speed}{" "}
+                    <FontAwesomeIcon className="speed" icon={faBolt} />
+                  </p>
+                  <p className="type">- {imagePet.battle_pet_type.type} -</p>
+                  {imagePet.battle_pet_type.type === "BEAST" ? (
+                    <div className="swipe"></div>
+                  ) : (
+                    ""
+                  )}
+                  {imagePet.battle_pet_type.type === "BEAST" ? (
+                    <FontAwesomeIcon className="paw" icon={faPaw} />
+                  ) : (
+                    ""
+                  )}
+                  {imagePet.battle_pet_type.type === "ELEMENTAL" ? (
+                    <div className="fireIcon"></div>
+                  ) : (
+                    ""
+                  )}
+                  {imagePet.battle_pet_type.type === "UNDEAD" ? (
+                    <div>
+                      <FontAwesomeIcon
+                        className="skull"
+                        icon={faSkull}
+                        style={{ top: 3 * pet.level + "%" }}
+                      />
+                      <FontAwesomeIcon className="skull1" icon={faSkull} />
+                      <FontAwesomeIcon className="skull2" icon={faSkull} />
                     </div>
-                    <div className="petName">{imagePet.name}</div>{" "}
-                    <div className={checkRarity(pet.quality.type)}>
-                      {pet.quality.type.toLowerCase()}
+                  ) : (
+                    ""
+                  )}
+                  {imagePet.battle_pet_type.type === "FLYING" ? (
+                    <div>
+                      <FontAwesomeIcon
+                        className="feather"
+                        style={{
+                          top: pet.stats.speed > 10 ? "17%" : "40%",
+                        }}
+                        icon={faFeatherAlt}
+                      />
                     </div>
-                    <p className="level">Level {pet.level}</p>
-                    <br></br>
-                    <p>
-                      {" "}
-                      Health: {pet.stats.health}{" "}
-                      <FontAwesomeIcon className="health" icon={faHeart} />
-                    </p>
-                    <p>
-                      {" "}
-                      Power: {pet.stats.power}{" "}
-                      <FontAwesomeIcon className="power" icon={faMeteor} />
-                    </p>
-                    <p>
-                      Speed: {pet.stats.speed}{" "}
-                      <FontAwesomeIcon className="speed" icon={faBolt} />
-                    </p>
-                    <p className="type">- {imagePet.battle_pet_type.type} -</p>
-                    {imagePet.battle_pet_type.type === "BEAST" ? (
-                      <div className="swipe"></div>
-                    ) : (
-                      ""
-                    )}
-                    {imagePet.battle_pet_type.type === "BEAST" ? (
-                      <FontAwesomeIcon className="paw" icon={faPaw} />
-                    ) : (
-                      ""
-                    )}
-                    {imagePet.battle_pet_type.type === "ELEMENTAL" ? (
-                      <div className="fireIcon"></div>
-                    ) : (
-                      ""
-                    )}
-                    {imagePet.battle_pet_type.type === "UNDEAD" ? (
-                      <div>
-                        <FontAwesomeIcon
-                          className="skull"
-                          icon={faSkull}
-                          style={{ top: 3 * pet.level + "%" }}
-                        />
-                        <FontAwesomeIcon className="skull1" icon={faSkull} />
-                        <FontAwesomeIcon className="skull2" icon={faSkull} />
-                      </div>
-                    ) : (
-                      ""
-                    )}
-                    {imagePet.battle_pet_type.type === "FLYING" ? (
-                      <div>
-                        <FontAwesomeIcon
-                          className="feather"
-                          style={{
-                            top: pet.stats.speed > 10 ? "17%" : "40%",
-                          }}
-                          icon={faFeatherAlt}
-                        />
-                      </div>
-                    ) : (
-                      ""
-                    )}
-                    {imagePet.battle_pet_type.type === "CRITTER" ? (
-                      <div>
-                        <FontAwesomeIcon
-                          className="frog"
-                          style={{
-                            bottom: pet.stats.speed > 10 ? "17%" : "10%",
-                            left: pet.stats.speed > 10 ? "17%" : "5%",
-                          }}
-                          icon={faFrog}
-                        />
-                      </div>
-                    ) : (
-                      ""
-                    )}
-                    {imagePet.battle_pet_type.type === "MECHANICAL" ? (
-                      <div>
-                        <FontAwesomeIcon className="cogs" icon={faCogs} />
-                        <FontAwesomeIcon className="cog" icon={faCog} />
-                      </div>
-                    ) : (
-                      ""
-                    )}
-                    {imagePet.battle_pet_type.type === "HUMANOID" ? (
-                      <div>
-                        <FontAwesomeIcon className="mask" icon={faMask} />
-                      </div>
-                    ) : (
-                      ""
-                    )}
-                    {imagePet.battle_pet_type.type === "AQUATIC" ? (
-                      <div>
-                        <div className="waterDrop1"></div>
-                        <div className="waterDrop2"></div>
-                        <div className="waterDrop3"></div>
-                      </div>
-                    ) : (
-                      ""
-                    )}
-                    {imagePet.battle_pet_type.type === "DRAGONKIN" ? (
-                      <div>
-                        <div className="dragonSign1"></div>
-                      </div>
-                    ) : (
-                      ""
-                    )}
-                  </li>
-                )
-            )}
-          </Tilt>
-        );
-      }
+                  ) : (
+                    ""
+                  )}
+                  {imagePet.battle_pet_type.type === "CRITTER" ? (
+                    <div>
+                      <FontAwesomeIcon
+                        className="frog"
+                        style={{
+                          bottom: pet.stats.speed > 10 ? "17%" : "10%",
+                          left: pet.stats.speed > 10 ? "17%" : "5%",
+                        }}
+                        icon={faFrog}
+                      />
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {imagePet.battle_pet_type.type === "MECHANICAL" ? (
+                    <div>
+                      <FontAwesomeIcon className="cogs" icon={faCogs} />
+                      <FontAwesomeIcon className="cog" icon={faCog} />
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {imagePet.battle_pet_type.type === "HUMANOID" ? (
+                    <div>
+                      <FontAwesomeIcon className="mask" icon={faMask} />
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {imagePet.battle_pet_type.type === "AQUATIC" ? (
+                    <div>
+                      <div className="waterDrop1"></div>
+                      <div className="waterDrop2"></div>
+                      <div className="waterDrop3"></div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {imagePet.battle_pet_type.type === "DRAGONKIN" ? (
+                    <div>
+                      <div className="dragonSign1"></div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </li>
+              )
+          )}
+        </Tilt>
+      );
     });
 
   function checkRarity(rare) {
@@ -358,7 +356,7 @@ function Home() {
           )}
         </ul>
       ) : (
-        "loading"
+        <div className="spinnerPets-1"></div>
       )}
       {!searchedChar.error && !petsChar.error && !petsChar.loading ? (
         <ReactPaginate

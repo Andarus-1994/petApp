@@ -40,7 +40,23 @@
     .locationImages {
       display: flex;
       flex-direction: column;
-      width: 600px;
+      width: 400px;
+      z-index: 20;
+      button {
+        background-color: rgb(236, 236, 221);
+        cursor: pointer;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        border: none;
+        padding: 10px 12px;
+        font-family: $Roboto;
+        transition: 0.4s;
+        &:hover {
+          background-color: rgb(202, 202, 163);
+        }
+      }
       img {
         width: 350px;
         height: 200px;

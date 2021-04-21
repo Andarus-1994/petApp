@@ -50,6 +50,39 @@
     align-items: center;
     font-family: $Raleway;
   }
+  .emptyBarTotalPets {
+    position: absolute;
+    top: 108px;
+    left: 17%;
+    border: 1px solid rgb(116, 116, 139);
+    border-radius: 10px;
+    width: 120px;
+    height: 10px;
+    p {
+      font-family: $Roboto;
+      font-weight: 100;
+      text-align: center;
+      color: rgb(22, 27, 22);
+      width: 170px;
+      margin-top: 5px;
+      margin-left: -10px;
+    }
+    .fillBarOwnedPets {
+      background: linear-gradient(120deg, rgb(58, 201, 82), rgb(36, 128, 24));
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+
+      height: 9px;
+    }
+    h3 {
+      position: absolute;
+      top: -25px;
+      left: 17%;
+      color: rgb(107, 151, 91);
+      font-family: $Roboto;
+      font-weight: 100;
+    }
+  }
   .profile {
     position: absolute;
     top: 60px;
@@ -59,16 +92,15 @@
       border-radius: 0.5rem;
     }
 
-    &:hover .hoverProfile {
-      opacity: 1;
+    &:hover:not(h2) .hoverProfile {
+      display: inline;
     }
 
     .hoverProfile {
       position: absolute;
-      left: 100px;
+      left: 89px;
       top: -20px;
-      opacity: 0;
-      transition: 0.4s ease-in-out;
+      display: none;
     }
     div {
       display: flex;

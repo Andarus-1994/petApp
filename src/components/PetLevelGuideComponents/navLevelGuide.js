@@ -4,10 +4,15 @@ import {
   Switch,
   NavLink,
 } from "react-router-dom";
+import ScrollTop from "../router/scrollTop.js";
 import ShadowmoonDraenorLevelGuide from "./shadowmoonDraenor.js";
 import { useSelector, useDispatch } from "react-redux";
 import DefaultLevelGuide from "./defaultLevelGuide.js";
 import FrostFireRidgeLevelGuide from "./frostFireRidge.js";
+import NagrandDraenorLevelGuide from "./nagrandDraenor.js";
+import CourageousYon from "./CourageousYon.js";
+import ThunderingPandarenSpirit from "./ThunderingPandarenSpirit.js";
+import WhisperingPandarenSpirit from "./WhisperingPandarenSpirit.js";
 function Nav() {
   const profile = useSelector((state) => state.profile);
   const favChar = JSON.parse(localStorage.getItem("favChar"));
@@ -18,12 +23,18 @@ function Nav() {
     <Router>
       <nav>
         <ul className="nav-links-guide-leveling">
+          <NavLink to="/guidepetlevel" className="label">
+            <li>Guide Menu</li>
+          </NavLink>
           <NavLink
             to="/guidepetlevel/ashlei"
             activeClassName="active"
             className="inactive"
           >
-            <li> Ashlei (ShadowMoon Draenor)</li>
+            <li>
+              {" "}
+              Ashlei <br></br>(ShadowMoon Draenor)
+            </li>
           </NavLink>
           <NavLink
             to="/guidepetlevel/gargra"
@@ -31,47 +42,83 @@ function Nav() {
             activeClassName="active"
             className="inactive"
           >
-            <li> Gargra (FrostFire Ridge Draenor) </li>
+            <li>
+              {" "}
+              Gargra<br></br> (FrostFire Ridge Draenor){" "}
+            </li>
           </NavLink>
           <NavLink
-            to="/guidepetlevel/silvermoon"
+            to="/guidepetlevel/tarr"
             exact
             activeClassName="active"
             className="inactive"
           >
-            <li> Pandaria </li>
+            <li>
+              {" "}
+              Tarr the Terrible<br></br> (Nagrand Draenor){" "}
+            </li>
           </NavLink>
           <NavLink
-            to="/guidepetlevel/silvermoon"
+            to="/guidepetlevel/yon"
             exact
             activeClassName="active"
             className="inactive"
           >
-            <li> Silvermoon </li>
+            <li>
+              {" "}
+              Courageous Yon <br></br>(Kun-lai Summit){" "}
+            </li>
           </NavLink>
           <NavLink
-            to="/guidepetlevel/orgrimmar"
+            to="/guidepetlevel/thunderingPS"
             exact
             activeClassName="active"
             className="inactive"
           >
-            <li> Orgrimmar </li>
+            <li>
+              {" "}
+              Thundering Pandaren Spirit<br></br> (Kun-lai Summit){" "}
+            </li>
+          </NavLink>
+          <NavLink
+            to="/guidepetlevel/whisperingPS"
+            exact
+            activeClassName="active"
+            className="inactive"
+          >
+            <li>
+              {" "}
+              Whispering Pandaren Spirit<br></br> (Jade Forest){" "}
+            </li>
           </NavLink>
         </ul>
       </nav>
-      <Switch>
-        <Route path="/guidepetlevel/ashlei">
-          <ShadowmoonDraenorLevelGuide />
-        </Route>
-        <Route path="/guidepetlevel/gargra">
-          <FrostFireRidgeLevelGuide />
-        </Route>
+      <ScrollTop>
+        <Switch>
+          <Route path="/guidepetlevel/ashlei">
+            <ShadowmoonDraenorLevelGuide />
+          </Route>
+          <Route path="/guidepetlevel/gargra">
+            <FrostFireRidgeLevelGuide />
+          </Route>
+          <Route path="/guidepetlevel/tarr">
+            <NagrandDraenorLevelGuide />
+          </Route>
+          <Route path="/guidepetlevel/yon">
+            <CourageousYon />
+          </Route>
+          <Route path="/guidepetlevel/thunderingps">
+            <ThunderingPandarenSpirit />
+          </Route>
+          <Route path="/guidepetlevel/whisperingps">
+            <WhisperingPandarenSpirit />
+          </Route>
 
-        <Route path="/guidepetlevel/pandaria">pandaria</Route>
-        <Route path="/guidepetlevel">
-          <DefaultLevelGuide />
-        </Route>
-      </Switch>
+          <Route path="/guidepetlevel">
+            <DefaultLevelGuide />
+          </Route>
+        </Switch>
+      </ScrollTop>
     </Router>
   );
 }

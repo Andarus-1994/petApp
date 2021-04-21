@@ -7,13 +7,14 @@
     top: 83px;
     right: 4%;
     z-index: 10;
-    width: 300px;
+    width: fit-content;
     ul {
       list-style-type: none;
       display: flex;
       justify-content: center;
 
       a {
+        position: relative;
         text-decoration: none;
         font-size: 0.95rem;
         font-family: $Raleway;
@@ -26,6 +27,18 @@
         &:hover {
           background-color: rgb(247, 244, 244);
           color: black;
+        }
+        .new {
+          position: relative;
+          top: 0;
+          &::after {
+            content: "*";
+            position: absolute;
+            font-size: 1.8rem;
+            color: rgb(214, 37, 37);
+            top: -8px;
+            right: -5px;
+          }
         }
       }
       .active {
