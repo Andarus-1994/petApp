@@ -263,7 +263,7 @@ function Home() {
   }
 
   useEffect(() => {
-    console.log(searchedChar);
+    document.title = "Petopia";
     if (!searchedChar.loading && petsChar.pets.length === 0)
       dispatch(getPetsCharacter(searchedChar.character));
     if (petsChar.pets.pets.length > 0 && img.length === 0)

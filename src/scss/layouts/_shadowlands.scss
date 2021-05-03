@@ -1,15 +1,17 @@
 .shadowlands {
   padding-top: 4rem;
-  min-height: 110vh;
+  min-height: 50vh;
+  background: linear-gradient(rgb(247, 244, 244), #b2bbb2, #262a33);
   & > h1 {
     font-family: $Roboto;
     font-weight: 900;
-    font-size: 3.5rem;
-    color: #1a1d1a;
+    font-size: 3rem;
+    color: #242724;
     text-align: center;
     margin-bottom: 80px;
+    animation: fade 1s;
   }
   .containerShadowlands {
-    min-height: 80vh;
+    min-height: 50vh;
   }
 }

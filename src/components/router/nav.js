@@ -8,7 +8,6 @@ import ScrollTop from "./scrollTop.js";
 import Home from "../home.js";
 import NotFound from "../notFound.js";
 import "../../scss/style.css";
-
 import { retriveToken } from "../actions";
 import { useEffect } from "react";
 
@@ -20,6 +19,11 @@ import Contact from "../contact.js";
 import Success from "../success.js";
 import NavMenuShadowLands from "./../ShadowLandsComponents/navShadowLands.js";
 import ArdenwealdWQs from "../ShadowLandsComponents/ardenwealdWQs.js";
+import MaldraxxusWQs from "../ShadowLandsComponents/maldraxxusWQs.js";
+import RevendrethWQs from "../ShadowLandsComponents/revendrethWQs.js";
+import BastionWQs from "../ShadowLandsComponents/bastionWQs.js";
+import BastionAchievement from "../ShadowLandsComponents/FamiliarAchievement/Bastion.js";
+
 function Nav() {
   const petsChar = useSelector((state) => state.pets);
   const profile = useSelector((state) => state.profile);
@@ -45,7 +49,6 @@ function Nav() {
     if (!favChar && Object.keys(searchedChar.character).length === 0) {
       dispatch(retriveMediaProfile({ char: "", server: "", region: "" }));
     }
-    console.log(petsChar.pets);
   }, [searchedChar.character, searchedChar.error]);
 
   return (
@@ -90,8 +93,21 @@ function Nav() {
             <Route path="/shadowlands/default">
               <NavMenuShadowLands />
             </Route>
+
             <Route path="/shadowlands/ardenwealdWQ">
               <ArdenwealdWQs />
+            </Route>
+            <Route path="/shadowlands/bastionWQ">
+              <BastionWQs />
+            </Route>
+            <Route path="/shadowlands/bastionAchievement">
+              <BastionAchievement />
+            </Route>
+            <Route path="/shadowlands/maldraxxusWQ">
+              <MaldraxxusWQs />
+            </Route>
+            <Route path="/shadowlands/revendrethWQ">
+              <RevendrethWQs />
             </Route>
 
             <Route path="/guidepetlevel">

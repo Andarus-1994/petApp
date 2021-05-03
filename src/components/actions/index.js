@@ -26,7 +26,6 @@ export const retriveToken = () => {
         },
       })
       .then((response) => {
-        console.log("merge post");
         const token = response.data;
         localStorage.removeItem("token");
         localStorage.setItem("token", token.access_token);
@@ -43,7 +42,6 @@ export const retriveMediaProfile = (character) => {
   const token = localStorage.getItem("token");
 
   return (dispatch) => {
-    console.log(character.char);
     if (character.char === "") {
       dispatch({
         type: "FETCH_PROFILE_MEDIA_FAILURE",
@@ -75,9 +73,8 @@ export const retriveMediaProfile = (character) => {
           }
         )
         .then((response) => {
-          console.log("merge post");
           const charMedia = response.data;
-          console.log(charMedia);
+
           dispatch({ type: "FETCH_PROFILE_MEDIA_SUCCESS", payload: charMedia });
         })
         .catch((error) => {
@@ -91,7 +88,6 @@ export const retriveMediaProfile = (character) => {
 };
 
 export const searchChar = (character) => {
-  console.log(character);
   return {
     type: "SEARCH_CHAR",
     payload: character,
@@ -129,13 +125,11 @@ export const getPetsCharacter = (character) => {
         }
       )
       .then((response) => {
-        console.log("merge post");
         const pets = response.data;
-        console.log(pets);
+
         dispatch({ type: "FETCH_PETS_SUCCESS", payload: pets });
       })
       .catch((error) => {
-        console.log("error");
         dispatch({
           type: "FETCH_PETS_FAILURE",
           payload: error.message,

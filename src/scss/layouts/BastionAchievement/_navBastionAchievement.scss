@@ -1,0 +1,88 @@
+.navBastionAchievement {
+  width: 250px;
+  nav {
+    position: relative;
+    width: 200px;
+    margin-top: 90px;
+    animation: fade 1s;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .disabled {
+        pointer-events: none;
+        background: rgb(94, 91, 91) !important;
+        color: rgb(189, 184, 184) !important;
+      }
+
+      a:not(a:first-child) {
+        background: linear-gradient(120deg, #948d5a, rgb(236, 218, 112));
+        color: black;
+        &:hover {
+          color: rgb(255, 255, 255);
+          background: linear-gradient(80deg, #66613f, rgb(117, 108, 52));
+        }
+
+        .active {
+          pointer-events: none;
+          color: rgb(255, 255, 255) !important;
+          background: linear-gradient(
+            60deg,
+            #66613f,
+            rgb(117, 108, 52)
+          ) !important;
+        }
+      }
+
+      .active {
+        pointer-events: none;
+        color: rgb(255, 255, 255) !important;
+        background: linear-gradient(
+          60deg,
+          #66613f,
+          rgb(117, 108, 52)
+        ) !important;
+      }
+      a {
+        background-color: rgba(7, 7, 7, 0.39);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-family: $Raleway;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        color: rgb(248, 248, 248);
+        padding: 10px 5px;
+        border-bottom: 1px solid rgb(236, 236, 236);
+        border-right: 1px solid rgb(233, 229, 229);
+        border-left: 1px solid rgb(236, 235, 235);
+        text-align: center;
+        margin: 0 0px;
+        transition: 0.4s;
+
+        &:hover {
+          color: rgb(255, 255, 255);
+          background-color: rgba(0, 0, 0, 0.623);
+        }
+      }
+
+      .label {
+        pointer-events: none;
+        padding: 10px 10px;
+        background: linear-gradient(
+          20deg,
+          rgb(12, 12, 19),
+          rgb(12, 12, 19),
+          #383629,
+          rgb(209, 209, 143),
+          #383629,
+          rgb(12, 12, 19),
+          rgb(12, 12, 19)
+        );
+        color: #ffffff;
+      }
+    }
+  }
+}

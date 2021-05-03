@@ -1,6 +1,8 @@
 @import "../../mixins/petTypeStyle";
 
 .ardenwealdWQs {
+  box-shadow: inset 0px -80px 100px 30px rgb(53, 59, 78);
+  background-color: rgb(226, 226, 235);
   & > .containerArdenwealdWQs {
     width: 99%;
     margin: 0 auto;
@@ -14,6 +16,7 @@
       flex-direction: column;
       width: 98%;
       max-width: 1200px;
+
       > .stratAviable {
         background: #77b842;
         cursor: pointer;
@@ -77,24 +80,33 @@
       }
 
       .FightInstructions {
+        position: relative;
         width: 98%;
         max-width: 900px;
         background: rgb(32, 37, 48);
-        border: 1px solid black;
-
         color: rgb(241, 237, 237);
         margin: 0 auto;
-        margin-top: 50px;
+        margin-top: 20px;
         padding: 40px 30px;
         display: flex;
-        min-height: 400px;
+        min-height: 300px;
         flex-direction: column;
+        box-shadow: inset 0px 0px 15px 0px rgb(36, 64, 100);
         animation: fadeIn 1s;
 
         h1 {
+          position: relative;
           color: white;
-          margin-bottom: 50px;
-          font-size: 2.5rem;
+          margin-bottom: 20px;
+          font-size: 2rem;
+          & > .leaf {
+            color: rgb(27, 46, 61);
+            margin: 0 5px;
+            &:first-child {
+              transform: rotateZ(70deg);
+              margin-right: 10px;
+            }
+          }
         }
 
         h3 {

@@ -1,8 +1,16 @@
 import { NavLink } from "react-router-dom";
 import Copyright from "../copyright.js";
 import bgImg from "../../assets/Shadowlands/SLbackground.jpg";
+import { useEffect } from "react";
 
 function NavSL() {
+  useEffect(() => {
+    document.title = "Shadowlands Pet Guides";
+    window.scrollTo({
+      top: 270,
+      left: 0,
+    });
+  }, []);
   return (
     <div className="shadowlands">
       <h1>Shadowlands Pet Guides</h1>
@@ -13,14 +21,14 @@ function NavSL() {
             <NavLink
               to="/shadowlands/bastionWQ"
               activeClassName="active"
-              className="inactive disabled"
+              className="inactive"
             >
               <li> Bastion WQ</li>
             </NavLink>
             <NavLink
               to="/shadowlands/bastionAchievement"
               activeClassName="active"
-              className="inactive disabled"
+              className="inactive"
             >
               <li> Bastion Achievements</li>
             </NavLink>
@@ -30,9 +38,9 @@ function NavSL() {
           <ul className="nav">
             <h1>Revendreth</h1>
             <NavLink
-              to="/shadowlands/revendrethdWQ"
+              to="/shadowlands/revendrethWQ"
               activeClassName="active"
-              className="inactive disabled"
+              className="inactive"
             >
               <li> Revendreth WQ</li>
             </NavLink>
@@ -75,7 +83,7 @@ function NavSL() {
             <NavLink
               to="/shadowlands/maldraxxusWQ"
               activeClassName="active"
-              className="inactive disabled"
+              className="inactive"
             >
               <li> Maldraxxus WQ</li>
             </NavLink>

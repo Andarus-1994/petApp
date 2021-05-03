@@ -1,0 +1,155 @@
+.maldraxxusDefault {
+  padding-top: 5vh;
+  width: 100%;
+  text-align: center;
+  & > h1 {
+    color: rgb(43, 49, 43);
+    font-size: 2.5rem;
+    font-family: $Roboto;
+    text-align: center;
+    margin-bottom: 4vh;
+  }
+  & > h2 {
+    font-family: $Raleway;
+    font-size: 1.5rem;
+    color: rgb(17, 17, 12);
+  }
+
+  & > h3 {
+    font-family: $Raleway;
+    font-weight: 100;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    color: rgb(6, 8, 6);
+  }
+
+  & > p {
+    font-family: $Merri;
+    font-weight: 100;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-indent: 2rem;
+    text-align: left;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: hsl(120, 6%, 23%);
+  }
+  & > p:nth-of-type(3) {
+    color: hsl(120, 14%, 49%);
+    width: 700px;
+  }
+  & > h4 {
+    color: grey;
+  }
+  & > ul {
+    background-color: rgb(32, 43, 54);
+    background: linear-gradient(10deg, rgb(47, 54, 49), rgb(33, 63, 45));
+
+    position: relative;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 170px);
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+    grid-auto-rows: 40px;
+    justify-content: center;
+    width: 80%;
+    min-height: 200px;
+    max-width: 900px;
+    padding: 50px 20px;
+    padding-top: 30px;
+    margin: 0 auto;
+    margin-top: 3vh;
+    &:nth-of-type(1) {
+      &::after {
+        top: 4%;
+        left: 0;
+        content: "";
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(
+          90deg,
+          rgb(156, 156, 96),
+          rgb(9, 95, 9) 30%
+        );
+        position: absolute;
+        clip-path: polygon(
+          30% 25%,
+          55% 34%,
+          70% 55%,
+          50% 71%,
+          34% 73%,
+          24% 85%,
+          0 100%,
+          0% 70%,
+          0% 35%,
+          0 0
+        );
+      }
+    }
+    &:nth-of-type(2) {
+      border-bottom-left-radius: 55px;
+      &::after {
+        bottom: 0;
+        left: 0;
+        content: "";
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(
+          40deg,
+          rgb(156, 156, 96),
+          rgb(8, 39, 8) 90%
+        );
+        position: absolute;
+        clip-path: polygon(
+          32% 0,
+          42% 21%,
+          65% 43%,
+          91% 54%,
+          100% 100%,
+          67% 100%,
+          39% 76%,
+          6% 66%,
+          0% 35%,
+          0 0
+        );
+      }
+    }
+
+    .cogBackground {
+      color: rgb(46, 63, 47);
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      font-size: 7rem;
+    }
+    .defaultPet {
+      display: flex;
+      font-weight: 100;
+      font-family: $Roboto;
+      font-size: 0.85rem;
+      align-items: center;
+
+      padding: 35px 15px;
+      color: green;
+      z-index: 10;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      span {
+        width: 100px;
+        margin: 0 auto;
+        text-align: center;
+        color: rgb(211, 211, 211);
+      }
+      .owned {
+        color: green;
+      }
+      .notOwned {
+        color: red;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.navRevendrethWQs {
+  width: 250px;
+  nav {
+    //background-image: url("https://wow.zamimg.com/uploads/screenshots/normal/983355.jpg");
+
+    position: relative;
+    width: 200px;
+    margin-top: 90px;
+    animation: fade 1s;
+    .space {
+      height: 50px;
+      background: linear-gradient(
+        90deg,
+        rgb(226, 224, 224),
+        rgb(247, 244, 244)
+      );
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &:nth-of-type(1) {
+        background: rgb(95, 14, 14);
+      }
+      &:nth-of-type(2) {
+        background-image: url("./../assets/Shadowlands/shadowNav.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      &:nth-child(2) {
+        .label {
+          background: linear-gradient(
+            20deg,
+            rgb(14, 7, 9),
+            rgb(14, 7, 9),
+            rgba(247, 8, 8, 0.658),
+            rgb(14, 7, 9),
+            rgba(14, 7, 9, 1)
+          );
+          pointer-events: none;
+        }
+      }
+      a {
+        background-color: rgba(7, 7, 7, 0.411);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-family: $Raleway;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        color: rgb(248, 248, 248);
+        padding: 10px 5px;
+        border-bottom: 1px solid black;
+        text-align: center;
+        margin: 0 0px;
+        transition: 0.4s;
+
+        &:hover {
+          color: rgb(255, 255, 255);
+          background-color: rgba(0, 0, 0, 0.623);
+        }
+      }
+      .active {
+        pointer-events: none;
+        color: rgba(146, 145, 145, 0.767);
+        background-color: rgba(22, 17, 17, 0.842);
+      }
+      .label {
+        pointer-events: none;
+        background: linear-gradient(
+          20deg,
+          rgb(14, 7, 9),
+          rgb(14, 7, 9),
+          rgba(247, 8, 8, 0.452),
+          rgb(14, 7, 9),
+          rgba(14, 7, 9, 1)
+        );
+        color: #ece7e7;
+      }
+    }
+  }
+}

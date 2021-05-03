@@ -243,7 +243,7 @@ function NagrandDraenor() {
               {" "}
               <p>Turn 4</p>
               <p>
-                Use <span>Dead's Man Party</span>.
+                Use <span>Dead Man's Party</span>.
               </p>
             </div>
             <div className="turn">
@@ -255,14 +255,14 @@ function NagrandDraenor() {
               {" "}
               <p>Turn 6</p>
               <p>
-                Use <span>Dead's Man Party</span> again.
+                Use <span>Dead Man's Party</span> again.
               </p>
             </div>
             <div className="turn">
               {" "}
               <p>Turn 9</p>
               <p>
-                Use <span>Dead's Man Party</span> again.
+                Use <span>Dead Man's Party</span> again.
               </p>
             </div>
             <div className="turn">

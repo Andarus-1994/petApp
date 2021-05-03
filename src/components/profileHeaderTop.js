@@ -10,22 +10,24 @@ function ProfileImage() {
   const [totalPets, setTotalPets] = useState(0);
   const [ownedUniquePets, setOwnedUniquePets] = useState(0);
   useMemo(() => {
-    petInfo2().then((res) => {
-      console.log(res);
-      setTotalPets(res.pets.length);
-    });
+    if (!profile.error) {
+      petInfo2().then((res) => {
+        console.log(res);
+        setTotalPets(res.pets.length);
+      });
 
-    let noDuplicates = [];
-    if (!petsChar.loading)
-      noDuplicates = petsChar.pets.pets.filter(
-        (ele, ind) =>
-          ind ===
-          petsChar.pets.pets.findIndex(
-            (elem) => elem.species.id === ele.species.id
-          )
-      );
-    setOwnedUniquePets(noDuplicates.length);
-    console.log("noDup", noDuplicates);
+      let noDuplicates = [];
+      if (!petsChar.loading && !petsChar.error && petsChar.pets.pets)
+        noDuplicates = petsChar.pets.pets.filter(
+          (ele, ind) =>
+            ind ===
+            petsChar.pets.pets.findIndex(
+              (elem) => elem.species.id === ele.species.id
+            )
+        );
+      setOwnedUniquePets(noDuplicates.length);
+      console.log("noDup", noDuplicates);
+    }
   }, [petsChar]);
 
   function percentage(partialValue, totalValue) {
@@ -47,7 +49,7 @@ function ProfileImage() {
         </div>
         <p>{ownedUniquePets + "/" + totalPets} Unique Pets</p>
       </div>
-      {profile.profile && !profile.loading ? (
+      {!profile.error && profile.profile && !profile.loading ? (
         <div>
           <div className="profile">
             <img

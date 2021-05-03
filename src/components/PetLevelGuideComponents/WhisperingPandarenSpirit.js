@@ -35,7 +35,7 @@ function WhisperingPandarenSpirit() {
     {
       id: 1167,
       owned: false,
-      abilities: { 1: 3, 2: 1, 3: 5 },
+      abilities: { 1: 3, 2: 4, 3: 5 },
       loading: true,
       speed: null,
       rarity: "rare",

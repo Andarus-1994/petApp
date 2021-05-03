@@ -26,23 +26,28 @@ function ShadowmoonDraenor({ pet, petOwned }) {
   const abilities = petOwned.abilities;
   const speed = petOwned.speed;
   const rarity = petOwned.rarity;
-  useEffect(() => {
-    if (petAbilitiesState === null) {
-      petAbilities(pet.pets.abilities).then((resp) => {
-        if (!resp.error) {
-          console.log(resp);
-          setPetAbilities(resp);
-        }
-      });
-    }
-    if (petOwnedDetails.petDetails.length === 0 && !petsChar.loading) {
-      checkPetLevel25(idPet);
-      console.log("intra");
-    }
+  useEffect(
+    () => {
+      if (petAbilitiesState === null) {
+        petAbilities(pet.pets.abilities).then((resp) => {
+          if (!resp.error) {
+            console.log(resp);
+            setPetAbilities(resp);
+          }
+        });
+      }
+      if (petOwnedDetails.petDetails.length === 0 && !petsChar.loading) {
+        checkPetLevel25(idPet);
+        console.log("intra");
+      }
 
-    console.log(petAbilitiesState);
-    console.log(petOwnedDetails.petDetails);
-  }, [petAbilitiesState, petOwnedDetails]);
+      console.log(petAbilitiesState);
+      console.log(petOwnedDetails.petDetails);
+    },
+    [
+      /*petAbilitiesState, petOwnedDetails */
+    ]
+  );
 
   function checkPetLevel25(id) {
     const petsOwned = [];
@@ -119,47 +124,49 @@ function ShadowmoonDraenor({ pet, petOwned }) {
         <img src={pet.pets.icon} alt="noImg"></img>
       </div>
       <div className="petName">{pet.pets.name}</div>{" "}
-      {petOwnedDetails.petDetails && !petOwnedDetails.loading && ownedPet ? (
-        petOwnedDetails.petDetails.map((detail) => (
-          <div>
-            <p className={detail.level === 25 ? "level" : "level required"}>
-              Required Level 25<br></br> (Level {detail.level})
-            </p>
+      <div className="containerReq">
+        {petOwnedDetails.petDetails && !petOwnedDetails.loading && ownedPet ? (
+          petOwnedDetails.petDetails.map((detail) => (
+            <div>
+              <p className={detail.level === 25 ? "level" : "level required"}>
+                Required Level 25<br></br> (Level {detail.level})
+              </p>
 
+              {speed === null ? (
+                <p className="stats">No Stats Required </p>
+              ) : speed > detail.speed ? (
+                detail.breed === 5 || detail.breed === 15 ? (
+                  <p className="stats"> SS Breed</p>
+                ) : (
+                  <p className="stats required">
+                    Required Speed {speed} ({detail.speed}) - SS breed
+                  </p>
+                )
+              ) : (
+                <p className="stats">Required SS Breed</p>
+              )}
+
+              {rarity !== detail.quality.toLowerCase() ? (
+                <p className="rarity required">
+                  Required Quality {rarity.toUpperCase()} ({detail.quality})
+                </p>
+              ) : (
+                <p className="stats"></p>
+              )}
+            </div>
+          ))
+        ) : (
+          <div>
+            <p className="level required">Level 25 required</p>
             {speed === null ? (
               <p className="stats">No Stats Required </p>
-            ) : speed > detail.speed ? (
-              detail.breed === 5 || detail.breed === 15 ? (
-                <p className="stats"> SS Breed</p>
-              ) : (
-                <p className="stats required">
-                  Required Speed {speed} ({detail.speed}) - SS breed
-                </p>
-              )
             ) : (
-              <p className="stats">Required SS Breed</p>
+              <p className="stats required">Required Speed {speed})</p>
             )}
-
-            {rarity !== detail.quality.toLowerCase() ? (
-              <p className="rarity required">
-                Required Quality {rarity.toUpperCase()} ({detail.quality})
-              </p>
-            ) : (
-              <p className="stats"></p>
-            )}
+            <p className="stats required">Required Quality {rarity}</p>
           </div>
-        ))
-      ) : (
-        <div>
-          <p className="level required">Level 25 required</p>
-          {speed === null ? (
-            <p className="stats">No Stats Required </p>
-          ) : (
-            <p className="stats required">Required Speed {speed})</p>
-          )}
-          <p className="stats required">Required Quality {rarity}</p>
-        </div>
-      )}
+        )}
+      </div>
       {petAbilitiesState != null && petAbilitiesState.length === 6 ? (
         <div className="abilities">
           <div>

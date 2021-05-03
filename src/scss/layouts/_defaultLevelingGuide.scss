@@ -37,7 +37,8 @@
 
   & > ul {
     background-color: rgb(32, 43, 54);
-    background: linear-gradient(10deg, rgb(40, 63, 78), rgb(24, 33, 41));
+    background: linear-gradient(10deg, rgb(28, 46, 58), rgb(24, 33, 41));
+    border: 2px solid rgb(12, 18, 24);
     position: relative;
     list-style-type: none;
     display: grid;
@@ -52,6 +53,13 @@
     margin: 0 auto;
     margin-top: 5vh;
 
+    .cogBackground {
+      color: rgb(34, 48, 63);
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      font-size: 7rem;
+    }
     .defaultPet {
       display: flex;
       font-weight: 100;
@@ -71,6 +79,12 @@
         margin: 0 auto;
         text-align: center;
         color: rgb(211, 211, 211);
+      }
+      .owned {
+        color: green;
+      }
+      .notOwned {
+        color: red;
       }
     }
   }

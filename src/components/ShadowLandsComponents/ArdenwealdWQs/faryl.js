@@ -6,7 +6,7 @@ import location3 from "../../../assets/Shadowlands/Faryl/Faryl.jpg";
 import location from "../../../assets/Shadowlands/Faryl/FarylSL.jpg";
 import location2 from "../../../assets/Shadowlands/Faryl/FarylArden.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClipboard } from "@fortawesome/free-solid-svg-icons";
+import { faClipboard, faLeaf } from "@fortawesome/free-solid-svg-icons";
 
 function FarylWQ() {
   const [renderOnce, setRenderOnce] = useState(false);
@@ -68,38 +68,40 @@ function FarylWQ() {
   });
 
   useEffect(() => {
-    if (
-      requiredPetOne.loading ||
-      (curentActiveSlot2.id === slot2pet1.id && requiredPetOneSlot2.loading)
-    )
-      getPetDetails();
+    if (!petsChar.loading || !localStorage.favChar) {
+      if (
+        requiredPetOne.loading ||
+        (curentActiveSlot2.id === slot2pet1.id && requiredPetOneSlot2.loading)
+      )
+        getPetDetails();
 
-    setPet({
-      ...pet,
-      owned: checkOwnedPet(pet.id),
-    });
-    setslot2pet1({
-      ...slot2pet1,
-      owned: checkOwnedPet(slot2pet1.id),
-    });
-    setslot3pet3({
-      ...slot3pet3,
-      owned: checkOwnedPet(slot3pet3.id),
-    });
-    setslot3pet4({
-      ...slot3pet4,
-      owned: checkOwnedPet(slot3pet4.id),
-    });
+      setPet({
+        ...pet,
+        owned: checkOwnedPet(pet.id),
+      });
+      setslot2pet1({
+        ...slot2pet1,
+        owned: checkOwnedPet(slot2pet1.id),
+      });
+      setslot3pet3({
+        ...slot3pet3,
+        owned: checkOwnedPet(slot3pet3.id),
+      });
+      setslot3pet4({
+        ...slot3pet4,
+        owned: checkOwnedPet(slot3pet4.id),
+      });
 
-    if (
-      renderOnce &&
-      !curentActiveSlot2.found &&
-      curentActiveSlot2.id === null &&
-      slot2pet1.owned
-    )
-      ActivePetSlot2();
+      if (
+        renderOnce &&
+        !curentActiveSlot2.found &&
+        curentActiveSlot2.id === null &&
+        slot2pet1.owned
+      )
+        ActivePetSlot2();
 
-    setRenderOnce(true);
+      setRenderOnce(true);
+    }
   }, [petsChar, slot2pet1.owned, curentActiveSlot2, renderOnce]);
 
   function ActivePetSlot2() {
@@ -147,7 +149,7 @@ function FarylWQ() {
 
   return (
     <div className="farylWQGuide">
-      <h1>Faryl WQ Pet Battle Guide</h1>
+      <h1>Airborne Defense Force (Faryl) Pet Battle Guide</h1>
       <h2>Ardenweald (Shadowlands)</h2>
       <div className="difficulty">
         <div className="greenDifficulty"></div>
@@ -181,7 +183,11 @@ function FarylWQ() {
             </li>
           </ul>
           <div className="FightInstructions">
-            <h1>Fight Instructions</h1>
+            <h1>
+              <FontAwesomeIcon className="leaf" icon={faLeaf} />
+              Fight Instructions{" "}
+              <FontAwesomeIcon className="leaf" icon={faLeaf} />
+            </h1>
             <div className="turn">
               {" "}
               <p>Turn 1</p>

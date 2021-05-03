@@ -1,0 +1,86 @@
+.containerAchiev {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  nav {
+    width: fit-content;
+    margin: 0 auto;
+
+    h2 {
+      width: fit-content;
+      color: rgb(234, 234, 240);
+      font-size: 1rem;
+      background: linear-gradient(60deg, rgb(29, 27, 27), rgb(24, 35, 49));
+      border-top-left-radius: 17px;
+      border-top-right-radius: 17px;
+      padding: 5px 15px;
+      font-family: $Sans;
+      margin: 0 auto;
+      margin-top: 5px;
+      animation: fade 0.9s;
+    }
+    ul {
+      background: linear-gradient(60deg, rgb(29, 27, 27), rgb(24, 35, 49));
+      border-radius: 27px;
+      padding: 3px 17px;
+      padding-top: 10px;
+      display: flex;
+      margin: 0 auto;
+      list-style-type: none;
+      animation: fade 1s;
+      .disabled {
+        pointer-events: none;
+        filter: brightness(0.2);
+      }
+      a {
+        margin: 5px 10px;
+
+        img {
+          width: 30px;
+          height: 30px;
+          transition: 0.4s;
+        }
+        &:hover {
+          img {
+            opacity: 0.5;
+          }
+        }
+      }
+      .active {
+        pointer-events: none;
+        img {
+          filter: brightness(0.4);
+        }
+      }
+    }
+  }
+
+  .containerContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .locationImages {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    margin-right: 2vh;
+    h2 {
+      color: rgb(18, 20, 29);
+      font-family: $Raleway;
+      text-align: center;
+    }
+    img {
+      width: 300px;
+      height: 230px;
+      object-fit: cover;
+      margin-top: 15px;
+      border-radius: 15px;
+      transition: 0.4s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.3);
+      }
+    }
+  }
+}

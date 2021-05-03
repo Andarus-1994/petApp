@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { petInfo2, petsInfo } from "../functions/serverFunctions.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes, faCheck, faDragon } from "@fortawesome/free-solid-svg-icons";
 
 function DefaultLevelGuide() {
   const petsChar = useSelector((state) => state.pets);
@@ -33,7 +35,8 @@ function DefaultLevelGuide() {
   }, [idRequiredPets]);
 
   useMemo(() => {
-    /*const idPets = [];
+    /*
+    const idPets = [];
     petInfo2().then((res) => {
       res.pets.map((res2) => {
         idPets.push({ id: res2.id });
@@ -41,8 +44,14 @@ function DefaultLevelGuide() {
 
       petsInfo(idPets, idPets.length).then((res3) => {
         res3.map((res4) => {
-          if (res4.creature.name === "Fragment of Anger")
-            console.log("chro " + res4.id);
+          if (res4.creature.name === "Son of Skum")
+            console.log("Skum " + res4.id);
+          if (res4.creature.name === "Twilight")
+            console.log("twilight " + res4.id);
+          if (res4.creature.name === "Red Panda")
+            console.log("Red Panda " + res4.id);
+          if (res4.creature.name === "Snowy Panda")
+            console.log("snow " + res4.id);
         });
       });
     });
@@ -57,6 +66,15 @@ function DefaultLevelGuide() {
       });
     });
   }
+
+  function checkOwnedPet(id) {
+    if (petsChar.pets.pets.find((pet) => isPet(pet, id))) return true;
+    else return false;
+  }
+  function isPet(pet, id) {
+    return pet.species.id === id;
+  }
+
   return (
     <div className="defaultLevelGuide">
       <h1>Leveling Pets Guide</h1>
@@ -73,16 +91,27 @@ function DefaultLevelGuide() {
         Usually there are 1-3 pets suggested for each slot and just the best is
         displayed (from the ones you own)."
       </p>
+
       <ul>
         {!requiredPets.loading ? (
           requiredPets.pets.map((pet, index) => (
             <li key={index} className="defaultPet">
-              <img src={pet.icon}></img> <span>{pet.name} </span>
+              <img src={pet.icon}></img>{" "}
+              <span className={checkOwnedPet(pet.id) ? "owned" : "notOwned"}>
+                {pet.name}{" "}
+              </span>
+              {checkOwnedPet(pet.id) ? (
+                <FontAwesomeIcon className="owned" icon={faCheck} />
+              ) : (
+                <FontAwesomeIcon className="notOwned" icon={faTimes} />
+              )}
             </li>
           ))
         ) : (
           <div className="spinnerPets-1"></div>
         )}
+
+        <FontAwesomeIcon className="cogBackground" icon={faDragon} />
       </ul>
     </div>
   );

@@ -1,0 +1,278 @@
+@import "../../mixins/petTypeStyle";
+
+.revendrethWQs {
+  box-shadow: inset 0px -80px 50px -20px rgb(39, 23, 23);
+
+  & > .containerRevendrethWQs {
+    width: 99%;
+    margin: 0 auto;
+
+    min-height: 50vh;
+    display: flex;
+    flex-direction: row;
+
+    .FightRequirements {
+      display: flex;
+      flex-direction: column;
+      width: 98%;
+      max-width: 1200px;
+      > .stratAviable {
+        background: linear-gradient(
+          40deg,
+          rgb(128, 0, 28),
+          rgb(128, 0, 28),
+          red,
+          rgb(128, 0, 28),
+          rgb(128, 0, 28)
+        );
+        cursor: pointer;
+        max-width: 200px;
+        margin-right: 50px;
+        margin-top: 5px;
+        padding: 5px 7px;
+        font-family: $Roboto;
+        font-weight: 100;
+        font-size: 0.8rem;
+        align-self: flex-end;
+        border: none;
+        border-radius: 25px;
+        color: rgb(7, 7, 7);
+        box-shadow: 0px 0px 10px 2px rgb(146, 182, 129);
+        transition: 0.4s;
+        svg {
+          animation: spinner 1.8s linear infinite;
+        }
+        &:hover {
+          background: linear-gradient(
+            40deg,
+            rgb(128, 0, 28),
+            red,
+            red,
+            red,
+            rgb(128, 0, 28)
+          );
+
+          svg {
+            animation-play-state: paused;
+          }
+        }
+      }
+      > h3 {
+        color: black;
+        font-family: $Raleway;
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 70%;
+        .loc {
+          color: red;
+          cursor: pointer;
+          &:hover {
+            color: red;
+            cursor: pointer;
+            &::after {
+              display: none;
+            }
+          }
+        }
+        & > span {
+          position: relative;
+          color: rgb(53, 109, 53);
+          transition: 0.6s;
+          &::after {
+            display: none;
+            position: absolute;
+            font-family: $Roboto;
+            font-weight: 300;
+            content: "Reward from [Taming the World] achivement.";
+            min-width: 300px;
+            padding: 10px 3px;
+            font-size: 0.85rem;
+            border-radius: 9px;
+            background-color: rgba(18, 30, 43, 0.658);
+            top: -40px;
+            left: -80px;
+            animation: fade 0.8s;
+          }
+          &:hover {
+            cursor: default;
+            opacity: 1;
+            color: rgb(24, 66, 24);
+
+            &::after {
+              display: inline;
+            }
+          }
+        }
+      }
+
+      .FightInstructions {
+        position: relative;
+        width: 98%;
+        max-width: 900px;
+        background: rgb(32, 37, 48);
+        color: rgb(241, 237, 237);
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 40px 30px;
+        display: flex;
+        min-height: 400px;
+        flex-direction: column;
+        box-shadow: 0px 40px 40px -40px rgb(59, 19, 25);
+        animation: fadeIn 1s;
+        &::after {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 10%;
+          height: 30px;
+          width: 30px;
+          background-color: rgb(247, 244, 244);
+          clip-path: polygon(
+            93% 0,
+            83% 8%,
+            64% 43%,
+            63% 70%,
+            79% 92%,
+            58% 84%,
+            36% 66%,
+            17% 50%,
+            0 0,
+            53% 0
+          );
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          top: 14%;
+          left: 11.5%;
+          height: 20px;
+          width: 15px;
+          background: linear-gradient(
+            -25deg,
+            rgb(255, 0, 64),
+            rgb(71, 15, 15),
+            rgb(248, 29, 29) 65%
+          );
+          clip-path: polygon(
+            48% 8%,
+            43% 12%,
+            38% 20%,
+            34% 30%,
+            27% 44%,
+            21% 57%,
+            28% 72%,
+            42% 85%,
+            57% 88%,
+            67% 83%,
+            76% 73%,
+            82% 65%,
+            87% 56%,
+            85% 41%,
+            77% 30%,
+            70% 23%,
+            65% 17%,
+            61% 10%,
+            59% 7%,
+            55% 3%,
+            54% 0,
+            53% 0
+          );
+        }
+
+        .effectRevendreth {
+          position: absolute;
+          content: "";
+          top: 0;
+          right: 0;
+          height: 30px;
+          width: 30px;
+          background: rgb(247, 244, 244);
+          border-bottom-left-radius: 80px;
+          &::after {
+            position: absolute;
+            content: "";
+            top: -2px;
+            right: -2px;
+            height: 40px;
+            width: 40px;
+            background: #202530;
+            clip-path: polygon(
+              85% 15%,
+              84% 15%,
+              71% 43%,
+              53% 69%,
+              40% 83%,
+              25% 100%,
+              1% 78%,
+              21% 57%,
+              47% 30%
+            );
+          }
+        }
+        h1 {
+          color: white;
+          margin-bottom: 50px;
+          font-size: 2rem;
+        }
+
+        h3 {
+          color: rgb(63, 75, 100);
+          font-family: $Merri;
+          font-weight: 100;
+          margin-top: 50px;
+          font-size: 0.95rem;
+        }
+
+        .tip {
+          margin-top: 5px;
+          font-family: $Roboto;
+          color: rgb(89, 103, 116);
+        }
+        .turn {
+          background: rgb(28, 32, 39);
+          padding: 10px 5px;
+          width: 90%;
+          margin: 0 auto;
+          margin-top: 5px;
+          display: flex;
+          flex-direction: row;
+          font-family: $Merri;
+          font-family: 0.9rem;
+          &:nth-child(2n) {
+            background: rgb(19, 24, 34);
+          }
+
+          p {
+            &:nth-child(1) {
+              margin-right: 5px;
+              max-width: 85px;
+            }
+            .hero {
+              color: brown;
+            }
+            span {
+              color: rgb(64, 132, 153);
+            }
+            text-align: left;
+            min-width: 95px;
+          }
+          .important {
+            display: block;
+            color: yellow;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

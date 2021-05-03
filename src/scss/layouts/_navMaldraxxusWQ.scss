@@ -1,0 +1,60 @@
+.navMaldraxxusWQs {
+  width: 250px;
+  nav {
+    position: relative;
+    width: 200px;
+    margin-top: 90px;
+    animation: fade 1s;
+
+    .space {
+      height: 50px;
+      background: linear-gradient(
+        270deg,
+        rgb(183, 190, 183),
+        rgb(108, 121, 114)
+      );
+    }
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &:nth-of-type(1) {
+        background: #3a4e3e;
+      }
+      &:nth-of-type(2) {
+        background-image: url("./../assets/Shadowlands/shadowNav.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      a {
+        background-color: rgba(7, 7, 7, 0.39);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-family: $Raleway;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        color: rgb(248, 248, 248);
+        padding: 10px 5px;
+        border-bottom: 1px solid black;
+        text-align: center;
+        margin: 0 0px;
+        transition: 0.4s;
+        &:hover {
+          color: rgb(255, 255, 255);
+          background-color: rgba(0, 0, 0, 0.623);
+        }
+      }
+      .active {
+        pointer-events: none;
+        color: rgb(173, 168, 168);
+        background-color: rgba(0, 0, 0, 0.623);
+      }
+      .label {
+        pointer-events: none;
+        background-color: rgb(23, 24, 31);
+        color: #ece7e7;
+      }
+    }
+  }
+}
