@@ -10,6 +10,9 @@
     text-align: center;
     margin-bottom: 80px;
     animation: fade 1s;
+    @media screen and (max-width: 800px) {
+      font-size: 1.9rem;
+    }
   }
   .containerShadowlands {
     min-height: 50vh;

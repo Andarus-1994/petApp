@@ -6,6 +6,8 @@ import {
   useHistory,
 } from "react-router-dom";
 import ScrollTop from "../../../router/scrollTop.js";
+import Stratios from "./navStratios.js";
+import Thenia from "./navThenia.js";
 import Zolla from "./navZolla.js";
 
 function NavBastion() {
@@ -22,15 +24,14 @@ function NavBastion() {
               <li>Bastion Achievement</li>
             </NavLink>
             <NavLink
-              to="/shadowlands/bastionAchievement/stratios"
+              to="/shadowlands/bastionAchievement/stratios/default"
               activeClassName="active"
               className="inactive"
-              className="disabled"
             >
               <li>Stratios</li>
             </NavLink>
             <NavLink
-              to="/shadowlands/bastionAchievement/zolla"
+              to="/shadowlands/bastionAchievement/zolla/default"
               activeClassName="active"
               className="inactive"
             >
@@ -38,10 +39,9 @@ function NavBastion() {
             </NavLink>
 
             <NavLink
-              to="/shadowlands/bastionAchievement/thenia"
+              to="/shadowlands/bastionAchievement/thenia/default"
               activeClassName="active"
               className="inactive"
-              className="disabled"
             >
               <li> Thenia</li>
             </NavLink>
@@ -50,10 +50,24 @@ function NavBastion() {
       </div>
       <ScrollTop>
         <Switch>
-          <Route path="/shadowlands/bastionAchievement/zolla">
+          <Route path="/shadowlands/bastionAchievement/zolla/">
             <Zolla />
           </Route>
-          <Route path="/shadowlands/bastionAchievement/">Default</Route>
+          <Route path="/shadowlands/bastionAchievement/zolla/default">
+            <Zolla />
+          </Route>
+          <Route path="/shadowlands/bastionAchievement/stratios/">
+            <Stratios />
+          </Route>
+          <Route path="/shadowlands/bastionAchievement/stratios/default">
+            <Stratios />
+          </Route>
+          <Route path="/shadowlands/bastionAchievement/thenia/">
+            <Thenia />
+          </Route>
+          <Route path="/shadowlands/bastionAchievement/thenia/default">
+            <Thenia />
+          </Route>
         </Switch>
       </ScrollTop>
     </Router>

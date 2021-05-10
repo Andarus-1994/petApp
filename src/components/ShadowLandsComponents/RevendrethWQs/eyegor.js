@@ -564,6 +564,10 @@ function Eyegor() {
                         <p>Turn 6</p>
                         <p>
                           Use <span>Wind-Up</span> just ONCE.
+                          <span className="important">
+                            If Spindler is dead just skip to Turn 8 and swap to
+                            third pet.
+                          </span>
                         </p>
                       </div>
                       <div className="turn">

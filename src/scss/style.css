@@ -65,11 +65,23 @@
   letter-spacing: 3px;
 }
 
+@media screen and (max-width: 800px) {
+  .headerTop h1 {
+    font-size: 1rem;
+  }
+}
+
 .headerTop h1 span {
   color: #f5f5f5;
   -webkit-text-stroke: 1px #333338;
   text-transform: uppercase;
   font-size: 2.9rem;
+}
+
+@media screen and (max-width: 800px) {
+  .headerTop h1 span {
+    font-size: 1.2rem;
+  }
 }
 
 .searchBar {
@@ -390,6 +402,12 @@
   font-family: "Raleway", sans-serif;
 }
 
+@media screen and (max-width: 800px) {
+  .App .noFavorite {
+    display: none;
+  }
+}
+
 .App .emptyBarTotalPets {
   position: absolute;
   top: 108px;
@@ -398,6 +416,12 @@
   border-radius: 10px;
   width: 120px;
   height: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .App .emptyBarTotalPets {
+    display: none;
+  }
 }
 
 .App .emptyBarTotalPets p {
@@ -411,19 +435,55 @@
 }
 
 .App .emptyBarTotalPets .fillBarOwnedPets {
-  background: linear-gradient(120deg, #3ac952, #248018);
+  background: linear-gradient(60deg, #2ac715, #205c2a, #2ac715);
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
   height: 9px;
 }
 
-.App .emptyBarTotalPets h3 {
+@media screen and (max-width: 800px) {
+  .App .emptyBarTotalPets .fillBarOwnedPets {
+    display: none;
+  }
+}
+
+.App .emptyBarTotalPets .fillBarOwnedPetsYellow {
+  background: linear-gradient(60deg, #e4e14d, #c9d45f, #c7a615);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 9px;
+}
+
+@media screen and (max-width: 800px) {
+  .App .emptyBarTotalPets .fillBarOwnedPetsYellow {
+    display: none;
+  }
+}
+
+.App .emptyBarTotalPets .yellowText {
   position: absolute;
-  top: -25px;
+  top: -20px;
   left: 17%;
-  color: #6b975b;
+  color: #abb347;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .App .emptyBarTotalPets .yellowText {
+    display: none;
+  }
+}
+
+.App .emptyBarTotalPets h3 {
+  position: absolute;
+  top: -20px;
+  left: 17%;
+  color: #63c241;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
 }
 
 .App .profile {
@@ -432,9 +492,23 @@
   left: 10%;
 }
 
+@media screen and (max-width: 800px) {
+  .App .profile {
+    top: 10px;
+    left: 10px;
+  }
+}
+
 .App .profile img {
   position: relative;
   border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .App .profile img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .App .profile:hover:not(h2) .hoverProfile {
@@ -461,6 +535,15 @@
   left: -40px;
 }
 
+@media screen and (max-width: 800px) {
+  .App .profile div {
+    font-size: 0.85rem;
+    top: 40px;
+    left: 0px;
+    color: white;
+  }
+}
+
 .App .profile div h2 {
   font-size: 1.2rem;
   padding: 5px 0;
@@ -472,6 +555,14 @@
 .App .profile div h2::first-letter {
   display: inline;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 800px) {
+  .App .profile div h2 {
+    color: white;
+    font-size: 0.85rem;
+    margin-top: -4.5px;
+  }
 }
 
 .App .error {
@@ -726,12 +817,12 @@
 }
 
 .App > .displayPets .humanoid {
-  background: -webkit-gradient(linear, left bottom, left top, from(#66634a), to(#928933));
-  background: linear-gradient(0deg, #66634a, #928933);
+  background: -webkit-gradient(linear, left bottom, left top, from(#38362c), to(#f0d38a));
+  background: linear-gradient(0deg, #38362c, #f0d38a);
   -webkit-box-shadow: 2px 2px 8px 3px black;
           box-shadow: 2px 2px 8px 3px black;
   border: none;
-  color: #d1d0d0;
+  color: black;
 }
 
 .App > .displayPets .humanoid .mask {
@@ -739,9 +830,17 @@
   position: absolute;
   top: 2%;
   right: 5%;
-  color: #f1f1f1;
+  color: #1a1919;
   -webkit-transform: rotateZ(20deg);
           transform: rotateZ(20deg);
+}
+
+.App > .displayPets .humanoid .petName {
+  color: black;
+}
+
+.App > .displayPets .humanoid .green {
+  color: green;
 }
 
 .App > .displayPets .humanoid .type {
@@ -1538,12 +1637,12 @@
 }
 
 .humanoid {
-  background: -webkit-gradient(linear, left bottom, left top, from(#66634a), to(#928933));
-  background: linear-gradient(0deg, #66634a, #928933);
+  background: -webkit-gradient(linear, left bottom, left top, from(#38362c), to(#f0d38a));
+  background: linear-gradient(0deg, #38362c, #f0d38a);
   -webkit-box-shadow: 2px 2px 8px 3px black;
           box-shadow: 2px 2px 8px 3px black;
   border: none;
-  color: #d1d0d0;
+  color: black;
 }
 
 .humanoid .mask {
@@ -1551,9 +1650,17 @@
   position: absolute;
   top: 2%;
   right: 5%;
-  color: #f1f1f1;
+  color: #1a1919;
   -webkit-transform: rotateZ(20deg);
           transform: rotateZ(20deg);
+}
+
+.humanoid .petName {
+  color: black;
+}
+
+.humanoid .green {
+  color: green;
 }
 
 .humanoid .type {
@@ -2044,6 +2151,12 @@
   width: fit-content;
 }
 
+@media screen and (max-width: 800px) {
+  .Routes > nav {
+    top: 86px;
+  }
+}
+
 .Routes > nav ul {
   list-style-type: none;
   display: -webkit-box;
@@ -2085,6 +2198,12 @@
   color: #d62525;
   top: -8px;
   right: -5px;
+}
+
+@media screen and (max-width: 800px) {
+  .Routes > nav ul a {
+    font-size: 0.7rem;
+  }
 }
 
 .Routes > nav ul .active {
@@ -2488,6 +2607,14 @@
   color: #dbd7d7;
 }
 
+.shadowmoonDraenorLevelGuide ul .mechanical .type {
+  color: black;
+}
+
+.shadowmoonDraenorLevelGuide ul .flying .type {
+  color: black;
+}
+
 .shadowmoonDraenorLevelGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -2546,7 +2673,7 @@
 .shadowmoonDraenorLevelGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -2845,6 +2972,14 @@
   color: #dbd7d7;
 }
 
+.frostFireDraenorLevelGuide ul .mechanical .type {
+  color: black;
+}
+
+.frostFireDraenorLevelGuide ul .flying .type {
+  color: black;
+}
+
 .frostFireDraenorLevelGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -2903,7 +3038,7 @@
 .frostFireDraenorLevelGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -3202,6 +3337,14 @@
   color: #dbd7d7;
 }
 
+.nagrandDraenorLevelGuide ul .mechanical .type {
+  color: black;
+}
+
+.nagrandDraenorLevelGuide ul .flying .type {
+  color: black;
+}
+
 .nagrandDraenorLevelGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -3260,7 +3403,7 @@
 .nagrandDraenorLevelGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -3560,6 +3703,14 @@
   color: #dbd7d7;
 }
 
+.YonKunLaiLevelGuide ul .mechanical .type {
+  color: black;
+}
+
+.YonKunLaiLevelGuide ul .flying .type {
+  color: black;
+}
+
 .YonKunLaiLevelGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -3618,7 +3769,7 @@
 .YonKunLaiLevelGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -3916,6 +4067,14 @@
   color: #dbd7d7;
 }
 
+.ThunderingPSKunLaiLevelGuide ul .mechanical .type {
+  color: black;
+}
+
+.ThunderingPSKunLaiLevelGuide ul .flying .type {
+  color: black;
+}
+
 .ThunderingPSKunLaiLevelGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -3974,7 +4133,7 @@
 .ThunderingPSKunLaiLevelGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -4273,6 +4432,14 @@
   color: #dbd7d7;
 }
 
+.WhisperingPSJadeForestLevelGuide ul .mechanical .type {
+  color: black;
+}
+
+.WhisperingPSJadeForestLevelGuide ul .flying .type {
+  color: black;
+}
+
 .WhisperingPSJadeForestLevelGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -4331,7 +4498,7 @@
 .WhisperingPSJadeForestLevelGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -4554,10 +4721,22 @@
   margin-bottom: 4vh;
 }
 
+@media screen and (max-width: 800px) {
+  .defaultLevelGuide > h1 {
+    font-size: 1.85rem;
+  }
+}
+
 .defaultLevelGuide > h2 {
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
   color: #11110c;
+}
+
+@media screen and (max-width: 800px) {
+  .defaultLevelGuide > h2 {
+    font-size: 1rem;
+  }
 }
 
 .defaultLevelGuide > h3 {
@@ -4566,6 +4745,12 @@
   font-size: 1.5rem;
   margin-top: 50px;
   color: #060806;
+}
+
+@media screen and (max-width: 800px) {
+  .defaultLevelGuide > h3 {
+    font-size: 0.85rem;
+  }
 }
 
 .defaultLevelGuide > p {
@@ -4581,27 +4766,46 @@
   color: #373e37;
 }
 
+@media screen and (max-width: 800px) {
+  .defaultLevelGuide > p {
+    font-size: 0.8rem;
+    width: 95%;
+  }
+}
+
 .defaultLevelGuide > ul {
   background-color: #202b36;
   background: linear-gradient(10deg, #1c2e3a, #182129);
-  border: 2px solid #0c1218;
   position: relative;
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (170px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 170px);
+  -ms-grid-columns: (190px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 190px);
   grid-column-gap: 10px;
-  grid-row-gap: 30px;
+  grid-row-gap: 50px;
   grid-auto-rows: 40px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: 80%;
   min-height: 400px;
-  padding: 30px 20px;
+  padding: 50px 20px;
   margin: 0 auto;
   margin-top: 5vh;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .defaultLevelGuide > ul {
+    -ms-grid-columns: (100px)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 100px);
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+    grid-auto-rows: 40px;
+    padding: 15px 5px;
+    width: 95%;
+  }
 }
 
 .defaultLevelGuide > ul .cogBackground {
@@ -4609,10 +4813,17 @@
   position: absolute;
   bottom: 0px;
   right: 0px;
-  font-size: 7rem;
+  font-size: 5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .defaultLevelGuide > ul .cogBackground {
+    font-size: 3rem;
+  }
 }
 
 .defaultLevelGuide > ul .defaultPet {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4622,14 +4833,49 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 1px solid #2b3041;
+  border-radius: 30px;
   padding: 35px 15px;
   color: green;
   z-index: 10;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.defaultLevelGuide > ul .defaultPet .source {
+  display: none;
+  background-color: #282f3a;
+  color: #254c64;
+  border: 1px solid #2d3335;
+  border-radius: 25px;
+  position: absolute;
+  width: 70%;
+  top: -40px;
+  left: 0;
+  right: 0;
+  padding: 15px 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.defaultLevelGuide > ul .defaultPet:hover {
+  border: 1px solid #474f66;
+}
+
+.defaultLevelGuide > ul .defaultPet:hover .source {
+  display: block;
 }
 
 .defaultLevelGuide > ul .defaultPet img {
   width: 40px;
   height: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .defaultLevelGuide > ul .defaultPet img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .defaultLevelGuide > ul .defaultPet span {
@@ -4639,8 +4885,14 @@
   color: lightgray;
 }
 
+@media screen and (max-width: 800px) {
+  .defaultLevelGuide > ul .defaultPet span {
+    font-size: 0.75rem;
+  }
+}
+
 .defaultLevelGuide > ul .defaultPet .owned {
-  color: green;
+  color: #26b409;
 }
 
 .defaultLevelGuide > ul .defaultPet .notOwned {
@@ -4663,6 +4915,12 @@
   margin-bottom: 80px;
   -webkit-animation: fade 1s;
           animation: fade 1s;
+}
+
+@media screen and (max-width: 800px) {
+  .shadowlands > h1 {
+    font-size: 1.9rem;
+  }
 }
 
 .shadowlands .containerShadowlands {
@@ -4714,6 +4972,14 @@
           animation: fadeInImageMiddle 1.7s;
 }
 
+@media screen and (max-width: 800px) {
+  .containerNavSL .bigImage .overlayImage {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+  }
+}
+
 .containerNavSL .bigImage .overlayImage::after {
   content: "";
   position: absolute;
@@ -4729,6 +4995,14 @@
   -webkit-box-shadow: 80px -80px 80px -60px #630c1d;
           box-shadow: 80px -80px 80px -60px #630c1d;
   z-index: 10;
+}
+
+@media screen and (max-width: 800px) {
+  .containerNavSL .bigImage .overlayImage::after {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+  }
 }
 
 .containerNavSL .bigImage .overlayImage::before {
@@ -4748,6 +5022,14 @@
   z-index: 10;
 }
 
+@media screen and (max-width: 800px) {
+  .containerNavSL .bigImage .overlayImage::before {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+  }
+}
+
 .containerNavSL .bigImage .overlayImage2 {
   background-color: rgba(0, 139, 139, 0.171);
   position: absolute;
@@ -4760,6 +5042,14 @@
   margin: 0 auto;
   -webkit-animation: fadeInImageMiddle 1.7s;
           animation: fadeInImageMiddle 1.7s;
+}
+
+@media screen and (max-width: 800px) {
+  .containerNavSL .bigImage .overlayImage2 {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+  }
 }
 
 .containerNavSL .bigImage .overlayImage2::after {
@@ -4779,6 +5069,14 @@
   z-index: 10;
 }
 
+@media screen and (max-width: 800px) {
+  .containerNavSL .bigImage .overlayImage2::after {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+  }
+}
+
 .containerNavSL .bigImage .overlayImage2::before {
   content: "";
   position: absolute;
@@ -4796,6 +5094,14 @@
   z-index: 10;
 }
 
+@media screen and (max-width: 800px) {
+  .containerNavSL .bigImage .overlayImage2::before {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+  }
+}
+
 .containerNavSL .bigImage img {
   position: absolute;
   width: 550px;
@@ -4811,6 +5117,14 @@
           animation: fadeInImageMiddle 1.7s;
 }
 
+@media screen and (max-width: 800px) {
+  .containerNavSL .bigImage img {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+  }
+}
+
 .containerNavSL nav {
   width: 100%;
   height: 43vh;
@@ -4819,6 +5133,12 @@
   display: -ms-flexbox;
   display: flex;
   background-color: #161816;
+}
+
+@media screen and (max-width: 800px) {
+  .containerNavSL nav {
+    height: 30vh;
+  }
 }
 
 .containerNavSL nav ul {
@@ -4836,6 +5156,12 @@
           align-items: center;
 }
 
+@media screen and (max-width: 800px) {
+  .containerNavSL nav ul {
+    width: 100%;
+  }
+}
+
 .containerNavSL nav ul h1 {
   color: #2b312b;
   font-family: "Roboto", sans-serif;
@@ -4845,6 +5171,12 @@
   margin-bottom: 60px;
   -webkit-animation: fadeInImageMiddle 1.6s;
           animation: fadeInImageMiddle 1.6s;
+}
+
+@media screen and (max-width: 800px) {
+  .containerNavSL nav ul h1 {
+    font-size: 1.7rem;
+  }
 }
 
 .containerNavSL nav ul .disabled {
@@ -4864,6 +5196,12 @@
   transition: 0.6s;
   -webkit-animation: fadeInImageMiddle 1.5s;
           animation: fadeInImageMiddle 1.5s;
+}
+
+@media screen and (max-width: 800px) {
+  .containerNavSL nav ul a {
+    font-size: 0.8rem;
+  }
 }
 
 .containerNavSL nav:nth-child(1) {
@@ -4943,6 +5281,12 @@
   right: 0;
 }
 
+@media screen and (max-width: 800px) {
+  .containerNavSL nav:nth-child(2) ul {
+    width: 100%;
+  }
+}
+
 .containerNavSL nav:nth-child(5) {
   background-image: url("./../assets/Shadowlands/mald.jpg");
   background-repeat: no-repeat;
@@ -4977,6 +5321,12 @@
   width: 80%;
   margin-left: auto;
   right: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .containerNavSL nav:nth-child(5) ul {
+    width: 100%;
+  }
 }
 
 .containerNavSL .first {
@@ -5760,6 +6110,14 @@
   color: #dbd7d7;
 }
 
+.farylWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.farylWQGuide ul .flying .type {
+  color: black;
+}
+
 .farylWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -5818,7 +6176,7 @@
 .farylWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -6119,6 +6477,14 @@
   color: #dbd7d7;
 }
 
+.rascalWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.rascalWQGuide ul .flying .type {
+  color: black;
+}
+
 .rascalWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -6177,7 +6543,7 @@
 .rascalWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -6478,6 +6844,14 @@
   color: #dbd7d7;
 }
 
+.nightfangWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.nightfangWQGuide ul .flying .type {
+  color: black;
+}
+
 .nightfangWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -6536,7 +6910,7 @@
 .nightfangWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -6837,6 +7211,14 @@
   color: #dbd7d7;
 }
 
+.glitterdustWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.glitterdustWQGuide ul .flying .type {
+  color: black;
+}
+
 .glitterdustWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -6895,7 +7277,7 @@
 .glitterdustWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -7574,6 +7956,14 @@
   color: #dbd7d7;
 }
 
+.gorgemouthWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.gorgemouthWQGuide ul .flying .type {
+  color: black;
+}
+
 .gorgemouthWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -7632,7 +8022,7 @@
 .gorgemouthWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -7933,6 +8323,14 @@
   color: #dbd7d7;
 }
 
+.rotgutWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.rotgutWQGuide ul .flying .type {
+  color: black;
+}
+
 .rotgutWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -7991,7 +8389,7 @@
 .rotgutWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -8292,6 +8690,14 @@
   color: #dbd7d7;
 }
 
+.maximilianWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.maximilianWQGuide ul .flying .type {
+  color: black;
+}
+
 .maximilianWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -8350,7 +8756,7 @@
 .maximilianWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -8651,6 +9057,14 @@
   color: #dbd7d7;
 }
 
+.dundleyWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.dundleyWQGuide ul .flying .type {
+  color: black;
+}
+
 .dundleyWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -8709,7 +9123,7 @@
 .dundleyWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -9450,6 +9864,14 @@
   color: #dbd7d7;
 }
 
+.addiusWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.addiusWQGuide ul .flying .type {
+  color: black;
+}
+
 .addiusWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -9508,7 +9930,7 @@
 .addiusWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -9810,6 +10232,14 @@
   color: #dbd7d7;
 }
 
+.scorchWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.scorchWQGuide ul .flying .type {
+  color: black;
+}
+
 .scorchWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -9868,7 +10298,7 @@
 .scorchWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -10170,6 +10600,14 @@
   color: #dbd7d7;
 }
 
+.syllaWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.syllaWQGuide ul .flying .type {
+  color: black;
+}
+
 .syllaWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -10228,7 +10666,7 @@
 .syllaWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -10530,6 +10968,14 @@
   color: #dbd7d7;
 }
 
+.eyegorWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.eyegorWQGuide ul .flying .type {
+  color: black;
+}
+
 .eyegorWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -10588,7 +11034,7 @@
 .eyegorWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -11263,6 +11709,14 @@
   color: #dbd7d7;
 }
 
+.jawboneWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.jawboneWQGuide ul .flying .type {
+  color: black;
+}
+
 .jawboneWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -11321,7 +11775,7 @@
 .jawboneWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -11622,6 +12076,14 @@
   color: #dbd7d7;
 }
 
+.theniaWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.theniaWQGuide ul .flying .type {
+  color: black;
+}
+
 .theniaWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -11680,7 +12142,7 @@
 .theniaWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -11981,6 +12443,14 @@
   color: #dbd7d7;
 }
 
+.zollaWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.zollaWQGuide ul .flying .type {
+  color: black;
+}
+
 .zollaWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -12039,7 +12509,7 @@
 .zollaWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -12340,6 +12810,14 @@
   color: #dbd7d7;
 }
 
+.stratiosWQGuide ul .mechanical .type {
+  color: black;
+}
+
+.stratiosWQGuide ul .flying .type {
+  color: black;
+}
+
 .stratiosWQGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -12398,7 +12876,7 @@
 .stratiosWQGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -12930,6 +13408,14 @@
   color: #dbd7d7;
 }
 
+.undeadZollaGuide ul .mechanical .type {
+  color: black;
+}
+
+.undeadZollaGuide ul .flying .type {
+  color: black;
+}
+
 .undeadZollaGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -12988,7 +13474,7 @@
 .undeadZollaGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -13289,6 +13775,14 @@
   color: #dbd7d7;
 }
 
+.dragonkinZollaGuide ul .mechanical .type {
+  color: black;
+}
+
+.dragonkinZollaGuide ul .flying .type {
+  color: black;
+}
+
 .dragonkinZollaGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -13347,7 +13841,7 @@
 .dragonkinZollaGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -13648,6 +14142,14 @@
   color: #dbd7d7;
 }
 
+.crittersZollaGuide ul .mechanical .type {
+  color: black;
+}
+
+.crittersZollaGuide ul .flying .type {
+  color: black;
+}
+
 .crittersZollaGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -13706,7 +14208,7 @@
 .crittersZollaGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -14007,6 +14509,14 @@
   color: #dbd7d7;
 }
 
+.flyingZollaGuide ul .mechanical .type {
+  color: black;
+}
+
+.flyingZollaGuide ul .flying .type {
+  color: black;
+}
+
 .flyingZollaGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -14065,7 +14575,7 @@
 .flyingZollaGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -14366,6 +14876,14 @@
   color: #dbd7d7;
 }
 
+.elementalZollaGuide ul .mechanical .type {
+  color: black;
+}
+
+.elementalZollaGuide ul .flying .type {
+  color: black;
+}
+
 .elementalZollaGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -14424,7 +14942,7 @@
 .elementalZollaGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -14725,6 +15243,14 @@
   color: #dbd7d7;
 }
 
+.beastsZollaGuide ul .mechanical .type {
+  color: black;
+}
+
+.beastsZollaGuide ul .flying .type {
+  color: black;
+}
+
 .beastsZollaGuide ul .aquatic .owned {
   color: #062406;
 }
@@ -14783,7 +15309,7 @@
 .beastsZollaGuide ul li .type {
   margin: 0 auto;
   margin-top: auto;
-  color: #1b1b1b;
+  color: #ebe7e7;
   font-size: 0.55rem;
   letter-spacing: 1.5px;
 }
@@ -14994,6 +15520,6979 @@
           transform: scale(1.3);
 }
 
+.magicZollaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.magicZollaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.magicZollaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.magicZollaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.magicZollaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 95%;
+  background-color: #37a733;
+}
+
+.magicZollaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.magicZollaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.magicZollaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.magicZollaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.magicZollaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.magicZollaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.magicZollaGuide ul .mechanical .type {
+  color: black;
+}
+
+.magicZollaGuide ul .flying .type {
+  color: black;
+}
+
+.magicZollaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.magicZollaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.magicZollaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.magicZollaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.magicZollaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.magicZollaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.magicZollaGuide ul li .space {
+  height: 50px;
+}
+
+.magicZollaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.magicZollaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.magicZollaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.magicZollaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.magicZollaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.magicZollaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.magicZollaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.magicZollaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.magicZollaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.magicZollaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.magicZollaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.magicZollaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.magicZollaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.magicZollaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.magicZollaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.magicZollaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.magicZollaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.magicZollaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.magicZollaGuide .containerMagicZolla {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.magicZollaGuide .containerMagicZolla .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.magicZollaGuide .containerMagicZolla .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.magicZollaGuide .containerMagicZolla .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.magicZollaGuide .containerMagicZolla .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.magicZollaGuide .containerMagicZolla .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.humanoidZollaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.humanoidZollaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.humanoidZollaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.humanoidZollaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.humanoidZollaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 98%;
+  background-color: #37a733;
+}
+
+.humanoidZollaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.humanoidZollaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.humanoidZollaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.humanoidZollaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.humanoidZollaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.humanoidZollaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.humanoidZollaGuide ul .mechanical .type {
+  color: black;
+}
+
+.humanoidZollaGuide ul .flying .type {
+  color: black;
+}
+
+.humanoidZollaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.humanoidZollaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.humanoidZollaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.humanoidZollaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.humanoidZollaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.humanoidZollaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.humanoidZollaGuide ul li .space {
+  height: 50px;
+}
+
+.humanoidZollaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.humanoidZollaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.humanoidZollaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.humanoidZollaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.humanoidZollaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.humanoidZollaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.humanoidZollaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.humanoidZollaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.humanoidZollaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.humanoidZollaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.humanoidZollaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.humanoidZollaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.humanoidZollaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.humanoidZollaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.humanoidZollaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.humanoidZollaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.humanoidZollaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.humanoidZollaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.humanoidZollaGuide .containerHumanoidZolla {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.humanoidZollaGuide .containerHumanoidZolla .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.humanoidZollaGuide .containerHumanoidZolla .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.humanoidZollaGuide .containerHumanoidZolla .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.humanoidZollaGuide .containerHumanoidZolla .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.humanoidZollaGuide .containerHumanoidZolla .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.mechanicalZollaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.mechanicalZollaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.mechanicalZollaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.mechanicalZollaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.mechanicalZollaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 88%;
+  background-color: #37a733;
+}
+
+.mechanicalZollaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.mechanicalZollaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.mechanicalZollaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.mechanicalZollaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.mechanicalZollaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.mechanicalZollaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.mechanicalZollaGuide ul .mechanical .type {
+  color: black;
+}
+
+.mechanicalZollaGuide ul .flying .type {
+  color: black;
+}
+
+.mechanicalZollaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.mechanicalZollaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.mechanicalZollaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.mechanicalZollaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.mechanicalZollaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.mechanicalZollaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.mechanicalZollaGuide ul li .space {
+  height: 50px;
+}
+
+.mechanicalZollaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.mechanicalZollaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.mechanicalZollaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.mechanicalZollaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.mechanicalZollaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.mechanicalZollaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.mechanicalZollaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.mechanicalZollaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.mechanicalZollaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.mechanicalZollaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.mechanicalZollaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.mechanicalZollaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.mechanicalZollaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.mechanicalZollaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.mechanicalZollaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.mechanicalZollaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.mechanicalZollaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.mechanicalZollaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.mechanicalZollaGuide .containerMechanicalZolla {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mechanicalZollaGuide .containerMechanicalZolla .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.mechanicalZollaGuide .containerMechanicalZolla .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.mechanicalZollaGuide .containerMechanicalZolla .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.mechanicalZollaGuide .containerMechanicalZolla .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.mechanicalZollaGuide .containerMechanicalZolla .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.aquaticZollaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.aquaticZollaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.aquaticZollaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.aquaticZollaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.aquaticZollaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 90%;
+  background-color: #37a733;
+}
+
+.aquaticZollaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.aquaticZollaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.aquaticZollaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.aquaticZollaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.aquaticZollaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.aquaticZollaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.aquaticZollaGuide ul .mechanical .type {
+  color: black;
+}
+
+.aquaticZollaGuide ul .flying .type {
+  color: black;
+}
+
+.aquaticZollaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.aquaticZollaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.aquaticZollaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.aquaticZollaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.aquaticZollaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.aquaticZollaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.aquaticZollaGuide ul li .space {
+  height: 50px;
+}
+
+.aquaticZollaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.aquaticZollaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.aquaticZollaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.aquaticZollaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.aquaticZollaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.aquaticZollaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.aquaticZollaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.aquaticZollaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.aquaticZollaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.aquaticZollaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.aquaticZollaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.aquaticZollaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.aquaticZollaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.aquaticZollaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.aquaticZollaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.aquaticZollaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.aquaticZollaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.aquaticZollaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.aquaticZollaGuide .containerAquaticZolla {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.aquaticZollaGuide .containerAquaticZolla .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.aquaticZollaGuide .containerAquaticZolla .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.aquaticZollaGuide .containerAquaticZolla .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.aquaticZollaGuide .containerAquaticZolla .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.aquaticZollaGuide .containerAquaticZolla .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.aquaticStratiosGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.aquaticStratiosGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.aquaticStratiosGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.aquaticStratiosGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.aquaticStratiosGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 95%;
+  background-color: #37a733;
+}
+
+.aquaticStratiosGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.aquaticStratiosGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.aquaticStratiosGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.aquaticStratiosGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.aquaticStratiosGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.aquaticStratiosGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.aquaticStratiosGuide ul .mechanical .type {
+  color: black;
+}
+
+.aquaticStratiosGuide ul .flying .type {
+  color: black;
+}
+
+.aquaticStratiosGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.aquaticStratiosGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.aquaticStratiosGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.aquaticStratiosGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.aquaticStratiosGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.aquaticStratiosGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.aquaticStratiosGuide ul li .space {
+  height: 50px;
+}
+
+.aquaticStratiosGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.aquaticStratiosGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.aquaticStratiosGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.aquaticStratiosGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.aquaticStratiosGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.aquaticStratiosGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.aquaticStratiosGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.aquaticStratiosGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.aquaticStratiosGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.aquaticStratiosGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.aquaticStratiosGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.aquaticStratiosGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.aquaticStratiosGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.aquaticStratiosGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.aquaticStratiosGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.aquaticStratiosGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.aquaticStratiosGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.aquaticStratiosGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.aquaticStratiosGuide .containerAquaticStratios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.aquaticStratiosGuide .containerAquaticStratios .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.aquaticStratiosGuide .containerAquaticStratios .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.aquaticStratiosGuide .containerAquaticStratios .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.aquaticStratiosGuide .containerAquaticStratios .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.aquaticStratiosGuide .containerAquaticStratios .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.humanoidStratiosGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.humanoidStratiosGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.humanoidStratiosGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.humanoidStratiosGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.humanoidStratiosGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 85%;
+  background-color: #37a733;
+}
+
+.humanoidStratiosGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.humanoidStratiosGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.humanoidStratiosGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.humanoidStratiosGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.humanoidStratiosGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.humanoidStratiosGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.humanoidStratiosGuide ul .mechanical .type {
+  color: black;
+}
+
+.humanoidStratiosGuide ul .flying .type {
+  color: black;
+}
+
+.humanoidStratiosGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.humanoidStratiosGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.humanoidStratiosGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.humanoidStratiosGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.humanoidStratiosGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.humanoidStratiosGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.humanoidStratiosGuide ul li .space {
+  height: 50px;
+}
+
+.humanoidStratiosGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.humanoidStratiosGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.humanoidStratiosGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.humanoidStratiosGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.humanoidStratiosGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.humanoidStratiosGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.humanoidStratiosGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.humanoidStratiosGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.humanoidStratiosGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.humanoidStratiosGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.humanoidStratiosGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.humanoidStratiosGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.humanoidStratiosGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.humanoidStratiosGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.humanoidStratiosGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.humanoidStratiosGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.humanoidStratiosGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.humanoidStratiosGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.humanoidStratiosGuide .containerHumanoidStratios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.humanoidStratiosGuide .containerHumanoidStratios .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.humanoidStratiosGuide .containerHumanoidStratios .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.humanoidStratiosGuide .containerHumanoidStratios .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.humanoidStratiosGuide .containerHumanoidStratios .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.humanoidStratiosGuide .containerHumanoidStratios .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.flyingStratiosGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.flyingStratiosGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.flyingStratiosGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.flyingStratiosGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.flyingStratiosGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 82%;
+  background-color: #37a733;
+}
+
+.flyingStratiosGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.flyingStratiosGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.flyingStratiosGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.flyingStratiosGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.flyingStratiosGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.flyingStratiosGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.flyingStratiosGuide ul .mechanical .type {
+  color: black;
+}
+
+.flyingStratiosGuide ul .flying .type {
+  color: black;
+}
+
+.flyingStratiosGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.flyingStratiosGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.flyingStratiosGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.flyingStratiosGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.flyingStratiosGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.flyingStratiosGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.flyingStratiosGuide ul li .space {
+  height: 50px;
+}
+
+.flyingStratiosGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.flyingStratiosGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.flyingStratiosGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.flyingStratiosGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.flyingStratiosGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.flyingStratiosGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.flyingStratiosGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.flyingStratiosGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.flyingStratiosGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.flyingStratiosGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.flyingStratiosGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.flyingStratiosGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.flyingStratiosGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.flyingStratiosGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.flyingStratiosGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.flyingStratiosGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.flyingStratiosGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.flyingStratiosGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.flyingStratiosGuide .containerFlyingStratios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flyingStratiosGuide .containerFlyingStratios .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.flyingStratiosGuide .containerFlyingStratios .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.flyingStratiosGuide .containerFlyingStratios .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.flyingStratiosGuide .containerFlyingStratios .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.flyingStratiosGuide .containerFlyingStratios .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.crittersStratiosGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.crittersStratiosGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.crittersStratiosGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.crittersStratiosGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.crittersStratiosGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 65%;
+  background-color: #37a733;
+}
+
+.crittersStratiosGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.crittersStratiosGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.crittersStratiosGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.crittersStratiosGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.crittersStratiosGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.crittersStratiosGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.crittersStratiosGuide ul .mechanical .type {
+  color: black;
+}
+
+.crittersStratiosGuide ul .flying .type {
+  color: black;
+}
+
+.crittersStratiosGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.crittersStratiosGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.crittersStratiosGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.crittersStratiosGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.crittersStratiosGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.crittersStratiosGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.crittersStratiosGuide ul li .space {
+  height: 50px;
+}
+
+.crittersStratiosGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.crittersStratiosGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.crittersStratiosGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.crittersStratiosGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.crittersStratiosGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.crittersStratiosGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.crittersStratiosGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.crittersStratiosGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.crittersStratiosGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.crittersStratiosGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.crittersStratiosGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.crittersStratiosGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.crittersStratiosGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.crittersStratiosGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.crittersStratiosGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.crittersStratiosGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.crittersStratiosGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.crittersStratiosGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.crittersStratiosGuide .containerCrittersStratios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.crittersStratiosGuide .containerCrittersStratios .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.crittersStratiosGuide .containerCrittersStratios .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.crittersStratiosGuide .containerCrittersStratios .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.crittersStratiosGuide .containerCrittersStratios .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.crittersStratiosGuide .containerCrittersStratios .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.dragonkinStratiosGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.dragonkinStratiosGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.dragonkinStratiosGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.dragonkinStratiosGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.dragonkinStratiosGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 87%;
+  background-color: #37a733;
+}
+
+.dragonkinStratiosGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.dragonkinStratiosGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.dragonkinStratiosGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.dragonkinStratiosGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.dragonkinStratiosGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.dragonkinStratiosGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.dragonkinStratiosGuide ul .mechanical .type {
+  color: black;
+}
+
+.dragonkinStratiosGuide ul .flying .type {
+  color: black;
+}
+
+.dragonkinStratiosGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.dragonkinStratiosGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.dragonkinStratiosGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.dragonkinStratiosGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.dragonkinStratiosGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.dragonkinStratiosGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.dragonkinStratiosGuide ul li .space {
+  height: 50px;
+}
+
+.dragonkinStratiosGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.dragonkinStratiosGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.dragonkinStratiosGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.dragonkinStratiosGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.dragonkinStratiosGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.dragonkinStratiosGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.dragonkinStratiosGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.dragonkinStratiosGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.dragonkinStratiosGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.dragonkinStratiosGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.dragonkinStratiosGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.dragonkinStratiosGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.dragonkinStratiosGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.dragonkinStratiosGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.dragonkinStratiosGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.dragonkinStratiosGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.dragonkinStratiosGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.dragonkinStratiosGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.dragonkinStratiosGuide .containerDragonkinStratios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dragonkinStratiosGuide .containerDragonkinStratios .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.dragonkinStratiosGuide .containerDragonkinStratios .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.dragonkinStratiosGuide .containerDragonkinStratios .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.dragonkinStratiosGuide .containerDragonkinStratios .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.dragonkinStratiosGuide .containerDragonkinStratios .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.elementalStratiosGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.elementalStratiosGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.elementalStratiosGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.elementalStratiosGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.elementalStratiosGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 85%;
+  background-color: #37a733;
+}
+
+.elementalStratiosGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.elementalStratiosGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.elementalStratiosGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.elementalStratiosGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.elementalStratiosGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.elementalStratiosGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.elementalStratiosGuide ul .mechanical .type {
+  color: black;
+}
+
+.elementalStratiosGuide ul .flying .type {
+  color: black;
+}
+
+.elementalStratiosGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.elementalStratiosGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.elementalStratiosGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.elementalStratiosGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.elementalStratiosGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.elementalStratiosGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.elementalStratiosGuide ul li .space {
+  height: 50px;
+}
+
+.elementalStratiosGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.elementalStratiosGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.elementalStratiosGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.elementalStratiosGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.elementalStratiosGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.elementalStratiosGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.elementalStratiosGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.elementalStratiosGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.elementalStratiosGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.elementalStratiosGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.elementalStratiosGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.elementalStratiosGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.elementalStratiosGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.elementalStratiosGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.elementalStratiosGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.elementalStratiosGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.elementalStratiosGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.elementalStratiosGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.elementalStratiosGuide .containerElementalStratios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.elementalStratiosGuide .containerElementalStratios .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.elementalStratiosGuide .containerElementalStratios .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.elementalStratiosGuide .containerElementalStratios .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.elementalStratiosGuide .containerElementalStratios .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.elementalStratiosGuide .containerElementalStratios .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.undeadStratiosGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.undeadStratiosGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.undeadStratiosGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.undeadStratiosGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.undeadStratiosGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 85%;
+  background-color: #37a733;
+}
+
+.undeadStratiosGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.undeadStratiosGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.undeadStratiosGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.undeadStratiosGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.undeadStratiosGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.undeadStratiosGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.undeadStratiosGuide ul .mechanical .type {
+  color: black;
+}
+
+.undeadStratiosGuide ul .flying .type {
+  color: black;
+}
+
+.undeadStratiosGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.undeadStratiosGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.undeadStratiosGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.undeadStratiosGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.undeadStratiosGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.undeadStratiosGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.undeadStratiosGuide ul li .space {
+  height: 50px;
+}
+
+.undeadStratiosGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.undeadStratiosGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.undeadStratiosGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.undeadStratiosGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.undeadStratiosGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.undeadStratiosGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.undeadStratiosGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.undeadStratiosGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.undeadStratiosGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.undeadStratiosGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.undeadStratiosGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.undeadStratiosGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.undeadStratiosGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.undeadStratiosGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.undeadStratiosGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.undeadStratiosGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.undeadStratiosGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.undeadStratiosGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.undeadStratiosGuide .containerUndeadStratios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.undeadStratiosGuide .containerUndeadStratios .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.undeadStratiosGuide .containerUndeadStratios .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.undeadStratiosGuide .containerUndeadStratios .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.undeadStratiosGuide .containerUndeadStratios .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.undeadStratiosGuide .containerUndeadStratios .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.magicStratiosGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.magicStratiosGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.magicStratiosGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.magicStratiosGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.magicStratiosGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 93%;
+  background-color: #37a733;
+}
+
+.magicStratiosGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.magicStratiosGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.magicStratiosGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.magicStratiosGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.magicStratiosGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.magicStratiosGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.magicStratiosGuide ul .mechanical .type {
+  color: black;
+}
+
+.magicStratiosGuide ul .flying .type {
+  color: black;
+}
+
+.magicStratiosGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.magicStratiosGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.magicStratiosGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.magicStratiosGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.magicStratiosGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.magicStratiosGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.magicStratiosGuide ul li .space {
+  height: 50px;
+}
+
+.magicStratiosGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.magicStratiosGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.magicStratiosGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.magicStratiosGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.magicStratiosGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.magicStratiosGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.magicStratiosGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.magicStratiosGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.magicStratiosGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.magicStratiosGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.magicStratiosGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.magicStratiosGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.magicStratiosGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.magicStratiosGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.magicStratiosGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.magicStratiosGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.magicStratiosGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.magicStratiosGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.magicStratiosGuide .containerMagicStratios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.magicStratiosGuide .containerMagicStratios .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.magicStratiosGuide .containerMagicStratios .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.magicStratiosGuide .containerMagicStratios .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.magicStratiosGuide .containerMagicStratios .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.magicStratiosGuide .containerMagicStratios .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.beastsStratiosGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.beastsStratiosGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.beastsStratiosGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.beastsStratiosGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.beastsStratiosGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 80%;
+  background-color: #37a733;
+}
+
+.beastsStratiosGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.beastsStratiosGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.beastsStratiosGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.beastsStratiosGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.beastsStratiosGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.beastsStratiosGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.beastsStratiosGuide ul .mechanical .type {
+  color: black;
+}
+
+.beastsStratiosGuide ul .flying .type {
+  color: black;
+}
+
+.beastsStratiosGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.beastsStratiosGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.beastsStratiosGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.beastsStratiosGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.beastsStratiosGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.beastsStratiosGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.beastsStratiosGuide ul li .space {
+  height: 50px;
+}
+
+.beastsStratiosGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.beastsStratiosGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.beastsStratiosGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.beastsStratiosGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.beastsStratiosGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.beastsStratiosGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.beastsStratiosGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.beastsStratiosGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.beastsStratiosGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.beastsStratiosGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.beastsStratiosGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.beastsStratiosGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.beastsStratiosGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.beastsStratiosGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.beastsStratiosGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.beastsStratiosGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.beastsStratiosGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.beastsStratiosGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.beastsStratiosGuide .containerBeastsStratios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.beastsStratiosGuide .containerBeastsStratios .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.beastsStratiosGuide .containerBeastsStratios .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.beastsStratiosGuide .containerBeastsStratios .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.beastsStratiosGuide .containerBeastsStratios .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.beastsStratiosGuide .containerBeastsStratios .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.mechanicalStratiosGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.mechanicalStratiosGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.mechanicalStratiosGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.mechanicalStratiosGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.mechanicalStratiosGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 90%;
+  background-color: #37a733;
+}
+
+.mechanicalStratiosGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.mechanicalStratiosGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.mechanicalStratiosGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.mechanicalStratiosGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.mechanicalStratiosGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.mechanicalStratiosGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.mechanicalStratiosGuide ul .mechanical .type {
+  color: black;
+}
+
+.mechanicalStratiosGuide ul .flying .type {
+  color: black;
+}
+
+.mechanicalStratiosGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.mechanicalStratiosGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.mechanicalStratiosGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.mechanicalStratiosGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.mechanicalStratiosGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.mechanicalStratiosGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.mechanicalStratiosGuide ul li .space {
+  height: 50px;
+}
+
+.mechanicalStratiosGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.mechanicalStratiosGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.mechanicalStratiosGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.mechanicalStratiosGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.mechanicalStratiosGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.mechanicalStratiosGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.mechanicalStratiosGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.mechanicalStratiosGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.mechanicalStratiosGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.mechanicalStratiosGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.mechanicalStratiosGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.mechanicalStratiosGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.mechanicalStratiosGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.mechanicalStratiosGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.mechanicalStratiosGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.mechanicalStratiosGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.mechanicalStratiosGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.mechanicalStratiosGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.mechanicalStratiosGuide .containerMechanicalStratios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mechanicalStratiosGuide .containerMechanicalStratios .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.mechanicalStratiosGuide .containerMechanicalStratios .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.mechanicalStratiosGuide .containerMechanicalStratios .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.mechanicalStratiosGuide .containerMechanicalStratios .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.mechanicalStratiosGuide .containerMechanicalStratios .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.humanoidTheniaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.humanoidTheniaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.humanoidTheniaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.humanoidTheniaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.humanoidTheniaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 90%;
+  background-color: #37a733;
+}
+
+.humanoidTheniaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.humanoidTheniaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.humanoidTheniaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.humanoidTheniaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.humanoidTheniaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.humanoidTheniaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.humanoidTheniaGuide ul .mechanical .type {
+  color: black;
+}
+
+.humanoidTheniaGuide ul .flying .type {
+  color: black;
+}
+
+.humanoidTheniaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.humanoidTheniaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.humanoidTheniaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.humanoidTheniaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.humanoidTheniaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.humanoidTheniaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.humanoidTheniaGuide ul li .space {
+  height: 50px;
+}
+
+.humanoidTheniaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.humanoidTheniaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.humanoidTheniaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.humanoidTheniaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.humanoidTheniaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.humanoidTheniaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.humanoidTheniaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.humanoidTheniaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.humanoidTheniaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.humanoidTheniaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.humanoidTheniaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.humanoidTheniaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.humanoidTheniaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.humanoidTheniaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.humanoidTheniaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.humanoidTheniaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.humanoidTheniaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.humanoidTheniaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.humanoidTheniaGuide .containerHumanoidThenia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.humanoidTheniaGuide .containerHumanoidThenia .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.humanoidTheniaGuide .containerHumanoidThenia .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.humanoidTheniaGuide .containerHumanoidThenia .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.humanoidTheniaGuide .containerHumanoidThenia .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.humanoidTheniaGuide .containerHumanoidThenia .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.flyingTheniaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.flyingTheniaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.flyingTheniaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.flyingTheniaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.flyingTheniaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 80%;
+  background-color: #37a733;
+}
+
+.flyingTheniaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.flyingTheniaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.flyingTheniaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.flyingTheniaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.flyingTheniaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.flyingTheniaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.flyingTheniaGuide ul .mechanical .type {
+  color: black;
+}
+
+.flyingTheniaGuide ul .flying .type {
+  color: black;
+}
+
+.flyingTheniaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.flyingTheniaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.flyingTheniaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.flyingTheniaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.flyingTheniaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.flyingTheniaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.flyingTheniaGuide ul li .space {
+  height: 50px;
+}
+
+.flyingTheniaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.flyingTheniaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.flyingTheniaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.flyingTheniaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.flyingTheniaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.flyingTheniaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.flyingTheniaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.flyingTheniaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.flyingTheniaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.flyingTheniaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.flyingTheniaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.flyingTheniaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.flyingTheniaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.flyingTheniaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.flyingTheniaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.flyingTheniaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.flyingTheniaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.flyingTheniaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.flyingTheniaGuide .containerFlyingThenia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flyingTheniaGuide .containerFlyingThenia .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.flyingTheniaGuide .containerFlyingThenia .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.flyingTheniaGuide .containerFlyingThenia .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.flyingTheniaGuide .containerFlyingThenia .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.flyingTheniaGuide .containerFlyingThenia .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.beastsTheniaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.beastsTheniaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.beastsTheniaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.beastsTheniaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.beastsTheniaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 90%;
+  background-color: #37a733;
+}
+
+.beastsTheniaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.beastsTheniaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.beastsTheniaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.beastsTheniaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.beastsTheniaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.beastsTheniaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.beastsTheniaGuide ul .mechanical .type {
+  color: black;
+}
+
+.beastsTheniaGuide ul .flying .type {
+  color: black;
+}
+
+.beastsTheniaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.beastsTheniaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.beastsTheniaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.beastsTheniaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.beastsTheniaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.beastsTheniaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.beastsTheniaGuide ul li .space {
+  height: 50px;
+}
+
+.beastsTheniaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.beastsTheniaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.beastsTheniaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.beastsTheniaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.beastsTheniaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.beastsTheniaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.beastsTheniaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.beastsTheniaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.beastsTheniaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.beastsTheniaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.beastsTheniaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.beastsTheniaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.beastsTheniaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.beastsTheniaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.beastsTheniaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.beastsTheniaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.beastsTheniaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.beastsTheniaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.beastsTheniaGuide .containerBeastsThenia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.beastsTheniaGuide .containerBeastsThenia .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.beastsTheniaGuide .containerBeastsThenia .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.beastsTheniaGuide .containerBeastsThenia .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.beastsTheniaGuide .containerBeastsThenia .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.beastsTheniaGuide .containerBeastsThenia .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.crittersTheniaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.crittersTheniaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.crittersTheniaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.crittersTheniaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.crittersTheniaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 70%;
+  background-color: #37a733;
+}
+
+.crittersTheniaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.crittersTheniaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.crittersTheniaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.crittersTheniaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.crittersTheniaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.crittersTheniaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.crittersTheniaGuide ul .mechanical .type {
+  color: black;
+}
+
+.crittersTheniaGuide ul .flying .type {
+  color: black;
+}
+
+.crittersTheniaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.crittersTheniaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.crittersTheniaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.crittersTheniaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.crittersTheniaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.crittersTheniaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.crittersTheniaGuide ul li .space {
+  height: 50px;
+}
+
+.crittersTheniaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.crittersTheniaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.crittersTheniaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.crittersTheniaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.crittersTheniaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.crittersTheniaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.crittersTheniaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.crittersTheniaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.crittersTheniaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.crittersTheniaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.crittersTheniaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.crittersTheniaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.crittersTheniaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.crittersTheniaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.crittersTheniaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.crittersTheniaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.crittersTheniaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.crittersTheniaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.crittersTheniaGuide .containerCrittersThenia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.crittersTheniaGuide .containerCrittersThenia .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.crittersTheniaGuide .containerCrittersThenia .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.crittersTheniaGuide .containerCrittersThenia .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.crittersTheniaGuide .containerCrittersThenia .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.crittersTheniaGuide .containerCrittersThenia .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.dragonkinTheniaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.dragonkinTheniaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.dragonkinTheniaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.dragonkinTheniaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.dragonkinTheniaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 93%;
+  background-color: #37a733;
+}
+
+.dragonkinTheniaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.dragonkinTheniaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.dragonkinTheniaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.dragonkinTheniaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.dragonkinTheniaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.dragonkinTheniaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.dragonkinTheniaGuide ul .mechanical .type {
+  color: black;
+}
+
+.dragonkinTheniaGuide ul .flying .type {
+  color: black;
+}
+
+.dragonkinTheniaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.dragonkinTheniaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.dragonkinTheniaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.dragonkinTheniaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.dragonkinTheniaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.dragonkinTheniaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.dragonkinTheniaGuide ul li .space {
+  height: 50px;
+}
+
+.dragonkinTheniaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.dragonkinTheniaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.dragonkinTheniaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.dragonkinTheniaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.dragonkinTheniaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.dragonkinTheniaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.dragonkinTheniaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.dragonkinTheniaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.dragonkinTheniaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.dragonkinTheniaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.dragonkinTheniaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.dragonkinTheniaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.dragonkinTheniaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.dragonkinTheniaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.dragonkinTheniaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.dragonkinTheniaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.dragonkinTheniaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.dragonkinTheniaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+.dragonkinTheniaGuide .containerDragonkinThenia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dragonkinTheniaGuide .containerDragonkinThenia .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.dragonkinTheniaGuide .containerDragonkinThenia .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.dragonkinTheniaGuide .containerDragonkinThenia .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.dragonkinTheniaGuide .containerDragonkinThenia .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.dragonkinTheniaGuide .containerDragonkinThenia .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
 .containerAchiev {
   width: 100%;
   display: -webkit-box;
@@ -15084,6 +22583,14 @@
           flex-direction: column;
 }
 
+.containerAchiev .containerContent > h1 {
+  color: #1b1b1b;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 50px;
+}
+
 .containerAchiev .locationImages {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15102,6 +22609,30 @@
   text-align: center;
 }
 
+.containerAchiev .locationImages button {
+  background-color: #597286;
+  color: #ccd9da;
+  border: none;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 10px;
+  margin: 0 auto;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+  font-size: 0.75rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.containerAchiev .locationImages button:hover {
+  background-color: #2b3f50;
+  color: #fafafa;
+}
+
 .containerAchiev .locationImages img {
   width: 300px;
   height: 230px;
@@ -15115,7 +22646,7 @@
 
 .containerAchiev .locationImages img:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 /*# sourceMappingURL=style.css.map */

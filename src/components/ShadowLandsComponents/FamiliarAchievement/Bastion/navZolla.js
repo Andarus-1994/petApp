@@ -5,6 +5,9 @@ import {
   NavLink,
   useHistory,
 } from "react-router-dom";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClipboard, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import Aquatic from "../../../../assets/FamilyIcons/aquatic.png";
 import Beast from "../../../../assets/FamilyIcons/beast.png";
 import Critter from "../../../../assets/FamilyIcons/critter.png";
@@ -24,7 +27,12 @@ import CrittersZolla from "./ZollaFamily/crittersZolla";
 import FlyingZolla from "./ZollaFamily/flyingZolla";
 import ElementalZolla from "./ZollaFamily/elementalZolla";
 import BeastsZolla from "./ZollaFamily/beastsZolla";
+import MagicZolla from "./ZollaFamily/magicZolla";
+import HumanoidZolla from "./ZollaFamily/humanoidZolla";
+import AquaticZolla from "./ZollaFamily/aquaticZolla";
+import MechanicalZolla from "./ZollaFamily/mechanicalZolla";
 function Zolla() {
+  const [coords] = useState("/way Bastion 51, 38");
   return (
     <div className="containerAchiev">
       <div className="containerContent">
@@ -36,7 +44,6 @@ function Zolla() {
                 to="/shadowlands/bastionAchievement/zolla/aquatic"
                 activeClassName="active"
                 className="inactive"
-                className="disabled"
               >
                 <li>
                   {" "}
@@ -97,7 +104,6 @@ function Zolla() {
                 to="/shadowlands/bastionAchievement/zolla/humanoid"
                 activeClassName="active"
                 className="inactive"
-                className="disabled"
               >
                 <li>
                   {" "}
@@ -108,7 +114,6 @@ function Zolla() {
                 to="/shadowlands/bastionAchievement/zolla/magic"
                 activeClassName="active"
                 className="inactive"
-                className="disabled"
               >
                 <li>
                   {" "}
@@ -119,7 +124,6 @@ function Zolla() {
                 to="/shadowlands/bastionAchievement/zolla/mechanical"
                 activeClassName="active"
                 className="inactive"
-                className="disabled"
               >
                 <li>
                   {" "}
@@ -139,8 +143,11 @@ function Zolla() {
             </ul>
           </nav>
           <Switch>
+            <Route path="/shadowlands/bastionAchievement/zolla/default">
+              <h1>Choose a guide to follow up from the above menu!</h1>
+            </Route>
             <Route path="/shadowlands/bastionAchievement/zolla/aquatic">
-              Aquatic
+              <AquaticZolla />
             </Route>
             <Route path="/shadowlands/bastionAchievement/zolla/beast">
               <BeastsZolla />
@@ -157,6 +164,15 @@ function Zolla() {
             <Route path="/shadowlands/bastionAchievement/zolla/flying">
               <FlyingZolla />
             </Route>
+            <Route path="/shadowlands/bastionAchievement/zolla/humanoid">
+              <HumanoidZolla />
+            </Route>
+            <Route path="/shadowlands/bastionAchievement/zolla/magic">
+              <MagicZolla />
+            </Route>
+            <Route path="/shadowlands/bastionAchievement/zolla/mechanical">
+              <MechanicalZolla />
+            </Route>
             <Route path="/shadowlands/bastionAchievement/zolla/undead">
               <UndeadZolla />
             </Route>
@@ -165,6 +181,13 @@ function Zolla() {
       </div>
       <div className="locationImages">
         <h2>Localization:</h2>
+        <button
+          onClick={() => {
+            navigator.clipboard.writeText(coords);
+          }}
+        >
+          Copy Coordinates <FontAwesomeIcon icon={faClipboard} />
+        </button>
         <img src={location1} alt="noImg"></img>
         <img src={location2} alt="noImg"></img>
         <img src={location3} alt="noImg"></img>

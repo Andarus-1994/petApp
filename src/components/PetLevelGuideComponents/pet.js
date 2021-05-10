@@ -26,6 +26,7 @@ function ShadowmoonDraenor({ pet, petOwned }) {
   const abilities = petOwned.abilities;
   const speed = petOwned.speed;
   const rarity = petOwned.rarity;
+  const breed = petOwned.breed;
   useEffect(
     () => {
       if (petAbilitiesState === null) {
@@ -132,14 +133,27 @@ function ShadowmoonDraenor({ pet, petOwned }) {
                 Required Level 25<br></br> (Level {detail.level})
               </p>
 
-              {speed === null ? (
+              {breed === "S" ? (
+                detail.breed === 21 ||
+                detail.breed === 11 ||
+                detail.breed === 9 ||
+                detail.breed === 19 ||
+                detail.breed === 8 ||
+                detail.breed === 18 ? (
+                  <div className="stats">Required S Breed</div>
+                ) : (
+                  <div className="stats required">
+                    Required Speed {speed} ({detail.speed}) - S breed
+                  </div>
+                )
+              ) : speed === null ? (
                 <p className="stats">No Stats Required </p>
               ) : speed > detail.speed ? (
                 detail.breed === 5 || detail.breed === 15 ? (
                   <p className="stats"> SS Breed</p>
                 ) : (
                   <p className="stats required">
-                    Required Speed {speed} ({detail.speed}) - SS breed
+                    Required Speed {speed} ({detail.speed}) - SS
                   </p>
                 )
               ) : (

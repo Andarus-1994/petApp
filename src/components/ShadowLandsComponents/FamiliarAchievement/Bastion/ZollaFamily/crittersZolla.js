@@ -784,7 +784,7 @@ function CrittersZolla() {
                     <p>Turn 12-13</p>
                     <p>
                       Slasher comes in. <span>Slow and Steady</span> and{" "}
-                      <span>Absorb</span> until
+                      <span>Absorb</span> until{" "}
                       <span className="hero">
                         {requiredPetOneSlot1[1].pets.name}
                       </span>{" "}
@@ -795,10 +795,10 @@ function CrittersZolla() {
                     {" "}
                     <p>Turn 14</p>
                     <p>
-                      Bring in
+                      Bring in{" "}
                       <span className="hero">
                         {requiredPetOneSlot2[1].pets.name}
-                      </span>
+                      </span>{" "}
                       and use <span>Poison Fang</span>.
                     </p>
                   </div>
@@ -806,10 +806,10 @@ function CrittersZolla() {
                     {" "}
                     <p>Turn 15+</p>
                     <p>
-                      Use <span>Stampede</span> until
+                      Use <span>Stampede</span> until{" "}
                       <span className="hero">
                         {requiredPetOneSlot2[1].pets.name}
-                      </span>
+                      </span>{" "}
                       dies.
                     </p>
                   </div>
@@ -819,11 +819,11 @@ function CrittersZolla() {
                     <p>
                       <span className="hero">
                         {requiredPetOneSlot2[1].pets.name}
-                      </span>
-                      probably dies here versus Pounder. Now just bring in
+                      </span>{" "}
+                      probably dies here versus Pounder. Now just bring in{" "}
                       <span className="hero">
                         {requiredPetOneSlot3[1].pets.name}
-                      </span>
+                      </span>{" "}
                       and cast <span>Stench</span>.
                     </p>
                   </div>

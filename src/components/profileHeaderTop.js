@@ -38,14 +38,27 @@ function ProfileImage() {
     <div>
       <div className="emptyBarTotalPets">
         <div
-          className="fillBarOwnedPets"
+          className={
+            percentage(ownedUniquePets, totalPets).toFixed(2) > 50
+              ? "fillBarOwnedPets"
+              : "fillBarOwnedPetsYellow"
+          }
           style={{
             width:
               (percentage(ownedUniquePets, totalPets).toFixed(2) * 120) / 100 +
               "px",
           }}
         >
-          <h3> {percentage(ownedUniquePets, totalPets).toFixed(2)} %</h3>
+          <h3
+            className={
+              percentage(ownedUniquePets, totalPets).toFixed(2) > 50
+                ? ""
+                : "yellowText"
+            }
+          >
+            {" "}
+            {percentage(ownedUniquePets, totalPets).toFixed(2)} %
+          </h3>
         </div>
         <p>{ownedUniquePets + "/" + totalPets} Unique Pets</p>
       </div>

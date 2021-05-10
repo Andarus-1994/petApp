@@ -44,14 +44,10 @@ function DefaultLevelGuide() {
 
       petsInfo(idPets, idPets.length).then((res3) => {
         res3.map((res4) => {
-          if (res4.creature.name === "Son of Skum")
-            console.log("Skum " + res4.id);
-          if (res4.creature.name === "Twilight")
-            console.log("twilight " + res4.id);
-          if (res4.creature.name === "Red Panda")
-            console.log("Red Panda " + res4.id);
-          if (res4.creature.name === "Snowy Panda")
-            console.log("snow " + res4.id);
+          if (res4.creature.name === "Chrominius")
+            console.log("chromi " + res4.id);
+          if (res4.creature.name === "Thunderscale Whelpling")
+            console.log("thunder " + res4.id);
         });
       });
     });
@@ -105,6 +101,7 @@ function DefaultLevelGuide() {
               ) : (
                 <FontAwesomeIcon className="notOwned" icon={faTimes} />
               )}
+              <div className="source">{pet.source.name}</div>
             </li>
           ))
         ) : (

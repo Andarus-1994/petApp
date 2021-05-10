@@ -1,7 +1,7 @@
 import axios from "axios";
 /*const token = "EUaqHPkRrZ9xEnxvd2iVKSjT649wt2lYY2"; */
-const clientID = "f684f07f82ac41aaabafaa42fa9a067f";
-const clientSecret = "eUE5pg86dF2V0vz1iubJv84ecWMNDTNd";
+const clientID = process.env.REACT_APP_CLIENT_ID;
+const clientSecret = process.env.REACT_APP_CLIENT_SECRET;
 
 var formData = new FormData();
 

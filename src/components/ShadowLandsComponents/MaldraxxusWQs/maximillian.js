@@ -1107,19 +1107,6 @@ function Maximilian() {
                   </p>
                 )}
               </div>
-              <div className="turn">
-                {" "}
-                <p>Turn 8</p>
-                {curentActiveSlot1[0].id === slot1pet1[0][0].id ? (
-                  <p>
-                    Use <span>Infected Claw</span>.
-                  </p>
-                ) : (
-                  <p>
-                    Use <span>Infected Claw</span> .
-                  </p>
-                )}
-              </div>
 
               <div className="turn">
                 {" "}

@@ -8,6 +8,9 @@
     right: 4%;
     z-index: 10;
     width: fit-content;
+    @media screen and (max-width: 800px) {
+      top: 86px;
+    }
     ul {
       list-style-type: none;
       display: flex;
@@ -40,7 +43,11 @@
             right: -5px;
           }
         }
+        @media screen and (max-width: 800px) {
+          font-size: 0.7rem;
+        }
       }
+
       .active {
         color: rgb(0, 0, 0);
         background-color: rgb(247, 244, 244);

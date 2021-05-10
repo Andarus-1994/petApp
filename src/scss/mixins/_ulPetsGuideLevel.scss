@@ -43,6 +43,16 @@ ul {
       color: rgb(219, 215, 215);
     }
   }
+  .mechanical {
+    .type {
+      color: black;
+    }
+  }
+  .flying {
+    .type {
+      color: black;
+    }
+  }
 
   .aquatic {
     .owned {
@@ -90,7 +100,7 @@ ul {
     .type {
       margin: 0 auto;
       margin-top: auto;
-      color: rgb(27, 27, 27);
+      color: rgb(235, 231, 231);
       font-size: 0.55rem;
       letter-spacing: 1.5px;
     }

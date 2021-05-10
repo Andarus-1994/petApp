@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { searchChar, retriveMediaProfile, getPetsCharacter } from "./actions";
+import ReactGa from "react-ga";
 import "../scss/style.css";
 
 function SearchBar(props) {
@@ -9,12 +10,21 @@ function SearchBar(props) {
   const searchedChar = useSelector((state) => state.foundChar);
   const dispatch = useDispatch();
   function handleChange(e) {
+    ReactGa.event({
+      category: "Searched Char",
+      action: "Searched for a char",
+      value: e.target.value,
+    });
     setUser(e.target.value);
   }
   function hitEnter(e) {
     if (e.charCode === 13) {
       const [character, server] = separateString(user);
-
+      ReactGa.event({
+        category: "Searched Char",
+        action: "Searched for a char",
+        value: e.target.value,
+      });
       // props.find(user, region);
       if (character && server && region) {
         props.setLoading();

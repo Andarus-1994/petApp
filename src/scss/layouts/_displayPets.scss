@@ -49,15 +49,22 @@
     justify-content: center;
     align-items: center;
     font-family: $Raleway;
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
   }
   .emptyBarTotalPets {
     position: absolute;
+
     top: 108px;
     left: 17%;
     border: 1px solid rgb(116, 116, 139);
     border-radius: 10px;
     width: 120px;
     height: 10px;
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
     p {
       font-family: $Roboto;
       font-weight: 100;
@@ -68,28 +75,73 @@
       margin-left: -10px;
     }
     .fillBarOwnedPets {
-      background: linear-gradient(120deg, rgb(58, 201, 82), rgb(36, 128, 24));
+      background: linear-gradient(
+        60deg,
+        rgb(42, 199, 21),
+        rgb(32, 92, 42),
+        rgb(42, 199, 21)
+      );
       border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
-
       height: 9px;
+
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+
+    .fillBarOwnedPetsYellow {
+      background: linear-gradient(
+        60deg,
+        rgb(228, 225, 77),
+        rgb(201, 212, 95),
+        rgb(199, 166, 21)
+      );
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      height: 9px;
+
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+    .yellowText {
+      position: absolute;
+      top: -20px;
+      left: 17%;
+      color: rgb(171, 179, 71);
+      font-family: $Roboto;
+      font-weight: 100;
+      font-size: 1rem;
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
     }
     h3 {
       position: absolute;
-      top: -25px;
+      top: -20px;
       left: 17%;
-      color: rgb(107, 151, 91);
+      color: rgb(99, 194, 65);
       font-family: $Roboto;
       font-weight: 100;
+      font-size: 1rem;
     }
   }
   .profile {
     position: absolute;
     top: 60px;
     left: 10%;
+    @media screen and (max-width: 800px) {
+      top: 10px;
+      left: 10px;
+    }
     img {
       position: relative;
       border-radius: 0.5rem;
+      @media screen and (max-width: 800px) {
+        width: 40px;
+        height: 40px;
+      }
     }
 
     &:hover:not(h2) .hoverProfile {
@@ -111,6 +163,12 @@
       min-width: 350px;
       top: 90px;
       left: -40px;
+      @media screen and (max-width: 800px) {
+        font-size: 0.85rem;
+        top: 40px;
+        left: 0px;
+        color: white;
+      }
       h2 {
         font-size: 1.2rem;
         padding: 5px 0;
@@ -120,6 +178,11 @@
         &::first-letter {
           display: inline;
           text-transform: uppercase;
+        }
+        @media screen and (max-width: 800px) {
+          color: white;
+          font-size: 0.85rem;
+          margin-top: -4.5px;
         }
       }
     }

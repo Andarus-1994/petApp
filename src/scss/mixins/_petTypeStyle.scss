@@ -145,17 +145,23 @@
   }
 
   .humanoid {
-    background: linear-gradient(0deg, rgb(102, 99, 74), rgb(146, 137, 51));
+    background: linear-gradient(0deg, rgb(56, 54, 44), rgb(240, 211, 138));
     box-shadow: 2px 2px 8px 3px black;
     border: none;
-    color: rgb(209, 208, 208);
+    color: rgb(0, 0, 0);
     .mask {
       font-size: 1.5rem;
       position: absolute;
       top: 2%;
       right: 5%;
-      color: rgb(241, 241, 241);
+      color: rgb(26, 25, 25);
       transform: rotateZ(20deg);
+    }
+    .petName {
+      color: black;
+    }
+    .green {
+      color: green;
     }
     .type {
       margin: 0 auto;
