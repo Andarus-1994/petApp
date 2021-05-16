@@ -1,8 +1,10 @@
+$navFontSize: 0.75rem;
+
 .navBastionAchievement {
   width: 250px;
-  nav {
+  nav:nth-child(1) {
     position: relative;
-    width: 200px;
+    width: 190px;
     margin-top: 90px;
     animation: fade 1s;
 
@@ -49,7 +51,7 @@
       a {
         background-color: rgba(7, 7, 7, 0.39);
         text-decoration: none;
-        font-size: 0.95rem;
+        font-size: $navFontSize;
         font-family: $Raleway;
         font-weight: 600;
         letter-spacing: 0.2px;
@@ -82,6 +84,269 @@
           rgb(12, 12, 19)
         );
         color: #ffffff;
+      }
+    }
+  }
+  nav:nth-child(2) {
+    position: relative;
+    width: 190px;
+    margin-top: 20px;
+    animation: fade 1s;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .disabled {
+        pointer-events: none;
+        background: rgb(61, 66, 68) !important;
+        color: rgb(189, 184, 184) !important;
+      }
+
+      a:not(a:first-child) {
+        background: linear-gradient(60deg, #a01919, rgb(212, 18, 44), #a01919);
+        color: black;
+        &:hover {
+          color: rgb(255, 255, 255);
+          background: linear-gradient(
+            60deg,
+            #a01919,
+            rgb(168, 25, 44),
+            #a01919
+          );
+        }
+
+        .active {
+          pointer-events: none;
+          color: rgb(255, 255, 255) !important;
+          background: linear-gradient(
+            60deg,
+            #66613f,
+            rgb(117, 108, 52)
+          ) !important;
+        }
+      }
+
+      .active {
+        pointer-events: none;
+        color: rgb(255, 255, 255) !important;
+        background: linear-gradient(
+          60deg,
+          #702929,
+          rgb(99, 7, 19),
+          #830f0f
+        ) !important;
+      }
+      a {
+        background-color: rgba(7, 7, 7, 0.39);
+        text-decoration: none;
+        font-size: $navFontSize;
+        font-family: $Raleway;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        color: rgb(248, 248, 248);
+        padding: 10px 5px;
+        border-bottom: 1px solid rgb(236, 236, 236);
+        border-right: 1px solid rgb(233, 229, 229);
+        border-left: 1px solid rgb(236, 235, 235);
+        text-align: center;
+        margin: 0 0px;
+        transition: 0.4s;
+
+        &:hover {
+          color: rgb(255, 255, 255);
+          background-color: rgba(0, 0, 0, 0.623);
+        }
+      }
+
+      .label {
+        background: linear-gradient(
+          20deg,
+          rgb(14, 7, 9),
+          rgb(14, 7, 9),
+          rgb(247, 8, 8),
+          rgb(14, 7, 9),
+          rgba(14, 7, 9, 1)
+        );
+        pointer-events: none;
+      }
+    }
+  }
+  nav:nth-child(3) {
+    position: relative;
+    width: 190px;
+    margin-top: 20px;
+    animation: fade 1s;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .disabled {
+        pointer-events: none;
+        background: rgb(61, 66, 68) !important;
+        color: rgb(189, 184, 184) !important;
+      }
+
+      a:not(a:first-child) {
+        background: linear-gradient(60deg, #a01919, rgb(212, 18, 44), #a01919);
+        color: black;
+        &:hover {
+          color: rgb(255, 255, 255);
+          background: linear-gradient(
+            60deg,
+            #a01919,
+            rgb(168, 25, 44),
+            #a01919
+          );
+        }
+
+        .active {
+          pointer-events: none;
+          color: rgb(255, 255, 255) !important;
+          background: linear-gradient(
+            60deg,
+            #66613f,
+            rgb(117, 108, 52)
+          ) !important;
+        }
+      }
+
+      .active {
+        pointer-events: none;
+        color: rgb(255, 255, 255) !important;
+        background: linear-gradient(
+          60deg,
+          #702929,
+          rgb(99, 7, 19),
+          #830f0f
+        ) !important;
+      }
+      a {
+        background-color: rgba(7, 7, 7, 0.39);
+        text-decoration: none;
+        font-size: $navFontSize;
+        font-family: $Raleway;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        color: rgb(248, 248, 248);
+        padding: 10px 5px;
+        border-bottom: 1px solid rgb(236, 236, 236);
+        border-right: 1px solid rgb(233, 229, 229);
+        border-left: 1px solid rgb(236, 235, 235);
+        text-align: center;
+        margin: 0 0px;
+        transition: 0.4s;
+
+        &:hover {
+          color: rgb(255, 255, 255);
+          background-color: rgba(0, 0, 0, 0.623);
+        }
+      }
+
+      .label {
+        background: linear-gradient(
+          20deg,
+          rgb(14, 7, 9),
+          rgb(14, 7, 9),
+          rgb(29, 85, 61),
+          rgb(14, 7, 9),
+          rgba(14, 7, 9, 1)
+        );
+        pointer-events: none;
+      }
+    }
+  }
+  nav:nth-child(4) {
+    position: relative;
+    width: 190px;
+    margin-top: 20px;
+    animation: fade 1s;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .disabled {
+        pointer-events: none;
+        background: rgb(61, 66, 68) !important;
+        color: rgb(189, 184, 184) !important;
+      }
+
+      a:not(a:first-child) {
+        background: linear-gradient(60deg, #a01919, rgb(212, 18, 44), #a01919);
+        color: black;
+        &:hover {
+          color: rgb(255, 255, 255);
+          background: linear-gradient(
+            60deg,
+            #a01919,
+            rgb(168, 25, 44),
+            #a01919
+          );
+        }
+
+        .active {
+          pointer-events: none;
+          color: rgb(255, 255, 255) !important;
+          background: linear-gradient(
+            60deg,
+            #66613f,
+            rgb(117, 108, 52)
+          ) !important;
+        }
+      }
+
+      .active {
+        pointer-events: none;
+        color: rgb(255, 255, 255) !important;
+        background: linear-gradient(
+          60deg,
+          #702929,
+          rgb(99, 7, 19),
+          #830f0f
+        ) !important;
+      }
+      a {
+        background-color: rgba(7, 7, 7, 0.39);
+        text-decoration: none;
+        font-size: $navFontSize;
+        font-family: $Raleway;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        color: rgb(248, 248, 248);
+        padding: 10px 5px;
+        border-bottom: 1px solid rgb(236, 236, 236);
+        border-right: 1px solid rgb(233, 229, 229);
+        border-left: 1px solid rgb(236, 235, 235);
+        text-align: center;
+        margin: 0 0px;
+        transition: 0.4s;
+
+        &:hover {
+          color: rgb(255, 255, 255);
+          background-color: rgba(0, 0, 0, 0.623);
+        }
+      }
+
+      .label {
+        background: linear-gradient(
+          20deg,
+          rgb(14, 7, 9),
+          rgb(14, 7, 9),
+          rgb(25, 38, 46),
+          rgb(44, 101, 116),
+          rgb(25, 38, 46),
+          rgb(14, 7, 9),
+          rgba(14, 7, 9, 1)
+        );
+        pointer-events: none;
       }
     }
   }

@@ -15,6 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function ShadowmoonDraenor({ pet, petOwned }) {
+  console.log("pet", pet);
   const petsChar = useSelector((state) => state.pets);
   const [petAbilitiesState, setPetAbilities] = useState(null);
   const [petOwnedDetails, setPetOwnedDetails] = useState({
@@ -122,7 +123,12 @@ function ShadowmoonDraenor({ pet, petOwned }) {
       style={{ animationDuration: 0.8 + "s" }}
     >
       <div className="iconPet">
-        <img src={pet.pets.icon} alt="noImg"></img>
+        <a
+          href={"https://www.wowhead.com/battle-pet/" + pet.pets.id}
+          target="_blank"
+        >
+          <img src={pet.pets.icon} alt="noImg"></img>
+        </a>
       </div>
       <div className="petName">{pet.pets.name}</div>{" "}
       <div className="containerReq">
@@ -221,6 +227,12 @@ function ShadowmoonDraenor({ pet, petOwned }) {
         </div>
       ) : (
         <div className="spaceOwned"></div>
+      )}
+      {!ownedPet && (
+        <div className="source">
+          Source: <br></br>
+          {pet.pets.source.name}
+        </div>
       )}
       <p className="type">- {pet.pets.battle_pet_type.type} -</p>
       {pet.pets.battle_pet_type.type === "BEAST" ? (

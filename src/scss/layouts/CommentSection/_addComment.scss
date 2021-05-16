@@ -1,0 +1,66 @@
+.addComment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: left;
+  text-align: left;
+  padding-left: 5vh;
+  margin-top: 2rem;
+  .warning {
+    color: red;
+    text-transform: uppercase;
+    font-family: $Raleway;
+    margin-left: 50px;
+  }
+  button {
+    cursor: pointer;
+    background-color: rgb(43, 43, 56);
+    width: fit-content;
+    padding: 10px 10px;
+    color: white;
+    font-family: $Raleway;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    &:hover {
+      background-color: rgb(30, 30, 41);
+      color: white;
+    }
+  }
+  div {
+    label {
+      display: block;
+      font-family: $Raleway;
+      min-width: 80px;
+      color: rgb(30, 30, 34);
+    }
+    input {
+      background-color: rgb(43, 43, 56);
+      color: white;
+      width: 350px;
+      padding: 10px 10px;
+      font-family: $Raleway;
+      border: none;
+      border-radius: 10px;
+      transition: 0.4s;
+      &:focus {
+        background-color: rgb(24, 24, 32);
+      }
+    }
+    textarea {
+      background-color: rgb(43, 43, 56);
+      color: white;
+      padding: 10px 10px;
+      font-family: $Raleway;
+      width: 350px;
+      height: 150px;
+      border: none;
+      border-radius: 10px;
+      resize: none;
+      transition: 0.4s;
+      &:focus {
+        background-color: rgb(24, 24, 32);
+      }
+    }
+  }
+}

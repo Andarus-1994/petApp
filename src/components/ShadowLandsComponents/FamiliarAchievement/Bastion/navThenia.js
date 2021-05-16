@@ -26,6 +26,11 @@ import FlyingThenia from "./TheniaFamily/flyingThenia";
 import BeastsThenia from "./TheniaFamily/beastsThenia";
 import CrittersThenia from "./TheniaFamily/crittersThenia";
 import DragonkinThenia from "./TheniaFamily/dragonkinThenia";
+import AquaticThenia from "./TheniaFamily/aquaticThenia";
+import MechanicalThenia from "./TheniaFamily/mechanicalThenia";
+import MagicThenia from "./TheniaFamily/magicThenia";
+import ElementalThenia from "./TheniaFamily/elementalThenia";
+import UndeadThenia from "./TheniaFamily/undeadThenia";
 
 function Thenia() {
   const [coords] = useState("/way Bastion 55, 56");
@@ -37,10 +42,9 @@ function Thenia() {
             <h2>Pet Family Types</h2>
             <ul>
               <NavLink
-                to="/shadowlands/bastionAchievement/thenia/aquatic"
+                to="/shadowlands/familiarExorcist/thenia/aquatic"
                 activeClassName="active"
                 className="inactive"
-                className="disabled"
               >
                 <li>
                   {" "}
@@ -48,7 +52,7 @@ function Thenia() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/thenia/beast"
+                to="/shadowlands/familiarExorcist/thenia/beast"
                 activeClassName="active"
                 className="inactive"
               >
@@ -58,7 +62,7 @@ function Thenia() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/thenia/critters"
+                to="/shadowlands/familiarExorcist/thenia/critters"
                 activeClassName="active"
                 className="inactive"
               >
@@ -68,7 +72,7 @@ function Thenia() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/thenia/dragonkin"
+                to="/shadowlands/familiarExorcist/thenia/dragonkin"
                 activeClassName="active"
                 className="inactive"
               >
@@ -78,10 +82,9 @@ function Thenia() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/thenia/elemental"
+                to="/shadowlands/familiarExorcist/thenia/elemental"
                 activeClassName="active"
                 className="inactive"
-                className="disabled"
               >
                 <li>
                   {" "}
@@ -89,7 +92,7 @@ function Thenia() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/thenia/flying"
+                to="/shadowlands/familiarExorcist/thenia/flying"
                 activeClassName="active"
                 className="inactive"
               >
@@ -99,7 +102,7 @@ function Thenia() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/thenia/humanoid"
+                to="/shadowlands/familiarExorcist/thenia/humanoid"
                 activeClassName="active"
                 className="inactive"
               >
@@ -109,10 +112,9 @@ function Thenia() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/thenia/magic"
+                to="/shadowlands/familiarExorcist/thenia/magic"
                 activeClassName="active"
                 className="inactive"
-                className="disabled"
               >
                 <li>
                   {" "}
@@ -120,10 +122,9 @@ function Thenia() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/thenia/mechanical"
+                to="/shadowlands/familiarExorcist/thenia/mechanical"
                 activeClassName="active"
                 className="inactive"
-                className="disabled"
               >
                 <li>
                   {" "}
@@ -131,10 +132,9 @@ function Thenia() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/thenia/undead"
+                to="/shadowlands/familiarExorcist/thenia/undead"
                 activeClassName="active"
                 className="inactive"
-                className="disabled"
               >
                 <li>
                   {" "}
@@ -144,23 +144,38 @@ function Thenia() {
             </ul>
           </nav>
           <Switch>
-            <Route path="/shadowlands/bastionAchievement/thenia/default">
+            <Route path="/shadowlands/familiarExorcist/thenia/default">
               <h1>Choose a guide to follow up from the above menu!</h1>
             </Route>
-            <Route path="/shadowlands/bastionAchievement/thenia/beast">
+            <Route path="/shadowlands/familiarExorcist/thenia/aquatic">
+              <AquaticThenia />
+            </Route>
+            <Route path="/shadowlands/familiarExorcist/thenia/beast">
               <BeastsThenia />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/thenia/critters">
+            <Route path="/shadowlands/familiarExorcist/thenia/critters">
               <CrittersThenia />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/thenia/dragonkin">
+            <Route path="/shadowlands/familiarExorcist/thenia/dragonkin">
               <DragonkinThenia />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/thenia/flying">
+            <Route path="/shadowlands/familiarExorcist/thenia/elemental">
+              <ElementalThenia />
+            </Route>
+            <Route path="/shadowlands/familiarExorcist/thenia/flying">
               <FlyingThenia />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/thenia/humanoid">
+            <Route path="/shadowlands/familiarExorcist/thenia/humanoid">
               <HumanoidThenia />
+            </Route>
+            <Route path="/shadowlands/familiarExorcist/thenia/magic">
+              <MagicThenia />
+            </Route>
+            <Route path="/shadowlands/familiarExorcist/thenia/mechanical">
+              <MechanicalThenia />
+            </Route>
+            <Route path="/shadowlands/familiarExorcist/thenia/undead">
+              <UndeadThenia />
             </Route>
           </Switch>
         </Router>

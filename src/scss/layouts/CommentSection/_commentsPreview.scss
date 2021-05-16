@@ -1,0 +1,36 @@
+.containerComments {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+
+  .containerComment {
+    background-color: rgb(60, 60, 70);
+    width: 100%;
+    max-width: 550px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 15px 10px;
+
+    .charName {
+      color: rgb(221, 223, 224);
+      font-family: $Roboto;
+      font-size: 1.2rem;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    .message {
+      color: rgb(221, 223, 224);
+      font-family: $Roboto;
+      font-size: 0.85rem;
+      margin-top: 10px;
+    }
+  }
+}

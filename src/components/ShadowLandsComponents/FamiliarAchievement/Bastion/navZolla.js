@@ -41,7 +41,7 @@ function Zolla() {
             <h2>Pet Family Types</h2>
             <ul>
               <NavLink
-                to="/shadowlands/bastionAchievement/zolla/aquatic"
+                to="/shadowlands/familiarExorcist/zolla/aquatic"
                 activeClassName="active"
                 className="inactive"
               >
@@ -51,7 +51,7 @@ function Zolla() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/zolla/beast"
+                to="/shadowlands/familiarExorcist/zolla/beast"
                 activeClassName="active"
                 className="inactive"
               >
@@ -61,7 +61,7 @@ function Zolla() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/zolla/critters"
+                to="/shadowlands/familiarExorcist/zolla/critters"
                 activeClassName="active"
                 className="inactive"
               >
@@ -71,7 +71,7 @@ function Zolla() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/zolla/dragonkin"
+                to="/shadowlands/familiarExorcist/zolla/dragonkin"
                 activeClassName="active"
                 className="inactive"
               >
@@ -81,7 +81,7 @@ function Zolla() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/zolla/elemental"
+                to="/shadowlands/familiarExorcist/zolla/elemental"
                 activeClassName="active"
                 className="inactive"
               >
@@ -91,7 +91,7 @@ function Zolla() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/zolla/flying"
+                to="/shadowlands/familiarExorcist/zolla/flying"
                 activeClassName="active"
                 className="inactive"
               >
@@ -101,7 +101,7 @@ function Zolla() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/zolla/humanoid"
+                to="/shadowlands/familiarExorcist/zolla/humanoid"
                 activeClassName="active"
                 className="inactive"
               >
@@ -111,7 +111,7 @@ function Zolla() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/zolla/magic"
+                to="/shadowlands/familiarExorcist/zolla/magic"
                 activeClassName="active"
                 className="inactive"
               >
@@ -121,7 +121,7 @@ function Zolla() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/zolla/mechanical"
+                to="/shadowlands/familiarExorcist/zolla/mechanical"
                 activeClassName="active"
                 className="inactive"
               >
@@ -131,7 +131,7 @@ function Zolla() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/zolla/undead"
+                to="/shadowlands/familiarExorcist/zolla/undead"
                 activeClassName="active"
                 className="inactive"
               >
@@ -143,37 +143,37 @@ function Zolla() {
             </ul>
           </nav>
           <Switch>
-            <Route path="/shadowlands/bastionAchievement/zolla/default">
+            <Route path="/shadowlands/familiarExorcist/zolla/default">
               <h1>Choose a guide to follow up from the above menu!</h1>
             </Route>
-            <Route path="/shadowlands/bastionAchievement/zolla/aquatic">
+            <Route path="/shadowlands/familiarExorcist/zolla/aquatic">
               <AquaticZolla />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/zolla/beast">
+            <Route path="/shadowlands/familiarExorcist/zolla/beast">
               <BeastsZolla />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/zolla/critters">
+            <Route path="/shadowlands/familiarExorcist/zolla/critters">
               <CrittersZolla />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/zolla/dragonkin">
+            <Route path="/shadowlands/familiarExorcist/zolla/dragonkin">
               <DragonkinZolla />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/zolla/elemental">
+            <Route path="/shadowlands/familiarExorcist/zolla/elemental">
               <ElementalZolla />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/zolla/flying">
+            <Route path="/shadowlands/familiarExorcist/zolla/flying">
               <FlyingZolla />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/zolla/humanoid">
+            <Route path="/shadowlands/familiarExorcist/zolla/humanoid">
               <HumanoidZolla />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/zolla/magic">
+            <Route path="/shadowlands/familiarExorcist/zolla/magic">
               <MagicZolla />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/zolla/mechanical">
+            <Route path="/shadowlands/familiarExorcist/zolla/mechanical">
               <MechanicalZolla />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/zolla/undead">
+            <Route path="/shadowlands/familiarExorcist/zolla/undead">
               <UndeadZolla />
             </Route>
           </Switch>

@@ -43,7 +43,7 @@ function Stratios() {
             <h2>Pet Family Types</h2>
             <ul>
               <NavLink
-                to="/shadowlands/bastionAchievement/stratios/aquatic"
+                to="/shadowlands/familiarExorcist/stratios/aquatic"
                 activeClassName="active"
                 className="inactive"
               >
@@ -53,7 +53,7 @@ function Stratios() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/stratios/beast"
+                to="/shadowlands/familiarExorcist/stratios/beast"
                 activeClassName="active"
                 className="inactive"
               >
@@ -63,7 +63,7 @@ function Stratios() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/stratios/critters"
+                to="/shadowlands/familiarExorcist/stratios/critters"
                 activeClassName="active"
                 className="inactive"
               >
@@ -73,7 +73,7 @@ function Stratios() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/stratios/dragonkin"
+                to="/shadowlands/familiarExorcist/stratios/dragonkin"
                 activeClassName="active"
                 className="inactive"
               >
@@ -83,7 +83,7 @@ function Stratios() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/stratios/elemental"
+                to="/shadowlands/familiarExorcist/stratios/elemental"
                 activeClassName="active"
                 className="inactive"
               >
@@ -93,7 +93,7 @@ function Stratios() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/stratios/flying"
+                to="/shadowlands/familiarExorcist/stratios/flying"
                 activeClassName="active"
                 className="inactive"
               >
@@ -103,7 +103,7 @@ function Stratios() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/stratios/humanoid"
+                to="/shadowlands/familiarExorcist/stratios/humanoid"
                 activeClassName="active"
                 className="inactive"
               >
@@ -113,7 +113,7 @@ function Stratios() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/stratios/magic"
+                to="/shadowlands/familiarExorcist/stratios/magic"
                 activeClassName="active"
                 className="inactive"
               >
@@ -123,7 +123,7 @@ function Stratios() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/stratios/mechanical"
+                to="/shadowlands/familiarExorcist/stratios/mechanical"
                 activeClassName="active"
                 className="inactive"
               >
@@ -133,7 +133,7 @@ function Stratios() {
                 </li>
               </NavLink>
               <NavLink
-                to="/shadowlands/bastionAchievement/stratios/undead"
+                to="/shadowlands/familiarExorcist/stratios/undead"
                 activeClassName="active"
                 className="inactive"
               >
@@ -145,37 +145,37 @@ function Stratios() {
             </ul>
           </nav>
           <Switch>
-            <Route path="/shadowlands/bastionAchievement/stratios/default">
+            <Route path="/shadowlands/familiarExorcist/stratios/default">
               <h1>Choose a guide to follow up from the above menu!</h1>
             </Route>
-            <Route path="/shadowlands/bastionAchievement/stratios/aquatic">
+            <Route path="/shadowlands/familiarExorcist/stratios/aquatic">
               <AquaticStratios />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/stratios/beast">
+            <Route path="/shadowlands/familiarExorcist/stratios/beast">
               <BeastsStratios />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/stratios/critters">
+            <Route path="/shadowlands/familiarExorcist/stratios/critters">
               <CrittersStratios />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/stratios/dragonkin">
+            <Route path="/shadowlands/familiarExorcist/stratios/dragonkin">
               <DragonkinStratios />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/stratios/elemental">
+            <Route path="/shadowlands/familiarExorcist/stratios/elemental">
               <ElementalStratios />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/stratios/flying">
+            <Route path="/shadowlands/familiarExorcist/stratios/flying">
               <FlyingStratios />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/stratios/humanoid">
+            <Route path="/shadowlands/familiarExorcist/stratios/humanoid">
               <HumanoidStratios />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/stratios/magic">
+            <Route path="/shadowlands/familiarExorcist/stratios/magic">
               <MagicStratios />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/stratios/mechanical">
+            <Route path="/shadowlands/familiarExorcist/stratios/mechanical">
               <MechanicalStratios />
             </Route>
-            <Route path="/shadowlands/bastionAchievement/stratios/undead">
+            <Route path="/shadowlands/familiarExorcist/stratios/undead">
               <UndeadStratios />
             </Route>
           </Switch>

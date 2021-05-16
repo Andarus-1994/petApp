@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSelector } from "react-redux";
 import { singlePetInfo } from "../../../../functions/serverFunctions.js";
-
 import Pet from "../../../../PetLevelGuideComponents/pet.js";
+import CommentSection from "../../../../commentSection.js";
 
 function MechanicalZolla() {
   const petsChar = useSelector((state) => state.pets);
@@ -781,6 +781,7 @@ function MechanicalZolla() {
           )}
         </div>
       </div>
+      <CommentSection props={{ location: "shadowlands/Zolla/Mechanical" }} />
     </div>
   );
 }

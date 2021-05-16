@@ -77,7 +77,38 @@ ul {
     line-height: 1.9rem;
     z-index: 10;
     animation: fadeIn;
-
+    &:hover {
+      .source {
+        display: block;
+      }
+    }
+    .source {
+      position: absolute;
+      width: 120px;
+      top: -70px;
+      right: 0px;
+      padding: 10px 15px;
+      font-family: $Raleway;
+      line-height: 20px;
+      border-radius: 5px;
+      border: 1px solid rgb(55, 61, 70);
+      background-color: rgb(42, 56, 70);
+      color: rgb(200, 223, 224);
+      z-index: 50;
+      display: none;
+      animation: 0.5s fadeEnter;
+      &::before {
+        position: absolute;
+        left: 10px;
+        bottom: -20px;
+        content: "";
+        width: 30px;
+        height: 30px;
+        background-color: rgb(42, 56, 70);
+        clip-path: polygon(0 0, 0 78%, 100% 0);
+        z-index: 50;
+      }
+    }
     .containerReq {
       z-index: 10;
     }
@@ -234,5 +265,14 @@ ul {
   100% {
     opacity: 1;
     transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

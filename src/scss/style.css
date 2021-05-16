@@ -1278,6 +1278,7 @@
 }
 
 .contact .containerContact {
+  position: relative;
   background-color: #2f3442;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -1288,7 +1289,31 @@
   padding-top: 10px;
 }
 
-.contact h1 {
+.contact .containerContact .changeStateButton {
+  cursor: pointer;
+  background-color: #4f5566;
+  position: absolute;
+  top: 30px;
+  right: -90px;
+  width: 90px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-family: "Raleway", sans-serif;
+  padding: 15px 5px;
+  font-size: 0.85rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 0 !important;
+}
+
+.contact .containerContact .changeStateButton:hover {
+  padding-right: 0;
+  padding-left: 15px;
+  background-color: #61687e;
+  color: #d2dfe2;
+}
+
+.contact .containerContact h1 {
   color: #d6ddd6;
   text-align: center;
   width: 500px;
@@ -1298,7 +1323,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-.contact h2 {
+.contact .containerContact h2 {
   color: #000000;
   text-align: center;
   width: 500px;
@@ -1308,7 +1333,7 @@
   margin-top: 50px;
 }
 
-.contact form {
+.contact .containerContact form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1321,7 +1346,7 @@
           flex-direction: column;
 }
 
-.contact label {
+.contact .containerContact label {
   color: #e2e1e1;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
@@ -1329,7 +1354,7 @@
   margin-bottom: 2px;
 }
 
-.contact input {
+.contact .containerContact input {
   background: #454c5e;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
@@ -1338,7 +1363,7 @@
   border: none;
 }
 
-.contact textarea {
+.contact .containerContact textarea {
   background: #454c5e;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
@@ -1352,12 +1377,12 @@
   transition: 0.4s;
 }
 
-.contact textarea:focus {
+.contact .containerContact textarea:focus {
   outline: none;
   background: #454c5f;
 }
 
-.contact button {
+.contact .containerContact button {
   cursor: pointer;
   background: #3b4153;
   font-family: "Raleway", sans-serif;
@@ -1371,7 +1396,131 @@
   transition: 0.4s;
 }
 
-.contact button:hover {
+.contact .containerContact button:hover {
+  background: #5a637e;
+}
+
+.contact .containerStrategySubmission {
+  position: relative;
+  background-color: #2f3442;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-top: 120px;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  padding: 20px 50px;
+}
+
+.contact .containerStrategySubmission .changeStateButton {
+  cursor: pointer;
+  background-color: #4f5566;
+  position: absolute;
+  top: 30px;
+  right: -100px;
+  width: 100px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-family: "Raleway", sans-serif;
+  padding: 15px 5px;
+  font-size: 0.85rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 0 !important;
+}
+
+.contact .containerStrategySubmission .changeStateButton:hover {
+  padding-right: 0;
+  padding-left: 15px;
+  background-color: #61687e;
+  color: #d2dfe2;
+}
+
+.contact .containerStrategySubmission h1 {
+  color: #eff5f5;
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.contact .containerStrategySubmission h2 {
+  color: #000000;
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  font-family: "Raleway", sans-serif;
+  margin-top: 30px;
+}
+
+.contact .containerStrategySubmission form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40vh;
+  min-width: 300px;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .containerStrategySubmission label {
+  color: #e2e1e1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.contact .containerStrategySubmission input {
+  background: #454c5e;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #f8f7f7;
+  padding: 5px 5px;
+  border: none;
+}
+
+.contact .containerStrategySubmission textarea {
+  background: #454c5e;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  padding: 5px 5px;
+  color: #f8f7f7;
+  border: none;
+  height: 200px;
+  max-width: 500px;
+  max-height: 400px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.contact .containerStrategySubmission textarea:focus {
+  outline: none;
+  background: #454c5f;
+}
+
+.contact .containerStrategySubmission button {
+  cursor: pointer;
+  background: #3b4153;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  border: 0;
+  padding: 10px 15px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 30px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.contact .containerStrategySubmission button:hover {
   background: #5a637e;
 }
 
@@ -2646,6 +2795,41 @@
           animation: fadeIn;
 }
 
+.shadowmoonDraenorLevelGuide ul li:hover .source {
+  display: block;
+}
+
+.shadowmoonDraenorLevelGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.shadowmoonDraenorLevelGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .shadowmoonDraenorLevelGuide ul li .containerReq {
   z-index: 10;
 }
@@ -2824,6 +3008,24 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@-webkit-keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -3011,6 +3213,41 @@
           animation: fadeIn;
 }
 
+.frostFireDraenorLevelGuide ul li:hover .source {
+  display: block;
+}
+
+.frostFireDraenorLevelGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.frostFireDraenorLevelGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .frostFireDraenorLevelGuide ul li .containerReq {
   z-index: 10;
 }
@@ -3189,6 +3426,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -3376,6 +3622,41 @@
           animation: fadeIn;
 }
 
+.nagrandDraenorLevelGuide ul li:hover .source {
+  display: block;
+}
+
+.nagrandDraenorLevelGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.nagrandDraenorLevelGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .nagrandDraenorLevelGuide ul li .containerReq {
   z-index: 10;
 }
@@ -3554,6 +3835,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -3742,6 +4032,41 @@
           animation: fadeIn;
 }
 
+.YonKunLaiLevelGuide ul li:hover .source {
+  display: block;
+}
+
+.YonKunLaiLevelGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.YonKunLaiLevelGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .YonKunLaiLevelGuide ul li .containerReq {
   z-index: 10;
 }
@@ -3920,6 +4245,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -4106,6 +4440,41 @@
           animation: fadeIn;
 }
 
+.ThunderingPSKunLaiLevelGuide ul li:hover .source {
+  display: block;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.ThunderingPSKunLaiLevelGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .ThunderingPSKunLaiLevelGuide ul li .containerReq {
   z-index: 10;
 }
@@ -4284,6 +4653,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -4471,6 +4849,41 @@
           animation: fadeIn;
 }
 
+.WhisperingPSJadeForestLevelGuide ul li:hover .source {
+  display: block;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.WhisperingPSJadeForestLevelGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .WhisperingPSJadeForestLevelGuide ul li .containerReq {
   z-index: 10;
 }
@@ -4649,6 +5062,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -4951,6 +5373,46 @@
   -ms-grid-row: 2;
   grid-row: 2;
   padding: 0;
+}
+
+.containerNavSL .bigImage > a {
+  position: relative;
+  background: linear-gradient(20deg, #1c1d1f, #383e42, #1a1d1f);
+  -webkit-box-shadow: 0px 0px 12px 0px #a1adb9;
+          box-shadow: 0px 0px 12px 0px #a1adb9;
+  margin: 0 auto;
+  text-decoration: none;
+  padding: 13px 17px;
+  padding-top: 15px;
+  width: 170px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #e4eff1;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-animation: fadeInImageMiddle 2.2s;
+          animation: fadeInImageMiddle 2.2s;
+  z-index: 20;
+  top: 50%;
+  -webkit-transform: translate(0, -52%);
+          transform: translate(0, -52%);
+  text-align: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.containerNavSL .bigImage > a:hover {
+  background: linear-gradient(20deg, #141516, #43494e, #1c1e20);
+}
+
+@media screen and (max-width: 800px) {
+  .containerNavSL .bigImage > a {
+    font-size: 0.8rem;
+  }
 }
 
 .containerNavSL .bigImage .overlayImage {
@@ -6149,6 +6611,41 @@
           animation: fadeIn;
 }
 
+.farylWQGuide ul li:hover .source {
+  display: block;
+}
+
+.farylWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.farylWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .farylWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -6327,6 +6824,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -6516,6 +7022,41 @@
           animation: fadeIn;
 }
 
+.rascalWQGuide ul li:hover .source {
+  display: block;
+}
+
+.rascalWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.rascalWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .rascalWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -6694,6 +7235,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -6883,6 +7433,41 @@
           animation: fadeIn;
 }
 
+.nightfangWQGuide ul li:hover .source {
+  display: block;
+}
+
+.nightfangWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.nightfangWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .nightfangWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -7061,6 +7646,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -7250,6 +7844,41 @@
           animation: fadeIn;
 }
 
+.glitterdustWQGuide ul li:hover .source {
+  display: block;
+}
+
+.glitterdustWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.glitterdustWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .glitterdustWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -7428,6 +8057,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -7995,6 +8633,41 @@
           animation: fadeIn;
 }
 
+.gorgemouthWQGuide ul li:hover .source {
+  display: block;
+}
+
+.gorgemouthWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.gorgemouthWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .gorgemouthWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -8173,6 +8846,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -8362,6 +9044,41 @@
           animation: fadeIn;
 }
 
+.rotgutWQGuide ul li:hover .source {
+  display: block;
+}
+
+.rotgutWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.rotgutWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .rotgutWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -8540,6 +9257,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -8729,6 +9455,41 @@
           animation: fadeIn;
 }
 
+.maximilianWQGuide ul li:hover .source {
+  display: block;
+}
+
+.maximilianWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.maximilianWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .maximilianWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -8907,6 +9668,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -9096,6 +9866,41 @@
           animation: fadeIn;
 }
 
+.dundleyWQGuide ul li:hover .source {
+  display: block;
+}
+
+.dundleyWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.dundleyWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .dundleyWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -9274,6 +10079,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -9903,6 +10717,41 @@
           animation: fadeIn;
 }
 
+.addiusWQGuide ul li:hover .source {
+  display: block;
+}
+
+.addiusWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.addiusWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .addiusWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -10081,6 +10930,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -10271,6 +11129,41 @@
           animation: fadeIn;
 }
 
+.scorchWQGuide ul li:hover .source {
+  display: block;
+}
+
+.scorchWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.scorchWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .scorchWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -10449,6 +11342,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -10639,6 +11541,41 @@
           animation: fadeIn;
 }
 
+.syllaWQGuide ul li:hover .source {
+  display: block;
+}
+
+.syllaWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.syllaWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .syllaWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -10820,6 +11757,15 @@
   }
 }
 
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .syllaWQGuide .containerSyllaWQ {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10908,7 +11854,7 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 97%;
+  width: 77%;
   background: -webkit-gradient(linear, left bottom, left top, from(#2a792a), to(#3cb12c));
   background: linear-gradient(0deg, #2a792a, #3cb12c);
 }
@@ -11005,6 +11951,41 @@
   z-index: 10;
   -webkit-animation: fadeIn;
           animation: fadeIn;
+}
+
+.eyegorWQGuide ul li:hover .source {
+  display: block;
+}
+
+.eyegorWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.eyegorWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
 }
 
 .eyegorWQGuide ul li .containerReq {
@@ -11185,6 +12166,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -11748,6 +12738,41 @@
           animation: fadeIn;
 }
 
+.jawboneWQGuide ul li:hover .source {
+  display: block;
+}
+
+.jawboneWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.jawboneWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .jawboneWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -11926,6 +12951,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -12115,6 +13149,41 @@
           animation: fadeIn;
 }
 
+.theniaWQGuide ul li:hover .source {
+  display: block;
+}
+
+.theniaWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.theniaWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .theniaWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -12293,6 +13362,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -12482,6 +13560,41 @@
           animation: fadeIn;
 }
 
+.zollaWQGuide ul li:hover .source {
+  display: block;
+}
+
+.zollaWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.zollaWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .zollaWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -12660,6 +13773,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -12849,6 +13971,41 @@
           animation: fadeIn;
 }
 
+.stratiosWQGuide ul li:hover .source {
+  display: block;
+}
+
+.stratiosWQGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.stratiosWQGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .stratiosWQGuide ul li .containerReq {
   z-index: 10;
 }
@@ -13027,6 +14184,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -13238,15 +14404,15 @@
   width: 250px;
 }
 
-.navBastionAchievement nav {
+.navBastionAchievement nav:nth-child(1) {
   position: relative;
-  width: 200px;
+  width: 190px;
   margin-top: 90px;
   -webkit-animation: fade 1s;
           animation: fade 1s;
 }
 
-.navBastionAchievement nav ul {
+.navBastionAchievement nav:nth-child(1) ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13260,38 +14426,38 @@
           justify-content: center;
 }
 
-.navBastionAchievement nav ul .disabled {
+.navBastionAchievement nav:nth-child(1) ul .disabled {
   pointer-events: none;
   background: #5e5b5b !important;
   color: #bdb8b8 !important;
 }
 
-.navBastionAchievement nav ul a:not(a:first-child) {
+.navBastionAchievement nav:nth-child(1) ul a:not(a:first-child) {
   background: linear-gradient(120deg, #948d5a, #ecda70);
   color: black;
 }
 
-.navBastionAchievement nav ul a:not(a:first-child):hover {
+.navBastionAchievement nav:nth-child(1) ul a:not(a:first-child):hover {
   color: white;
   background: linear-gradient(80deg, #66613f, #756c34);
 }
 
-.navBastionAchievement nav ul a:not(a:first-child) .active {
+.navBastionAchievement nav:nth-child(1) ul a:not(a:first-child) .active {
   pointer-events: none;
   color: white !important;
   background: linear-gradient(60deg, #66613f, #756c34) !important;
 }
 
-.navBastionAchievement nav ul .active {
+.navBastionAchievement nav:nth-child(1) ul .active {
   pointer-events: none;
   color: white !important;
   background: linear-gradient(60deg, #66613f, #756c34) !important;
 }
 
-.navBastionAchievement nav ul a {
+.navBastionAchievement nav:nth-child(1) ul a {
   background-color: rgba(7, 7, 7, 0.39);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   letter-spacing: 0.2px;
@@ -13306,16 +14472,250 @@
   transition: 0.4s;
 }
 
-.navBastionAchievement nav ul a:hover {
+.navBastionAchievement nav:nth-child(1) ul a:hover {
   color: white;
   background-color: rgba(0, 0, 0, 0.623);
 }
 
-.navBastionAchievement nav ul .label {
+.navBastionAchievement nav:nth-child(1) ul .label {
   pointer-events: none;
   padding: 10px 10px;
   background: linear-gradient(20deg, #0c0c13, #0c0c13, #383629, #d1d18f, #383629, #0c0c13, #0c0c13);
   color: #ffffff;
+}
+
+.navBastionAchievement nav:nth-child(2) {
+  position: relative;
+  width: 190px;
+  margin-top: 20px;
+  -webkit-animation: fade 1s;
+          animation: fade 1s;
+}
+
+.navBastionAchievement nav:nth-child(2) ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navBastionAchievement nav:nth-child(2) ul .disabled {
+  pointer-events: none;
+  background: #3d4244 !important;
+  color: #bdb8b8 !important;
+}
+
+.navBastionAchievement nav:nth-child(2) ul a:not(a:first-child) {
+  background: linear-gradient(60deg, #a01919, #d4122c, #a01919);
+  color: black;
+}
+
+.navBastionAchievement nav:nth-child(2) ul a:not(a:first-child):hover {
+  color: white;
+  background: linear-gradient(60deg, #a01919, #a8192c, #a01919);
+}
+
+.navBastionAchievement nav:nth-child(2) ul a:not(a:first-child) .active {
+  pointer-events: none;
+  color: white !important;
+  background: linear-gradient(60deg, #66613f, #756c34) !important;
+}
+
+.navBastionAchievement nav:nth-child(2) ul .active {
+  pointer-events: none;
+  color: white !important;
+  background: linear-gradient(60deg, #702929, #630713, #830f0f) !important;
+}
+
+.navBastionAchievement nav:nth-child(2) ul a {
+  background-color: rgba(7, 7, 7, 0.39);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #f8f8f8;
+  padding: 10px 5px;
+  border-bottom: 1px solid #ececec;
+  border-right: 1px solid #e9e5e5;
+  border-left: 1px solid #ecebeb;
+  text-align: center;
+  margin: 0 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.navBastionAchievement nav:nth-child(2) ul a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.navBastionAchievement nav:nth-child(2) ul .label {
+  background: linear-gradient(20deg, #0e0709, #0e0709, #f70808, #0e0709, #0e0709);
+  pointer-events: none;
+}
+
+.navBastionAchievement nav:nth-child(3) {
+  position: relative;
+  width: 190px;
+  margin-top: 20px;
+  -webkit-animation: fade 1s;
+          animation: fade 1s;
+}
+
+.navBastionAchievement nav:nth-child(3) ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navBastionAchievement nav:nth-child(3) ul .disabled {
+  pointer-events: none;
+  background: #3d4244 !important;
+  color: #bdb8b8 !important;
+}
+
+.navBastionAchievement nav:nth-child(3) ul a:not(a:first-child) {
+  background: linear-gradient(60deg, #a01919, #d4122c, #a01919);
+  color: black;
+}
+
+.navBastionAchievement nav:nth-child(3) ul a:not(a:first-child):hover {
+  color: white;
+  background: linear-gradient(60deg, #a01919, #a8192c, #a01919);
+}
+
+.navBastionAchievement nav:nth-child(3) ul a:not(a:first-child) .active {
+  pointer-events: none;
+  color: white !important;
+  background: linear-gradient(60deg, #66613f, #756c34) !important;
+}
+
+.navBastionAchievement nav:nth-child(3) ul .active {
+  pointer-events: none;
+  color: white !important;
+  background: linear-gradient(60deg, #702929, #630713, #830f0f) !important;
+}
+
+.navBastionAchievement nav:nth-child(3) ul a {
+  background-color: rgba(7, 7, 7, 0.39);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #f8f8f8;
+  padding: 10px 5px;
+  border-bottom: 1px solid #ececec;
+  border-right: 1px solid #e9e5e5;
+  border-left: 1px solid #ecebeb;
+  text-align: center;
+  margin: 0 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.navBastionAchievement nav:nth-child(3) ul a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.navBastionAchievement nav:nth-child(3) ul .label {
+  background: linear-gradient(20deg, #0e0709, #0e0709, #1d553d, #0e0709, #0e0709);
+  pointer-events: none;
+}
+
+.navBastionAchievement nav:nth-child(4) {
+  position: relative;
+  width: 190px;
+  margin-top: 20px;
+  -webkit-animation: fade 1s;
+          animation: fade 1s;
+}
+
+.navBastionAchievement nav:nth-child(4) ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navBastionAchievement nav:nth-child(4) ul .disabled {
+  pointer-events: none;
+  background: #3d4244 !important;
+  color: #bdb8b8 !important;
+}
+
+.navBastionAchievement nav:nth-child(4) ul a:not(a:first-child) {
+  background: linear-gradient(60deg, #a01919, #d4122c, #a01919);
+  color: black;
+}
+
+.navBastionAchievement nav:nth-child(4) ul a:not(a:first-child):hover {
+  color: white;
+  background: linear-gradient(60deg, #a01919, #a8192c, #a01919);
+}
+
+.navBastionAchievement nav:nth-child(4) ul a:not(a:first-child) .active {
+  pointer-events: none;
+  color: white !important;
+  background: linear-gradient(60deg, #66613f, #756c34) !important;
+}
+
+.navBastionAchievement nav:nth-child(4) ul .active {
+  pointer-events: none;
+  color: white !important;
+  background: linear-gradient(60deg, #702929, #630713, #830f0f) !important;
+}
+
+.navBastionAchievement nav:nth-child(4) ul a {
+  background-color: rgba(7, 7, 7, 0.39);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #f8f8f8;
+  padding: 10px 5px;
+  border-bottom: 1px solid #ececec;
+  border-right: 1px solid #e9e5e5;
+  border-left: 1px solid #ecebeb;
+  text-align: center;
+  margin: 0 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.navBastionAchievement nav:nth-child(4) ul a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.navBastionAchievement nav:nth-child(4) ul .label {
+  background: linear-gradient(20deg, #0e0709, #0e0709, #19262e, #2c6574, #19262e, #0e0709, #0e0709);
+  pointer-events: none;
 }
 
 .undeadZollaGuide {
@@ -13445,6 +14845,41 @@
   z-index: 10;
   -webkit-animation: fadeIn;
           animation: fadeIn;
+}
+
+.undeadZollaGuide ul li:hover .source {
+  display: block;
+}
+
+.undeadZollaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.undeadZollaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
 }
 
 .undeadZollaGuide ul li .containerReq {
@@ -13625,6 +15060,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -13814,6 +15258,41 @@
           animation: fadeIn;
 }
 
+.dragonkinZollaGuide ul li:hover .source {
+  display: block;
+}
+
+.dragonkinZollaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.dragonkinZollaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .dragonkinZollaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -13992,6 +15471,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -14181,6 +15669,41 @@
           animation: fadeIn;
 }
 
+.crittersZollaGuide ul li:hover .source {
+  display: block;
+}
+
+.crittersZollaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.crittersZollaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .crittersZollaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -14359,6 +15882,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -14548,6 +16080,41 @@
           animation: fadeIn;
 }
 
+.flyingZollaGuide ul li:hover .source {
+  display: block;
+}
+
+.flyingZollaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.flyingZollaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .flyingZollaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -14726,6 +16293,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -14915,6 +16491,41 @@
           animation: fadeIn;
 }
 
+.elementalZollaGuide ul li:hover .source {
+  display: block;
+}
+
+.elementalZollaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.elementalZollaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .elementalZollaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -15093,6 +16704,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -15282,6 +16902,41 @@
           animation: fadeIn;
 }
 
+.beastsZollaGuide ul li:hover .source {
+  display: block;
+}
+
+.beastsZollaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.beastsZollaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .beastsZollaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -15460,6 +17115,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -15649,6 +17313,41 @@
           animation: fadeIn;
 }
 
+.magicZollaGuide ul li:hover .source {
+  display: block;
+}
+
+.magicZollaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.magicZollaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .magicZollaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -15827,6 +17526,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -16016,6 +17724,41 @@
           animation: fadeIn;
 }
 
+.humanoidZollaGuide ul li:hover .source {
+  display: block;
+}
+
+.humanoidZollaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.humanoidZollaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .humanoidZollaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -16194,6 +17937,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -16383,6 +18135,41 @@
           animation: fadeIn;
 }
 
+.mechanicalZollaGuide ul li:hover .source {
+  display: block;
+}
+
+.mechanicalZollaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.mechanicalZollaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .mechanicalZollaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -16561,6 +18348,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -16750,6 +18546,41 @@
           animation: fadeIn;
 }
 
+.aquaticZollaGuide ul li:hover .source {
+  display: block;
+}
+
+.aquaticZollaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.aquaticZollaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .aquaticZollaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -16928,6 +18759,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -17117,6 +18957,41 @@
           animation: fadeIn;
 }
 
+.aquaticStratiosGuide ul li:hover .source {
+  display: block;
+}
+
+.aquaticStratiosGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.aquaticStratiosGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .aquaticStratiosGuide ul li .containerReq {
   z-index: 10;
 }
@@ -17295,6 +19170,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -17484,6 +19368,41 @@
           animation: fadeIn;
 }
 
+.humanoidStratiosGuide ul li:hover .source {
+  display: block;
+}
+
+.humanoidStratiosGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.humanoidStratiosGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .humanoidStratiosGuide ul li .containerReq {
   z-index: 10;
 }
@@ -17662,6 +19581,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -17851,6 +19779,41 @@
           animation: fadeIn;
 }
 
+.flyingStratiosGuide ul li:hover .source {
+  display: block;
+}
+
+.flyingStratiosGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.flyingStratiosGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .flyingStratiosGuide ul li .containerReq {
   z-index: 10;
 }
@@ -18029,6 +19992,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -18218,6 +20190,41 @@
           animation: fadeIn;
 }
 
+.crittersStratiosGuide ul li:hover .source {
+  display: block;
+}
+
+.crittersStratiosGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.crittersStratiosGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .crittersStratiosGuide ul li .containerReq {
   z-index: 10;
 }
@@ -18396,6 +20403,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -18585,6 +20601,41 @@
           animation: fadeIn;
 }
 
+.dragonkinStratiosGuide ul li:hover .source {
+  display: block;
+}
+
+.dragonkinStratiosGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.dragonkinStratiosGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .dragonkinStratiosGuide ul li .containerReq {
   z-index: 10;
 }
@@ -18763,6 +20814,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -18952,6 +21012,41 @@
           animation: fadeIn;
 }
 
+.elementalStratiosGuide ul li:hover .source {
+  display: block;
+}
+
+.elementalStratiosGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.elementalStratiosGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .elementalStratiosGuide ul li .containerReq {
   z-index: 10;
 }
@@ -19130,6 +21225,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -19319,6 +21423,41 @@
           animation: fadeIn;
 }
 
+.undeadStratiosGuide ul li:hover .source {
+  display: block;
+}
+
+.undeadStratiosGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.undeadStratiosGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .undeadStratiosGuide ul li .containerReq {
   z-index: 10;
 }
@@ -19497,6 +21636,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -19686,6 +21834,41 @@
           animation: fadeIn;
 }
 
+.magicStratiosGuide ul li:hover .source {
+  display: block;
+}
+
+.magicStratiosGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.magicStratiosGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .magicStratiosGuide ul li .containerReq {
   z-index: 10;
 }
@@ -19864,6 +22047,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -20053,6 +22245,41 @@
           animation: fadeIn;
 }
 
+.beastsStratiosGuide ul li:hover .source {
+  display: block;
+}
+
+.beastsStratiosGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.beastsStratiosGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .beastsStratiosGuide ul li .containerReq {
   z-index: 10;
 }
@@ -20231,6 +22458,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -20420,6 +22656,41 @@
           animation: fadeIn;
 }
 
+.mechanicalStratiosGuide ul li:hover .source {
+  display: block;
+}
+
+.mechanicalStratiosGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.mechanicalStratiosGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .mechanicalStratiosGuide ul li .containerReq {
   z-index: 10;
 }
@@ -20598,6 +22869,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -20787,6 +23067,41 @@
           animation: fadeIn;
 }
 
+.humanoidTheniaGuide ul li:hover .source {
+  display: block;
+}
+
+.humanoidTheniaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.humanoidTheniaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .humanoidTheniaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -20965,6 +23280,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -21154,6 +23478,41 @@
           animation: fadeIn;
 }
 
+.flyingTheniaGuide ul li:hover .source {
+  display: block;
+}
+
+.flyingTheniaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.flyingTheniaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .flyingTheniaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -21332,6 +23691,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -21521,6 +23889,41 @@
           animation: fadeIn;
 }
 
+.beastsTheniaGuide ul li:hover .source {
+  display: block;
+}
+
+.beastsTheniaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.beastsTheniaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .beastsTheniaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -21699,6 +24102,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -21888,6 +24300,41 @@
           animation: fadeIn;
 }
 
+.crittersTheniaGuide ul li:hover .source {
+  display: block;
+}
+
+.crittersTheniaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.crittersTheniaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .crittersTheniaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -22066,6 +24513,15 @@
     opacity: 1;
     -webkit-transform: translate(0px) rotate(0);
             transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -22255,6 +24711,41 @@
           animation: fadeIn;
 }
 
+.dragonkinTheniaGuide ul li:hover .source {
+  display: block;
+}
+
+.dragonkinTheniaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.dragonkinTheniaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
 .dragonkinTheniaGuide ul li .containerReq {
   z-index: 10;
 }
@@ -22436,6 +24927,15 @@
   }
 }
 
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .dragonkinTheniaGuide .containerDragonkinThenia {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22489,6 +24989,3769 @@
 }
 
 .dragonkinTheniaGuide .containerDragonkinThenia .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.aquaticTheniaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.aquaticTheniaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.aquaticTheniaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.aquaticTheniaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.aquaticTheniaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 86%;
+  background-color: #37a733;
+}
+
+.aquaticTheniaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.aquaticTheniaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.aquaticTheniaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.aquaticTheniaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.aquaticTheniaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.aquaticTheniaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.aquaticTheniaGuide ul .mechanical .type {
+  color: black;
+}
+
+.aquaticTheniaGuide ul .flying .type {
+  color: black;
+}
+
+.aquaticTheniaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.aquaticTheniaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.aquaticTheniaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.aquaticTheniaGuide ul li:hover .source {
+  display: block;
+}
+
+.aquaticTheniaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.aquaticTheniaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
+.aquaticTheniaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.aquaticTheniaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.aquaticTheniaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.aquaticTheniaGuide ul li .space {
+  height: 50px;
+}
+
+.aquaticTheniaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.aquaticTheniaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.aquaticTheniaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.aquaticTheniaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.aquaticTheniaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.aquaticTheniaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.aquaticTheniaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.aquaticTheniaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.aquaticTheniaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.aquaticTheniaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.aquaticTheniaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.aquaticTheniaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.aquaticTheniaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.aquaticTheniaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.aquaticTheniaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.aquaticTheniaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.aquaticTheniaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.aquaticTheniaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.aquaticTheniaGuide .containerAquaticThenia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.aquaticTheniaGuide .containerAquaticThenia .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.aquaticTheniaGuide .containerAquaticThenia .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.aquaticTheniaGuide .containerAquaticThenia .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.aquaticTheniaGuide .containerAquaticThenia .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.aquaticTheniaGuide .containerAquaticThenia .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.mechanicalTheniaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.mechanicalTheniaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.mechanicalTheniaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.mechanicalTheniaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.mechanicalTheniaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 92%;
+  background-color: #37a733;
+}
+
+.mechanicalTheniaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.mechanicalTheniaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.mechanicalTheniaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.mechanicalTheniaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.mechanicalTheniaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.mechanicalTheniaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.mechanicalTheniaGuide ul .mechanical .type {
+  color: black;
+}
+
+.mechanicalTheniaGuide ul .flying .type {
+  color: black;
+}
+
+.mechanicalTheniaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.mechanicalTheniaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.mechanicalTheniaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.mechanicalTheniaGuide ul li:hover .source {
+  display: block;
+}
+
+.mechanicalTheniaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.mechanicalTheniaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
+.mechanicalTheniaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.mechanicalTheniaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.mechanicalTheniaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.mechanicalTheniaGuide ul li .space {
+  height: 50px;
+}
+
+.mechanicalTheniaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.mechanicalTheniaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.mechanicalTheniaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.mechanicalTheniaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.mechanicalTheniaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.mechanicalTheniaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.mechanicalTheniaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.mechanicalTheniaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.mechanicalTheniaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.mechanicalTheniaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.mechanicalTheniaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.mechanicalTheniaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.mechanicalTheniaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.mechanicalTheniaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.mechanicalTheniaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.mechanicalTheniaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.mechanicalTheniaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.mechanicalTheniaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mechanicalTheniaGuide .containerMechanicalThenia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mechanicalTheniaGuide .containerMechanicalThenia .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.mechanicalTheniaGuide .containerMechanicalThenia .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.mechanicalTheniaGuide .containerMechanicalThenia .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.mechanicalTheniaGuide .containerMechanicalThenia .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.mechanicalTheniaGuide .containerMechanicalThenia .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.magicTheniaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.magicTheniaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.magicTheniaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.magicTheniaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.magicTheniaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 84%;
+  background-color: #37a733;
+}
+
+.magicTheniaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.magicTheniaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.magicTheniaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.magicTheniaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.magicTheniaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.magicTheniaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.magicTheniaGuide ul .mechanical .type {
+  color: black;
+}
+
+.magicTheniaGuide ul .flying .type {
+  color: black;
+}
+
+.magicTheniaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.magicTheniaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.magicTheniaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.magicTheniaGuide ul li:hover .source {
+  display: block;
+}
+
+.magicTheniaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.magicTheniaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
+.magicTheniaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.magicTheniaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.magicTheniaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.magicTheniaGuide ul li .space {
+  height: 50px;
+}
+
+.magicTheniaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.magicTheniaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.magicTheniaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.magicTheniaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.magicTheniaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.magicTheniaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.magicTheniaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.magicTheniaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.magicTheniaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.magicTheniaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.magicTheniaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.magicTheniaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.magicTheniaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.magicTheniaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.magicTheniaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.magicTheniaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.magicTheniaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.magicTheniaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.magicTheniaGuide .containerMagicThenia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.magicTheniaGuide .containerMagicThenia .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.magicTheniaGuide .containerMagicThenia .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.magicTheniaGuide .containerMagicThenia .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.magicTheniaGuide .containerMagicThenia .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.magicTheniaGuide .containerMagicThenia .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.elementalTheniaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.elementalTheniaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.elementalTheniaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.elementalTheniaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.elementalTheniaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 86%;
+  background-color: #37a733;
+}
+
+.elementalTheniaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.elementalTheniaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.elementalTheniaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.elementalTheniaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.elementalTheniaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.elementalTheniaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.elementalTheniaGuide ul .mechanical .type {
+  color: black;
+}
+
+.elementalTheniaGuide ul .flying .type {
+  color: black;
+}
+
+.elementalTheniaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.elementalTheniaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.elementalTheniaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.elementalTheniaGuide ul li:hover .source {
+  display: block;
+}
+
+.elementalTheniaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.elementalTheniaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
+.elementalTheniaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.elementalTheniaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.elementalTheniaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.elementalTheniaGuide ul li .space {
+  height: 50px;
+}
+
+.elementalTheniaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.elementalTheniaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.elementalTheniaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.elementalTheniaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.elementalTheniaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.elementalTheniaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.elementalTheniaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.elementalTheniaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.elementalTheniaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.elementalTheniaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.elementalTheniaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.elementalTheniaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.elementalTheniaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.elementalTheniaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.elementalTheniaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.elementalTheniaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.elementalTheniaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.elementalTheniaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.elementalTheniaGuide .containerElementalThenia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.elementalTheniaGuide .containerElementalThenia .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.elementalTheniaGuide .containerElementalThenia .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.elementalTheniaGuide .containerElementalThenia .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.elementalTheniaGuide .containerElementalThenia .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.elementalTheniaGuide .containerElementalThenia .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.undeadTheniaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.undeadTheniaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.undeadTheniaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.undeadTheniaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.undeadTheniaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 98%;
+  background-color: #37a733;
+}
+
+.undeadTheniaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.undeadTheniaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.undeadTheniaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.undeadTheniaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.undeadTheniaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.undeadTheniaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.undeadTheniaGuide ul .mechanical .type {
+  color: black;
+}
+
+.undeadTheniaGuide ul .flying .type {
+  color: black;
+}
+
+.undeadTheniaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.undeadTheniaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.undeadTheniaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.undeadTheniaGuide ul li:hover .source {
+  display: block;
+}
+
+.undeadTheniaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.undeadTheniaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
+.undeadTheniaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.undeadTheniaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.undeadTheniaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.undeadTheniaGuide ul li .space {
+  height: 50px;
+}
+
+.undeadTheniaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.undeadTheniaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.undeadTheniaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.undeadTheniaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.undeadTheniaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.undeadTheniaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.undeadTheniaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.undeadTheniaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.undeadTheniaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.undeadTheniaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.undeadTheniaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.undeadTheniaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.undeadTheniaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.undeadTheniaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.undeadTheniaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.undeadTheniaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.undeadTheniaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.undeadTheniaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.undeadTheniaGuide .containerUndeadThenia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.undeadTheniaGuide .containerUndeadThenia .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.undeadTheniaGuide .containerUndeadThenia .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.undeadTheniaGuide .containerUndeadThenia .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.undeadTheniaGuide .containerUndeadThenia .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.undeadTheniaGuide .containerUndeadThenia .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.humanoidSyllaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.humanoidSyllaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.humanoidSyllaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.humanoidSyllaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.humanoidSyllaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 93%;
+  background-color: #37a733;
+}
+
+.humanoidSyllaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.humanoidSyllaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.humanoidSyllaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.humanoidSyllaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.humanoidSyllaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.humanoidSyllaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.humanoidSyllaGuide ul .mechanical .type {
+  color: black;
+}
+
+.humanoidSyllaGuide ul .flying .type {
+  color: black;
+}
+
+.humanoidSyllaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.humanoidSyllaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.humanoidSyllaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.humanoidSyllaGuide ul li:hover .source {
+  display: block;
+}
+
+.humanoidSyllaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.humanoidSyllaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
+.humanoidSyllaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.humanoidSyllaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.humanoidSyllaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.humanoidSyllaGuide ul li .space {
+  height: 50px;
+}
+
+.humanoidSyllaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.humanoidSyllaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.humanoidSyllaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.humanoidSyllaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.humanoidSyllaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.humanoidSyllaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.humanoidSyllaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.humanoidSyllaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.humanoidSyllaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.humanoidSyllaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.humanoidSyllaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.humanoidSyllaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.humanoidSyllaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.humanoidSyllaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.humanoidSyllaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.humanoidSyllaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.humanoidSyllaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.humanoidSyllaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.humanoidSyllaGuide .containerHumanoidSylla {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.humanoidSyllaGuide .containerHumanoidSylla .FightInstructions {
+  -webkit-box-shadow: inset 0px 0px 10px 0px #181313 !important;
+          box-shadow: inset 0px 0px 10px 0px #181313 !important;
+}
+
+.humanoidSyllaGuide .containerHumanoidSylla .FightInstructions::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  background-color: #31323a;
+  width: 40px;
+  height: 40px;
+  -webkit-clip-path: polygon(71% 64%, 45% 65%, 35% 71%, 23% 72%, 0 82%, 0 15%, 19% 35%, 34% 46%, 54% 54%);
+          clip-path: polygon(71% 64%, 45% 65%, 35% 71%, 23% 72%, 0 82%, 0 15%, 19% 35%, 34% 46%, 54% 54%);
+}
+
+.humanoidSyllaGuide .containerHumanoidSylla .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.humanoidSyllaGuide .containerHumanoidSylla .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.humanoidSyllaGuide .containerHumanoidSylla .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.humanoidSyllaGuide .containerHumanoidSylla .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.humanoidSyllaGuide .containerHumanoidSylla .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.dragonkinSyllaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.dragonkinSyllaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.dragonkinSyllaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.dragonkinSyllaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.dragonkinSyllaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 95%;
+  background-color: #37a733;
+}
+
+.dragonkinSyllaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.dragonkinSyllaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.dragonkinSyllaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.dragonkinSyllaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.dragonkinSyllaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.dragonkinSyllaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.dragonkinSyllaGuide ul .mechanical .type {
+  color: black;
+}
+
+.dragonkinSyllaGuide ul .flying .type {
+  color: black;
+}
+
+.dragonkinSyllaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.dragonkinSyllaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.dragonkinSyllaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.dragonkinSyllaGuide ul li:hover .source {
+  display: block;
+}
+
+.dragonkinSyllaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.dragonkinSyllaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
+.dragonkinSyllaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.dragonkinSyllaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.dragonkinSyllaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.dragonkinSyllaGuide ul li .space {
+  height: 50px;
+}
+
+.dragonkinSyllaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.dragonkinSyllaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.dragonkinSyllaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.dragonkinSyllaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.dragonkinSyllaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.dragonkinSyllaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.dragonkinSyllaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.dragonkinSyllaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.dragonkinSyllaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.dragonkinSyllaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.dragonkinSyllaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.dragonkinSyllaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.dragonkinSyllaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.dragonkinSyllaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.dragonkinSyllaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.dragonkinSyllaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.dragonkinSyllaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.dragonkinSyllaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dragonkinSyllaGuide .containerDragonkinSylla {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dragonkinSyllaGuide .containerDragonkinSylla .FightInstructions {
+  -webkit-box-shadow: inset 0px 0px 10px 0px #181313 !important;
+          box-shadow: inset 0px 0px 10px 0px #181313 !important;
+}
+
+.dragonkinSyllaGuide .containerDragonkinSylla .FightInstructions::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  background-color: #31323a;
+  width: 40px;
+  height: 40px;
+  -webkit-clip-path: polygon(71% 64%, 45% 65%, 35% 71%, 23% 72%, 0 82%, 0 15%, 19% 35%, 34% 46%, 54% 54%);
+          clip-path: polygon(71% 64%, 45% 65%, 35% 71%, 23% 72%, 0 82%, 0 15%, 19% 35%, 34% 46%, 54% 54%);
+}
+
+.dragonkinSyllaGuide .containerDragonkinSylla .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.dragonkinSyllaGuide .containerDragonkinSylla .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.dragonkinSyllaGuide .containerDragonkinSylla .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.dragonkinSyllaGuide .containerDragonkinSylla .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.dragonkinSyllaGuide .containerDragonkinSylla .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.flyingSyllaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.flyingSyllaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.flyingSyllaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.flyingSyllaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.flyingSyllaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 88%;
+  background-color: #37a733;
+}
+
+.flyingSyllaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.flyingSyllaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.flyingSyllaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.flyingSyllaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.flyingSyllaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.flyingSyllaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.flyingSyllaGuide ul .mechanical .type {
+  color: black;
+}
+
+.flyingSyllaGuide ul .flying .type {
+  color: black;
+}
+
+.flyingSyllaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.flyingSyllaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.flyingSyllaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.flyingSyllaGuide ul li:hover .source {
+  display: block;
+}
+
+.flyingSyllaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.flyingSyllaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
+.flyingSyllaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.flyingSyllaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.flyingSyllaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.flyingSyllaGuide ul li .space {
+  height: 50px;
+}
+
+.flyingSyllaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.flyingSyllaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.flyingSyllaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.flyingSyllaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.flyingSyllaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.flyingSyllaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.flyingSyllaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.flyingSyllaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.flyingSyllaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.flyingSyllaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.flyingSyllaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.flyingSyllaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.flyingSyllaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.flyingSyllaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.flyingSyllaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.flyingSyllaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.flyingSyllaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.flyingSyllaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flyingSyllaGuide .containerFlyingSylla {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flyingSyllaGuide .containerFlyingSylla .FightInstructions {
+  -webkit-box-shadow: inset 0px 0px 10px 0px #181313 !important;
+          box-shadow: inset 0px 0px 10px 0px #181313 !important;
+}
+
+.flyingSyllaGuide .containerFlyingSylla .FightInstructions::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  background-color: #31323a;
+  width: 40px;
+  height: 40px;
+  -webkit-clip-path: polygon(71% 64%, 45% 65%, 35% 71%, 23% 72%, 0 82%, 0 15%, 19% 35%, 34% 46%, 54% 54%);
+          clip-path: polygon(71% 64%, 45% 65%, 35% 71%, 23% 72%, 0 82%, 0 15%, 19% 35%, 34% 46%, 54% 54%);
+}
+
+.flyingSyllaGuide .containerFlyingSylla .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.flyingSyllaGuide .containerFlyingSylla .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.flyingSyllaGuide .containerFlyingSylla .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.flyingSyllaGuide .containerFlyingSylla .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.flyingSyllaGuide .containerFlyingSylla .locationImages img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.crittersSyllaGuide {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.crittersSyllaGuide h1 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.crittersSyllaGuide h2 {
+  font-family: "Raleway", sans-serif;
+  color: #161616;
+}
+
+.crittersSyllaGuide .difficulty {
+  position: relative;
+  margin-left: 60px;
+  background-color: #e20f2b;
+  border-radius: 5px;
+  width: 300px;
+  height: 10px;
+}
+
+.crittersSyllaGuide .difficulty .greenDifficulty {
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: absolute;
+  height: 10px;
+  width: 90%;
+  background-color: #37a733;
+}
+
+.crittersSyllaGuide .difficulty p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  position: absolute;
+  top: -20px;
+}
+
+.crittersSyllaGuide ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.crittersSyllaGuide ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.crittersSyllaGuide ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.crittersSyllaGuide ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.crittersSyllaGuide ul .undead .type {
+  color: #dbd7d7;
+}
+
+.crittersSyllaGuide ul .mechanical .type {
+  color: black;
+}
+
+.crittersSyllaGuide ul .flying .type {
+  color: black;
+}
+
+.crittersSyllaGuide ul .aquatic .owned {
+  color: #062406;
+}
+
+.crittersSyllaGuide ul .aquatic .required {
+  color: #8f0707;
+}
+
+.crittersSyllaGuide ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.crittersSyllaGuide ul li:hover .source {
+  display: block;
+}
+
+.crittersSyllaGuide ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.crittersSyllaGuide ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
+.crittersSyllaGuide ul li .containerReq {
+  z-index: 10;
+}
+
+.crittersSyllaGuide ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.crittersSyllaGuide ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.crittersSyllaGuide ul li .space {
+  height: 50px;
+}
+
+.crittersSyllaGuide ul li .level {
+  margin-bottom: 0px;
+}
+
+.crittersSyllaGuide ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.crittersSyllaGuide ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.crittersSyllaGuide ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.crittersSyllaGuide ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.crittersSyllaGuide ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.crittersSyllaGuide ul li .stats {
+  margin-bottom: 0px;
+}
+
+.crittersSyllaGuide ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.crittersSyllaGuide ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.crittersSyllaGuide ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.crittersSyllaGuide ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.crittersSyllaGuide ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.crittersSyllaGuide ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.crittersSyllaGuide ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.crittersSyllaGuide ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.crittersSyllaGuide ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.crittersSyllaGuide ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.crittersSyllaGuide ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.crittersSyllaGuide .containerCrittersSylla {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.crittersSyllaGuide .containerCrittersSylla .FightInstructions {
+  -webkit-box-shadow: inset 0px 0px 10px 0px #181313 !important;
+          box-shadow: inset 0px 0px 10px 0px #181313 !important;
+}
+
+.crittersSyllaGuide .containerCrittersSylla .FightInstructions::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  background-color: #31323a;
+  width: 40px;
+  height: 40px;
+  -webkit-clip-path: polygon(71% 64%, 45% 65%, 35% 71%, 23% 72%, 0 82%, 0 15%, 19% 35%, 34% 46%, 54% 54%);
+          clip-path: polygon(71% 64%, 45% 65%, 35% 71%, 23% 72%, 0 82%, 0 15%, 19% 35%, 34% 46%, 54% 54%);
+}
+
+.crittersSyllaGuide .containerCrittersSylla .locationImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  z-index: 20;
+}
+
+.crittersSyllaGuide .containerCrittersSylla .locationImages button {
+  background-color: #a0a074;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.crittersSyllaGuide .containerCrittersSylla .locationImages button:hover {
+  background-color: #cacaa3;
+}
+
+.crittersSyllaGuide .containerCrittersSylla .locationImages img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: enterTop 1s;
+          animation: enterTop 1s;
+  z-index: 50;
+}
+
+.crittersSyllaGuide .containerCrittersSylla .locationImages img:hover {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
 }
@@ -22648,5 +28911,378 @@
   cursor: pointer;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes skullColorChange {
+  0% {
+    color: #525151;
+  }
+  100% {
+    color: #a09e9e;
+  }
+}
+
+@keyframes magicalColors {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #e0d476;
+  }
+}
+
+.familiarAchiev {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#99a4ad));
+  background: linear-gradient(180deg, white, #99a4ad);
+  -webkit-box-shadow: inset 0px -80px 50px 5px #c5c6c9;
+          box-shadow: inset 0px -80px 50px 5px #c5c6c9;
+}
+
+.familiarAchiev > .containerFamiliar {
+  width: 99%;
+  margin: 0 auto;
+  min-height: 55vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 98%;
+  max-width: 1200px;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements > .stratAviable {
+  background: #77b842;
+  cursor: pointer;
+  max-width: 200px;
+  margin-right: 50px;
+  margin-top: 5px;
+  padding: 5px 7px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 0.8rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: none;
+  border-radius: 25px;
+  color: #070707;
+  -webkit-box-shadow: 0px 0px 10px 2px #92b681;
+          box-shadow: 0px 0px 10px 2px #92b681;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements > .stratAviable svg {
+  -webkit-animation: spinner 1.8s linear infinite;
+          animation: spinner 1.8s linear infinite;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements > .stratAviable:hover {
+  background: #487027;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements > .stratAviable:hover svg {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements > h3 {
+  color: black;
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements > h3 > span {
+  position: relative;
+  color: #1a2e1a;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements > h3 > span::after {
+  display: none;
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  content: "Reward from [Taming the World] achivement.";
+  min-width: 300px;
+  padding: 10px 3px;
+  font-size: 0.85rem;
+  border-radius: 9px;
+  background-color: rgba(18, 30, 43, 0.658);
+  top: -40px;
+  left: -80px;
+  -webkit-animation: fade 0.8s;
+          animation: fade 0.8s;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements > h3 > span:hover {
+  cursor: default;
+  opacity: 1;
+  color: #184218;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements > h3 > span:hover::after {
+  display: inline;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements .FightInstructions {
+  position: relative;
+  width: 98%;
+  max-width: 900px;
+  background: #202530;
+  color: #f1eded;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 40px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 400px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+  -webkit-box-shadow: inset 0px 0px 20px 0px white;
+          box-shadow: inset 0px 0px 20px 0px white;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements .FightInstructions h1 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-shadow: 2px 5px 10px #163329;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements .FightInstructions h3 {
+  color: #3f4b64;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 100;
+  margin-top: 50px;
+  font-size: 0.95rem;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements .FightInstructions .tip {
+  margin-top: 5px;
+  font-family: "Roboto", sans-serif;
+  color: #596774;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements .FightInstructions .turn {
+  background: #1c2027;
+  padding: 10px 5px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements .FightInstructions .turn:nth-child(2n) {
+  background: #131822;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements .FightInstructions .turn p {
+  text-align: left;
+  min-width: 95px;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements .FightInstructions .turn p:nth-child(1) {
+  margin-right: 5px;
+  max-width: 85px;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements .FightInstructions .turn p .hero {
+  color: brown;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements .FightInstructions .turn p span {
+  color: #408499;
+}
+
+.familiarAchiev > .containerFamiliar .FightRequirements .FightInstructions .turn .important {
+  display: block;
+  color: yellow;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.addComment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  text-align: left;
+  padding-left: 5vh;
+  margin-top: 2rem;
+}
+
+.addComment .warning {
+  color: red;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  margin-left: 50px;
+}
+
+.addComment button {
+  cursor: pointer;
+  background-color: #2b2b38;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 10px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.addComment button:hover {
+  background-color: #1e1e29;
+  color: white;
+}
+
+.addComment div label {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  min-width: 80px;
+  color: #1e1e22;
+}
+
+.addComment div input {
+  background-color: #2b2b38;
+  color: white;
+  width: 350px;
+  padding: 10px 10px;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  border-radius: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.addComment div input:focus {
+  background-color: #181820;
+}
+
+.addComment div textarea {
+  background-color: #2b2b38;
+  color: white;
+  padding: 10px 10px;
+  font-family: "Raleway", sans-serif;
+  width: 350px;
+  height: 150px;
+  border: none;
+  border-radius: 10px;
+  resize: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.addComment div textarea:focus {
+  background-color: #181820;
+}
+
+.commentSection {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.containerComments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  text-align: left;
+}
+
+.containerComments .containerComment {
+  background-color: #3c3c46;
+  width: 100%;
+  max-width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 15px 10px;
+}
+
+.containerComments .containerComment .charName {
+  color: #dddfe0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+}
+
+.containerComments .containerComment .charName::first-letter {
+  text-transform: uppercase;
+}
+
+.containerComments .containerComment .message {
+  color: #dddfe0;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,7 @@ import { singlePetInfo } from "../../../../functions/serverFunctions.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboard, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import Pet from "../../../../PetLevelGuideComponents/pet.js";
+import CommentSection from "../../../../commentSection.js";
 
 function CrittersThenia() {
   const petsChar = useSelector((state) => state.pets);
@@ -965,6 +966,7 @@ function CrittersThenia() {
           )}
         </div>
       </div>
+      <CommentSection props={{ location: "shadowlands/Thenia/Critters" }} />
     </div>
   );
 }

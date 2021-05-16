@@ -2,9 +2,12 @@ import { NavLink } from "react-router-dom";
 import Copyright from "../copyright.js";
 import bgImg from "../../assets/Shadowlands/SLbackground.jpg";
 import { useEffect } from "react";
+import ReactGa from "react-ga";
 
 function NavSL() {
   useEffect(() => {
+    ReactGa.initialize("UA-194620693-1");
+    ReactGa.pageview(window.location.pathname);
     document.title = "Shadowlands Pet Guides";
     window.scrollTo({
       top: 270,
@@ -26,7 +29,7 @@ function NavSL() {
               <li> Bastion WQ</li>
             </NavLink>
             <NavLink
-              to="/shadowlands/bastionAchievement"
+              to="/shadowlands/familiarExorcist"
               activeClassName="active"
               className="inactive"
             >
@@ -56,6 +59,9 @@ function NavSL() {
         <div className="bigImage">
           <div className="overlayImage"></div>
           <img src={bgImg} alt="noImg"></img>
+          <NavLink to="/shadowlands/familiarExorcist" activeClassName="active">
+            Family Exorcist
+          </NavLink>
           <div className="overlayImage2"></div>
         </div>
         <nav>

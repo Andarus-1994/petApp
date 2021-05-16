@@ -553,8 +553,8 @@ function Glitterdust() {
                       <span className="hero">
                         {" "}
                         {requiredPetOneSlot1[0].pets.name}
-                      </span>
-                      . Bring in{" "}
+                      </span>{" "}
+                      dies . Bring in{" "}
                       <span className="hero">
                         {" "}
                         {requiredPetOneSlot2[0].pets.name}

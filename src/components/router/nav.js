@@ -70,7 +70,7 @@ function Nav() {
               activeClassName="active"
               className="inactive"
             >
-              <li> Pet Leveling Guide</li>
+              <li> Pet Power-Leveling </li>
             </NavLink>
             <NavLink
               to="/shadowlands/default"
@@ -100,7 +100,7 @@ function Nav() {
             <Route path="/shadowlands/bastionWQ">
               <BastionWQs />
             </Route>
-            <Route path="/shadowlands/bastionAchievement">
+            <Route path="/shadowlands/familiarExorcist">
               <BastionAchievement />
             </Route>
             <Route path="/shadowlands/maldraxxusWQ">

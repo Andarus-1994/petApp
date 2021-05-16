@@ -17,6 +17,45 @@
     grid-row: 2;
     padding: 0;
 
+    & > a {
+      position: relative;
+      background: linear-gradient(
+        20deg,
+        rgb(28, 29, 31),
+        rgb(56, 62, 66),
+        rgb(26, 29, 31)
+      );
+      box-shadow: 0px 0px 12px 0px rgb(161, 173, 185);
+      margin: 0 auto;
+      text-decoration: none;
+      padding: 13px 17px;
+      padding-top: 15px;
+      width: 170px;
+      height: fit-content;
+      color: rgb(228, 239, 241);
+      border-radius: 20px;
+      font-size: 1rem;
+      font-family: $Raleway;
+      transition: 0.6s;
+      animation: fadeInImageMiddle 2.2s;
+      z-index: 20;
+      top: 50%;
+      transform: translate(0, -52%);
+      text-align: center;
+      transition: 0.4s;
+      &:hover {
+        background: linear-gradient(
+          20deg,
+          rgb(20, 21, 22),
+          rgb(67, 73, 78),
+          rgb(28, 30, 32)
+        );
+      }
+      @media screen and (max-width: 800px) {
+        font-size: 0.8rem;
+      }
+    }
+
     .overlayImage {
       background-color: rgba(0, 139, 139, 0.171);
       position: absolute;

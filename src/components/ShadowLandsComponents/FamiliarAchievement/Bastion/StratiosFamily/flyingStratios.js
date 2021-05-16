@@ -4,6 +4,7 @@ import { singlePetInfo } from "../../../../functions/serverFunctions.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboard, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import Pet from "../../../../PetLevelGuideComponents/pet.js";
+import CommentSection from "../../../../commentSection.js";
 
 function FlyingStratios() {
   const petsChar = useSelector((state) => state.pets);
@@ -887,6 +888,7 @@ function FlyingStratios() {
           )}
         </div>
       </div>
+      <CommentSection props={{ location: "shadowlands/Stratios/Flying" }} />
     </div>
   );
 }

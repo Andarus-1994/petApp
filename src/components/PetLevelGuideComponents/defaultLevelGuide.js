@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { petInfo2, petsInfo } from "../functions/serverFunctions.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faCheck, faDragon } from "@fortawesome/free-solid-svg-icons";
-
+import ReactGa from "react-ga";
 function DefaultLevelGuide() {
   const petsChar = useSelector((state) => state.pets);
   const [idRequiredPets, setIdRequiredPets] = useState([
@@ -28,6 +28,8 @@ function DefaultLevelGuide() {
   const [requiredPets, setRequiredPets] = useState({ pets: [], loading: true });
 
   useEffect(() => {
+    ReactGa.initialize("UA-194620693-1");
+    ReactGa.pageview(window.location.pathname);
     if (requiredPets.pets.length === 0) {
       getPets();
     }
@@ -44,10 +46,14 @@ function DefaultLevelGuide() {
 
       petsInfo(idPets, idPets.length).then((res3) => {
         res3.map((res4) => {
-          if (res4.creature.name === "Chrominius")
-            console.log("chromi " + res4.id);
-          if (res4.creature.name === "Thunderscale Whelpling")
-            console.log("thunder " + res4.id);
+          if (res4.creature.name === "Scooter the Snail")
+            console.log("Scooter the Snail " + res4.id);
+          if (res4.creature.name === "Nibbles")
+            console.log("Nibbles  " + res4.id);
+          if (res4.creature.name === "Orphaned Marsuul")
+            console.log("Orphaned Marsuul " + res4.id);
+          if (res4.creature.name === "Spinemaw Gormling")
+            console.log("Spinemaw Gormling  " + res4.id);
         });
       });
     });
@@ -73,7 +79,7 @@ function DefaultLevelGuide() {
 
   return (
     <div className="defaultLevelGuide">
-      <h1>Leveling Pets Guide</h1>
+      <h1>Power Leveling Pets Guide</h1>
       <h2>Choose a guide to follow up from the menu on the left!</h2>
       <p>
         The most effective way to level pets is via Pet Trainers because they
@@ -92,7 +98,12 @@ function DefaultLevelGuide() {
         {!requiredPets.loading ? (
           requiredPets.pets.map((pet, index) => (
             <li key={index} className="defaultPet">
-              <img src={pet.icon}></img>{" "}
+              <a
+                href={"https://www.wowhead.com/battle-pet/" + pet.id}
+                target="_blank"
+              >
+                <img src={pet.icon}></img>{" "}
+              </a>
               <span className={checkOwnedPet(pet.id) ? "owned" : "notOwned"}>
                 {pet.name}{" "}
               </span>
