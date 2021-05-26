@@ -7,7 +7,7 @@ import Pet from "./pet.js";
 import location3 from "../../assets/Gargra/gargraFrostFireRidge.jpg";
 import location from "../../assets/Gargra/gargraDraenorMap.jpg";
 import location2 from "../../assets/Gargra/gargraFrostFireMap.jpg";
-
+import CommentSection from "../commentSection.js";
 function FrostFireRidge() {
   const petsChar = useSelector((state) => state.pets);
   const [renderOnce, setRenderOnce] = useState(false);
@@ -341,6 +341,7 @@ function FrostFireRidge() {
           </a>
         </div>
       </div>
+      <CommentSection props={{ location: "defaultLevelingGuide/Gargra" }} />
     </div>
   );
 }

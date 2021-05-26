@@ -11,7 +11,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Nightfang/nightfang.jpg";
 import location from "../../../assets/Shadowlands/Nightfang/nightfangSL.jpg";
 import location2 from "../../../assets/Shadowlands/Nightfang/nightfangArdenweald.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Nightfang() {
   const petsChar = useSelector((state) => state.pets);
   const foundChar = useSelector((state) => state.foundChar);
@@ -567,6 +567,9 @@ function Nightfang() {
           </a>
         </div>
       </div>
+      <CommentSection
+        props={{ location: "shadowlands/ArdenwealdWQs/Nightfang" }}
+      />
     </div>
   );
 }

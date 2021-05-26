@@ -7,7 +7,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Zolla/zolla.jpg";
 import location from "../../../assets/Shadowlands/Zolla/zollaSL.jpg";
 import location2 from "../../../assets/Shadowlands/Zolla/zollaBastion.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Zolla() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way Bastion 51, 38");
@@ -360,6 +360,7 @@ function Zolla() {
           </a>
         </div>
       </div>
+      <CommentSection props={{ location: "shadowlands/BastionWQs/Zolla" }} />
     </div>
   );
 }

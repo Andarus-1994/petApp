@@ -7,7 +7,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Rotgut/rotgut.jpg";
 import location from "../../../assets/Shadowlands/Rotgut/rotgutSL.jpg";
 import location2 from "../../../assets/Shadowlands/Rotgut/rotgutMaldraxxus.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Rotgut() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way Maldraxxus 34, 55");
@@ -929,6 +929,9 @@ function Rotgut() {
           </a>
         </div>
       </div>
+      <CommentSection
+        props={{ location: "shadowlands/MaldraxxusWQs/Rotgut" }}
+      />
     </div>
   );
 }

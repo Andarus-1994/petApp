@@ -11,7 +11,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Rascal/rascal.jpg";
 import location from "../../../assets/Shadowlands/Rascal/rascalSL.jpg";
 import location2 from "../../../assets/Shadowlands/Rascal/rascalArdenweald.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Rascal() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way Ardenweald 40, 28");
@@ -546,6 +546,9 @@ function Rascal() {
           </a>
         </div>
       </div>
+      <CommentSection
+        props={{ location: "shadowlands/ArdenwealdWQs/Rascal" }}
+      />
     </div>
   );
 }

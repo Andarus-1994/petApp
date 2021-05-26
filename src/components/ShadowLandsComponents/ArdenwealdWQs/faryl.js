@@ -7,7 +7,7 @@ import location from "../../../assets/Shadowlands/Faryl/FarylSL.jpg";
 import location2 from "../../../assets/Shadowlands/Faryl/FarylArden.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboard, faLeaf } from "@fortawesome/free-solid-svg-icons";
-
+import CommentSection from "../../commentSection.js";
 function FarylWQ() {
   const [renderOnce, setRenderOnce] = useState(false);
   const petsChar = useSelector((state) => state.pets);
@@ -260,6 +260,7 @@ function FarylWQ() {
           </a>
         </div>
       </div>
+      <CommentSection props={{ location: "shadowlands/ArdenwealdWQs/Faryl" }} />
     </div>
   );
 }

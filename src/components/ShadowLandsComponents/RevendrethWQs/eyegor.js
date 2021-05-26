@@ -7,7 +7,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Eyegor/eyegor.jpg";
 import location from "../../../assets/Shadowlands/Eyegor/eyegorSL.jpg";
 import location2 from "../../../assets/Shadowlands/Eyegor/eyegorRevendreth.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Eyegor() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way Revendreth 67, 66");
@@ -734,6 +734,9 @@ function Eyegor() {
           </a>
         </div>
       </div>
+      <CommentSection
+        props={{ location: "shadowlands/RevendrethWQs/Eyegor" }}
+      />
     </div>
   );
 }

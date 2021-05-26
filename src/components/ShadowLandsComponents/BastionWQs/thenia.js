@@ -7,7 +7,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Thenia/thenia.jpg";
 import location from "../../../assets/Shadowlands/Thenia/theniaSL.jpg";
 import location2 from "../../../assets/Shadowlands/Thenia/theniaBastion.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Thenia() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way Bastion 55, 56");
@@ -890,6 +890,7 @@ function Thenia() {
           </a>
         </div>
       </div>
+      <CommentSection props={{ location: "shadowlands/BastionWQs/Thenia" }} />
     </div>
   );
 }

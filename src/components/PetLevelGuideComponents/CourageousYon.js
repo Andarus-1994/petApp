@@ -11,7 +11,7 @@ import Pet from "./pet.js";
 import location3 from "../../assets/Yon/curageousYon.jpg";
 import location from "../../assets/Yon/curageousYonPandaria.jpg";
 import location2 from "../../assets/Yon/curageousYonKunLai.jpg";
-
+import CommentSection from "../commentSection.js";
 function CourageousYon() {
   const petsChar = useSelector((state) => state.pets);
   const [renderOnce, setRenderOnce] = useState(false);
@@ -283,6 +283,9 @@ function CourageousYon() {
           </a>
         </div>
       </div>
+      <CommentSection
+        props={{ location: "defaultLevelingGuide/CourageousYon" }}
+      />
     </div>
   );
 }

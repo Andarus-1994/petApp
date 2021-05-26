@@ -137,3 +137,28 @@ export const getPetsCharacter = (character) => {
       });
   };
 };
+
+export const getAllPets = () => {
+  return (dispatch) => {
+    dispatch({
+      type: "FETCH_ALL_PETS_REQUEST",
+    });
+    axios
+      .get("https://apipetslaravel.herokuapp.com/api/getAllPets", {
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+        },
+      })
+      .then((response) => {
+        const pets = response.data;
+
+        dispatch({ type: "FETCH_ALL_PETS_SUCCESS", payload: pets });
+      })
+      .catch((error) => {
+        dispatch({
+          type: "FETCH_ALL_PETS_FAILURE",
+          payload: error.message,
+        });
+      });
+  };
+};

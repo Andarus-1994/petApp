@@ -7,7 +7,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Scorch/scorch.jpg";
 import location from "../../../assets/Shadowlands/Scorch/scorchSL.jpg";
 import location2 from "../../../assets/Shadowlands/Scorch/scorchRevendreth.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Scorch() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way Revendreth 25, 38");
@@ -623,6 +623,9 @@ function Scorch() {
           </a>
         </div>
       </div>
+      <CommentSection
+        props={{ location: "shadowlands/RevendrethWQs/Scorch" }}
+      />
     </div>
   );
 }

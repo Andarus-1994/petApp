@@ -7,7 +7,7 @@ import Pet from "./pet.js";
 import location3 from "../../assets/WhisperingPS/WhisperingPandarenSpirit.jpg";
 import location from "../../assets/WhisperingPS/WPSPandaria.jpg";
 import location2 from "../../assets/WhisperingPS/WPSJadeForest.jpg";
-
+import CommentSection from "../commentSection.js";
 function WhisperingPandarenSpirit() {
   const petsChar = useSelector((state) => state.pets);
   const [renderOnce, setRenderOnce] = useState(false);
@@ -713,6 +713,11 @@ function WhisperingPandarenSpirit() {
           </a>
         </div>
       </div>
+      <CommentSection
+        props={{
+          location: "defaultLevelingGuide/WhisperingPandarenSpirit",
+        }}
+      />
     </div>
   );
 }

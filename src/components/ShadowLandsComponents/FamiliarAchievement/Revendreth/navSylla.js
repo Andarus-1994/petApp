@@ -25,6 +25,7 @@ import HumanoidSylla from "./SyllaFamily/humanoidSylla";
 import DragonkinSylla from "./SyllaFamily/dragonkinSylla";
 import FlyingSylla from "./SyllaFamily/flyingSylla";
 import CrittersSylla from "./SyllaFamily/crittersSylla";
+import AquaticSylla from "./SyllaFamily/aquaticSylla";
 
 function Sylla() {
   const [coords] = useState("/way Revendreth 40, 53");
@@ -39,7 +40,6 @@ function Sylla() {
                 to="/shadowlands/familiarExorcist/sylla/aquatic"
                 activeClassName="active"
                 className="inactive"
-                className="disabled"
               >
                 <li>
                   {" "}
@@ -146,6 +146,9 @@ function Sylla() {
           <Switch>
             <Route path="/shadowlands/familiarExorcist/sylla/default">
               <h1>Choose a guide to follow up from the above menu!</h1>
+            </Route>
+            <Route path="/shadowlands/familiarExorcist/sylla/aquatic">
+              <AquaticSylla />
             </Route>
             <Route path="/shadowlands/familiarExorcist/sylla/critters">
               <CrittersSylla />

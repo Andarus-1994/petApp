@@ -7,7 +7,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Addius/addius.jpg";
 import location from "../../../assets/Shadowlands/Addius/addiusSL.jpg";
 import location2 from "../../../assets/Shadowlands/Addius/addiusRevendreth.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Addius() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way Revendreth 63, 46");
@@ -835,6 +835,9 @@ function Addius() {
           </a>
         </div>
       </div>
+      <CommentSection
+        props={{ location: "shadowlands/RevendrethWQs/Addius" }}
+      />
     </div>
   );
 }

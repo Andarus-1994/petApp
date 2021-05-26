@@ -7,7 +7,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Jawbone/jawbone.jpg";
 import location from "../../../assets/Shadowlands/Jawbone/jawboneSL.jpg";
 import location2 from "../../../assets/Shadowlands/Jawbone/jawboneBastion.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Jawbone() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way Bastion 36, 42");
@@ -589,6 +589,7 @@ function Jawbone() {
           </a>
         </div>
       </div>
+      <CommentSection props={{ location: "shadowlands/BastionWQs/Jawbone" }} />
     </div>
   );
 }

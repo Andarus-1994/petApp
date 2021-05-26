@@ -53,6 +53,132 @@
       display: none;
     }
   }
+
+  .petFilters {
+    display: flex;
+
+    .sort {
+      margin-left: 150px;
+      position: relative;
+      width: fit-content;
+      label {
+        position: absolute;
+        width: 150px;
+        top: -1.3rem;
+        left: -1.4rem;
+        pointer-events: none;
+        color: rgb(52, 57, 61);
+        position: absolute;
+        font-family: $Raleway;
+        letter-spacing: 0.5px;
+      }
+      & > select {
+        background-color: rgb(103, 110, 97);
+        color: white;
+        border: none;
+        padding: 8px 10px;
+        appearance: none;
+        option {
+          background-color: rgb(61, 73, 71);
+        }
+      }
+    }
+
+    .search {
+      position: relative;
+      margin-left: 20px;
+      input {
+        background-color: rgb(135, 146, 124);
+        position: relative;
+        padding: 10px 12px;
+        font-family: $Raleway;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border: none;
+        letter-spacing: 1px;
+        transition: 0.4s;
+        &:focus {
+          border-top-left-radius: 2rem;
+          border-bottom-left-radius: 2rem;
+          background-color: rgb(127, 141, 113);
+          box-shadow: 0px 0px 4px 0px black;
+          outline: none;
+          border: none;
+        }
+      }
+
+      input:focus + label,
+      input:not(:placeholder-shown) + label {
+        transform: scale(0.9) translateY(-2rem);
+        opacity: 1;
+      }
+      input::placeholder {
+        opacity: 0;
+      }
+      input::placeholder {
+        opacity: 0;
+      }
+      label {
+        pointer-events: none;
+        color: rgb(52, 57, 61);
+        left: 0.8rem;
+        top: 0.55rem;
+        position: absolute;
+        font-family: $Raleway;
+        letter-spacing: 0.5px;
+        transition: 0.4s;
+      }
+
+      button {
+        background-color: unset;
+        color: rgb(17, 17, 17);
+        position: absolute;
+        right: 0px;
+        font-size: 0.85rem;
+        padding: 0.55rem 1rem;
+        &:hover {
+          background-color: transparent !important;
+        }
+      }
+      label:nth-of-type(2) {
+        pointer-events: none;
+        color: rgb(52, 57, 61);
+        left: 0.8rem;
+        top: 2.45rem;
+        position: absolute;
+        font-size: 0.75rem;
+        font-family: $Raleway;
+        letter-spacing: 0.5px;
+        transition: 0.4s;
+      }
+    }
+    button {
+      position: relative;
+      font-size: 1rem;
+      background-color: rgb(124, 136, 113);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      padding: 0.4rem 1.2rem;
+      border: none;
+      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      transition: 0.4s;
+      i {
+        color: rgb(37, 39, 41);
+      }
+    }
+    button:hover {
+      background-color: rgb(97, 107, 87);
+    }
+    .totalPets {
+      font-family: $Raleway;
+      font-size: 1.7rem;
+      color: rgb(35, 41, 48);
+      margin-left: auto;
+      margin-right: 25vh;
+    }
+  }
   .emptyBarTotalPets {
     position: absolute;
 
@@ -212,7 +338,7 @@
     justify-content: center;
     width: 90%;
     margin: 0 auto;
-    margin-top: 15vh;
+    margin-top: 8vh;
     .zoomOutPet {
       position: absolute;
       height: 100vh;

@@ -7,6 +7,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Stratios/stratios.jpg";
 import location from "../../../assets/Shadowlands/Stratios/stratiosSL.jpg";
 import location2 from "../../../assets/Shadowlands/Stratios/stratiosBastion.jpg";
+import CommentSection from "../../commentSection.js";
 
 function Stratios() {
   const petsChar = useSelector((state) => state.pets);
@@ -752,6 +753,7 @@ function Stratios() {
           </a>
         </div>
       </div>
+      <CommentSection props={{ location: "shadowlands/BastionWQs/Stratios" }} />
     </div>
   );
 }

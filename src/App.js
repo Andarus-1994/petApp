@@ -8,6 +8,8 @@ function App() {
     ReactGa.initialize("UA-194620693-1");
     console.log("sent the pet info");
     ReactGa.pageview(window.location.pathname);
+
+    localStorage.removeItem("comments");
   }, []);
 
   return (

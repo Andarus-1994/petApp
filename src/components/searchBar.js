@@ -29,6 +29,7 @@ function SearchBar(props) {
       if (character && server && region) {
         props.setLoading();
         props.setError("");
+
         dispatch(
           searchChar({
             char: character,
@@ -61,6 +62,7 @@ function SearchBar(props) {
     if (character && server && region) {
       props.setLoading();
       props.setError("");
+
       dispatch(
         searchChar({
           char: character,

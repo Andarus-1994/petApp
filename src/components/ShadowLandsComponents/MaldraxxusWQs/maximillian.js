@@ -7,7 +7,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Maximilian/maximilian.jpg";
 import location from "../../../assets/Shadowlands/Maximilian/maximilianSL.jpg";
 import location2 from "../../../assets/Shadowlands/Maximilian/maximilianMaldraxxus.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Maximilian() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way Maldraxxus 47, 50");
@@ -1271,6 +1271,9 @@ function Maximilian() {
           </a>
         </div>
       </div>
+      <CommentSection
+        props={{ location: "shadowlands/MaldraxxusWQs/Maximillian" }}
+      />
     </div>
   );
 }

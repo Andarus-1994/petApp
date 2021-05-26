@@ -7,7 +7,7 @@ import location from "../../assets/Tarr/TarrDraenorMap.jpg";
 import location2 from "../../assets/Tarr/TarrNagrandDraenor.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboard } from "@fortawesome/free-solid-svg-icons";
-
+import CommentSection from "../commentSection.js";
 function NagrandDraenor() {
   const [renderOnce, setRenderOnce] = useState(false);
   const petsChar = useSelector((state) => state.pets);
@@ -314,6 +314,7 @@ function NagrandDraenor() {
           </a>
         </div>
       </div>
+      <CommentSection props={{ location: "defaultLevelingGuide/Tarr" }} />
     </div>
   );
 }

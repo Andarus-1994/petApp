@@ -8,7 +8,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Glitterdust/glitterdust.jpg";
 import location from "../../../assets/Shadowlands/Glitterdust/glitterdustSL.jpg";
 import location2 from "../../../assets/Shadowlands/Glitterdust/glitterdustArdenweald.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Glitterdust() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way Ardenweald 58, 57");
@@ -720,6 +720,9 @@ function Glitterdust() {
           </a>
         </div>
       </div>
+      <CommentSection
+        props={{ location: "shadowlands/ArdenwealdWQs/Glitterdust" }}
+      />
     </div>
   );
 }

@@ -7,7 +7,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Gorgemouth/gorgemouth.jpg";
 import location from "../../../assets/Shadowlands/Gorgemouth/gorgemouthSL.jpg";
 import location2 from "../../../assets/Shadowlands/Gorgemouth/gorgemouthMaldraxxus.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Gorgemouth() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way Maldraxxus 54, 28");
@@ -177,8 +177,7 @@ function Gorgemouth() {
     }
     if (
       !curentActiveSlot3[0].found &&
-      curentActiveSlot3[0].id ===
-        null /*&&
+      curentActiveSlot3[0].id === null /*&&
       !curentActiveSlot3[1].found &&
       curentActiveSlot3[1].id === null
       for strategy 2 */
@@ -804,6 +803,9 @@ function Gorgemouth() {
           </a>
         </div>
       </div>
+      <CommentSection
+        props={{ location: "shadowlands/MaldraxxusWQs/Gorgemouth" }}
+      />
     </div>
   );
 }

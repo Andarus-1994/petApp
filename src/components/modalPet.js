@@ -13,18 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function ModalPet({ pet, closeModal }) {
-  const [petAbilities, setPetAbilities] = useState([]);
-  const [loadAbilities, setLoadAbilities] = useState(true);
-
-  useEffect(() => {
-    if (petAbilities.length < 6) {
-      petAbility(pet.abilities[petAbilities.length]).then((resp) => {
-        if (!resp.error)
-          setPetAbilities([...petAbilities, resp.assets[0].value]);
-      });
-      if (petAbilities.length === 5) setLoadAbilities(false);
-    }
-  }, [petAbilities, pet]);
+  useEffect(() => {}, [pet]);
 
   function checkType(type) {
     if (type.toLowerCase() === "elemental") {
@@ -62,23 +51,23 @@ function ModalPet({ pet, closeModal }) {
   return (
     <div>
       <div className="behindModal" onClick={closeModal}></div>
-      <div className={"modalPet " + checkType(pet.battle_pet_type.name)}>
+      <div className={"modalPet " + checkType(pet.battle_pet_type.type)}>
         <div className="icon">
           <img src={pet.icon} alt="NoIcon"></img>
         </div>
-        <h1>{pet.creature.name}</h1>
+        <h1>{pet.name}</h1>
         <h2> {pet.battle_pet_type.name}</h2>
         <p>"{pet.description}"</p>
         <ul>
-          {!loadAbilities ? (
-            petAbilities.map((ability, index) => (
+          {pet.abilities ? (
+            pet.abilities.map((ability, index) => (
               <li key={index}>
-                <img src={ability} alt="noIcon"></img>
-                <h2>{pet.abilities[index].ability.name}</h2>
+                <img src={ability.ability.icon} alt="noIcon"></img>
+                <h2>{ability.ability.name}</h2>
               </li>
             ))
           ) : (
-            <div className="loadingAbilities"></div>
+            <p className="stats">No abilities</p>
           )}
         </ul>
         <p className="trade">{pet.is_tradable ? "Tradable" : "Non-tradable"}</p>

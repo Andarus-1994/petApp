@@ -9,10 +9,15 @@ import Home from "../home.js";
 import NotFound from "../notFound.js";
 import "../../scss/style.css";
 import { retriveToken } from "../actions";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { retriveMediaProfile, searchChar, getPetsCharacter } from "../actions";
+import {
+  retriveMediaProfile,
+  searchChar,
+  getPetsCharacter,
+  getAllPets,
+} from "../actions";
 import Profile from "../profileHeaderTop.js";
 import LevelGuide from "../PetLevelGuideComponents/levelGuide.js";
 import Contact from "../contact.js";
@@ -25,7 +30,7 @@ import BastionWQs from "../ShadowLandsComponents/bastionWQs.js";
 import BastionAchievement from "../ShadowLandsComponents/FamiliarAchievement/Bastion.js";
 
 function Nav() {
-  const petsChar = useSelector((state) => state.pets);
+  const allPets = useSelector((state) => state.allPets);
   const profile = useSelector((state) => state.profile);
   const favChar = JSON.parse(localStorage.getItem("favChar"));
   const searchedChar = useSelector((state) => state.foundChar);
@@ -33,7 +38,8 @@ function Nav() {
 
   useEffect(() => {
     dispatch(retriveToken());
-    console.log(searchedChar);
+
+    console.log("test", allPets);
 
     if (favChar && Object.keys(searchedChar.character).length === 0) {
       dispatch(retriveMediaProfile(favChar));
@@ -49,7 +55,13 @@ function Nav() {
     if (!favChar && Object.keys(searchedChar.character).length === 0) {
       dispatch(retriveMediaProfile({ char: "", server: "", region: "" }));
     }
-  }, [searchedChar.character, searchedChar.error]);
+  }, [searchedChar.character, searchedChar.error, allPets.loading]);
+
+  useMemo(() => {
+    if (allPets.loading) {
+      dispatch(getAllPets());
+    }
+  }, []);
 
   return (
     <div className="Routes">

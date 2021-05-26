@@ -7,7 +7,7 @@ import Pet from "./pet.js";
 import location3 from "../../assets/Ashlei/Ashlei.jpg";
 import location from "../../assets/Ashlei/ashleiDraenorMap.jpg";
 import location2 from "../../assets/Ashlei/ashleiSMmap.jpg";
-
+import CommentSection from "../commentSection.js";
 function ShadowmoonDraenor() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way ShadowMoon Valley 50, 31");
@@ -155,6 +155,7 @@ function ShadowmoonDraenor() {
           </a>
         </div>
       </div>
+      <CommentSection props={{ location: "defaultLevelingGuide/Ashlei" }} />
     </div>
   );
 }

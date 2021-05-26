@@ -7,7 +7,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Sylla/sylla.jpg";
 import location from "../../../assets/Shadowlands/Sylla/syllaSL.jpg";
 import location2 from "../../../assets/Shadowlands/Sylla/syllaRevendreth.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Sylla() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way Revendreth 40, 53");
@@ -802,6 +802,7 @@ function Sylla() {
           </a>
         </div>
       </div>
+      <CommentSection props={{ location: "shadowlands/RevendrethWQs/Sylla" }} />
     </div>
   );
 }

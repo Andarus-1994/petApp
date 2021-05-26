@@ -7,7 +7,7 @@ import Pet from "./pet.js";
 import location3 from "../../assets/ThunderingPS/ThunderingPandarenSpirit.jpg";
 import location from "../../assets/ThunderingPS/TPSPandaria.jpg";
 import location2 from "../../assets/ThunderingPS/TPSKunLai.jpg";
-
+import CommentSection from "../commentSection.js";
 function ThunderingPandarenSpirit() {
   const petsChar = useSelector((state) => state.pets);
   const [renderOnce, setRenderOnce] = useState(false);
@@ -538,6 +538,11 @@ function ThunderingPandarenSpirit() {
           </a>
         </div>
       </div>
+      <CommentSection
+        props={{
+          location: "defaultLevelingGuide/ThunderingPandarenSpirit",
+        }}
+      />
     </div>
   );
 }

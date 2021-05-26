@@ -408,6 +408,182 @@
   }
 }
 
+.App .petFilters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.App .petFilters .sort {
+  margin-left: 150px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.App .petFilters .sort label {
+  position: absolute;
+  width: 150px;
+  top: -1.3rem;
+  left: -1.4rem;
+  pointer-events: none;
+  color: #34393d;
+  position: absolute;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.App .petFilters .sort > select {
+  background-color: #676e61;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.App .petFilters .sort > select option {
+  background-color: #3d4947;
+}
+
+.App .petFilters .search {
+  position: relative;
+  margin-left: 20px;
+}
+
+.App .petFilters .search input {
+  background-color: #87927c;
+  position: relative;
+  padding: 10px 12px;
+  font-family: "Raleway", sans-serif;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: none;
+  letter-spacing: 1px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.App .petFilters .search input:focus {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  background-color: #7f8d71;
+  -webkit-box-shadow: 0px 0px 4px 0px black;
+          box-shadow: 0px 0px 4px 0px black;
+  outline: none;
+  border: none;
+}
+
+.App .petFilters .search input:focus + label,
+.App .petFilters .search input:not(:placeholder-shown) + label {
+  -webkit-transform: scale(0.9) translateY(-2rem);
+          transform: scale(0.9) translateY(-2rem);
+  opacity: 1;
+}
+
+.App .petFilters .search input::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.App .petFilters .search input:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.App .petFilters .search input::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.App .petFilters .search input::placeholder {
+  opacity: 0;
+}
+
+.App .petFilters .search input::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.App .petFilters .search input:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.App .petFilters .search input::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.App .petFilters .search input::placeholder {
+  opacity: 0;
+}
+
+.App .petFilters .search label {
+  pointer-events: none;
+  color: #34393d;
+  left: 0.8rem;
+  top: 0.55rem;
+  position: absolute;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.App .petFilters .search button {
+  background-color: unset;
+  color: #111111;
+  position: absolute;
+  right: 0px;
+  font-size: 0.85rem;
+  padding: 0.55rem 1rem;
+}
+
+.App .petFilters .search button:hover {
+  background-color: transparent !important;
+}
+
+.App .petFilters .search label:nth-of-type(2) {
+  pointer-events: none;
+  color: #34393d;
+  left: 0.8rem;
+  top: 2.45rem;
+  position: absolute;
+  font-size: 0.75rem;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.App .petFilters button {
+  position: relative;
+  font-size: 1rem;
+  background-color: #7c8871;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 0.4rem 1.2rem;
+  border: none;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.App .petFilters button i {
+  color: #252729;
+}
+
+.App .petFilters button:hover {
+  background-color: #616b57;
+}
+
+.App .petFilters .totalPets {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.7rem;
+  color: #232930;
+  margin-left: auto;
+  margin-right: 25vh;
+}
+
 .App .emptyBarTotalPets {
   position: absolute;
   top: 108px;
@@ -596,7 +772,7 @@
           justify-content: center;
   width: 90%;
   margin: 0 auto;
-  margin-top: 15vh;
+  margin-top: 8vh;
 }
 
 .App > .displayPets .zoomOutPet {
@@ -2682,6 +2858,11 @@
   color: #161616;
 }
 
+.shadowmoonDraenorLevelGuide .commentSection {
+  max-width: 1000px;
+  margin: 0;
+}
+
 .shadowmoonDraenorLevelGuide .difficulty {
   position: relative;
   margin-left: 60px;
@@ -3100,6 +3281,11 @@
   color: #161616;
 }
 
+.frostFireDraenorLevelGuide .commentSection {
+  max-width: 1000px;
+  margin: 0;
+}
+
 .frostFireDraenorLevelGuide .difficulty {
   position: relative;
   margin-left: 60px;
@@ -3507,6 +3693,11 @@
 .nagrandDraenorLevelGuide h2 {
   font-family: "Raleway", sans-serif;
   color: #161616;
+}
+
+.nagrandDraenorLevelGuide .commentSection {
+  max-width: 1000px;
+  margin: 0;
 }
 
 .nagrandDraenorLevelGuide .difficulty {
@@ -3919,6 +4110,11 @@
   color: #161616;
 }
 
+.YonKunLaiLevelGuide .commentSection {
+  max-width: 1000px;
+  margin: 0;
+}
+
 .YonKunLaiLevelGuide .difficulty {
   position: relative;
   margin-left: 60px;
@@ -4325,6 +4521,11 @@
 .ThunderingPSKunLaiLevelGuide h2 {
   font-family: "Raleway", sans-serif;
   color: #161616;
+}
+
+.ThunderingPSKunLaiLevelGuide .commentSection {
+  max-width: 1000px;
+  margin: 0;
 }
 
 .ThunderingPSKunLaiLevelGuide .difficulty {
@@ -4734,6 +4935,11 @@
 .WhisperingPSJadeForestLevelGuide h2 {
   font-family: "Raleway", sans-serif;
   color: #161616;
+}
+
+.WhisperingPSJadeForestLevelGuide .commentSection {
+  max-width: 1000px;
+  margin: 0;
 }
 
 .WhisperingPSJadeForestLevelGuide .difficulty {
@@ -6282,6 +6488,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.ardenwealdWQs > .containerArdenwealdWQs .commentSection {
+  max-width: 1000px;
+  margin: 0;
 }
 
 .ardenwealdWQs > .containerArdenwealdWQs .FightRequirements {
@@ -8288,6 +8499,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.maldraxxusWQs > .containerMaldraxxusWQs .commentSection {
+  max-width: 1000px;
+  margin: 0;
 }
 
 .maldraxxusWQs > .containerMaldraxxusWQs .FightRequirements {
@@ -10335,6 +10551,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.revendrethWQs > .containerRevendrethWQs .commentSection {
+  max-width: 1000px;
+  margin: 0;
 }
 
 .revendrethWQs > .containerRevendrethWQs .FightRequirements {
@@ -12420,6 +12641,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.bastionWQs > .containerBastionWQs .commentSection {
+  max-width: 1000px;
+  margin: 0;
 }
 
 .bastionWQs > .containerBastionWQs .FightRequirements {
@@ -29145,6 +29371,1093 @@
   }
 }
 
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes skullColorChange {
+  0% {
+    color: #525151;
+  }
+  100% {
+    color: #a09e9e;
+  }
+}
+
+@keyframes magicalColors {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #e0d476;
+  }
+}
+
+.submitStrategy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.submitStrategy .elemental {
+  background: linear-gradient(150deg, #921717, #380505, #380505, #921717);
+  color: white;
+  border: 1px solid #dfd9d9;
+  -webkit-box-shadow: 0px 0px 15px 2px #801d1d;
+          box-shadow: 0px 0px 15px 2px #801d1d;
+}
+
+.submitStrategy .elemental .blue {
+  color: #5387d6;
+}
+
+.submitStrategy .elemental .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0 !important;
+}
+
+.submitStrategy .elemental .health {
+  color: red;
+}
+
+.submitStrategy .elemental .speed {
+  color: yellow;
+}
+
+.submitStrategy .elemental .power {
+  color: orange;
+}
+
+.submitStrategy .elemental li {
+  color: white;
+}
+
+.submitStrategy .undead {
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
+  background: linear-gradient(20deg, #272323, black 0%, #444242, black);
+  color: white;
+  border: 1px solid silver;
+  -webkit-box-shadow: 2px 2px 10px 3px #474747;
+          box-shadow: 2px 2px 10px 3px #474747;
+}
+
+.submitStrategy .undead .blue {
+  color: #2a6080;
+}
+
+.submitStrategy .undead .blue::first-letter {
+  text-transform: uppercase;
+}
+
+.submitStrategy .undead .skull {
+  position: absolute;
+  color: #525151;
+  left: 10%;
+  top: 30%;
+  -webkit-transform: rotateZ(-10deg);
+          transform: rotateZ(-10deg);
+  animation: skullColorChange 2s alternate-reverse infinite;
+}
+
+.submitStrategy .undead .skull1 {
+  position: absolute;
+  color: #525151;
+  left: 27%;
+  bottom: 15%;
+  -webkit-transform: rotateZ(-5deg);
+          transform: rotateZ(-5deg);
+  animation: skullColorChange 1s alternate-reverse infinite;
+}
+
+.submitStrategy .undead .skull2 {
+  position: absolute;
+  color: #525151;
+  right: 13%;
+  top: 30%;
+  -webkit-transform: rotateZ(10deg);
+          transform: rotateZ(10deg);
+  animation: skullColorChange 4s alternate-reverse infinite;
+}
+
+.submitStrategy .undead .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.submitStrategy .critter {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  background: linear-gradient(10deg, #643a18, #f5e65e);
+  border: 1px solid #b4a270;
+  -webkit-box-shadow: 6px 8px 8px 1px #967722;
+          box-shadow: 6px 8px 8px 1px #967722;
+  color: #1f1e1e;
+}
+
+.submitStrategy .critter .grey {
+  color: #616060;
+}
+
+.submitStrategy .critter .green {
+  color: green;
+}
+
+.submitStrategy .critter .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.submitStrategy .critter .power {
+  color: #724318;
+}
+
+.submitStrategy .critter .speed {
+  color: #f0f016;
+}
+
+.submitStrategy .critter .frog {
+  position: absolute;
+  color: #abaf73;
+  left: 20%;
+  bottom: 10%;
+}
+
+.submitStrategy .critter h1 {
+  color: #222222;
+}
+
+.submitStrategy .aquatic {
+  background: -webkit-gradient(linear, left bottom, left top, from(#1c3c94), to(#3e7dcf));
+  background: linear-gradient(0deg, #1c3c94, #3e7dcf);
+  -webkit-box-shadow: 2px 2px 8px 3px black;
+          box-shadow: 2px 2px 8px 3px black;
+  border: none;
+  color: #e2e1e1;
+}
+
+.submitStrategy .aquatic .blue {
+  color: #142444;
+}
+
+.submitStrategy .aquatic .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.submitStrategy .aquatic .speed {
+  color: #f0f06e;
+}
+
+.submitStrategy .aquatic .owned {
+  color: #288128;
+}
+
+.submitStrategy .humanoid {
+  background: -webkit-gradient(linear, left bottom, left top, from(#38362c), to(#f0d38a));
+  background: linear-gradient(0deg, #38362c, #f0d38a);
+  -webkit-box-shadow: 2px 2px 8px 3px black;
+          box-shadow: 2px 2px 8px 3px black;
+  border: none;
+  color: black;
+}
+
+.submitStrategy .humanoid .mask {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  color: #1a1919;
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
+}
+
+.submitStrategy .humanoid .petName {
+  color: black;
+}
+
+.submitStrategy .humanoid .green {
+  color: green;
+}
+
+.submitStrategy .humanoid .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.submitStrategy .humanoid .speed {
+  color: #f0f06e;
+}
+
+.submitStrategy .magic {
+  background: linear-gradient(30deg, #155363, #5c062a);
+  color: #e0d476;
+  border: 1px solid #5dcc8c;
+  -webkit-box-shadow: 2px 2px 15px 3px #2d6a72;
+          box-shadow: 2px 2px 15px 3px #2d6a72;
+  animation: magicalColors 4s infinite alternate-reverse;
+}
+
+.submitStrategy .magic .blue {
+  color: #2d8399;
+}
+
+.submitStrategy .magic .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #d6d0d0;
+}
+
+.submitStrategy .beast {
+  background: -webkit-gradient(linear, left bottom, left top, from(#493814), to(#47430b));
+  background: linear-gradient(0deg, #493814, #47430b);
+  -webkit-box-shadow: 2px 2px 15px 3px black;
+          box-shadow: 2px 2px 15px 3px black;
+  color: #d6d2d2;
+}
+
+.submitStrategy .beast .paw {
+  color: #6e5725;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 17%;
+  right: 17%;
+}
+
+.submitStrategy .beast .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #aaa8a8;
+}
+
+.submitStrategy .flying {
+  background: -webkit-gradient(linear, left bottom, left top, from(#bebe93), to(#beba79));
+  background: linear-gradient(0deg, #bebe93, #beba79);
+  -webkit-box-shadow: 2px 2px 10px 2px #a09f9f;
+          box-shadow: 2px 2px 10px 2px #a09f9f;
+  -webkit-animation: flyIn 0.6s;
+          animation: flyIn 0.6s;
+}
+
+.submitStrategy .flying .green {
+  color: #046904;
+}
+
+.submitStrategy .flying .grey {
+  color: #525050;
+}
+
+.submitStrategy .flying .feather {
+  color: #646446;
+  position: absolute;
+  top: 25%;
+  right: 15%;
+}
+
+.submitStrategy .flying .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #2c2b2b;
+}
+
+.submitStrategy .mechanical {
+  background: linear-gradient(60deg, #757573, #cecece);
+  -webkit-box-shadow: 2px 2px 10px 2px #383737;
+          box-shadow: 2px 2px 10px 2px #383737;
+}
+
+.submitStrategy .mechanical .cogs {
+  color: #252523;
+  position: absolute;
+  font-size: 2rem;
+  bottom: 12%;
+  right: 10%;
+}
+
+.submitStrategy .mechanical .cog {
+  color: #252523;
+  position: absolute;
+  font-size: 1.5rem;
+  top: 20%;
+  left: 10%;
+  -webkit-animation: spinner 3.5s linear infinite;
+          animation: spinner 3.5s linear infinite;
+}
+
+.submitStrategy .mechanical .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #2e2d2d;
+}
+
+.submitStrategy .dragonkin {
+  background: -webkit-gradient(linear, left bottom, left top, from(#577950), to(#beba79));
+  background: linear-gradient(0deg, #577950, #beba79);
+  -webkit-box-shadow: 2px 2px 10px 2px #a09f9f;
+          box-shadow: 2px 2px 10px 2px #a09f9f;
+}
+
+.submitStrategy .dragonkin .power {
+  color: #86592e;
+}
+
+.submitStrategy .dragonkin .type {
+  margin: 0 auto;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  margin-top: 40px;
+  color: #2e2d2d;
+}
+
+.submitStrategy .dragonkin .blue {
+  color: #1c1c81;
+}
+
+.submitStrategy .dragonkin .blue::first-letter {
+  text-transform: uppercase;
+}
+
+.submitStrategy .dragonkin .green {
+  color: #5d8b31;
+}
+
+.submitStrategy .dragonkin .green::first-letter {
+  text-transform: uppercase;
+}
+
+.submitStrategy .dragonkin .white {
+  color: #e7ecdc;
+}
+
+.submitStrategy .dragonkin .white::first-letter {
+  text-transform: uppercase;
+}
+
+.submitStrategy .dragonkin .grey {
+  color: #a7a8a5;
+}
+
+.submitStrategy .dragonkin .grey::first-letter {
+  text-transform: uppercase;
+}
+
+.submitStrategy .dragonkin .dragonSign1 {
+  position: absolute;
+  top: 35%;
+  right: 0%;
+  background-color: #bad6b3;
+  width: 20px;
+  height: 20px;
+  -webkit-clip-path: polygon(35% 39%, 49% 30%, 100% 8%, 100% 100%, 56% 84%, 37% 71%, 18% 66%, 0 67%, 9% 57%, 20% 49%);
+          clip-path: polygon(35% 39%, 49% 30%, 100% 8%, 100% 100%, 56% 84%, 37% 71%, 18% 66%, 0 67%, 9% 57%, 20% 49%);
+}
+
+.submitStrategy .fireIcon {
+  background-image: url(".././assets/fireIcon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 20px;
+  width: 35px;
+  top: 17px;
+  right: 3%;
+  z-index: 25;
+  -webkit-transform: translate3d(20%, 50%, 0px);
+          transform: translate3d(20%, 50%, 0px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.submitStrategy .swipe {
+  position: absolute;
+  top: 10%;
+  left: 0px;
+  width: 50px;
+  height: 40px;
+  background-color: #dadada;
+  -webkit-clip-path: polygon(0 18%, 24% 26%, 43% 30%, 55% 32%, 54% 35%, 49% 44%, 44% 46%, 40% 54%, 29% 67%, 0 81%);
+          clip-path: polygon(0 18%, 24% 26%, 43% 30%, 55% 32%, 54% 35%, 49% 44%, 44% 46%, 40% 54%, 29% 67%, 0 81%);
+}
+
+.submitStrategy .waterDrop1 {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  width: 20px;
+  height: 20px;
+  background-color: #5d93d1;
+  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+  -webkit-transform: rotateZ(10deg);
+          transform: rotateZ(10deg);
+}
+
+.submitStrategy .waterDrop2 {
+  position: absolute;
+  right: 30%;
+  bottom: 10%;
+  width: 20px;
+  height: 20px;
+  background-color: #5d93d1;
+  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
+}
+
+.submitStrategy .waterDrop3 {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  width: 20px;
+  height: 20px;
+  background-color: #5d93d1;
+  -webkit-clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+          clip-path: polygon(56% 12%, 70% 25%, 74% 48%, 65% 69%, 58% 85%, 50% 100%, 35% 80%, 26% 60%, 25% 35%, 34% 19%);
+  -webkit-transform: rotateZ(320deg);
+          transform: rotateZ(320deg);
+}
+
+.submitStrategy .locked {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+.submitStrategy > h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.submitStrategy ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.submitStrategy ul li {
+  position: relative;
+  background-color: #222227;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+}
+
+.submitStrategy ul li:hover .source {
+  display: block;
+}
+
+.submitStrategy ul li .allPetIcons {
+  background-color: #262631;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 300px;
+  top: 20px;
+  overflow-y: scroll;
+  padding: 0;
+  z-index: 50;
+  text-align: left;
+}
+
+.submitStrategy ul li .allPetIcons > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.submitStrategy ul li .allPetIcons img {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.submitStrategy ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.submitStrategy ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
+.submitStrategy ul li .containerReq {
+  z-index: 10;
+}
+
+.submitStrategy ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.submitStrategy ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.submitStrategy ul li .space {
+  height: 50px;
+}
+
+.submitStrategy ul li .level {
+  margin-bottom: 0px;
+}
+
+.submitStrategy ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  margin-bottom: 0;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.submitStrategy ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.submitStrategy ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.submitStrategy ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.submitStrategy ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.submitStrategy ul li .stats {
+  margin-bottom: 0px;
+}
+
+.submitStrategy ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.submitStrategy ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.submitStrategy ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.submitStrategy ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.submitStrategy ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.submitStrategy ul li .abilities {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (80px)[3];
+      grid-template-columns: repeat(3, 80px);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-auto-rows: 70px;
+  margin-top: 50px;
+}
+
+.submitStrategy ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.submitStrategy ul li .abilities > div > img {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  -webkit-filter: brightness(0.3);
+          filter: brightness(0.3);
+  cursor: pointer;
+}
+
+.submitStrategy ul li .abilities > div .chosen {
+  border: 2px solid #5a9e22;
+  width: 32px;
+  height: 32px;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+  pointer-events: none;
+  cursor: default;
+}
+
+.submitStrategy ul li .abilities > div p {
+  min-width: 30px;
+  width: 60px;
+  color: #d2ddd2;
+}
+
+.submitStrategy ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.submitStrategy ul li .iconPet > img {
+  cursor: pointer;
+  background-color: #343441;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.submitStrategy ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.submitStrategy .nextStep {
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 5px;
+  background-color: #24252c;
+  color: white;
+}
+
+.submitStrategy .utilitiesUser {
+  position: relative;
+  background-color: #353547;
+  color: white;
+  width: 70%;
+  padding: 1rem;
+  margin: 0 auto;
+  margin-top: 3vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+          box-shadow: 0px 0px 5px 0px black;
+}
+
+.submitStrategy .utilitiesUser > div {
+  margin: 7px 10px;
+}
+
+.submitStrategy .utilitiesUser .important {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #c5c527;
+  border-radius: 0.2rem;
+  color: #8f9ca0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-box-shadow: inset -10px -10px 5px -10px black;
+          box-shadow: inset -10px -10px 5px -10px black;
+}
+
+.submitStrategy .utilitiesUser .important > span {
+  display: none;
+  background-color: #d3b73d;
+  color: #1d1e20;
+  pointer-events: none;
+  position: absolute;
+  padding: 5px 10px;
+  top: -89px;
+  left: -42px;
+  width: 200px;
+  text-align: center;
+  -webkit-animation: fade 0.4s;
+          animation: fade 0.4s;
+}
+
+.submitStrategy .utilitiesUser .important > span::after {
+  position: absolute;
+  content: "";
+  background-color: #d3b73d;
+  height: 30px;
+  width: 30px;
+  -webkit-clip-path: polygon(100% 0, 0 0, 50% 70%);
+          clip-path: polygon(100% 0, 0 0, 50% 70%);
+  bottom: -30px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.submitStrategy .utilitiesUser .important:hover {
+  background-color: #c5c527;
+}
+
+.submitStrategy .utilitiesUser .important:hover > span {
+  display: inline;
+}
+
+.submitStrategy .utilitiesUser .pet {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #445c3d;
+  border-radius: 0.2rem;
+  color: #8f9ca0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-box-shadow: inset -10px -10px 5px -10px black;
+          box-shadow: inset -10px -10px 5px -10px black;
+}
+
+.submitStrategy .utilitiesUser .pet:hover {
+  background-color: #516e56;
+}
+
+.submitStrategy .utilitiesUser .ability {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #2c7d91;
+  border-radius: 0.2rem;
+  color: #8f9ca0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-box-shadow: inset -10px -10px 5px -10px black;
+          box-shadow: inset -10px -10px 5px -10px black;
+}
+
+.submitStrategy .utilitiesUser .ability:hover {
+  background-color: #46515f;
+}
+
+.submitStrategy .strategyInstructions {
+  background-color: #23232e;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2vh;
+  min-height: 200px;
+  padding: 20px 25px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.submitStrategy .strategyInstructions h1 {
+  text-align: center;
+}
+
+.submitStrategy .strategyInstructions .ColumnNames {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.submitStrategy .strategyInstructions .ColumnNames .turn {
+  width: 140px;
+}
+
+.submitStrategy .strategyInstructions .instruction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 5px;
+}
+
+.submitStrategy .strategyInstructions .instruction input {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: black;
+  padding: 5px 7px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: none;
+  background-color: white;
+  margin: 5px 10px;
+}
+
+.submitStrategy .strategyInstructions .instruction textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: black;
+  padding: 5px 7px;
+  border: none;
+  min-height: 100px;
+  background-color: white;
+}
+
+.submitStrategy .strategyInstructions .instruction .turn {
+  width: 140px;
+}
+
+.submitStrategy .strategyInstructions .instruction .description {
+  width: 80%;
+}
+
+.submitStrategy .strategyInstructions .buttons {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.submitStrategy .strategyInstructions button {
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 10px;
+  background-color: #0c51c9;
+  color: white;
+  border: none;
+  text-align: center;
+  margin: 0 20px;
+  margin-top: 3vh;
+}
+
+.submitStrategy > button {
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 3vh;
+  padding: 15px 10px;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  background-color: #1e222b;
+  color: white;
+}
+
+.containerAddComment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.containerAddComment > div > {
+  position: relative;
+}
+
+.containerAddComment > div > img {
+  width: 40px;
+  height: 40px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.containerAddComment > div > p {
+  font-family: "Raleway", sans-serif;
+}
+
+.containerAddComment > div > .iconsChoice {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -0.75rem;
+  left: -3.7rem;
+  background-color: #272a30;
+  padding: 5px 20px;
+}
+
+.containerAddComment > div > .iconsChoice::after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 8px;
+  background-color: #272a30;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-clip-path: polygon(100% 0, 0 0, 48% 100%);
+          clip-path: polygon(100% 0, 0 0, 48% 100%);
+}
+
+.containerAddComment > div > .iconsChoice img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: 0 7px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.containerAddComment > div > .iconsChoice img:hover {
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
+}
+
 .addComment {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29159,7 +30472,9 @@
           justify-content: left;
   text-align: left;
   padding-left: 5vh;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+  -webkit-animation: fadeIn 0.75s;
+          animation: fadeIn 0.75s;
 }
 
 .addComment .warning {
@@ -29230,8 +30545,19 @@
 }
 
 .commentSection {
+  position: relative;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.commentSection > h2 {
+  color: #1f1f22;
+  margin-top: 1.5rem;
+  text-align: end;
+}
+
+.commentSection > .empty {
+  margin-top: 2rem;
 }
 
 .containerComments {
@@ -29249,9 +30575,28 @@
 }
 
 .containerComments .containerComment {
-  background-color: #3c3c46;
+  position: relative;
+  background-color: #222a35;
   width: 100%;
-  max-width: 550px;
+  max-width: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  text-align: left;
+  margin-left: 0px;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 25px 20px;
+}
+
+.containerComments .containerComment .actualComment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29259,20 +30604,24 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  text-align: left;
-  margin-left: 50px;
-  margin-top: 20px;
-  border-radius: 20px;
-  padding: 15px 10px;
+  padding: 0px 10px;
+  padding-top: 10px;
+}
+
+.containerComments .containerComment > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .containerComments .containerComment .charName {
-  color: #dddfe0;
+  color: white;
   font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .containerComments .containerComment .charName::first-letter {
@@ -29280,9 +30629,107 @@
 }
 
 .containerComments .containerComment .message {
-  color: #dddfe0;
+  color: #d6dadb;
   font-family: "Roboto", sans-serif;
   font-size: 0.85rem;
+  font-weight: 100;
+  letter-spacing: 0.5px;
   margin-top: 10px;
+  padding: 5px 15px;
+}
+
+.containerComments .containerComment .time {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #7c8591;
+  font-family: "Roboto", sans-serif;
+}
+
+.containerComments .containerComment .reply {
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  color: #cae9e9;
+  font-family: "Raleway", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.containerComments .containerComment .reply:hover {
+  text-decoration: underline;
+}
+
+.containerComments .containerCommentReply {
+  position: relative;
+  background-color: #222a35;
+  width: 100%;
+  max-width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  text-align: left;
+  margin-left: 200px;
+  margin-top: 5px;
+  border-radius: 20px;
+  padding: 25px 20px;
+}
+
+.containerComments .containerCommentReply .actualCommentReply {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px 10px;
+  padding-top: 10px;
+}
+
+.containerComments .containerCommentReply > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.containerComments .containerCommentReply .charName {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.containerComments .containerCommentReply .charName::first-letter {
+  text-transform: uppercase;
+}
+
+.containerComments .containerCommentReply .message {
+  color: #d6dadb;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  padding: 5px 15px;
+}
+
+.containerComments .containerCommentReply .time {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #7c8591;
+  font-family: "Roboto", sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

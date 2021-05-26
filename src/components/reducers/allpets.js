@@ -1,0 +1,34 @@
+const initialState = {
+  loading: true,
+  pets: { pets: [] },
+  error: "",
+};
+
+const allPets = (state = initialState, action) => {
+  switch (action.type) {
+    case "FETCH_ALL_PETS_REQUEST":
+      return {
+        ...state,
+        loading: true,
+      };
+    case "FETCH_ALL_PETS_SUCCESS": {
+      console.log("merge post2");
+      console.log(action.payload);
+      return {
+        loading: false,
+        pets: action.payload,
+        error: "",
+      };
+    }
+    case "FETCH_ALL_PETS_FAILURE":
+      return {
+        loading: false,
+        pets: { pets: [] },
+        error: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+
+export default allPets;

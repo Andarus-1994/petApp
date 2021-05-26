@@ -1,6 +1,6 @@
 import "../scss/style.css";
 import ReactPaginate from "react-paginate";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getPetsCharacter } from "./actions";
 import Tilt from "react-parallax-tilt";
@@ -19,8 +19,9 @@ import {
   faCog,
   faMask,
   faCheck,
+  faTrash,
 } from "@fortawesome/free-solid-svg-icons";
-import { petInfo } from "./functions/serverFunctions.js";
+import { petInfo, getDetails } from "./functions/serverFunctions.js";
 import SearchBar from "./searchBar.js";
 import ModalPet from "./modalPet.js";
 import CopyRight from "./copyright.js";
@@ -31,6 +32,7 @@ function Home() {
   const profileTop = useSelector((state) => state.profile);
   const searchedChar = useSelector((state) => state.foundChar);
   const petsChar = useSelector((state) => state.pets);
+  const allPets = useSelector((state) => state.allPets);
   const [fav, setFav] = useState(false);
   const [load, setLoad] = useState(true);
   const [loadPetImage, setLoadPetImage] = useState(true);
@@ -38,15 +40,39 @@ function Home() {
   const [searchError, setSearchError] = useState("");
   const [curentPet, setCurentPet] = useState({ id: null, pet: {} });
   const [pageNumber, setPageNumber] = useState(0);
+  const [pageLoad, setPageLoad] = useState(true);
   const petsPerPage = 10;
   const pagesVisited = pageNumber * petsPerPage;
-  const pageCount = Math.ceil(petsChar.pets.pets.length / petsPerPage);
+  const [searchPetName, setSearchPetName] = useState("");
+  const [searchPetNameKey, setSearchPetNameKey] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [displayedPets, SetDisplayedPets] = useState({
+    loading: true,
+    pets: [],
+    errors: "",
+  });
+  const options = [
+    { value: "", label: "Default" },
+    { value: "AQUATIC", label: "Aquatic" },
+    { value: "BEAST", label: "Beast" },
+    { value: "CRITTER", label: "Critter" },
+    { value: "DRAGONKIN", label: "Dragonkin" },
+    { value: "ELEMENTAL", label: "Elemental" },
+    { value: "FLYING", label: "Flying" },
+    { value: "HUMANOID", label: "Humanoid" },
+    { value: "MAGIC", label: "Magic" },
+    { value: "MECHANICAL", label: "Mechanical" },
+    { value: "UNDEAD", label: "Undead" },
+  ];
+  const [selectedOption, SetSelectedOption] = useState("");
+  const [pageCount, setPageCount] = useState(1);
   const changePage = ({ selected }) => {
     setPageNumber(selected);
+    setPageLoad(true);
     setLoadPetImage(false);
     setLoad(true);
-    getPetDetails(petsChar.pets.pets, selected);
+    // getPetDetails(petsChar.pets.pets, selected);
+    getDetailsPets(selected);
     window.scrollTo(0, 0);
   };
 
@@ -63,136 +89,164 @@ function Home() {
     localStorage.setItem("favChar", JSON.stringify(searchedChar.character));
   }
 
-  const displayPets = petsChar.pets.pets
-    .slice(pagesVisited, pagesVisited + petsPerPage)
-    .map((pet, ind) => {
+  async function getDetailsPets(selected) {
+    console.log("testing", selected);
+
+    setPageLoad(true);
+    await getDetails({
+      pets: petsChar.pets.pets,
+      page: selected,
+      petName: searchPetName,
+      type: selectedOption,
+      allPets: allPets.pets,
+    }).then((response) => {
+      if (!response.data) {
+        SetDisplayedPets({
+          loading: false,
+          pets: [],
+          errors: "Server Down until 1st June.",
+        });
+        setPageLoad(false);
+        return;
+      }
+      console.log("founder", response.data);
+      let nonDuplicate = response.data.filter(
+        (ele, ind) =>
+          ind === response.data.findIndex((elem) => elem.id === ele.id)
+      );
+      SetDisplayedPets({ loading: false, pets: response.data });
+      setPageLoad(false);
+
+      console.log("testing", nonDuplicate);
+      setPageCount(response.page);
+    });
+  }
+
+  const displayPets =
+    !displayedPets.loading &&
+    displayedPets.pets.map((imagePet, index) => {
       return (
-        <Tilt key={ind} scale={1.1} transitionSpeed={800}>
-          {img.map(
-            (imagePet, index) =>
-              imagePet.id === pet.species.id && (
-                <li
-                  key={index}
-                  onClick={() => {
-                    setShowModal(true);
-                    setCurentPet({ id: pet.id, pet: imagePet });
+        <Tilt key={index} scale={1.1} transitionSpeed={800}>
+          <li
+            key={index}
+            onClick={() => {
+              setShowModal(true);
+              setCurentPet({ id: imagePet.data.id, pet: imagePet });
+            }}
+            className={[checkType(imagePet.battle_pet_type.type)]}
+            style={{ animationDuration: 0.6 + index * 0.12 + "s" }}
+          >
+            <div className="iconPet">
+              <img key={index} src={imagePet.icon} alt="noImg"></img>
+            </div>
+            <div className="petName">{imagePet.name}</div>{" "}
+            <div className={checkRarity(imagePet.data.quality.type)}>
+              {imagePet.data.quality.type.toLowerCase()}
+            </div>
+            <p className="level">Level {imagePet.data.level}</p>
+            <br></br>
+            <p>
+              {" "}
+              Health: {imagePet.data.stats.health}{" "}
+              <FontAwesomeIcon className="health" icon={faHeart} />
+            </p>
+            <p>
+              {" "}
+              Power: {imagePet.data.stats.power}{" "}
+              <FontAwesomeIcon className="power" icon={faMeteor} />
+            </p>
+            <p>
+              Speed: {imagePet.data.stats.speed}{" "}
+              <FontAwesomeIcon className="speed" icon={faBolt} />
+            </p>
+            <p className="type">- {imagePet.battle_pet_type.type} -</p>
+            {imagePet.battle_pet_type.type === "BEAST" ? (
+              <div className="swipe"></div>
+            ) : (
+              ""
+            )}
+            {imagePet.battle_pet_type.type === "BEAST" ? (
+              <FontAwesomeIcon className="paw" icon={faPaw} />
+            ) : (
+              ""
+            )}
+            {imagePet.battle_pet_type.type === "ELEMENTAL" ? (
+              <div className="fireIcon"></div>
+            ) : (
+              ""
+            )}
+            {imagePet.battle_pet_type.type === "UNDEAD" ? (
+              <div>
+                <FontAwesomeIcon
+                  className="skull"
+                  icon={faSkull}
+                  style={{ top: 3 * imagePet.data.level + "%" }}
+                />
+                <FontAwesomeIcon className="skull1" icon={faSkull} />
+                <FontAwesomeIcon className="skull2" icon={faSkull} />
+              </div>
+            ) : (
+              ""
+            )}
+            {imagePet.battle_pet_type.type === "FLYING" ? (
+              <div>
+                <FontAwesomeIcon
+                  className="feather"
+                  style={{
+                    top: imagePet.data.stats.speed > 10 ? "17%" : "40%",
                   }}
-                  className={[checkType(imagePet.battle_pet_type.type)]}
-                  style={{ animationDuration: 0.6 + index * 0.12 + "s" }}
-                >
-                  <div className="iconPet">
-                    <img key={index} src={imagePet.icon} alt="noImg"></img>
-                  </div>
-                  <div className="petName">{imagePet.name}</div>{" "}
-                  <div className={checkRarity(pet.quality.type)}>
-                    {pet.quality.type.toLowerCase()}
-                  </div>
-                  <p className="level">Level {pet.level}</p>
-                  <br></br>
-                  <p>
-                    {" "}
-                    Health: {pet.stats.health}{" "}
-                    <FontAwesomeIcon className="health" icon={faHeart} />
-                  </p>
-                  <p>
-                    {" "}
-                    Power: {pet.stats.power}{" "}
-                    <FontAwesomeIcon className="power" icon={faMeteor} />
-                  </p>
-                  <p>
-                    Speed: {pet.stats.speed}{" "}
-                    <FontAwesomeIcon className="speed" icon={faBolt} />
-                  </p>
-                  <p className="type">- {imagePet.battle_pet_type.type} -</p>
-                  {imagePet.battle_pet_type.type === "BEAST" ? (
-                    <div className="swipe"></div>
-                  ) : (
-                    ""
-                  )}
-                  {imagePet.battle_pet_type.type === "BEAST" ? (
-                    <FontAwesomeIcon className="paw" icon={faPaw} />
-                  ) : (
-                    ""
-                  )}
-                  {imagePet.battle_pet_type.type === "ELEMENTAL" ? (
-                    <div className="fireIcon"></div>
-                  ) : (
-                    ""
-                  )}
-                  {imagePet.battle_pet_type.type === "UNDEAD" ? (
-                    <div>
-                      <FontAwesomeIcon
-                        className="skull"
-                        icon={faSkull}
-                        style={{ top: 3 * pet.level + "%" }}
-                      />
-                      <FontAwesomeIcon className="skull1" icon={faSkull} />
-                      <FontAwesomeIcon className="skull2" icon={faSkull} />
-                    </div>
-                  ) : (
-                    ""
-                  )}
-                  {imagePet.battle_pet_type.type === "FLYING" ? (
-                    <div>
-                      <FontAwesomeIcon
-                        className="feather"
-                        style={{
-                          top: pet.stats.speed > 10 ? "17%" : "40%",
-                        }}
-                        icon={faFeatherAlt}
-                      />
-                    </div>
-                  ) : (
-                    ""
-                  )}
-                  {imagePet.battle_pet_type.type === "CRITTER" ? (
-                    <div>
-                      <FontAwesomeIcon
-                        className="frog"
-                        style={{
-                          bottom: pet.stats.speed > 10 ? "17%" : "10%",
-                          left: pet.stats.speed > 10 ? "17%" : "5%",
-                        }}
-                        icon={faFrog}
-                      />
-                    </div>
-                  ) : (
-                    ""
-                  )}
-                  {imagePet.battle_pet_type.type === "MECHANICAL" ? (
-                    <div>
-                      <FontAwesomeIcon className="cogs" icon={faCogs} />
-                      <FontAwesomeIcon className="cog" icon={faCog} />
-                    </div>
-                  ) : (
-                    ""
-                  )}
-                  {imagePet.battle_pet_type.type === "HUMANOID" ? (
-                    <div>
-                      <FontAwesomeIcon className="mask" icon={faMask} />
-                    </div>
-                  ) : (
-                    ""
-                  )}
-                  {imagePet.battle_pet_type.type === "AQUATIC" ? (
-                    <div>
-                      <div className="waterDrop1"></div>
-                      <div className="waterDrop2"></div>
-                      <div className="waterDrop3"></div>
-                    </div>
-                  ) : (
-                    ""
-                  )}
-                  {imagePet.battle_pet_type.type === "DRAGONKIN" ? (
-                    <div>
-                      <div className="dragonSign1"></div>
-                    </div>
-                  ) : (
-                    ""
-                  )}
-                </li>
-              )
-          )}
+                  icon={faFeatherAlt}
+                />
+              </div>
+            ) : (
+              ""
+            )}
+            {imagePet.battle_pet_type.type === "CRITTER" ? (
+              <div>
+                <FontAwesomeIcon
+                  className="frog"
+                  style={{
+                    bottom: imagePet.data.stats.speed > 10 ? "17%" : "10%",
+                    left: imagePet.data.stats.speed > 10 ? "17%" : "5%",
+                  }}
+                  icon={faFrog}
+                />
+              </div>
+            ) : (
+              ""
+            )}
+            {imagePet.battle_pet_type.type === "MECHANICAL" ? (
+              <div>
+                <FontAwesomeIcon className="cogs" icon={faCogs} />
+                <FontAwesomeIcon className="cog" icon={faCog} />
+              </div>
+            ) : (
+              ""
+            )}
+            {imagePet.battle_pet_type.type === "HUMANOID" ? (
+              <div>
+                <FontAwesomeIcon className="mask" icon={faMask} />
+              </div>
+            ) : (
+              ""
+            )}
+            {imagePet.battle_pet_type.type === "AQUATIC" ? (
+              <div>
+                <div className="waterDrop1"></div>
+                <div className="waterDrop2"></div>
+                <div className="waterDrop3"></div>
+              </div>
+            ) : (
+              ""
+            )}
+            {imagePet.battle_pet_type.type === "DRAGONKIN" ? (
+              <div>
+                <div className="dragonSign1"></div>
+              </div>
+            ) : (
+              ""
+            )}
+          </li>
         </Tilt>
       );
     });
@@ -263,23 +317,46 @@ function Home() {
   }
 
   useEffect(() => {
-    document.title = "Petopia";
-    if (!searchedChar.loading && petsChar.pets.length === 0)
-      dispatch(getPetsCharacter(searchedChar.character));
-    if (petsChar.pets.pets.length > 0 && img.length === 0)
-      getPetDetails(petsChar.pets.pets, 0);
+    console.log("test", searchedChar.character);
+    if (
+      Object.keys(searchedChar.character).length === 0 &&
+      searchedChar.loading
+    ) {
+      console.log("test4242");
+      setPageLoad(false);
+    }
 
-    if (searchedChar && !searchedChar.error) {
-      console.log(pageNumber);
+    document.title = "Petopia";
+
+    if (
+      displayedPets.loading &&
+      !petsChar.loading &&
+      pageLoad &&
+      !allPets.loading
+    ) {
+      getDetailsPets(0);
+      console.log("test244466");
+    }
+
+    if (
+      !searchedChar.loading &&
+      !searchedChar.error &&
+      !petsChar.loading &&
+      !pageLoad &&
+      !allPets.loading
+    ) {
       setPageNumber(0);
-      getPetDetails(petsChar.pets.pets, 0);
+      console.log("test24");
+      getDetailsPets(0);
     }
   }, [
-    searchedChar.character,
     petsChar.pets.pets,
     petsChar.loading,
     petsChar.error,
-    searchedChar.loading,
+    searchPetName,
+    load,
+    selectedOption,
+    allPets.loading,
   ]);
 
   function setError(error) {
@@ -287,9 +364,30 @@ function Home() {
   }
 
   function loadingOnDisplayPets() {
-    setLoad(true);
+    //  getPetDetails(0);
+    SetDisplayedPets({ loading: true, pets: [] });
+    setPageLoad(true);
+    setPageNumber(0);
+    setSearchPetNameKey("");
   }
 
+  function hitEnter(e) {
+    if (e.charCode === 13) {
+      setSearchPetName(e.target.value);
+    }
+  }
+
+  function handleChange(e) {
+    setSearchPetNameKey(e.target.value);
+  }
+  function searchPet() {
+    setSearchPetName(searchPetNameKey);
+  }
+
+  function handleChangeOptions(e) {
+    console.log("testing,", e.target.value);
+    SetSelectedOption(e.target.value);
+  }
   return (
     <div className="App">
       {profileTop.profile && !profileTop.loading && !profileTop.error ? (
@@ -326,13 +424,11 @@ function Home() {
       ) : (
         ""
       )}
-
       {showModal ? (
         <ModalPet pet={curentPet.pet} closeModal={displayModal}></ModalPet>
       ) : (
         ""
       )}
-
       <SearchBar
         setError={setError}
         setLoading={loadingOnDisplayPets}
@@ -347,18 +443,79 @@ function Home() {
         ""
       )}
 
-      {loadPetImage ? (
-        <ul className="displayPets">
-          {load ? (
-            <div className="spinnerPets-1"></div>
-          ) : (
-            !petsChar.loading && petsChar.pets.pets && displayPets
+      <div className="petFilters">
+        <div className="sort">
+          <label>Order by type:</label>
+          <select
+            id="lang"
+            onChange={handleChangeOptions}
+            value={selectedOption}
+            className="round"
+          >
+            {options.map((item) => (
+              <option key={item.value} value={item.value}>
+                {item.label}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="search">
+          <input
+            type="search"
+            id="site-search"
+            name="q"
+            aria-label="Search through site content"
+            placeholder="Pet Name"
+            onChange={handleChange}
+            onKeyPress={hitEnter}
+            value={searchPetNameKey}
+          />
+          <label>Find a pet </label>
+          <label>Ex: "Fawn, Otter, Blue etc... " </label>
+          {searchPetNameKey && (
+            <button
+              onClick={() => {
+                setSearchPetNameKey("");
+              }}
+            >
+              <FontAwesomeIcon icon={faTrash} />{" "}
+            </button>
           )}
-        </ul>
-      ) : (
-        <div className="spinnerPets-1"></div>
-      )}
-      {!searchedChar.error && !petsChar.error && !petsChar.loading ? (
+        </div>
+        <button onClick={searchPet}>
+          <i className="fa fa-search"></i>
+        </button>
+        <div className="totalPets">
+          Total Pets (
+          {!petsChar.loading && petsChar.pets && petsChar.pets.pets.length})
+        </div>
+      </div>
+
+      <ul className="displayPets">
+        {!petsChar.loading &&
+        !pageLoad &&
+        !displayedPets.loading &&
+        searchedChar.character ? (
+          displayedPets.pets.length > 0 ? (
+            displayPets
+          ) : (
+            !searchedChar.error &&
+            !petsChar.error &&
+            !petsChar.loading &&
+            !allPets.loading &&
+            "No pets found."
+          )
+        ) : pageLoad ? (
+          <div className="spinnerPets-1"></div>
+        ) : (
+          ""
+        )}
+        <h1>{displayedPets.errors}</h1>
+      </ul>
+      {!searchedChar.error &&
+      !petsChar.error &&
+      !petsChar.loading &&
+      !allPets.loading ? (
         <ReactPaginate
           pageCount={pageCount}
           onPageChange={changePage}

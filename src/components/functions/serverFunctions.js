@@ -274,6 +274,25 @@ export const petsInfo = async (pet, number) => {
   return petDetails;
 };
 
+export const getDetails = async (pets) => {
+  console.log("ajunge", pets);
+  return await axios
+    .post("https://apipetslaravel.herokuapp.com/api/getPetDetails", pets, {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    })
+    .then((response) => {
+      console.log(response.data);
+
+      return response.data;
+    })
+
+    .catch((error) => {
+      return error;
+    });
+};
+
 export const singlePetInfo = async (pet) => {
   const token = localStorage.getItem("token");
   const idPet = pet.id;

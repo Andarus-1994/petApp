@@ -1,0 +1,440 @@
+@import "../mixins/petTypeStyle";
+
+.submitStrategy {
+  display: flex;
+  flex-direction: column;
+  @include petTypes;
+  .locked {
+    pointer-events: none !important;
+    cursor: default !important;
+  }
+  & > h1 {
+    font-family: $Raleway;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  ul {
+    position: relative;
+    list-style-type: none;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+    grid-auto-rows: 320px;
+    justify-content: center;
+    width: 100%;
+
+    margin: 0 auto;
+    margin-top: 5vh;
+
+    li {
+      position: relative;
+      background-color: rgb(34, 34, 39);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgb(31, 30, 30);
+      text-align: center;
+      padding: 0.8rem 0;
+      padding-bottom: 0rem;
+      border-radius: 0.8rem;
+      transition: 1s;
+      line-height: 1.9rem;
+      z-index: 10;
+      animation: fadeIn;
+
+      &:hover {
+        .source {
+          display: block;
+        }
+      }
+
+      .allPetIcons {
+        background-color: rgb(38, 38, 49);
+        position: absolute;
+        width: fit-content;
+        height: 300px;
+        top: 20px;
+        overflow-y: scroll;
+        padding: 0;
+        z-index: 50;
+        text-align: left;
+        & > div {
+          & > div {
+            display: flex;
+            width: fit-content;
+            flex-direction: row;
+          }
+        }
+        img {
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .source {
+        position: absolute;
+        width: 120px;
+        top: -70px;
+        right: 0px;
+        padding: 10px 15px;
+        font-family: $Raleway;
+        line-height: 20px;
+        border-radius: 5px;
+        border: 1px solid rgb(55, 61, 70);
+        background-color: rgb(42, 56, 70);
+        color: rgb(200, 223, 224);
+        z-index: 50;
+        display: none;
+        animation: 0.5s fadeEnter;
+        &::before {
+          position: absolute;
+          left: 10px;
+          bottom: -20px;
+          content: "";
+          width: 30px;
+          height: 30px;
+          background-color: rgb(42, 56, 70);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+          z-index: 50;
+        }
+      }
+      .containerReq {
+        z-index: 10;
+      }
+      .petName {
+        font-family: $Roboto;
+        font-size: 0.85rem;
+        line-height: 18px;
+        min-height: 33px;
+      }
+      .required {
+        color: red;
+        margin-bottom: 0 !important;
+      }
+      .space {
+        height: 50px;
+      }
+      .level {
+        margin-bottom: 0px;
+      }
+      .type {
+        margin: 0 auto;
+        margin-top: auto;
+        margin-bottom: 0;
+        color: rgb(235, 231, 231);
+        font-size: 0.55rem;
+        letter-spacing: 1.5px;
+      }
+
+      .owned {
+        color: rgb(20, 95, 20);
+        margin-top: 5px;
+      }
+      .check {
+        color: rgb(32, 139, 32);
+        font-size: 2rem;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+      .notOwned {
+        color: rgb(207, 29, 29);
+      }
+      .notChecked {
+        color: rgb(207, 29, 29);
+        font-size: 2rem;
+        margin: 0 auto;
+      }
+      .stats {
+        margin-bottom: 0px;
+      }
+
+      p {
+        text-align: center;
+        margin: 0 auto;
+        line-height: 17px;
+        min-width: 110px;
+        font-family: $Merri;
+        font-size: 0.8rem;
+
+        .health {
+          color: rgb(194, 47, 47);
+          font-size: 1rem;
+        }
+        .power {
+          color: rgb(201, 121, 47);
+
+          font-size: 1rem;
+        }
+        .speed {
+          color: rgb(196, 185, 36);
+          font-size: 1rem;
+        }
+      }
+
+      .spaceOwned {
+        margin-bottom: 50px;
+      }
+
+      .abilities {
+        display: grid;
+        grid-template-columns: repeat(3, 80px);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        grid-auto-rows: 70px;
+        margin-top: 50px;
+        & > div {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+
+          & > img {
+            width: 30px;
+            height: 30px;
+            margin: 0 auto;
+            filter: brightness(0.3);
+            cursor: pointer;
+          }
+          .chosen {
+            border: 2px solid rgb(90, 158, 34);
+            width: 32px;
+            height: 32px;
+            filter: brightness(1);
+            pointer-events: none;
+            cursor: default;
+          }
+          p {
+            min-width: 30px;
+            width: 60px;
+            color: rgb(210, 221, 210);
+          }
+        }
+      }
+
+      .iconPet {
+        position: relative;
+        width: 100%;
+        height: 20px;
+
+        & > img {
+          cursor: pointer;
+          background-color: rgb(52, 52, 65);
+          position: absolute;
+          top: -25px;
+          left: 50%;
+          right: 50%;
+          width: 50px;
+          height: 50px;
+          border-radius: 0.2rem;
+          border: 0.5px solid rgb(196, 194, 194);
+          margin: 0 auto;
+          transform-style: preserve-3d;
+          transform: translate3d(-50%, -50%, 0px);
+        }
+        .noImg {
+          background: linear-gradient(10deg, rgb(63, 57, 52), rgb(28, 45, 61));
+          position: absolute;
+          top: -10px;
+          left: 50%;
+          right: 50%;
+          width: 50px;
+          height: 50px;
+          padding: 5px;
+          border-radius: 0.2rem;
+          border: 0.5px solid rgb(196, 194, 194);
+          margin: 0 auto;
+          transform-style: preserve-3d;
+          transform: translate3d(-50%, -50%, 0px);
+        }
+      }
+    }
+  }
+  .nextStep {
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: none;
+    font-family: $Raleway;
+    padding: 10px 5px;
+    background-color: rgb(36, 37, 44);
+    color: white;
+  }
+  .utilitiesUser {
+    position: relative;
+    background-color: rgb(53, 53, 71);
+    color: white;
+    width: 70%;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 5px 0px black;
+    & > div {
+      margin: 7px 10px;
+    }
+    .important {
+      position: relative;
+      cursor: pointer;
+      border: 1px solid rgb(197, 197, 39);
+      border-radius: 0.2rem;
+      color: rgb(143, 156, 160);
+      font-family: $Raleway;
+      font-weight: 600;
+      padding: 5px 10px;
+      letter-spacing: 1px;
+      transition: 0.4s;
+      box-shadow: inset -10px -10px 5px -10px black;
+
+      & > span {
+        display: none;
+        background-color: rgb(211, 183, 61);
+        color: rgb(29, 30, 32);
+        pointer-events: none;
+        position: absolute;
+        padding: 5px 10px;
+        top: -89px;
+        left: -42px;
+        width: 200px;
+        text-align: center;
+        animation: fade 0.4s;
+        &::after {
+          position: absolute;
+          content: "";
+          background-color: rgb(211, 183, 61);
+          height: 30px;
+          width: 30px;
+          clip-path: polygon(100% 0, 0 0, 50% 70%);
+          bottom: -30px;
+          margin-left: auto;
+          margin-right: auto;
+          left: 0;
+          right: 0;
+        }
+      }
+
+      &:hover {
+        background-color: rgb(197, 197, 39);
+        & > span {
+          display: inline;
+        }
+      }
+    }
+
+    .pet {
+      position: relative;
+      cursor: pointer;
+      border: 1px solid rgb(68, 92, 61);
+      border-radius: 0.2rem;
+      color: rgb(143, 156, 160);
+      font-family: $Raleway;
+      font-weight: 600;
+      padding: 5px 10px;
+      letter-spacing: 1px;
+      transition: 0.4s;
+      box-shadow: inset -10px -10px 5px -10px black;
+      &:hover {
+        background-color: rgb(81, 110, 86);
+      }
+    }
+    .ability {
+      position: relative;
+      cursor: pointer;
+      border: 1px solid rgb(44, 125, 145);
+      border-radius: 0.2rem;
+      color: rgb(143, 156, 160);
+      font-family: $Raleway;
+      font-weight: 600;
+      padding: 5px 10px;
+      letter-spacing: 1px;
+      transition: 0.4s;
+      box-shadow: inset -10px -10px 5px -10px black;
+      &:hover {
+        background-color: rgb(70, 81, 95);
+      }
+    }
+  }
+  .strategyInstructions {
+    background-color: rgb(35, 35, 46);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2vh;
+    min-height: 200px;
+    padding: 20px 25px;
+    color: white;
+    font-family: $Roboto;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      text-align: center;
+    }
+    .ColumnNames {
+      display: flex;
+      flex-direction: row;
+      .turn {
+        width: 140px;
+      }
+    }
+    .instruction {
+      display: flex;
+      flex-direction: row;
+      height: fit-content;
+      margin-top: 5px;
+      input {
+        font-family: $Roboto;
+        font-size: 1rem;
+        color: black;
+        padding: 5px 7px;
+        height: fit-content;
+        border: none;
+        background-color: white;
+        margin: 5px 10px;
+      }
+      textarea {
+        font-family: $Roboto;
+        font-size: 1rem;
+        color: black;
+        padding: 5px 7px;
+        border: none;
+        min-height: 100px;
+        background-color: white;
+      }
+      .turn {
+        width: 140px;
+      }
+      .description {
+        width: 80%;
+      }
+    }
+    .buttons {
+      width: fit-content;
+      margin: 0 auto;
+    }
+    button {
+      cursor: pointer;
+      width: fit-content;
+      padding: 5px 10px;
+      background-color: rgb(12, 81, 201);
+      color: white;
+      border: none;
+      text-align: center;
+      margin: 0 20px;
+      margin-top: 3vh;
+    }
+  }
+  & > button {
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 3vh;
+    padding: 15px 10px;
+    font-family: $Raleway;
+    border: none;
+    background-color: rgb(30, 34, 43);
+    color: white;
+  }
+}

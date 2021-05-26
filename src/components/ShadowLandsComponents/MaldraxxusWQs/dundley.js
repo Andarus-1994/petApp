@@ -7,7 +7,7 @@ import Pet from "../../PetLevelGuideComponents/pet.js";
 import location3 from "../../../assets/Shadowlands/Dundley/dundley.jpg";
 import location from "../../../assets/Shadowlands/Dundley/dundleySL.jpg";
 import location2 from "../../../assets/Shadowlands/Dundley/dundleyMaldraxxus.jpg";
-
+import CommentSection from "../../commentSection.js";
 function Dundley() {
   const petsChar = useSelector((state) => state.pets);
   const [coords] = useState("/way Maldraxxus 63, 46");
@@ -178,8 +178,7 @@ function Dundley() {
     }
     if (
       !curentActiveSlot3[0].found &&
-      curentActiveSlot3[0].id ===
-        null /*&&
+      curentActiveSlot3[0].id === null /*&&
       !curentActiveSlot3[1].found &&
       curentActiveSlot3[1].id === null
       for strategy 2 */
@@ -887,6 +886,9 @@ function Dundley() {
           </a>
         </div>
       </div>
+      <CommentSection
+        props={{ location: "shadowlands/MaldraxxusWQs/Dundley" }}
+      />
     </div>
   );
 }
