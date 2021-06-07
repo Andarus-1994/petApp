@@ -67,7 +67,7 @@ function Nav() {
     <div className="Routes">
       <div className="headerTop">
         <h1>
-          <span>PlaceHolder</span>, Pet Guides of Warcraft
+          <span>Petius</span>, Pet Guides of Warcraft
         </h1>
         <Profile />
       </div>

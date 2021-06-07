@@ -12,6 +12,14 @@ function SearchPet(props) {
         placeholder="Search Pet"
       ></input>
       <div>
+        <p
+          className="anypet"
+          onClick={() => {
+            props.setPet(0, null, null, null, null);
+          }}
+        >
+          Any Pet
+        </p>
         {!props.allPets.loading &&
           props.allPets.pets
             .filter((petFind) =>

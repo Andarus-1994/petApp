@@ -43,7 +43,7 @@
       transition: 1s;
       line-height: 1.9rem;
       z-index: 10;
-      animation: fadeIn;
+      animation: 0.8s FlowIn;
 
       &:hover {
         .source {
@@ -53,6 +53,7 @@
 
       .allPetIcons {
         background-color: rgb(38, 38, 49);
+        color: white;
         position: absolute;
         width: fit-content;
         height: 300px;
@@ -61,12 +62,37 @@
         padding: 0;
         z-index: 50;
         text-align: left;
+        .anypet {
+          cursor: pointer;
+          background-color: rgb(66, 80, 94);
+          width: fit-content;
+          margin-bottom: 5px;
+          padding: 5px 0px;
+          transition: 0.4s;
+          &:hover {
+            background-color: rgb(36, 44, 51);
+          }
+        }
         & > div {
+          margin-top: 15px;
+
           & > div {
             display: flex;
             width: fit-content;
             flex-direction: row;
           }
+        }
+        input {
+          background-color: white;
+          color: black;
+          font-family: $Raleway;
+          padding: 2px 5px;
+          font-size: 0.8rem;
+
+          border: none;
+        }
+        p {
+          width: 200px;
         }
         img {
           cursor: pointer;
@@ -108,7 +134,7 @@
         font-family: $Roboto;
         font-size: 0.85rem;
         line-height: 18px;
-        min-height: 33px;
+        min-height: 25px;
       }
       .required {
         color: red;
@@ -122,10 +148,10 @@
       }
       .type {
         margin: 0 auto;
-        margin-top: auto;
-        margin-bottom: 0;
+        margin-top: 5px !important;
+
         color: rgb(235, 231, 231);
-        font-size: 0.55rem;
+        font-size: 0.55rem !important;
         letter-spacing: 1.5px;
       }
 
@@ -149,6 +175,31 @@
       }
       .stats {
         margin-bottom: 0px;
+      }
+
+      .options {
+        font-size: 1rem;
+        font-family: $Roboto;
+        label {
+          margin-right: 20px;
+        }
+        select {
+          cursor: pointer;
+          text-align: center;
+          width: fit-content;
+          margin: 0 auto;
+          background-color: rgb(43, 42, 53);
+          color: white;
+          border: none;
+          padding: 2px 5px;
+          appearance: none;
+          font-family: $Roboto;
+          letter-spacing: 1px;
+
+          option {
+            background-color: rgb(93, 91, 112);
+          }
+        }
       }
 
       p {
@@ -184,7 +235,7 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         grid-auto-rows: 70px;
-        margin-top: 50px;
+        margin-top: 5px;
         & > div {
           display: flex;
           flex-direction: column;
@@ -196,14 +247,19 @@
             margin: 0 auto;
             filter: brightness(0.3);
             cursor: pointer;
+            transition: 0.4s;
+            &:hover {
+              filter: brightness(1);
+            }
           }
           .chosen {
-            border: 2px solid rgb(90, 158, 34);
+            border: 2px solid rgb(59, 88, 35);
             width: 32px;
             height: 32px;
             filter: brightness(1);
             pointer-events: none;
             cursor: default;
+            box-shadow: 0px 0px 5px 2px rgb(12, 80, 12);
           }
           p {
             min-width: 30px;
@@ -262,6 +318,16 @@
     background-color: rgb(36, 37, 44);
     color: white;
   }
+  @keyframes FlowIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
   .utilitiesUser {
     position: relative;
     background-color: rgb(53, 53, 71);
@@ -274,8 +340,14 @@
     flex-wrap: wrap;
     border-radius: 2rem;
     box-shadow: 0px 0px 5px 0px black;
+    animation: 0.6s FlowIn;
     & > div {
       margin: 7px 10px;
+    }
+    .disabled {
+      color: rgb(88, 92, 94) !important;
+      border: 1px solid rgb(88, 88, 86) !important;
+      pointer-events: none;
     }
     .important {
       position: relative;
@@ -369,6 +441,7 @@
     font-family: $Roboto;
     display: flex;
     flex-direction: column;
+    animation: 0.6s FlowIn;
     h1 {
       text-align: center;
     }
@@ -376,7 +449,10 @@
       display: flex;
       flex-direction: row;
       .turn {
-        width: 140px;
+        width: 170px;
+      }
+      .instruction {
+        margin-top: 0;
       }
     }
     .instruction {
@@ -392,7 +468,9 @@
         height: fit-content;
         border: none;
         background-color: white;
-        margin: 5px 10px;
+        margin: 5px 0;
+        margin-right: 20px;
+        animation: 0.4s FlowIn;
       }
       textarea {
         font-family: $Roboto;
@@ -402,6 +480,8 @@
         border: none;
         min-height: 100px;
         background-color: white;
+        margin: 5px 10px;
+        animation: 0.6s FlowIn;
       }
       .turn {
         width: 140px;
@@ -409,11 +489,16 @@
       .description {
         width: 80%;
       }
+      .chosen {
+        border: 2px solid rgb(89, 136, 175);
+        box-shadow: 0px 0px 5px 0px rgb(123, 156, 199);
+      }
     }
     .buttons {
       width: fit-content;
       margin: 0 auto;
     }
+
     button {
       cursor: pointer;
       width: fit-content;
@@ -426,6 +511,11 @@
       margin-top: 3vh;
     }
   }
+  .disabledButton {
+    background-color: rgb(72, 80, 87);
+    color: rgb(143, 136, 136);
+    pointer-events: none;
+  }
   & > button {
     cursor: pointer;
     width: fit-content;
@@ -436,5 +526,16 @@
     border: none;
     background-color: rgb(30, 34, 43);
     color: white;
+    transition: 0.4s;
+    animation: 0.8s FlowIn;
+    &:hover {
+      background-color: rgb(59, 64, 75);
+      color: rgb(223, 240, 247);
+    }
+  }
+  & > .disabledSubmit {
+    background-color: rgb(57, 60, 66);
+    color: rgb(150, 140, 140);
+    pointer-events: none;
   }
 }

@@ -53,7 +53,12 @@ function ModalPet({ pet, closeModal }) {
       <div className="behindModal" onClick={closeModal}></div>
       <div className={"modalPet " + checkType(pet.battle_pet_type.type)}>
         <div className="icon">
-          <img src={pet.icon} alt="NoIcon"></img>
+          <a
+            href={"https://www.wowhead.com/battle-pet/" + pet.id}
+            target="_blank"
+          >
+            <img src={pet.icon} alt="NoIcon"></img>
+          </a>
         </div>
         <h1>{pet.name}</h1>
         <h2> {pet.battle_pet_type.name}</h2>
@@ -62,7 +67,14 @@ function ModalPet({ pet, closeModal }) {
           {pet.abilities ? (
             pet.abilities.map((ability, index) => (
               <li key={index}>
-                <img src={ability.ability.icon} alt="noIcon"></img>
+                <a
+                  href={
+                    "https://www.wowhead.com/pet-ability=" + ability.ability.id
+                  }
+                  target="_blank"
+                >
+                  <img src={ability.ability.icon} alt="noIcon"></img>
+                </a>
                 <h2>{ability.ability.name}</h2>
               </li>
             ))

@@ -317,16 +317,14 @@ function Home() {
   }
 
   useEffect(() => {
-    console.log("test", searchedChar.character);
     if (
       Object.keys(searchedChar.character).length === 0 &&
       searchedChar.loading
     ) {
-      console.log("test4242");
       setPageLoad(false);
     }
 
-    document.title = "Petopia";
+    document.title = "Petius";
 
     if (
       displayedPets.loading &&
@@ -335,7 +333,6 @@ function Home() {
       !allPets.loading
     ) {
       getDetailsPets(0);
-      console.log("test244466");
     }
 
     if (
@@ -444,21 +441,6 @@ function Home() {
       )}
 
       <div className="petFilters">
-        <div className="sort">
-          <label>Order by type:</label>
-          <select
-            id="lang"
-            onChange={handleChangeOptions}
-            value={selectedOption}
-            className="round"
-          >
-            {options.map((item) => (
-              <option key={item.value} value={item.value}>
-                {item.label}
-              </option>
-            ))}
-          </select>
-        </div>
         <div className="search">
           <input
             type="search"
@@ -485,6 +467,21 @@ function Home() {
         <button onClick={searchPet}>
           <i className="fa fa-search"></i>
         </button>
+        <div className="sort">
+          <label>Order by type:</label>
+          <select
+            id="lang"
+            onChange={handleChangeOptions}
+            value={selectedOption}
+            className="round"
+          >
+            {options.map((item) => (
+              <option key={item.value} value={item.value}>
+                {item.label}
+              </option>
+            ))}
+          </select>
+        </div>
         <div className="totalPets">
           Total Pets (
           {!petsChar.loading && petsChar.pets && petsChar.pets.pets.length})
@@ -510,7 +507,7 @@ function Home() {
         ) : (
           ""
         )}
-        <h1>{displayedPets.errors}</h1>
+        {displayedPets.errors && <p>{displayedPets.errors}</p>}
       </ul>
       {!searchedChar.error &&
       !petsChar.error &&

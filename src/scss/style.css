@@ -420,13 +420,14 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  padding-top: 2px;
 }
 
 .App .petFilters .sort label {
   position: absolute;
   width: 150px;
-  top: -1.3rem;
-  left: -1.4rem;
+  top: 0.6rem;
+  left: -7.5rem;
   pointer-events: none;
   color: #34393d;
   position: absolute;
@@ -450,7 +451,7 @@
 
 .App .petFilters .search {
   position: relative;
-  margin-left: 20px;
+  margin-left: 120px;
 }
 
 .App .petFilters .search input {
@@ -29899,8 +29900,8 @@
   transition: 1s;
   line-height: 1.9rem;
   z-index: 10;
-  -webkit-animation: fadeIn;
-          animation: fadeIn;
+  -webkit-animation: 0.8s FlowIn;
+          animation: 0.8s FlowIn;
 }
 
 .submitStrategy ul li:hover .source {
@@ -29909,6 +29910,7 @@
 
 .submitStrategy ul li .allPetIcons {
   background-color: #262631;
+  color: white;
   position: absolute;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -29919,6 +29921,26 @@
   padding: 0;
   z-index: 50;
   text-align: left;
+}
+
+.submitStrategy ul li .allPetIcons .anypet {
+  cursor: pointer;
+  background-color: #42505e;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 5px;
+  padding: 5px 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.submitStrategy ul li .allPetIcons .anypet:hover {
+  background-color: #242c33;
+}
+
+.submitStrategy ul li .allPetIcons > div {
+  margin-top: 15px;
 }
 
 .submitStrategy ul li .allPetIcons > div > div {
@@ -29932,6 +29954,19 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.submitStrategy ul li .allPetIcons input {
+  background-color: white;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  padding: 2px 5px;
+  font-size: 0.8rem;
+  border: none;
+}
+
+.submitStrategy ul li .allPetIcons p {
+  width: 200px;
 }
 
 .submitStrategy ul li .allPetIcons img {
@@ -29979,7 +30014,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 0.85rem;
   line-height: 18px;
-  min-height: 33px;
+  min-height: 25px;
 }
 
 .submitStrategy ul li .required {
@@ -29997,10 +30032,9 @@
 
 .submitStrategy ul li .type {
   margin: 0 auto;
-  margin-top: auto;
-  margin-bottom: 0;
+  margin-top: 5px !important;
   color: #ebe7e7;
-  font-size: 0.55rem;
+  font-size: 0.55rem !important;
   letter-spacing: 1.5px;
 }
 
@@ -30028,6 +30062,37 @@
 
 .submitStrategy ul li .stats {
   margin-bottom: 0px;
+}
+
+.submitStrategy ul li .options {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.submitStrategy ul li .options label {
+  margin-right: 20px;
+}
+
+.submitStrategy ul li .options select {
+  cursor: pointer;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #2b2a35;
+  color: white;
+  border: none;
+  padding: 2px 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+.submitStrategy ul li .options select option {
+  background-color: #5d5b70;
 }
 
 .submitStrategy ul li p {
@@ -30066,7 +30131,7 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   grid-auto-rows: 70px;
-  margin-top: 50px;
+  margin-top: 5px;
 }
 
 .submitStrategy ul li .abilities > div {
@@ -30087,16 +30152,25 @@
   -webkit-filter: brightness(0.3);
           filter: brightness(0.3);
   cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.submitStrategy ul li .abilities > div > img:hover {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 
 .submitStrategy ul li .abilities > div .chosen {
-  border: 2px solid #5a9e22;
+  border: 2px solid #3b5823;
   width: 32px;
   height: 32px;
   -webkit-filter: brightness(1);
           filter: brightness(1);
   pointer-events: none;
   cursor: default;
+  -webkit-box-shadow: 0px 0px 5px 2px #0c500c;
+          box-shadow: 0px 0px 5px 2px #0c500c;
 }
 
 .submitStrategy ul li .abilities > div p {
@@ -30161,6 +30235,32 @@
   color: white;
 }
 
+@-webkit-keyframes FlowIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px) scale(0.8);
+            transform: translateY(30px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes FlowIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px) scale(0.8);
+            transform: translateY(30px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+  }
+}
+
 .submitStrategy .utilitiesUser {
   position: relative;
   background-color: #353547;
@@ -30177,10 +30277,18 @@
   border-radius: 2rem;
   -webkit-box-shadow: 0px 0px 5px 0px black;
           box-shadow: 0px 0px 5px 0px black;
+  -webkit-animation: 0.6s FlowIn;
+          animation: 0.6s FlowIn;
 }
 
 .submitStrategy .utilitiesUser > div {
   margin: 7px 10px;
+}
+
+.submitStrategy .utilitiesUser .disabled {
+  color: #585c5e !important;
+  border: 1px solid #585856 !important;
+  pointer-events: none;
 }
 
 .submitStrategy .utilitiesUser .important {
@@ -30293,6 +30401,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-animation: 0.6s FlowIn;
+          animation: 0.6s FlowIn;
 }
 
 .submitStrategy .strategyInstructions h1 {
@@ -30310,7 +30420,11 @@
 }
 
 .submitStrategy .strategyInstructions .ColumnNames .turn {
-  width: 140px;
+  width: 170px;
+}
+
+.submitStrategy .strategyInstructions .ColumnNames .instruction {
+  margin-top: 0;
 }
 
 .submitStrategy .strategyInstructions .instruction {
@@ -30337,7 +30451,10 @@
   height: fit-content;
   border: none;
   background-color: white;
-  margin: 5px 10px;
+  margin: 5px 0;
+  margin-right: 20px;
+  -webkit-animation: 0.4s FlowIn;
+          animation: 0.4s FlowIn;
 }
 
 .submitStrategy .strategyInstructions .instruction textarea {
@@ -30348,6 +30465,9 @@
   border: none;
   min-height: 100px;
   background-color: white;
+  margin: 5px 10px;
+  -webkit-animation: 0.6s FlowIn;
+          animation: 0.6s FlowIn;
 }
 
 .submitStrategy .strategyInstructions .instruction .turn {
@@ -30356,6 +30476,12 @@
 
 .submitStrategy .strategyInstructions .instruction .description {
   width: 80%;
+}
+
+.submitStrategy .strategyInstructions .instruction .chosen {
+  border: 2px solid #5988af;
+  -webkit-box-shadow: 0px 0px 5px 0px #7b9cc7;
+          box-shadow: 0px 0px 5px 0px #7b9cc7;
 }
 
 .submitStrategy .strategyInstructions .buttons {
@@ -30379,6 +30505,12 @@
   margin-top: 3vh;
 }
 
+.submitStrategy .disabledButton {
+  background-color: #485057;
+  color: #8f8888;
+  pointer-events: none;
+}
+
 .submitStrategy > button {
   cursor: pointer;
   width: -webkit-fit-content;
@@ -30391,6 +30523,21 @@
   border: none;
   background-color: #1e222b;
   color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-animation: 0.8s FlowIn;
+          animation: 0.8s FlowIn;
+}
+
+.submitStrategy > button:hover {
+  background-color: #3b404b;
+  color: #dff0f7;
+}
+
+.submitStrategy > .disabledSubmit {
+  background-color: #393c42;
+  color: #968c8c;
+  pointer-events: none;
 }
 
 .containerAddComment {

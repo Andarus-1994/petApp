@@ -21,36 +21,39 @@ function StrategySubmision() {
     owned: false,
     abilitiesChosen: { 1: 0, 2: 1, 3: 2 },
     loading: true,
-    speed: null,
-    rarity: "rare",
+    breed: null,
+    rarity: null,
     type: null,
     icon: null,
     abilities: null,
     name: null,
+    level: 1,
   });
   const [pet2, setPet2] = useState({
     id: null,
     owned: false,
     abilitiesChosen: { 1: 0, 2: 1, 3: 2 },
     loading: true,
-    speed: null,
-    rarity: "rare",
+    breed: null,
+    rarity: null,
     type: null,
     icon: null,
     abilities: null,
     name: null,
+    level: 1,
   });
   const [pet3, setPet3] = useState({
     id: null,
     owned: false,
     abilitiesChosen: { 1: 0, 2: 1, 3: 2 },
     loading: true,
-    speed: null,
-    rarity: "rare",
+    breed: null,
+    rarity: null,
     type: null,
     icon: null,
     abilities: null,
     name: null,
+    level: 1,
   });
   useEffect(() => {
     if (!allPets.loading && allPetsIcons.loading) {
@@ -111,7 +114,7 @@ function StrategySubmision() {
                 onChange={(e) => {
                   handleInputChangeTurn(e, i);
                 }}
-                placeholder="Turn number..."
+                placeholder="Turn 1 /2 /..."
                 className="turn"
                 value={instructions[i].turn}
               ></input>
@@ -121,7 +124,9 @@ function StrategySubmision() {
                 }}
                 value={instructions[i].instructions}
                 placeholder="Instruction...."
-                className="description"
+                className={
+                  chosenInput === i ? "description chosen" : "description"
+                }
                 onClick={() => {
                   setChosenInput(i);
                 }}
@@ -206,6 +211,61 @@ function StrategySubmision() {
       setInstructions(instructionsArray);
     }
   }
+  function handleChangeOptionsPet1(e) {
+    setPet1({
+      ...pet1,
+      breed: e.target.value,
+    });
+  }
+  function handleChangeLevelPet1(e) {
+    setPet1({
+      ...pet1,
+      level: e.target.value,
+    });
+  }
+  function handleChangeRarityPet1(e) {
+    setPet1({
+      ...pet1,
+      rarity: e.target.value,
+    });
+  }
+  function handleChangeOptionsPet2(e) {
+    setPet2({
+      ...pet2,
+      breed: e.target.value,
+    });
+  }
+  function handleChangeLevelPet2(e) {
+    console.log(pet2);
+    setPet2({
+      ...pet2,
+      level: e.target.value,
+    });
+  }
+  function handleChangeRarityPet2(e) {
+    setPet2({
+      ...pet2,
+      rarity: e.target.value,
+    });
+  }
+  function handleChangeOptionsPet3(e) {
+    setPet3({
+      ...pet3,
+      breed: e.target.value,
+    });
+  }
+  function handleChangeLevelPet3(e) {
+    setPet3({
+      ...pet3,
+      level: e.target.value,
+    });
+  }
+  function handleChangeRarityPet3(e) {
+    setPet3({
+      ...pet3,
+      rarity: e.target.value,
+    });
+  }
 
   return (
     <div className="submitStrategy">
@@ -223,10 +283,51 @@ function StrategySubmision() {
               className={nextStep ? "locked" : ""}
             ></img>
           </div>
-          {!pet1.id && <p>Choose Pet</p>}
-          {pet1.id && (
+          {!pet1.id && pet1.id != 0 && <p>Choose Pet</p>}
+          {pet1.id === 0 ? <div>Any pet</div> : ""}
+          {pet1.id ? (
             <div>
               <div className="petName">{pet1.name}</div>
+              <div className="options">
+                <div>
+                  <label>Breed</label>
+                  <select onChange={handleChangeOptionsPet1}>
+                    <option>All</option>
+                    <option>P/P</option>
+                    <option>S/S</option>
+                    <option>H/H</option>
+                    <option>H/P</option>
+                    <option>P/S</option>
+                    <option>H/S</option>
+                    <option>P/B</option>
+                    <option>S/B</option>
+                    <option>H/B</option>
+                    <option>B/B</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Level</label>
+                  <select onChange={handleChangeLevelPet1}>
+                    <option>25</option>
+                    <option>24</option>
+                    <option>23</option>
+                    <option>22</option>
+                    <option>21</option>
+                    <option>20</option>
+                    <option>10</option>
+                    <option>1</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Rarity</label>
+                  <select onChange={handleChangeRarityPet1}>
+                    <option>Rare</option>
+                    <option>Uncommon</option>
+                    <option>Common</option>
+                    <option>Poor</option>
+                  </select>
+                </div>
+              </div>
               <div className="abilities">
                 {pet1.abilities.map((ability, index) => (
                   <div key={index}>
@@ -256,6 +357,8 @@ function StrategySubmision() {
               </div>
               <p className="type">-{pet1.type}-</p>
             </div>
+          ) : (
+            ""
           )}
 
           {modalPet1 && (
@@ -273,10 +376,51 @@ function StrategySubmision() {
               className={nextStep ? "locked" : ""}
             ></img>
           </div>
-          {!pet2.id && <p>Choose Pet</p>}
-          {pet2.id && (
+          {!pet2.id && pet2.id != 0 && <p>Choose Pet</p>}
+          {pet2.id === 0 ? <div>Any pet</div> : ""}
+          {pet2.id ? (
             <div>
               <div className="petName">{pet2.name}</div>
+              <div className="options">
+                <div>
+                  <label>Breed</label>
+                  <select onChange={handleChangeOptionsPet2}>
+                    <option>All</option>
+                    <option>P/P</option>
+                    <option>S/S</option>
+                    <option>H/H</option>
+                    <option>H/P</option>
+                    <option>P/S</option>
+                    <option>H/S</option>
+                    <option>P/B</option>
+                    <option>S/B</option>
+                    <option>H/B</option>
+                    <option>B/B</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Level</label>
+                  <select onChange={handleChangeLevelPet2}>
+                    <option>25</option>
+                    <option>24</option>
+                    <option>23</option>
+                    <option>22</option>
+                    <option>21</option>
+                    <option>20</option>
+                    <option>10</option>
+                    <option>1</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Rarity</label>
+                  <select onChange={handleChangeRarityPet2}>
+                    <option>Rare</option>
+                    <option>Uncommon</option>
+                    <option>Common</option>
+                    <option>Poor</option>
+                  </select>
+                </div>
+              </div>
               <div className="abilities">
                 {pet2.abilities.map((ability, index) => (
                   <div key={index}>
@@ -306,6 +450,8 @@ function StrategySubmision() {
               </div>
               <p className="type">-{pet2.type}-</p>
             </div>
+          ) : (
+            ""
           )}
 
           {modalPet2 && (
@@ -323,10 +469,51 @@ function StrategySubmision() {
               className={nextStep ? "locked" : ""}
             ></img>
           </div>
-          {!pet3.id && <p>Choose Pet</p>}
-          {pet3.id && (
+          {!pet3.id && pet3.id != 0 && <p>Choose Pet</p>}
+          {pet3.id === 0 ? <div>Any pet</div> : ""}
+          {pet3.id ? (
             <div>
               <div className="petName">{pet3.name}</div>
+              <div className="options">
+                <div>
+                  <label>Breed</label>
+                  <select onChange={handleChangeOptionsPet3}>
+                    <option>All</option>
+                    <option>P/P</option>
+                    <option>S/S</option>
+                    <option>H/H</option>
+                    <option>H/P</option>
+                    <option>P/S</option>
+                    <option>H/S</option>
+                    <option>P/B</option>
+                    <option>S/B</option>
+                    <option>H/B</option>
+                    <option>B/B</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Level</label>
+                  <select onChange={handleChangeLevelPet3}>
+                    <option>25</option>
+                    <option>24</option>
+                    <option>23</option>
+                    <option>22</option>
+                    <option>21</option>
+                    <option>20</option>
+                    <option>10</option>
+                    <option>1</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Rarity</label>
+                  <select onChange={handleChangeRarityPet3}>
+                    <option>Rare</option>
+                    <option>Uncommon</option>
+                    <option>Common</option>
+                    <option>Poor</option>
+                  </select>
+                </div>
+              </div>
               <div className="abilities">
                 {pet3.abilities.map((ability, index) => (
                   <div key={index}>
@@ -356,6 +543,8 @@ function StrategySubmision() {
               </div>
               <p className="type">-{pet3.type}-</p>
             </div>
+          ) : (
+            ""
           )}
 
           {modalPet3 && (
@@ -364,187 +553,209 @@ function StrategySubmision() {
         </li>
       </ul>
       <button
-        className="nextStep"
+        className={
+          pet1.id != null && pet2.id != null && pet3.id != null
+            ? "nextStep"
+            : "disabledButton"
+        }
         onClick={() => {
-          setNextStep(true);
+          setNextStep(!nextStep);
         }}
       >
         Next Step
       </button>
-      <div className="utilitiesUser">
-        <div className="important" onClick={importantSpan}>
-          Important !
-          <span className="importantHelper">
-            Remember to replace the text inside the SPAN tag
-          </span>
-        </div>
+      {nextStep && (
+        <div className="utilitiesUser">
+          <div
+            className={counterTurns === 0 ? "important disabled" : "important"}
+            onClick={importantSpan}
+          >
+            Important !
+            <span className="importantHelper">
+              Remember to replace the text inside the SPAN tag
+            </span>
+          </div>
 
-        {pet1.id && (
-          <>
-            <div
-              className="pet"
-              onClick={() => {
-                addNamePet(pet1.id, pet1.name);
-              }}
-            >
-              {pet1.name}
-            </div>
-            <div
-              className="ability"
-              onClick={() => {
-                addAbilityPet(
-                  pet1.abilities[pet1.abilitiesChosen[1]].ability.id,
-                  pet1.abilities[pet1.abilitiesChosen[1]].ability.name
-                );
-              }}
-            >
-              {pet1.abilities[pet1.abilitiesChosen[1]].ability.name}
-            </div>
-            <div
-              className="ability"
-              onClick={() => {
-                addAbilityPet(
-                  pet1.abilities[pet1.abilitiesChosen[2]].ability.id,
-                  pet1.abilities[pet1.abilitiesChosen[2]].ability.name
-                );
-              }}
-            >
-              {pet1.abilities[pet1.abilitiesChosen[2]].ability.name}
-            </div>
-            <div
-              className="ability"
-              onClick={() => {
-                addAbilityPet(
-                  pet1.abilities[pet1.abilitiesChosen[3]].ability.id,
-                  pet1.abilities[pet1.abilitiesChosen[3]].ability.name
-                );
-              }}
-            >
-              {pet1.abilities[pet1.abilitiesChosen[3]].ability.name}
-            </div>
-          </>
-        )}
-        {pet2.id && (
-          <>
-            <div
-              className="pet"
-              onClick={() => {
-                addNamePet(pet2.id, pet2.name);
-              }}
-            >
-              {pet2.name}
-            </div>
-            <div
-              className="ability"
-              onClick={() => {
-                addAbilityPet(
-                  pet2.abilities[pet2.abilitiesChosen[1]].ability.id,
-                  pet2.abilities[pet2.abilitiesChosen[1]].ability.name
-                );
-              }}
-            >
-              {pet2.abilities[pet2.abilitiesChosen[1]].ability.name}
-            </div>
-            <div
-              className="ability"
-              onClick={() => {
-                addAbilityPet(
-                  pet2.abilities[pet2.abilitiesChosen[2]].ability.id,
-                  pet2.abilities[pet2.abilitiesChosen[2]].ability.name
-                );
-              }}
-            >
-              {pet2.abilities[pet2.abilitiesChosen[2]].ability.name}
-            </div>
-            <div
-              className="ability"
-              onClick={() => {
-                addAbilityPet(
-                  pet2.abilities[pet2.abilitiesChosen[3]].ability.id,
-                  pet2.abilities[pet2.abilitiesChosen[3]].ability.name
-                );
-              }}
-            >
-              {pet2.abilities[pet2.abilitiesChosen[3]].ability.name}
-            </div>
-          </>
-        )}
-        {pet3.id && (
-          <>
-            <div
-              className="pet"
-              onClick={() => {
-                addNamePet(pet3.id, pet3.name);
-              }}
-            >
-              {pet3.name}
-            </div>
-            <div
-              className="ability"
-              onClick={() => {
-                addAbilityPet(
-                  pet3.abilities[pet3.abilitiesChosen[1]].ability.id,
-                  pet3.abilities[pet3.abilitiesChosen[1]].ability.name
-                );
-              }}
-            >
-              {pet3.abilities[pet3.abilitiesChosen[1]].ability.name}
-            </div>
-            <div
-              className="ability"
-              onClick={() => {
-                addAbilityPet(
-                  pet3.abilities[pet3.abilitiesChosen[2]].ability.id,
-                  pet3.abilities[pet3.abilitiesChosen[2]].ability.name
-                );
-              }}
-            >
-              {pet3.abilities[pet3.abilitiesChosen[2]].ability.name}
-            </div>
-            <div
-              className="ability"
-              onClick={() => {
-                addAbilityPet(
-                  pet3.abilities[pet3.abilitiesChosen[3]].ability.id,
-                  pet3.abilities[pet3.abilitiesChosen[3]].ability.name
-                );
-              }}
-            >
-              {pet3.abilities[pet3.abilitiesChosen[3]].ability.name}
-            </div>
-          </>
-        )}
-      </div>
-      <div className="strategyInstructions">
-        <h1>Fight Instructions</h1>
-        <div className="ColumnNames">
-          <div className="turn">Turn Number</div>
-          <div className="instruction">Description</div>
+          {pet1.id ? (
+            <>
+              <div
+                className={counterTurns === 0 ? "pet disabled" : "pet"}
+                onClick={() => {
+                  addNamePet(pet1.id, pet1.name);
+                }}
+              >
+                {pet1.name}
+              </div>
+              <div
+                className={counterTurns === 0 ? "ability disabled" : "ability"}
+                onClick={() => {
+                  addAbilityPet(
+                    pet1.abilities[pet1.abilitiesChosen[1]].ability.id,
+                    pet1.abilities[pet1.abilitiesChosen[1]].ability.name
+                  );
+                }}
+              >
+                {pet1.abilities[pet1.abilitiesChosen[1]].ability.name}
+              </div>
+              <div
+                className={counterTurns === 0 ? "ability disabled" : "ability"}
+                onClick={() => {
+                  addAbilityPet(
+                    pet1.abilities[pet1.abilitiesChosen[2]].ability.id,
+                    pet1.abilities[pet1.abilitiesChosen[2]].ability.name
+                  );
+                }}
+              >
+                {pet1.abilities[pet1.abilitiesChosen[2]].ability.name}
+              </div>
+              <div
+                className={counterTurns === 0 ? "ability disabled" : "ability"}
+                onClick={() => {
+                  addAbilityPet(
+                    pet1.abilities[pet1.abilitiesChosen[3]].ability.id,
+                    pet1.abilities[pet1.abilitiesChosen[3]].ability.name
+                  );
+                }}
+              >
+                {pet1.abilities[pet1.abilitiesChosen[3]].ability.name}
+              </div>
+            </>
+          ) : (
+            ""
+          )}
+          {pet2.id ? (
+            <>
+              <div
+                className={counterTurns === 0 ? "pet disabled" : "pet"}
+                onClick={() => {
+                  addNamePet(pet2.id, pet2.name);
+                }}
+              >
+                {pet2.name}
+              </div>
+              <div
+                className={counterTurns === 0 ? "ability disabled" : "ability"}
+                onClick={() => {
+                  addAbilityPet(
+                    pet2.abilities[pet2.abilitiesChosen[1]].ability.id,
+                    pet2.abilities[pet2.abilitiesChosen[1]].ability.name
+                  );
+                }}
+              >
+                {pet2.abilities[pet2.abilitiesChosen[1]].ability.name}
+              </div>
+              <div
+                className={counterTurns === 0 ? "ability disabled" : "ability"}
+                onClick={() => {
+                  addAbilityPet(
+                    pet2.abilities[pet2.abilitiesChosen[2]].ability.id,
+                    pet2.abilities[pet2.abilitiesChosen[2]].ability.name
+                  );
+                }}
+              >
+                {pet2.abilities[pet2.abilitiesChosen[2]].ability.name}
+              </div>
+              <div
+                className={counterTurns === 0 ? "ability disabled" : "ability"}
+                onClick={() => {
+                  addAbilityPet(
+                    pet2.abilities[pet2.abilitiesChosen[3]].ability.id,
+                    pet2.abilities[pet2.abilitiesChosen[3]].ability.name
+                  );
+                }}
+              >
+                {pet2.abilities[pet2.abilitiesChosen[3]].ability.name}
+              </div>
+            </>
+          ) : (
+            ""
+          )}
+          {pet3.id ? (
+            <>
+              <div
+                className={counterTurns === 0 ? "pet disabled" : "pet"}
+                onClick={() => {
+                  addNamePet(pet3.id, pet3.name);
+                }}
+              >
+                {pet3.name}
+              </div>
+              <div
+                className={counterTurns === 0 ? "ability disabled" : "ability"}
+                onClick={() => {
+                  addAbilityPet(
+                    pet3.abilities[pet3.abilitiesChosen[1]].ability.id,
+                    pet3.abilities[pet3.abilitiesChosen[1]].ability.name
+                  );
+                }}
+              >
+                {pet3.abilities[pet3.abilitiesChosen[1]].ability.name}
+              </div>
+              <div
+                className={counterTurns === 0 ? "ability disabled" : "ability"}
+                onClick={() => {
+                  addAbilityPet(
+                    pet3.abilities[pet3.abilitiesChosen[2]].ability.id,
+                    pet3.abilities[pet3.abilitiesChosen[2]].ability.name
+                  );
+                }}
+              >
+                {pet3.abilities[pet3.abilitiesChosen[2]].ability.name}
+              </div>
+              <div
+                className={counterTurns === 0 ? "ability disabled" : "ability"}
+                onClick={() => {
+                  addAbilityPet(
+                    pet3.abilities[pet3.abilitiesChosen[3]].ability.id,
+                    pet3.abilities[pet3.abilitiesChosen[3]].ability.name
+                  );
+                }}
+              >
+                {pet3.abilities[pet3.abilitiesChosen[3]].ability.name}
+              </div>
+            </>
+          ) : (
+            ""
+          )}
         </div>
-        {createElements(counterTurns)}
-        <div className="buttons">
-          <button
-            onClick={() => {
-              setCounterTurns(counterTurns - 1);
-              removeRow();
-            }}
-          >
-            -
+      )}
+      {nextStep && (
+        <>
+          <div className="strategyInstructions">
+            <h1>Fight Instructions</h1>
+            <div className="ColumnNames">
+              <div className="turn">Turn Number</div>
+              <div className="instruction">Description</div>
+            </div>
+            {createElements(counterTurns)}
+            <div className="buttons">
+              <button
+                className={counterTurns === 0 ? "disabledButton" : ""}
+                onClick={() => {
+                  setCounterTurns(counterTurns - 1);
+                  removeRow();
+                }}
+              >
+                -
+              </button>
+              <button
+                onClick={() => {
+                  setCounterTurns(counterTurns + 1);
+                  setInstructions([
+                    ...instructions,
+                    { turn: "", instructions: "" },
+                  ]);
+                }}
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <button className={instructions.length === 0 ? "disabledSubmit" : ""}>
+            Submit Your Strategy
           </button>
-          <button
-            onClick={() => {
-              setCounterTurns(counterTurns + 1);
-              setInstructions([
-                ...instructions,
-                { turn: "", instructions: "" },
-              ]);
-            }}
-          >
-            +
-          </button>
-        </div>
-      </div>
-      <button>Submit Your Strategy</button>
+        </>
+      )}
     </div>
   );
 }

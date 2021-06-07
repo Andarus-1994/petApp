@@ -61,11 +61,12 @@
       margin-left: 150px;
       position: relative;
       width: fit-content;
+      padding-top: 2px;
       label {
         position: absolute;
         width: 150px;
-        top: -1.3rem;
-        left: -1.4rem;
+        top: 0.6rem;
+        left: -7.5rem;
         pointer-events: none;
         color: rgb(52, 57, 61);
         position: absolute;
@@ -78,6 +79,7 @@
         border: none;
         padding: 8px 10px;
         appearance: none;
+
         option {
           background-color: rgb(61, 73, 71);
         }
@@ -86,7 +88,7 @@
 
     .search {
       position: relative;
-      margin-left: 20px;
+      margin-left: 120px;
       input {
         background-color: rgb(135, 146, 124);
         position: relative;
