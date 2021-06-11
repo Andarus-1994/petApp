@@ -58,14 +58,29 @@
         width: fit-content;
         height: 300px;
         top: 20px;
-        overflow-y: scroll;
         padding: 0;
         z-index: 50;
         text-align: left;
+        .buttons {
+          display: flex;
+        }
+        .allPets {
+          display: flex;
+          flex-direction: column;
+          overflow-y: scroll;
+          height: 220px;
+          & > div {
+            display: flex;
+            width: fit-content;
+            flex-direction: row;
+          }
+        }
+
         .anypet {
           cursor: pointer;
           background-color: rgb(66, 80, 94);
           width: fit-content;
+          margin: 0 10px;
           margin-bottom: 5px;
           padding: 5px 0px;
           transition: 0.4s;
@@ -75,20 +90,17 @@
         }
         & > div {
           margin-top: 15px;
-
-          & > div {
-            display: flex;
-            width: fit-content;
-            flex-direction: row;
-          }
         }
         input {
-          background-color: white;
+          position: relative;
+          background-color: rgb(255, 255, 255);
           color: black;
           font-family: $Raleway;
           padding: 2px 5px;
           font-size: 0.8rem;
-
+          width: 170px;
+          left: 20%;
+          transform: translate(0%, 0);
           border: none;
         }
         p {

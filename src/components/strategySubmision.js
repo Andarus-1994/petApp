@@ -283,7 +283,7 @@ function StrategySubmision() {
               className={nextStep ? "locked" : ""}
             ></img>
           </div>
-          {!pet1.id && pet1.id != 0 && <p>Choose Pet</p>}
+          {!pet1.id && pet1.id !== 0 && <p>Choose Pet</p>}
           {pet1.id === 0 ? <div>Any pet</div> : ""}
           {pet1.id ? (
             <div>
@@ -362,7 +362,11 @@ function StrategySubmision() {
           )}
 
           {modalPet1 && (
-            <SearchPet setPet={setPetDetails1} allPets={allPetsIcons} />
+            <SearchPet
+              setPet={setPetDetails1}
+              allPets={allPetsIcons}
+              setModal={setModalPet1}
+            />
           )}
         </li>
         <li className={pet2.type && pet2.type.toLowerCase()}>
@@ -376,7 +380,7 @@ function StrategySubmision() {
               className={nextStep ? "locked" : ""}
             ></img>
           </div>
-          {!pet2.id && pet2.id != 0 && <p>Choose Pet</p>}
+          {!pet2.id && pet2.id !== 0 && <p>Choose Pet</p>}
           {pet2.id === 0 ? <div>Any pet</div> : ""}
           {pet2.id ? (
             <div>
@@ -455,7 +459,11 @@ function StrategySubmision() {
           )}
 
           {modalPet2 && (
-            <SearchPet setPet={setPetDetails2} allPets={allPetsIcons} />
+            <SearchPet
+              setPet={setPetDetails2}
+              allPets={allPetsIcons}
+              setModal={setModalPet2}
+            />
           )}
         </li>
         <li className={pet3.type && pet3.type.toLowerCase()}>
@@ -469,7 +477,7 @@ function StrategySubmision() {
               className={nextStep ? "locked" : ""}
             ></img>
           </div>
-          {!pet3.id && pet3.id != 0 && <p>Choose Pet</p>}
+          {!pet3.id && pet3.id !== 0 && <p>Choose Pet</p>}
           {pet3.id === 0 ? <div>Any pet</div> : ""}
           {pet3.id ? (
             <div>
@@ -548,13 +556,17 @@ function StrategySubmision() {
           )}
 
           {modalPet3 && (
-            <SearchPet setPet={setPetDetails3} allPets={allPetsIcons} />
+            <SearchPet
+              setPet={setPetDetails3}
+              allPets={allPetsIcons}
+              setModal={setModalPet3}
+            />
           )}
         </li>
       </ul>
       <button
         className={
-          pet1.id != null && pet2.id != null && pet3.id != null
+          pet1.id !== null && pet2.id !== null && pet3.id !== null
             ? "nextStep"
             : "disabledButton"
         }

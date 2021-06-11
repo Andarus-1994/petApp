@@ -29917,10 +29917,40 @@
   width: fit-content;
   height: 300px;
   top: 20px;
-  overflow-y: scroll;
   padding: 0;
   z-index: 50;
   text-align: left;
+}
+
+.submitStrategy ul li .allPetIcons .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.submitStrategy ul li .allPetIcons .allPets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: scroll;
+  height: 220px;
+}
+
+.submitStrategy ul li .allPetIcons .allPets > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .submitStrategy ul li .allPetIcons .anypet {
@@ -29929,6 +29959,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin: 0 10px;
   margin-bottom: 5px;
   padding: 5px 0px;
   -webkit-transition: 0.4s;
@@ -29943,25 +29974,17 @@
   margin-top: 15px;
 }
 
-.submitStrategy ul li .allPetIcons > div > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
 .submitStrategy ul li .allPetIcons input {
+  position: relative;
   background-color: white;
   color: black;
   font-family: "Raleway", sans-serif;
   padding: 2px 5px;
   font-size: 0.8rem;
+  width: 170px;
+  left: 20%;
+  -webkit-transform: translate(0%, 0);
+          transform: translate(0%, 0);
   border: none;
 }
 

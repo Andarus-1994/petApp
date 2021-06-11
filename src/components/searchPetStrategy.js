@@ -12,37 +12,49 @@ function SearchPet(props) {
         placeholder="Search Pet"
       ></input>
       <div>
-        <p
-          className="anypet"
-          onClick={() => {
-            props.setPet(0, null, null, null, null);
-          }}
-        >
-          Any Pet
-        </p>
-        {!props.allPets.loading &&
-          props.allPets.pets
-            .filter((petFind) =>
-              petFind.name.toLowerCase().includes(filter.toLowerCase())
-            )
-            .map((pet) => (
-              <div key={pet.id}>
-                <img
-                  onClick={() => {
-                    props.setPet(
-                      pet.id,
-                      pet.name,
-                      pet.battle_pet_type.type,
-                      pet.abilities,
-                      pet.icon
-                    );
-                  }}
-                  src={pet.icon}
-                  alt="noIcon"
-                ></img>
-                <p>{pet.name}</p>
-              </div>
-            ))}
+        <div className="buttons">
+          <p
+            className="anypet"
+            onClick={() => {
+              props.setPet(0, null, null, null, null);
+            }}
+          >
+            Any Pet
+          </p>
+          <p
+            className="anypet"
+            onClick={() => {
+              props.setModal(false);
+            }}
+          >
+            Close
+          </p>
+        </div>
+        <div className="allPets">
+          {!props.allPets.loading &&
+            props.allPets.pets
+              .filter((petFind) =>
+                petFind.name.toLowerCase().includes(filter.toLowerCase())
+              )
+              .map((pet) => (
+                <div key={pet.id}>
+                  <img
+                    onClick={() => {
+                      props.setPet(
+                        pet.id,
+                        pet.name,
+                        pet.battle_pet_type.type,
+                        pet.abilities,
+                        pet.icon
+                      );
+                    }}
+                    src={pet.icon}
+                    alt="noIcon"
+                  ></img>
+                  <p>{pet.name}</p>
+                </div>
+              ))}
+        </div>
       </div>
     </div>
   );
