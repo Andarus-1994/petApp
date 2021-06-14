@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import SearchPet from "./searchPetStrategy";
+import { strategySubmission } from "./functions/submitStrategy";
 
-function StrategySubmision() {
+function StrategySubmision({ location }) {
   const allPets = useSelector((state) => state.allPets);
   const [allPetsIcons, setAllPetsIcons] = useState({
     loading: true,
@@ -212,6 +213,7 @@ function StrategySubmision() {
     }
   }
   function handleChangeOptionsPet1(e) {
+    console.log(pet1);
     setPet1({
       ...pet1,
       breed: e.target.value,
@@ -264,6 +266,18 @@ function StrategySubmision() {
     setPet3({
       ...pet3,
       rarity: e.target.value,
+    });
+  }
+
+  async function SubmitStrategy() {
+    await strategySubmission({
+      pet1: pet1,
+      pet2: pet2,
+      pet3: pet3,
+      instructions: instructions,
+      location: location,
+    }).then((resp) => {
+      console.log(resp);
     });
   }
 
@@ -763,7 +777,10 @@ function StrategySubmision() {
               </button>
             </div>
           </div>
-          <button className={instructions.length === 0 ? "disabledSubmit" : ""}>
+          <button
+            onClick={SubmitStrategy}
+            className={instructions.length === 0 ? "disabledSubmit" : ""}
+          >
             Submit Your Strategy
           </button>
         </>
