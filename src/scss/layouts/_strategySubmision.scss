@@ -14,6 +14,38 @@
     font-weight: 600;
     text-align: center;
   }
+  .requiredFieldsError {
+    color: red;
+    font-family: $Raleway;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 5vh;
+  }
+  .inputAuthorTitle {
+    display: flex;
+    flex-direction: row;
+    margin: 5vh 0;
+    label {
+      color: rgb(40, 39, 43);
+      font-family: $Raleway;
+      font-size: 0.9rem;
+      padding: 10px 15px;
+      &:nth-of-type(2) {
+        margin-left: 30px;
+      }
+    }
+    input {
+      position: relative;
+      background-color: rgb(62, 65, 80);
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      padding: 10px 15px;
+      font-size: 0.8rem;
+      width: 170px;
+
+      border: none;
+    }
+  }
   ul {
     position: relative;
     list-style-type: none;

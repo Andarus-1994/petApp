@@ -9,7 +9,8 @@ function StrategySubmision({ location }) {
     loading: true,
     pets: null,
   });
-
+  const [author, setAuthor] = useState("");
+  const [title, setTitle] = useState("");
   const [counterTurns, setCounterTurns] = useState(0);
   const [chosenInput, setChosenInput] = useState(0);
   const [instructions, setInstructions] = useState([]);
@@ -268,6 +269,12 @@ function StrategySubmision({ location }) {
       rarity: e.target.value,
     });
   }
+  function handleInputChangeAuthor(e) {
+    setAuthor(e.target.value);
+  }
+  function handleInputChangeTitle(e) {
+    setTitle(e.target.value);
+  }
 
   async function SubmitStrategy() {
     await strategySubmission({
@@ -276,6 +283,8 @@ function StrategySubmision({ location }) {
       pet3: pet3,
       instructions: instructions,
       location: location,
+      title: title,
+      author: author,
     }).then((resp) => {
       console.log(resp);
     });
@@ -284,7 +293,26 @@ function StrategySubmision({ location }) {
   return (
     <div className="submitStrategy">
       <h1>Submit Your Strategy</h1>
-
+      <div className="inputAuthorTitle">
+        <label>Title*</label>
+        <input
+          onChange={(e) => {
+            handleInputChangeTitle(e);
+          }}
+          placeholder="Write title here"
+          className="title"
+          value={title}
+        ></input>
+        <label>Author*</label>
+        <input
+          onChange={(e) => {
+            handleInputChangeAuthor(e);
+          }}
+          placeholder="Author"
+          className="title"
+          value={author}
+        ></input>
+      </div>
       <ul className="petPanel">
         <li className={pet1.type && pet1.type.toLowerCase()}>
           <div className="iconPet">
@@ -777,9 +805,20 @@ function StrategySubmision({ location }) {
               </button>
             </div>
           </div>
+          {!author || !title ? (
+            <label className="requiredFieldsError">
+              Title* and Author* are required fields!
+            </label>
+          ) : (
+            ""
+          )}
           <button
             onClick={SubmitStrategy}
-            className={instructions.length === 0 ? "disabledSubmit" : ""}
+            className={
+              instructions.length === 0 || !title || !author
+                ? "disabledSubmit"
+                : ""
+            }
           >
             Submit Your Strategy
           </button>

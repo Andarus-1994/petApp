@@ -7,13 +7,16 @@ function AquaticSylla() {
   return (
     <div>
       {
-        <button
-          onClick={() => {
-            setSubmitWindow(!submitWindow);
-          }}
-        >
-          {submitWindow ? "Close" : "New Strategy"}
-        </button>
+        <div className="containerStrategyButton">
+          <button
+            className="strategyButton"
+            onClick={() => {
+              setSubmitWindow(!submitWindow);
+            }}
+          >
+            {submitWindow ? "Close" : "New Strategy"}
+          </button>
+        </div>
       }
       {submitWindow && <StrategySubmision location={location} />}
     </div>

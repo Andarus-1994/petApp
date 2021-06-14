@@ -29862,6 +29862,47 @@
   text-align: center;
 }
 
+.submitStrategy .requiredFieldsError {
+  color: red;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.submitStrategy .inputAuthorTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 5vh 0;
+}
+
+.submitStrategy .inputAuthorTitle label {
+  color: #28272b;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem;
+  padding: 10px 15px;
+}
+
+.submitStrategy .inputAuthorTitle label:nth-of-type(2) {
+  margin-left: 30px;
+}
+
+.submitStrategy .inputAuthorTitle input {
+  position: relative;
+  background-color: #3e4150;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 15px;
+  font-size: 0.8rem;
+  width: 170px;
+  border: none;
+}
+
 .submitStrategy ul {
   position: relative;
   list-style-type: none;
@@ -30901,5 +30942,30 @@
   right: 20px;
   color: #7c8591;
   font-family: "Roboto", sans-serif;
+}
+
+.containerStrategyButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+.containerStrategyButton .strategyButton {
+  position: relative;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem;
+  padding: 10px 5px;
+  background-color: #222630;
+  color: #dfe3e6;
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */
