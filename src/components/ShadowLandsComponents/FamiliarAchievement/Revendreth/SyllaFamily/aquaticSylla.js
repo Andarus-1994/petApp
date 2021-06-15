@@ -1,4 +1,5 @@
 import { useState } from "react";
+import StrategiesPreview from "../../../../strategiesPreview.js";
 import StrategySubmision from "../../../../strategySubmision.js";
 
 function AquaticSylla() {
@@ -18,7 +19,11 @@ function AquaticSylla() {
           </button>
         </div>
       }
-      {submitWindow && <StrategySubmision location={location} />}
+      {submitWindow ? (
+        <StrategySubmision location={location} />
+      ) : (
+        <StrategiesPreview location={location} />
+      )}
     </div>
   );
 }

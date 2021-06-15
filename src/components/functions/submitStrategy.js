@@ -1,10 +1,9 @@
 import axios from "axios";
 
 export const strategySubmission = async (petsInstructions) => {
-  return console.log(petsInstructions);
-  await axios
+  return await axios
     .post(
-      "adress",
+      "https://apipetslaravel.herokuapp.com/api/addStrategy",
       petsInstructions,
 
       {
@@ -15,7 +14,29 @@ export const strategySubmission = async (petsInstructions) => {
     )
     .then((response) => {
       console.log(response.data);
-      return response.data;
+      return response;
+    })
+
+    .catch((error) => {
+      return { error: error };
+    });
+};
+
+export const getStrategy = async (location) => {
+  return await axios
+    .post(
+      "https://apipetslaravel.herokuapp.com/api/getStrategy",
+      location,
+
+      {
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+        },
+      }
+    )
+    .then((response) => {
+      console.log(response.data);
+      return response;
     })
 
     .catch((error) => {

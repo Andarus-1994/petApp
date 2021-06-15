@@ -9,6 +9,7 @@ function StrategySubmision({ location }) {
     loading: true,
     pets: null,
   });
+  const [successSubmit, setSuccessSubmit] = useState(false);
   const [author, setAuthor] = useState("");
   const [title, setTitle] = useState("");
   const [counterTurns, setCounterTurns] = useState(0);
@@ -24,12 +25,12 @@ function StrategySubmision({ location }) {
     abilitiesChosen: { 1: 0, 2: 1, 3: 2 },
     loading: true,
     breed: null,
-    rarity: null,
+    rarity: "rare",
     type: null,
     icon: null,
     abilities: null,
     name: null,
-    level: 1,
+    level: 25,
   });
   const [pet2, setPet2] = useState({
     id: null,
@@ -37,12 +38,12 @@ function StrategySubmision({ location }) {
     abilitiesChosen: { 1: 0, 2: 1, 3: 2 },
     loading: true,
     breed: null,
-    rarity: null,
+    rarity: "rare",
     type: null,
     icon: null,
     abilities: null,
     name: null,
-    level: 1,
+    level: 25,
   });
   const [pet3, setPet3] = useState({
     id: null,
@@ -50,12 +51,12 @@ function StrategySubmision({ location }) {
     abilitiesChosen: { 1: 0, 2: 1, 3: 2 },
     loading: true,
     breed: null,
-    rarity: null,
+    rarity: "rare",
     type: null,
     icon: null,
     abilities: null,
     name: null,
-    level: 1,
+    level: 25,
   });
   useEffect(() => {
     if (!allPets.loading && allPetsIcons.loading) {
@@ -286,7 +287,10 @@ function StrategySubmision({ location }) {
       title: title,
       author: author,
     }).then((resp) => {
-      console.log(resp);
+      console.log(resp.data);
+      if (resp.data.success) {
+        setSuccessSubmit(true);
+      }
     });
   }
 
@@ -815,13 +819,21 @@ function StrategySubmision({ location }) {
           <button
             onClick={SubmitStrategy}
             className={
-              instructions.length === 0 || !title || !author
+              instructions.length === 0 || !title || !author || successSubmit
                 ? "disabledSubmit"
                 : ""
             }
           >
             Submit Your Strategy
           </button>
+          {successSubmit ? (
+            <p className="successSubmit">
+              Your strategy has been sent for verification! Thank you for your
+              devotion!
+            </p>
+          ) : (
+            ""
+          )}
         </>
       )}
     </div>

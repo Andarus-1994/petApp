@@ -29870,6 +29870,14 @@
   margin-top: 5vh;
 }
 
+.submitStrategy .successSubmit {
+  color: #175f17;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 2vh;
+}
+
 .submitStrategy .inputAuthorTitle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30604,6 +30612,380 @@
   pointer-events: none;
 }
 
+.strategiesPreview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.strategiesPreview h2 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  color: #19191d;
+}
+
+.strategiesPreview .strategyOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.strategiesPreview .strategyOptions label {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: black;
+  margin-right: 5px;
+  padding: 5px 8px;
+}
+
+.strategiesPreview .strategyOptions select {
+  cursor: pointer;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #2b2a35;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+.strategiesPreview .author {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  color: #1c1c1f;
+  text-align: end;
+  margin: 5px 10px;
+  margin-right: 5vh;
+  margin-top: 3vh;
+}
+
+.strategiesPreview ul {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-auto-rows: 320px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.strategiesPreview ul .anyPet {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  background: linear-gradient(10deg, #303541, #111220);
+  -webkit-box-shadow: 0px 0px 8px 1px #13100a;
+          box-shadow: 0px 0px 8px 1px #13100a;
+  color: white;
+}
+
+.strategiesPreview ul .anyPet .iconPet {
+  margin-bottom: 70px;
+}
+
+.strategiesPreview ul .loadingAbilities {
+  position: relative;
+  border: 3px solid #a51c1c;
+  border-top: 1px solid #e2e0e0;
+  border-right: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: spinner 0.7s linear infinite;
+          animation: spinner 0.7s linear infinite;
+}
+
+.strategiesPreview ul .undead .type {
+  color: #dbd7d7;
+}
+
+.strategiesPreview ul .mechanical .type {
+  color: black;
+}
+
+.strategiesPreview ul .flying .type {
+  color: black;
+}
+
+.strategiesPreview ul .aquatic .owned {
+  color: #062406;
+}
+
+.strategiesPreview ul .aquatic .required {
+  color: #8f0707;
+}
+
+.strategiesPreview ul li {
+  position: relative;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1f1e1e;
+  text-align: center;
+  padding: 0.8rem 0;
+  padding-bottom: 0rem;
+  border-radius: 0.8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  line-height: 1.9rem;
+  z-index: 10;
+  -webkit-animation: fadeIn 0.7s;
+          animation: fadeIn 0.7s;
+}
+
+.strategiesPreview ul li:hover .source {
+  display: block;
+}
+
+.strategiesPreview ul li .source {
+  position: absolute;
+  width: 120px;
+  top: -70px;
+  right: 0px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #373d46;
+  background-color: #2a3846;
+  color: #c8dfe0;
+  z-index: 50;
+  display: none;
+  -webkit-animation: 0.5s fadeEnter;
+          animation: 0.5s fadeEnter;
+}
+
+.strategiesPreview ul li .source::before {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #2a3846;
+  -webkit-clip-path: polygon(0 0, 0 78%, 100% 0);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+  z-index: 50;
+}
+
+.strategiesPreview ul li .containerReq {
+  z-index: 10;
+}
+
+.strategiesPreview ul li .petName {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  line-height: 18px;
+  min-height: 33px;
+}
+
+.strategiesPreview ul li .required {
+  color: red;
+  margin-bottom: 0 !important;
+}
+
+.strategiesPreview ul li .space {
+  height: 50px;
+}
+
+.strategiesPreview ul li .level {
+  margin-bottom: 0px;
+}
+
+.strategiesPreview ul li .type {
+  margin: 0 auto;
+  margin-top: auto;
+  color: #ebe7e7;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+}
+
+.strategiesPreview ul li .owned {
+  color: #145f14;
+  margin-top: 5px;
+}
+
+.strategiesPreview ul li .check {
+  color: #208b20;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.strategiesPreview ul li .notOwned {
+  color: #cf1d1d;
+}
+
+.strategiesPreview ul li .notChecked {
+  color: #cf1d1d;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.strategiesPreview ul li .stats {
+  margin-bottom: 0px;
+}
+
+.strategiesPreview ul li p {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 17px;
+  min-width: 110px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.strategiesPreview ul li p .health {
+  color: #c22f2f;
+  font-size: 1rem;
+}
+
+.strategiesPreview ul li p .power {
+  color: #c9792f;
+  font-size: 1rem;
+}
+
+.strategiesPreview ul li p .speed {
+  color: #c4b924;
+  font-size: 1rem;
+}
+
+.strategiesPreview ul li .spaceOwned {
+  margin-bottom: 50px;
+}
+
+.strategiesPreview ul li .abilities {
+  position: relative;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 10;
+}
+
+.strategiesPreview ul li .abilities > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+.strategiesPreview ul li .abilities > div img {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.strategiesPreview ul li .iconPet {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.strategiesPreview ul li .iconPet img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+.strategiesPreview ul li .iconPet .noImg {
+  background: linear-gradient(10deg, #3f3934, #1c2d3d);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  border: 0.5px solid #c4c2c2;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px);
+          transform: translate3d(-50%, -50%, 0px);
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .containerAddComment {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30967,5 +31349,12 @@
   background-color: #222630;
   color: #dfe3e6;
   border: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.containerStrategyButton .strategyButton:hover {
+  background-color: #13182b;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
