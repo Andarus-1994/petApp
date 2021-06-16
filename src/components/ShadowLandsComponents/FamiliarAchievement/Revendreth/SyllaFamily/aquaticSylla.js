@@ -6,7 +6,9 @@ function AquaticSylla() {
   const [submitWindow, setSubmitWindow] = useState(false);
   const location = "aquaticSylla";
   return (
-    <div>
+    <div className="containerStrategy">
+      <h1>Sylla Aquatic Pet Battle Guide</h1>
+      <h2>Revendreth (Shadowlands)</h2>
       {
         <div className="containerStrategyButton">
           <button

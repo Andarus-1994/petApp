@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getStrategy } from "./functions/submitStrategy.js";
+import InstructionsPreview from "./instructionsPreview.js";
 import PetPreview from "./petPreview.js";
 
 function StrategiesPreview({ location }) {
@@ -39,11 +40,11 @@ function StrategiesPreview({ location }) {
   return (
     <div className="strategiesPreview">
       <h2>{emptyStrategy}</h2>
-      {selectOption}
+
       <div className="strategyOptions">
         <label>Strategy:</label>
 
-        <select onChange={handleSelect}>
+        <select onChange={handleSelect} className="CustomSelect">
           {strategies.loading ? (
             <option>Loading</option>
           ) : (
@@ -55,54 +56,60 @@ function StrategiesPreview({ location }) {
           )}
         </select>
       </div>
-      {strategies.loading
-        ? "Loading"
-        : strategies.data.map((strategy, index) => (
-            <div key={index}>
-              {strategy[0] === selectOption ? (
-                <div>
-                  <ul>
-                    <PetPreview
-                      petId={strategy[1].pet1_id}
-                      petRequiredLevel={strategy[1].pet1_level}
-                      petRarity={strategy[1].pet1_rarity}
-                      petBreed={strategy[1].pet1_breed}
-                      chosenAbilities={{
-                        0: strategy[1].pet1_ability_1,
-                        1: strategy[1].pet1_ability_2,
-                        2: strategy[1].pet1_ability_3,
-                      }}
-                    />
-                    <PetPreview
-                      petId={strategy[1].pet2_id}
-                      petRequiredLevel={strategy[1].pet2_level}
-                      petRarity={strategy[1].pet2_rarity}
-                      petBreed={strategy[1].pet2_breed}
-                      chosenAbilities={{
-                        0: strategy[1].pet2_ability_1,
-                        1: strategy[1].pet2_ability_2,
-                        2: strategy[1].pet2_ability_3,
-                      }}
-                    />
-                    <PetPreview
-                      petId={strategy[1].pet3_id}
-                      petRequiredLevel={strategy[1].pet3_level}
-                      petRarity={strategy[1].pet3_rarity}
-                      petBreed={strategy[1].pet3_breed}
-                      chosenAbilities={{
-                        0: strategy[1].pet3_ability_1,
-                        1: strategy[1].pet3_ability_2,
-                        2: strategy[1].pet3_ability_3,
-                      }}
-                    />
-                  </ul>
-                  <div className="author">Author: {strategy[1].author}</div>
-                </div>
-              ) : (
-                ""
-              )}
-            </div>
-          ))}
+      {strategies.loading ? (
+        <div className="loadingSpinner"></div>
+      ) : (
+        strategies.data.map((strategy, index) => (
+          <div key={index}>
+            {strategy[0] === selectOption ? (
+              <div>
+                <ul>
+                  <PetPreview
+                    petId={strategy[1].pet1_id}
+                    petRequiredLevel={strategy[1].pet1_level}
+                    petRarity={strategy[1].pet1_rarity}
+                    petBreed={strategy[1].pet1_breed}
+                    chosenAbilities={{
+                      0: strategy[1].pet1_ability_1,
+                      1: strategy[1].pet1_ability_2,
+                      2: strategy[1].pet1_ability_3,
+                    }}
+                  />
+                  <PetPreview
+                    petId={strategy[1].pet2_id}
+                    petRequiredLevel={strategy[1].pet2_level}
+                    petRarity={strategy[1].pet2_rarity}
+                    petBreed={strategy[1].pet2_breed}
+                    chosenAbilities={{
+                      0: strategy[1].pet2_ability_1,
+                      1: strategy[1].pet2_ability_2,
+                      2: strategy[1].pet2_ability_3,
+                    }}
+                  />
+                  <PetPreview
+                    petId={strategy[1].pet3_id}
+                    petRequiredLevel={strategy[1].pet3_level}
+                    petRarity={strategy[1].pet3_rarity}
+                    petBreed={strategy[1].pet3_breed}
+                    chosenAbilities={{
+                      0: strategy[1].pet3_ability_1,
+                      1: strategy[1].pet3_ability_2,
+                      2: strategy[1].pet3_ability_3,
+                    }}
+                  />
+                </ul>
+                <div className="author">Author: {strategy[1].author}</div>
+                <InstructionsPreview
+                  location={location}
+                  idStrategy={selectOption}
+                />
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
+        ))
+      )}
     </div>
   );
 }

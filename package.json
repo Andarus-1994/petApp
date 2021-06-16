@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "history": "^5.0.0",
+    "html-react-parser": "^1.2.6",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.33",
     "passport-bnet": "^2.0.0",

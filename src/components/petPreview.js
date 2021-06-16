@@ -137,7 +137,7 @@ function PetPreview({
   }
 
   return petInfo.loading ? (
-    "Loading"
+    <div className="loadingSpinner"></div>
   ) : !petInfo.anyPet ? (
     petUser.data ? (
       <li className={petInfo.data.type.toLowerCase()}>
@@ -300,31 +300,60 @@ function PetPreview({
     ) : (
       <li className={petInfo.data.type.toLowerCase()}>
         <div className="iconPet">
-          <img src={petInfo.data.icon}></img>
+          <a
+            href={"https://www.wowhead.com/battle-pet/" + petId}
+            target="_blank"
+          >
+            <img src={petInfo.data.icon}></img>
+          </a>
         </div>
         <p className="petName">{petInfo.data.name}</p>
 
         <p className="level">Required Level {petRequiredLevel}</p>
         <div className="abilities">
           <div>
-            <img
-              src={petInfo.data.abilities[chosenAbilities[0]].ability.icon}
-              alt="noAbility"
-            ></img>
+            <a
+              href={
+                "https://www.wowhead.com/pet-ability=" +
+                petInfo.data.abilities[chosenAbilities[0]].ability.id
+              }
+              target="_blank"
+            >
+              <img
+                src={petInfo.data.abilities[chosenAbilities[0]].ability.icon}
+                alt="noAbility"
+              ></img>
+            </a>
             {petInfo.data.abilities[chosenAbilities[0]].ability.name}
           </div>
           <div>
-            <img
-              src={petInfo.data.abilities[chosenAbilities[1]].ability.icon}
-              alt="noAbility"
-            ></img>
+            <a
+              href={
+                "https://www.wowhead.com/pet-ability=" +
+                petInfo.data.abilities[chosenAbilities[1]].ability.id
+              }
+              target="_blank"
+            >
+              <img
+                src={petInfo.data.abilities[chosenAbilities[1]].ability.icon}
+                alt="noAbility"
+              ></img>
+            </a>
             {petInfo.data.abilities[chosenAbilities[1]].ability.name}
           </div>
           <div>
-            <img
-              src={petInfo.data.abilities[chosenAbilities[2]].ability.icon}
-              alt="noAbility"
-            ></img>
+            <a
+              href={
+                "https://www.wowhead.com/pet-ability=" +
+                petInfo.data.abilities[chosenAbilities[2]].ability.id
+              }
+              target="_blank"
+            >
+              <img
+                src={petInfo.data.abilities[chosenAbilities[2]].ability.icon}
+                alt="noAbility"
+              ></img>
+            </a>
             {petInfo.data.abilities[chosenAbilities[2]].ability.name}
           </div>
         </div>

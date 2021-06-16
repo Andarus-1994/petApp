@@ -27,7 +27,7 @@ function SearchPet(props) {
               props.setModal(false);
             }}
           >
-            Close
+            Done
           </p>
         </div>
         <div className="allPets">

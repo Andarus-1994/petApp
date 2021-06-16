@@ -43,3 +43,25 @@ export const getStrategy = async (location) => {
       return { error: error };
     });
 };
+
+export const getInstructions = async (detailsStrategy) => {
+  return await axios
+    .post(
+      "https://apipetslaravel.herokuapp.com/api/getInstructions",
+      detailsStrategy,
+
+      {
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+        },
+      }
+    )
+    .then((response) => {
+      console.log(response.data);
+      return response.data;
+    })
+
+    .catch((error) => {
+      return { error: error };
+    });
+};
