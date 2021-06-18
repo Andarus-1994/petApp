@@ -55,6 +55,63 @@
   background-color: #242833;
 }
 
+.headerTop .loginButtons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-top: 15px;
+  padding-right: 25px;
+}
+
+.headerTop .loginButtons .logedUser {
+  font-family: "Roboto", sans-serif;
+  color: #eee6e6;
+}
+
+.headerTop .loginButtons .logedUser span {
+  font-size: 1.1rem;
+  color: #e2e2e2;
+}
+
+.headerTop .loginButtons .logedUser a {
+  color: #7595aa;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 125px;
+}
+
+.headerTop .loginButtons > a {
+  position: absolute;
+  cursor: pointer;
+  padding: 10px 25px;
+  background-color: transparent;
+  color: whitesmoke;
+  border: 1px solid #5b5b6b;
+  border-radius: 35px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.headerTop .loginButtons > a:hover {
+  background-color: #272a30;
+  color: #454357;
+}
+
+.headerTop .loginButtons > a:active {
+  -webkit-animation: shadowBox 0.1s;
+          animation: shadowBox 0.1s;
+}
+
 .headerTop h1 {
   font-size: 2rem;
   font-weight: 900;
@@ -81,6 +138,28 @@
 @media screen and (max-width: 800px) {
   .headerTop h1 span {
     font-size: 1.2rem;
+  }
+}
+
+@-webkit-keyframes shadowBox {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 0px black;
+            box-shadow: 0px 0px 0px 0px black;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 10px 10px #18191b;
+            box-shadow: 0px 0px 10px 10px #18191b;
+  }
+}
+
+@keyframes shadowBox {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 0px black;
+            box-shadow: 0px 0px 0px 0px black;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 10px 10px #18191b;
+            box-shadow: 0px 0px 10px 10px #18191b;
   }
 }
 
@@ -30628,6 +30707,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 1.7rem;
   color: #19191d;
+  margin-top: 5vh;
 }
 
 .strategiesPreview .loadingSpinner {
@@ -31488,6 +31568,145 @@
     opacity: 1;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+
+.loginPage {
+  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(#333344), to(white));
+  background: linear-gradient(0, #333344, white);
+  overflow: hidden;
+  min-height: 80vh;
+}
+
+.loginPage .containerLogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 500px;
+  background-color: #272931;
+  margin: 0 auto;
+  margin-top: 12vh;
+  padding: 17px 20px;
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+          box-shadow: 0px 0px 5px 0px black;
+  -webkit-animation: loginFadeIn 1s;
+          animation: loginFadeIn 1s;
+}
+
+.loginPage .containerLogin h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #fcfcfc;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.loginPage .containerLogin input {
+  padding: 10px 15px;
+  width: 250px;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  background-color: #cacaca;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.loginPage .containerLogin input:focus {
+  background-color: white;
+}
+
+.loginPage .containerLogin label {
+  color: red;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+.loginPage .containerLogin p {
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #646464;
+}
+
+.loginPage .containerLogin p a {
+  cursor: pointer;
+  text-decoration: underline;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.loginPage .containerLogin p a:hover {
+  color: #545488;
+}
+
+.loginPage .containerLogin .loginButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.loginPage .containerLogin .loginButtons .disabled {
+  pointer-events: none;
+}
+
+.loginPage .containerLogin .loginButtons button {
+  cursor: pointer;
+  width: 250px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  background-color: #343442;
+  color: white;
+  margin: 0 auto;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.loginPage .containerLogin .loginButtons button:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+          box-shadow: 0px 0px 5px 0px black;
+}
+
+@-webkit-keyframes loginFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px) scale(0.7);
+            transform: translateY(100px) scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes loginFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px) scale(0.7);
+            transform: translateY(100px) scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
   }
 }
 

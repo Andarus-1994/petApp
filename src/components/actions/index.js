@@ -162,3 +162,16 @@ export const getAllPets = () => {
       });
   };
 };
+
+export const loginAction = (loginAnswer) => {
+  return {
+    type: "LOGIN",
+    payload: loginAnswer,
+  };
+};
+
+export const logoutAction = () => {
+  return {
+    type: "LOGOUT",
+  };
+};

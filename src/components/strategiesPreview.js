@@ -39,8 +39,6 @@ function StrategiesPreview({ location }) {
   }
   return (
     <div className="strategiesPreview">
-      <h2>{emptyStrategy}</h2>
-
       <div className="strategyOptions">
         <label>Strategy:</label>
 
@@ -56,6 +54,7 @@ function StrategiesPreview({ location }) {
           )}
         </select>
       </div>
+      <h2>{emptyStrategy}</h2>
       {strategies.loading ? (
         <div className="loadingSpinner"></div>
       ) : (

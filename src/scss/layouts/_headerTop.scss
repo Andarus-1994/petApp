@@ -7,6 +7,51 @@
   width: 100%;
   background-color: #242833;
 
+  .loginButtons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    padding-top: 15px;
+    padding-right: 25px;
+    .logedUser {
+      font-family: $Roboto;
+      color: rgb(238, 230, 230);
+      span {
+        font-size: 1.1rem;
+        color: rgb(226, 226, 226);
+      }
+      a {
+        color: rgb(117, 149, 170);
+        cursor: pointer;
+        text-decoration: underline;
+        margin-left: 125px;
+      }
+    }
+    & > a {
+      position: absolute;
+      cursor: pointer;
+      padding: 10px 25px;
+      background-color: transparent;
+      color: rgb(245, 245, 245);
+      border: 1px solid rgb(91, 91, 107);
+      border-radius: 35px;
+      font-family: $Roboto;
+      font-size: 1rem;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: 0.4s;
+      &:hover {
+        background-color: rgb(39, 42, 48);
+        color: rgb(69, 67, 87);
+      }
+      &:active {
+        animation: shadowBox 0.1s;
+      }
+    }
+  }
+
   h1 {
     font-size: 2rem;
     font-weight: 900;
@@ -27,5 +72,14 @@
         font-size: 1.2rem;
       }
     }
+  }
+}
+
+@keyframes shadowBox {
+  0% {
+    box-shadow: 0px 0px 0px 0px black;
+  }
+  100% {
+    box-shadow: 0px 0px 10px 10px rgb(24, 25, 27);
   }
 }

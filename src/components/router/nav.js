@@ -17,7 +17,10 @@ import {
   searchChar,
   getPetsCharacter,
   getAllPets,
+  loginAction,
+  logoutAction,
 } from "../actions";
+import { login } from "../functions/userFunctions.js";
 import Profile from "../profileHeaderTop.js";
 import LevelGuide from "../PetLevelGuideComponents/levelGuide.js";
 import Contact from "../contact.js";
@@ -28,18 +31,27 @@ import MaldraxxusWQs from "../ShadowLandsComponents/maldraxxusWQs.js";
 import RevendrethWQs from "../ShadowLandsComponents/revendrethWQs.js";
 import BastionWQs from "../ShadowLandsComponents/bastionWQs.js";
 import BastionAchievement from "../ShadowLandsComponents/FamiliarAchievement/Bastion.js";
+import LoginPage from "../loginPage.js";
 
 function Nav() {
   const allPets = useSelector((state) => state.allPets);
   const profile = useSelector((state) => state.profile);
   const favChar = JSON.parse(localStorage.getItem("favChar"));
   const searchedChar = useSelector((state) => state.foundChar);
+  const loginStatus = useSelector((state) => state.login);
+  const userToken = localStorage.getItem("userToken");
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(retriveToken());
 
     console.log("test", allPets);
+    if (userToken && !loginStatus.login) {
+      login().then((resp) => {
+        console.log("test2", resp);
+        dispatch(loginAction(resp.Success));
+      });
+    }
 
     if (favChar && Object.keys(searchedChar.character).length === 0) {
       dispatch(retriveMediaProfile(favChar));
@@ -63,15 +75,38 @@ function Nav() {
     }
   }, []);
 
+  function logOut() {
+    dispatch(logoutAction());
+    localStorage.removeItem("userToken");
+  }
+
   return (
     <div className="Routes">
-      <div className="headerTop">
-        <h1>
-          <span>Petius</span>, Pet Guides of Warcraft
-        </h1>
-        <Profile />
-      </div>
       <Router>
+        <div className="headerTop">
+          <div className="loginButtons">
+            {!loginStatus.login ? (
+              <NavLink
+                to="/login"
+                exact
+                activeClassName="active"
+                className="inactive"
+              >
+                Login
+              </NavLink>
+            ) : (
+              <p className="logedUser">
+                You are logged as <span>{loginStatus.user.user}</span>,<br></br>
+                <a onClick={logOut}>Logout</a>
+              </p>
+            )}
+          </div>
+          <h1>
+            <span>Petius</span>, Pet Guides of Warcraft
+          </h1>
+          <Profile />
+        </div>
+
         <nav>
           <ul className="nav-links">
             <NavLink to="/" exact activeClassName="active" className="inactive">
@@ -130,6 +165,9 @@ function Nav() {
             </Route>
             <Route exact path="/contact">
               <Contact />
+            </Route>
+            <Route exact path="/login">
+              <LoginPage />
             </Route>
             <Route exact path="/">
               <Home />
