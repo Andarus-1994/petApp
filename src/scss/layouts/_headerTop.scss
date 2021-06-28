@@ -23,10 +23,11 @@
         color: rgb(226, 226, 226);
       }
       a {
+        display: block;
         color: rgb(117, 149, 170);
         cursor: pointer;
         text-decoration: underline;
-        margin-left: 125px;
+        text-align: right;
       }
     }
     & > a {

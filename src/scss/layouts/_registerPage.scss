@@ -1,32 +1,10 @@
-.loginPage {
+.registerPage {
   background: linear-gradient(0, rgb(122, 122, 139), white);
   overflow: hidden;
   min-height: 80vh;
   z-index: 0;
-  &::after {
-    top: 550px;
-    position: absolute;
-    content: "";
-    width: 100px;
-    height: 100px;
-    border-radius: 20px;
-    background-color: rgb(97, 97, 96);
-    transform: rotateZ(40deg);
-    z-index: 0;
-  }
-  &::before {
-    top: 250px;
-    right: 0;
-    position: absolute;
-    content: "";
-    width: 100px;
-    height: 100px;
-    border-radius: 20px;
-    background-color: rgb(190, 190, 186);
-    transform: rotateZ(40deg);
-    z-index: 0;
-  }
-  .containerLogin {
+
+  .containerRegister {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -37,10 +15,18 @@
 
     margin: 0 auto;
     margin-top: 12vh;
-    padding: 17px 20px;
+    padding: 25px 20px;
     box-shadow: 0px 0px 5px 0px black;
-    animation: loginFadeIn 1s;
+    animation: registerFadeIn 1s;
     z-index: 50;
+
+    h1 {
+      color: rgb(97, 117, 160);
+      margin-top: 150px;
+      font-family: $Roboto;
+      font-size: 1.3rem;
+      text-align: center;
+    }
 
     h2 {
       font-family: $Raleway;
@@ -49,7 +35,7 @@
       color: rgb(252, 252, 252);
       text-align: center;
       margin-top: 50px;
-      margin-bottom: 100px;
+      margin-bottom: 50px;
     }
     input {
       padding: 10px 15px;
@@ -68,6 +54,7 @@
       color: red;
       font-family: $Raleway;
       text-align: center;
+      animation: registerFadeIn 0.8s;
     }
     p {
       margin-top: 50px;
@@ -83,7 +70,7 @@
         }
       }
     }
-    .loginButtons {
+    .registerButtons {
       display: flex;
       flex-direction: column;
       margin: 0 auto;
@@ -110,13 +97,11 @@
   }
 }
 
-@keyframes loginFadeIn {
+@keyframes registerFadeIn {
   0% {
     opacity: 0;
-    transform: translateY(50px) scale(0.7);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px) scale(1);
   }
 }

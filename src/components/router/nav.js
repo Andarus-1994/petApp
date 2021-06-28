@@ -32,6 +32,8 @@ import RevendrethWQs from "../ShadowLandsComponents/revendrethWQs.js";
 import BastionWQs from "../ShadowLandsComponents/bastionWQs.js";
 import BastionAchievement from "../ShadowLandsComponents/FamiliarAchievement/Bastion.js";
 import LoginPage from "../loginPage.js";
+import RegisterPage from "../registerPage.js";
+import ValidateUser from "../validateUser.js";
 
 function Nav() {
   const allPets = useSelector((state) => state.allPets);
@@ -168,6 +170,12 @@ function Nav() {
             </Route>
             <Route exact path="/login">
               <LoginPage />
+            </Route>
+            <Route exact path="/register">
+              <RegisterPage />
+            </Route>
+            <Route exact path="/validateUser">
+              <ValidateUser />
             </Route>
             <Route exact path="/">
               <Home />

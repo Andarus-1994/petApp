@@ -80,10 +80,11 @@
 }
 
 .headerTop .loginButtons .logedUser a {
+  display: block;
   color: #7595aa;
   cursor: pointer;
   text-decoration: underline;
-  margin-left: 125px;
+  text-align: right;
 }
 
 .headerTop .loginButtons > a {
@@ -31572,13 +31573,42 @@
 }
 
 .loginPage {
-  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(#333344), to(white));
-  background: linear-gradient(0, #333344, white);
+  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(#7a7a8b), to(white));
+  background: linear-gradient(0, #7a7a8b, white);
   overflow: hidden;
   min-height: 80vh;
+  z-index: 0;
+}
+
+.loginPage::after {
+  top: 550px;
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background-color: #616160;
+  -webkit-transform: rotateZ(40deg);
+          transform: rotateZ(40deg);
+  z-index: 0;
+}
+
+.loginPage::before {
+  top: 250px;
+  right: 0;
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background-color: #bebeba;
+  -webkit-transform: rotateZ(40deg);
+          transform: rotateZ(40deg);
+  z-index: 0;
 }
 
 .loginPage .containerLogin {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31599,6 +31629,7 @@
           box-shadow: 0px 0px 5px 0px black;
   -webkit-animation: loginFadeIn 1s;
           animation: loginFadeIn 1s;
+  z-index: 50;
 }
 
 .loginPage .containerLogin h2 {
@@ -31687,8 +31718,8 @@
 @-webkit-keyframes loginFadeIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(100px) scale(0.7);
-            transform: translateY(100px) scale(0.7);
+    -webkit-transform: translateY(50px) scale(0.7);
+            transform: translateY(50px) scale(0.7);
   }
   100% {
     opacity: 1;
@@ -31700,14 +31731,180 @@
 @keyframes loginFadeIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(100px) scale(0.7);
-            transform: translateY(100px) scale(0.7);
+    -webkit-transform: translateY(50px) scale(0.7);
+            transform: translateY(50px) scale(0.7);
   }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0px) scale(1);
             transform: translateY(0px) scale(1);
   }
+}
+
+.registerPage {
+  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(#7a7a8b), to(white));
+  background: linear-gradient(0, #7a7a8b, white);
+  overflow: hidden;
+  min-height: 80vh;
+  z-index: 0;
+}
+
+.registerPage .containerRegister {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 500px;
+  background-color: #272931;
+  margin: 0 auto;
+  margin-top: 12vh;
+  padding: 25px 20px;
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+          box-shadow: 0px 0px 5px 0px black;
+  -webkit-animation: registerFadeIn 1s;
+          animation: registerFadeIn 1s;
+  z-index: 50;
+}
+
+.registerPage .containerRegister h1 {
+  color: #6175a0;
+  margin-top: 150px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.registerPage .containerRegister h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #fcfcfc;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.registerPage .containerRegister input {
+  padding: 10px 15px;
+  width: 250px;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  background-color: #cacaca;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.registerPage .containerRegister input:focus {
+  background-color: white;
+}
+
+.registerPage .containerRegister label {
+  color: red;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  -webkit-animation: registerFadeIn 0.8s;
+          animation: registerFadeIn 0.8s;
+}
+
+.registerPage .containerRegister p {
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #646464;
+}
+
+.registerPage .containerRegister p a {
+  cursor: pointer;
+  text-decoration: underline;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.registerPage .containerRegister p a:hover {
+  color: #545488;
+}
+
+.registerPage .containerRegister .registerButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.registerPage .containerRegister .registerButtons .disabled {
+  pointer-events: none;
+}
+
+.registerPage .containerRegister .registerButtons button {
+  cursor: pointer;
+  width: 250px;
+  padding: 10px 15px;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  background-color: #343442;
+  color: white;
+  margin: 0 auto;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.registerPage .containerRegister .registerButtons button:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+          box-shadow: 0px 0px 5px 0px black;
+}
+
+@-webkit-keyframes registerFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes registerFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.validateUser h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  color: #1b1c20;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.validateUser h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: #28292e;
+  text-align: center;
+  margin-top: 1vh;
+  margin-bottom: 80vh;
+}
+
+.validateUser .errorAlone {
+  margin-top: 20vh;
+  margin-bottom: 70vh;
 }
 
 .containerStrategyButton {

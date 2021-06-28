@@ -44,7 +44,7 @@ function LoginPage() {
             dispatch(loginAction(resp.user));
             setTimeout(() => {
               history.push("/");
-            }, 700);
+            }, 500);
           }
         });
       }

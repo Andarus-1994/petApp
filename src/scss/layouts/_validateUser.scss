@@ -1,0 +1,21 @@
+.validateUser {
+  h1 {
+    font-family: $Roboto;
+    font-size: 2.5rem;
+    color: rgb(27, 28, 32);
+    text-align: center;
+    margin-top: 10vh;
+  }
+  h2 {
+    font-family: $Roboto;
+    font-size: 2rem;
+    color: rgb(40, 41, 46);
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 80vh;
+  }
+  .errorAlone {
+    margin-top: 20vh;
+    margin-bottom: 70vh;
+  }
+}
