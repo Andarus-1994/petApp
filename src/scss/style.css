@@ -75,8 +75,8 @@
 }
 
 .headerTop .loginButtons .logedUser span {
-  font-size: 1.1rem;
-  color: #e2e2e2;
+  font-size: 1.3rem;
+  color: #81b1b1;
 }
 
 .headerTop .loginButtons .logedUser a {
@@ -179,13 +179,13 @@
 }
 
 .searchBar select {
-  color: #1a2c31;
+  color: #d8e8ec;
   top: -3rem;
   padding: 0.4rem 0.8rem;
   font-family: "Raleway", sans-serif;
   border: 0;
   position: absolute;
-  background-color: #d9e0f3;
+  background-color: #62687a;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -239,9 +239,9 @@
 }
 
 .searchBar input {
-  background-color: #d9e0f3;
+  background-color: #464d5f;
   position: relative;
-  color: #17404b;
+  color: white;
   font-size: 1.3rem;
   padding: 0.6rem 0.8rem;
   border-top-left-radius: 2rem;
@@ -256,7 +256,7 @@
 .searchBar input:focus {
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
-  background-color: #d9e0f3;
+  background-color: #494d57;
   -webkit-box-shadow: 0px 0px 4px 0px black;
           box-shadow: 0px 0px 4px 0px black;
   outline: none;
@@ -265,7 +265,7 @@
 
 .searchBar button {
   font-size: 1rem;
-  background-color: #7ab1d6;
+  background-color: #3d465a;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
@@ -278,11 +278,11 @@
 }
 
 .searchBar button i {
-  color: #305772;
+  color: #87b3d3;
 }
 
 .searchBar button:hover {
-  background-color: #5b91b6;
+  background-color: #344d5e;
 }
 
 .searchBar > label {
@@ -425,11 +425,11 @@
   background-color: #c03737;
   color: white;
   font-family: "Roboto", sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   position: absolute;
-  padding: 10px 14px;
+  padding: 7px 14px;
   top: 220px;
-  left: 8%;
+  left: 9%;
   z-index: 5;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -437,6 +437,8 @@
 
 .App .rememberChar:hover {
   background-color: #912222;
+  -webkit-box-shadow: 0px 0px 5px 1px black;
+          box-shadow: 0px 0px 5px 1px black;
 }
 
 .App .rememberChar:active {
@@ -445,10 +447,11 @@
 
 .App .favored {
   cursor: auto;
-  color: white;
+  color: #d8b3b3;
+  font-size: 0.8rem;
   background-color: #812323;
-  -webkit-box-shadow: inset 0px 0px 8px 4px #313131;
-          box-shadow: inset 0px 0px 8px 4px #313131;
+  -webkit-box-shadow: inset 0px 0px 8px 4px black;
+          box-shadow: inset 0px 0px 8px 4px black;
   left: 10%;
 }
 
@@ -523,10 +526,6 @@
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-}
-
-.App .petFilters .sort > select option {
-  background-color: #3d4947;
 }
 
 .App .petFilters .search {
@@ -662,7 +661,7 @@
   font-size: 1.7rem;
   color: #232930;
   margin-left: auto;
-  margin-right: 25vh;
+  margin-right: 22vh;
 }
 
 .App .emptyBarTotalPets {
@@ -777,6 +776,8 @@
   left: 89px;
   top: -20px;
   display: none;
+  -webkit-animation: appear 1s;
+          animation: appear 1s;
 }
 
 .App .profile div {
@@ -1501,6 +1502,24 @@
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -2337,8 +2356,8 @@
   z-index: 40;
   -webkit-box-shadow: 0px 0px 8px 3px black;
           box-shadow: 0px 0px 8px 3px black;
-  -webkit-animation: 1s fadeIn cubic-bezier(0.075, 0.12, 0.165, 0.8);
-          animation: 1s fadeIn cubic-bezier(0.075, 0.12, 0.165, 0.8);
+  -webkit-animation: 0.8s fadeInModal;
+          animation: 0.8s fadeInModal;
 }
 
 .modalPet .icon {
@@ -2401,9 +2420,9 @@
   margin: 0 auto;
   font-size: 0.75rem;
   font-family: "Raleway", sans-serif;
-  -webkit-animation: 1s enterTop;
-          animation: 1s enterTop;
   z-index: 10;
+  -webkit-animation: delayedEnter 0.9s;
+          animation: delayedEnter 0.9s;
 }
 
 .modalPet ul {
@@ -2421,6 +2440,8 @@
   margin: 0 auto;
   margin-top: 15px;
   z-index: 10;
+  -webkit-animation: delayedEnter 0.9s;
+          animation: delayedEnter 0.9s;
 }
 
 .modalPet .loadingAbilities {
@@ -2450,51 +2471,47 @@
   }
 }
 
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fadeInModal {
   0% {
     opacity: 0;
-    -webkit-transform: translate(-40px, 240px) rotate(-5deg);
-            transform: translate(-40px, 240px) rotate(-5deg);
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(0px) rotate(0);
-            transform: translate(0px) rotate(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
-@keyframes fadeIn {
+@keyframes fadeInModal {
   0% {
     opacity: 0;
-    -webkit-transform: translate(-40px, 240px) rotate(-5deg);
-            transform: translate(-40px, 240px) rotate(-5deg);
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(0px) rotate(0);
-            transform: translate(0px) rotate(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @-webkit-keyframes enterLeft {
   0% {
-    -webkit-transform: translateX(-120px);
-            transform: translateX(-120px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes enterLeft {
   0% {
-    -webkit-transform: translateX(-120px);
-            transform: translateX(-120px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -2528,6 +2545,30 @@
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes delayedEnter {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes delayedEnter {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -3257,6 +3298,19 @@
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 170px) rotate(-7deg);
+            transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
   }
 }
 
@@ -31623,7 +31677,7 @@
   min-height: 500px;
   background-color: #272931;
   margin: 0 auto;
-  margin-top: 12vh;
+  margin-top: 17vh;
   padding: 17px 20px;
   -webkit-box-shadow: 0px 0px 5px 0px black;
           box-shadow: 0px 0px 5px 0px black;

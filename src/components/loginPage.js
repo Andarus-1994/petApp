@@ -42,9 +42,8 @@ function LoginPage() {
             setServerError("");
             localStorage.setItem("userToken", resp.token);
             dispatch(loginAction(resp.user));
-            setTimeout(() => {
-              history.push("/");
-            }, 500);
+
+            history.push("/");
           }
         });
       }

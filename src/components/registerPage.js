@@ -20,6 +20,7 @@ function RegisterPage() {
   const [buttonLoading, setButtonLoading] = useState(false);
   const [samePasswordError, setSamePasswordError] = useState("");
   const [successRegister, setSuccessRegister] = useState(false);
+  const [viewPassword, setViewPassword] = useState(false);
   function handleEmailInput(e) {
     setUserDetails({ ...userDetails, email: e.target.value });
   }
@@ -313,18 +314,24 @@ function RegisterPage() {
             placeholder="Username"
           ></input>
           <label>{requiredErrors.user}</label>
+
           <input
             value={userDetails.password}
             onChange={handlePasswordInput}
             placeholder="Password"
-            type="password"
+            type={!viewPassword ? "password" : "text"}
+            onMouseLeave={() => setViewPassword(false)}
+            onMouseEnter={() => setViewPassword(true)}
           ></input>
+
           <label>{requiredErrors.password}</label>
           <input
             value={userDetails.confirmPassword}
             onChange={handlePasswordConfirmationInput}
             placeholder="Password Confirmation"
-            type="password"
+            type={!viewPassword ? "password" : "text"}
+            onMouseLeave={() => setViewPassword(false)}
+            onMouseEnter={() => setViewPassword(true)}
             onBlur={checkPassword}
           ></input>
           <label>{requiredErrors.confirmPassword}</label>

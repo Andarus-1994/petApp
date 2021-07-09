@@ -69,7 +69,7 @@ function Nav() {
     if (!favChar && Object.keys(searchedChar.character).length === 0) {
       dispatch(retriveMediaProfile({ char: "", server: "", region: "" }));
     }
-  }, [searchedChar.character, searchedChar.error, allPets.loading]);
+  }, [searchedChar.character, searchedChar.error, allPets.loading, userToken]);
 
   useMemo(() => {
     if (allPets.loading) {
@@ -99,6 +99,9 @@ function Nav() {
             ) : (
               <p className="logedUser">
                 You are logged as <span>{loginStatus.user.user}</span>,<br></br>
+                {!loginStatus.user.verified && (
+                  <p> Visit your email to verify your account!</p>
+                )}
                 <a onClick={logOut}>Logout</a>
               </p>
             )}

@@ -28,7 +28,7 @@
   margin-right: auto;
   z-index: 40;
   box-shadow: 0px 0px 8px 3px rgb(0, 0, 0);
-  animation: 1s fadeIn cubic-bezier(0.075, 0.12, 0.165, 0.8);
+  animation: 0.8s fadeInModal;
   .icon {
     position: relative;
     height: 60px;
@@ -80,8 +80,8 @@
     margin: 0 auto;
     font-size: 0.75rem;
     font-family: $Raleway;
-    animation: 1s enterTop;
     z-index: 10;
+    animation: delayedEnter 0.9s;
   }
 
   ul {
@@ -97,6 +97,7 @@
     margin: 0 auto;
     margin-top: 15px;
     z-index: 10;
+    animation: delayedEnter 0.9s;
   }
 
   .loadingAbilities {
@@ -124,23 +125,23 @@
       transform: rotate(360deg);
     }
   }
-  @keyframes fadeIn {
+  @keyframes fadeInModal {
     0% {
       opacity: 0;
-      transform: translate(-40px, 240px) rotate(-5deg);
+      transform: scale(0.85);
     }
     100% {
       opacity: 1;
-      transform: translate(0px) rotate(0);
+      transform: scale(1);
     }
   }
 
   @keyframes enterLeft {
     0% {
-      transform: translateX(-120px);
+      opacity: 0;
     }
     100% {
-      transform: translateX(0);
+      opacity: 1;
     }
   }
   @keyframes enterRight {
@@ -158,6 +159,17 @@
     }
     100% {
       transform: translateX(0);
+    }
+  }
+  @keyframes delayedEnter {
+    0% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }

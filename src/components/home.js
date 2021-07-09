@@ -439,54 +439,57 @@ function Home() {
       ) : (
         ""
       )}
-
-      <div className="petFilters">
-        <div className="search">
-          <input
-            type="search"
-            id="site-search"
-            name="q"
-            aria-label="Search through site content"
-            placeholder="Pet Name"
-            onChange={handleChange}
-            onKeyPress={hitEnter}
-            value={searchPetNameKey}
-          />
-          <label>Find a pet </label>
-          <label>Ex: "Fawn, Otter, Blue etc... " </label>
-          {searchPetNameKey && (
-            <button
-              onClick={() => {
-                setSearchPetNameKey("");
-              }}
+      {!petsChar.error ? (
+        <div className="petFilters">
+          <div className="search">
+            <input
+              type="search"
+              id="site-search"
+              name="q"
+              aria-label="Search through site content"
+              placeholder="Pet Name"
+              onChange={handleChange}
+              onKeyPress={hitEnter}
+              value={searchPetNameKey}
+            />
+            <label>Find a pet </label>
+            <label>Ex: "Fawn, Otter, Blue etc... " </label>
+            {searchPetNameKey && (
+              <button
+                onClick={() => {
+                  setSearchPetNameKey("");
+                }}
+              >
+                <FontAwesomeIcon icon={faTrash} />{" "}
+              </button>
+            )}
+          </div>
+          <button onClick={searchPet}>
+            <i className="fa fa-search"></i>
+          </button>
+          <div className="sort">
+            <label>Order by type:</label>
+            <select
+              id="lang"
+              onChange={handleChangeOptions}
+              value={selectedOption}
+              className="round"
             >
-              <FontAwesomeIcon icon={faTrash} />{" "}
-            </button>
-          )}
+              {options.map((item) => (
+                <option key={item.value} value={item.value}>
+                  {item.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="totalPets">
+            Total Pets (
+            {!petsChar.loading && petsChar.pets && petsChar.pets.pets.length})
+          </div>
         </div>
-        <button onClick={searchPet}>
-          <i className="fa fa-search"></i>
-        </button>
-        <div className="sort">
-          <label>Order by type:</label>
-          <select
-            id="lang"
-            onChange={handleChangeOptions}
-            value={selectedOption}
-            className="round"
-          >
-            {options.map((item) => (
-              <option key={item.value} value={item.value}>
-                {item.label}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="totalPets">
-          Total Pets (
-          {!petsChar.loading && petsChar.pets && petsChar.pets.pets.length})
-        </div>
-      </div>
+      ) : (
+        ""
+      )}
 
       <ul className="displayPets">
         {!petsChar.loading &&
