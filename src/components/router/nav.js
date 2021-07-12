@@ -51,6 +51,7 @@ function Nav() {
     if (userToken && !loginStatus.login) {
       login().then((resp) => {
         console.log("test2", resp);
+        if (resp.error) return;
         dispatch(loginAction(resp.Success));
       });
     }

@@ -37,6 +37,33 @@ function StrategiesPreview({ location }) {
   function handleSelect(e) {
     setSelectOption(e.target.value);
   }
+
+  function checkPetLevel25(id1, id2, id3) {
+    let petsOwned = 0;
+    let pet1Found = false;
+    let pet2Found = false;
+    let pet3Found = false;
+    allUserPets.pets.pets.map((pet) => {
+      if ((pet.species.id === id1 || id1 === 0) && !pet1Found) {
+        petsOwned = petsOwned + 1;
+        pet1Found = true;
+      }
+      if ((pet.species.id === id2 || id2 === 0) && !pet2Found) {
+        petsOwned = petsOwned + 1;
+        pet2Found = true;
+      }
+      if ((pet.species.id === id3 || id3 === 0) && !pet3Found) {
+        petsOwned = petsOwned + 1;
+        pet3Found = true;
+      }
+    });
+    console.log(petsOwned);
+    if (petsOwned === 3) {
+      return true;
+    }
+    return false;
+  }
+
   return (
     <div className="strategiesPreview">
       <div className="strategyOptions">
@@ -47,8 +74,24 @@ function StrategiesPreview({ location }) {
             <option>Loading</option>
           ) : (
             strategies.data.map((strategy, index) => (
-              <option key={index} value={strategy[0]}>
-                {strategy[1].title}
+              <option
+                key={index}
+                value={strategy[0]}
+                className={
+                  checkPetLevel25(
+                    strategy[1].pet1_id,
+                    strategy[1].pet2_id,
+                    strategy[1].pet3_id
+                  ) && "OwnedPetsSelect"
+                }
+              >
+                {checkPetLevel25(
+                  strategy[1].pet1_id,
+                  strategy[1].pet2_id,
+                  strategy[1].pet3_id
+                )
+                  ? strategy[1].title + "(Owned Pets)"
+                  : strategy[1].title}
               </option>
             ))
           )}
@@ -97,7 +140,17 @@ function StrategiesPreview({ location }) {
                     }}
                   />
                 </ul>
-                <div className="author">Author: {strategy[1].author}</div>
+
+                <div className="flexRNGAuthor">
+                  {strategy[1].rng ? (
+                    <div className="rngSign">RNG Involved !</div>
+                  ) : (
+                    <div></div>
+                  )}
+
+                  <div className="author">Author: {strategy[1].author}</div>
+                </div>
+
                 <InstructionsPreview
                   location={location}
                   idStrategy={selectOption}

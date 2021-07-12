@@ -5,6 +5,7 @@ import { strategySubmission } from "./functions/submitStrategy";
 
 function StrategySubmision({ location }) {
   const allPets = useSelector((state) => state.allPets);
+  const loginStatus = useSelector((state) => state.login);
   const [allPetsIcons, setAllPetsIcons] = useState({
     loading: true,
     pets: null,
@@ -19,6 +20,7 @@ function StrategySubmision({ location }) {
   const [modalPet2, setModalPet2] = useState(false);
   const [modalPet3, setModalPet3] = useState(false);
   const [nextStep, setNextStep] = useState(false);
+  const [rng, setRNG] = useState(false);
   const [pet1, setPet1] = useState({
     id: null,
     owned: false,
@@ -61,6 +63,9 @@ function StrategySubmision({ location }) {
   useEffect(() => {
     if (!allPets.loading && allPetsIcons.loading) {
       setAllPetsIcons({ loading: false, pets: allPets.pets });
+    }
+    if (loginStatus.login) {
+      setAuthor(loginStatus.user.user);
     }
     console.log(allPetsIcons);
     console.log(pet1);
@@ -286,6 +291,7 @@ function StrategySubmision({ location }) {
       location: location,
       title: title,
       author: author,
+      rng: rng,
     }).then((resp) => {
       console.log(resp.data);
       if (resp.data.success) {
@@ -316,6 +322,27 @@ function StrategySubmision({ location }) {
           className="title"
           value={author}
         ></input>
+        <div className="toggleRNG">
+          <label>RNG trigger:</label>
+          <form>
+            <label class="toggle">
+              <div class="toggle__wrapper">
+                <input
+                  type="checkbox"
+                  onChange={() => {
+                    setRNG(!rng);
+                  }}
+                ></input>
+                <div class="toggle__bg">
+                  <div class="toggle__sphere">
+                    <div class="toggle__sphere-bg"></div>
+                    <div class="toggle__sphere-overlay"></div>
+                  </div>
+                </div>
+              </div>
+            </label>
+          </form>
+        </div>
       </div>
       <ul className="petPanel">
         <li className={pet1.type && pet1.type.toLowerCase()}>

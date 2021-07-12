@@ -72,15 +72,36 @@
       font-family: $Roboto;
       letter-spacing: 1px;
     }
+    .OwnedPetsSelect {
+      color: rgb(27, 155, 27) !important;
+      &:hover {
+        color: green !important;
+      }
+    }
   }
-  .author {
-    font-family: $Roboto;
-    font-size: 1.3rem;
-    color: rgb(28, 28, 31);
-    text-align: end;
-    margin: 5px 10px;
-    margin-right: 5vh;
+  .flexRNGAuthor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-top: 3vh;
+    .rngSign {
+      background-color: rgb(235, 42, 42);
+      padding: 10px 15px;
+      border-radius: 20px;
+      margin-left: 50px;
+      font-family: $Raleway;
+      letter-spacing: 1px;
+      box-shadow: 0px 0px 5px 1px rgb(116, 23, 23);
+      animation: 0.8s fadeEnter;
+    }
+    .author {
+      font-family: $Roboto;
+      font-size: 1.3rem;
+      color: rgb(28, 28, 31);
+      text-align: end;
+      margin-right: 5vh;
+      animation: 0.8s fadeEnter;
+    }
   }
 
   ul {

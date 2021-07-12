@@ -30004,6 +30004,191 @@
   margin-top: 5vh;
 }
 
+.submitStrategy .toggleRNG {
+  margin-left: auto;
+  margin-right: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.submitStrategy .toggleRNG > label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.submitStrategy .toggleRNG form {
+  width: 120px;
+  height: 50px;
+  margin: -4px -2px;
+  border-radius: 500px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffbd00), to(#ca7900));
+  background: linear-gradient(#ffbd00, #ca7900);
+  -webkit-box-shadow: 0 1px 5px rgba(204, 139, 0, 0.3), -3px 25px 25px rgba(179, 122, 0, 0.5), -6px 50px 50px rgba(153, 105, 0, 0.3), -9px 65px 65px rgba(102, 70, 0, 0.3);
+          box-shadow: 0 1px 5px rgba(204, 139, 0, 0.3), -3px 25px 25px rgba(179, 122, 0, 0.5), -6px 50px 50px rgba(153, 105, 0, 0.3), -9px 65px 65px rgba(102, 70, 0, 0.3);
+}
+
+.submitStrategy .toggleRNG .toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 120px;
+  height: 55px;
+  background: #ffad00;
+  border-radius: 500px;
+  border: solid 5px transparent;
+  background-clip: padding-box;
+  cursor: pointer;
+}
+
+.submitStrategy .toggleRNG .toggle__wrapper {
+  width: 60px;
+  height: 30px;
+  margin: -4px -5px;
+  border-radius: 500px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3c3747), to(rgba(214, 139, 0, 0.1)));
+  background: linear-gradient(#3c3747, rgba(214, 139, 0, 0.1));
+  -webkit-box-shadow: 0px 5px 1px 0 rgba(255, 186, 36, 0.7);
+          box-shadow: 0px 5px 1px 0 rgba(255, 186, 36, 0.7);
+}
+
+.submitStrategy .toggleRNG .toggle__bg {
+  margin-top: -28px;
+  margin-left: -17px;
+  width: 100px;
+  height: 50px;
+  background: #569630;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #569630), color-stop(50%, #7c6e68));
+  background: linear-gradient(to right, #569630 50%, #7c6e68 50% 100%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  border-radius: 500px;
+  border: solid 5px transparent;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0px 0px 50px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0px 0px 50px 15px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.85s ease-in-out;
+  transition: all 0.85s ease-in-out;
+}
+
+.submitStrategy .toggleRNG .toggle__sphere {
+  position: relative;
+  height: 37px;
+  width: 39px;
+  background: #7c6e68;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #569630), color-stop(50%, #7c6e68));
+  background: linear-gradient(to right, #569630 50%, #7c6e68 50% 100%);
+  border-radius: 50%;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+  -webkit-box-shadow: 2px 0px 5px 1px rgba(68, 26, 9, 0.05), 0px 10px 10px 1px rgba(68, 26, 9, 0.2), -3px 0px 3px 1px rgba(0, 0, 0, 0.75);
+          box-shadow: 2px 0px 5px 1px rgba(68, 26, 9, 0.05), 0px 10px 10px 1px rgba(68, 26, 9, 0.2), -3px 0px 3px 1px rgba(0, 0, 0, 0.75);
+  -webkit-transition: all 0.85s ease-in-out;
+  transition: all 0.85s ease-in-out;
+}
+
+.submitStrategy .toggleRNG .toggle__sphere:before,
+.submitStrategy .toggleRNG .toggle__sphere:after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 20px);
+  height: 1px;
+  width: 40px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.submitStrategy .toggleRNG .toggle__sphere:before {
+  top: -2px;
+}
+
+.submitStrategy .toggleRNG .toggle__sphere:after {
+  bottom: -1px;
+}
+
+.submitStrategy .toggleRNG .toggle__sphere-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0px -30px 30px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px -30px 30px 15px rgba(0, 0, 0, 0.1);
+}
+
+.submitStrategy .toggleRNG .toggle__sphere-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.85s ease-in-out;
+  transition: -webkit-transform 0.85s ease-in-out;
+  transition: transform 0.85s ease-in-out;
+  transition: transform 0.85s ease-in-out, -webkit-transform 0.85s ease-in-out;
+}
+
+.submitStrategy .toggleRNG .toggle__sphere-bg:before,
+.submitStrategy .toggleRNG .toggle__sphere-bg:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.submitStrategy .toggleRNG .toggle__sphere-bg:before {
+  background-color: #7c6e68;
+  border-radius: 50%;
+}
+
+.submitStrategy .toggleRNG .toggle__sphere-bg:after {
+  background-color: #569630;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  border-radius: 50%;
+}
+
+.submitStrategy .toggleRNG input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.submitStrategy .toggleRNG input:checked + .toggle__bg {
+  background-position: 25%;
+}
+
+.submitStrategy .toggleRNG input:checked + .toggle__bg .toggle__sphere {
+  -webkit-transform: translateX(50px) translateY(1px);
+          transform: translateX(50px) translateY(1px);
+  -webkit-box-shadow: -2px 0px 5px 1px rgba(68, 26, 9, 0.05), 0px 10px 10px 1px rgba(68, 26, 9, 0.2), 3px 0px 3px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -2px 0px 5px 1px rgba(68, 26, 9, 0.05), 0px 10px 10px 1px rgba(68, 26, 9, 0.2), 3px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.submitStrategy .toggleRNG input:checked + .toggle__bg .toggle__sphere-bg {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
 .submitStrategy .successSubmit {
   color: #175f17;
   font-family: "Raleway", sans-serif;
@@ -30609,6 +30794,8 @@
           flex-direction: column;
   -webkit-animation: 0.6s FlowIn;
           animation: 0.6s FlowIn;
+  max-height: 500px;
+  overflow-y: scroll;
 }
 
 .submitStrategy .strategyInstructions h1 {
@@ -30829,14 +31016,49 @@
   letter-spacing: 1px;
 }
 
-.strategiesPreview .author {
+.strategiesPreview .strategyOptions .OwnedPetsSelect {
+  color: #1b9b1b !important;
+}
+
+.strategiesPreview .strategyOptions .OwnedPetsSelect:hover {
+  color: green !important;
+}
+
+.strategiesPreview .flexRNGAuthor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 3vh;
+}
+
+.strategiesPreview .flexRNGAuthor .rngSign {
+  background-color: #eb2a2a;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-left: 50px;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 0px 5px 1px #741717;
+          box-shadow: 0px 0px 5px 1px #741717;
+  -webkit-animation: 0.8s fadeEnter;
+          animation: 0.8s fadeEnter;
+}
+
+.strategiesPreview .flexRNGAuthor .author {
   font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
   color: #1c1c1f;
   text-align: end;
-  margin: 5px 10px;
   margin-right: 5vh;
-  margin-top: 3vh;
+  -webkit-animation: 0.8s fadeEnter;
+          animation: 0.8s fadeEnter;
 }
 
 .strategiesPreview ul {
