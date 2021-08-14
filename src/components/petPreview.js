@@ -61,7 +61,6 @@ function PetPreview({
 
     allUserPets.pets.pets.map((pet) => {
       if (pet.species.id === id) {
-        console.log("daa");
         petsOwned.push({
           level: pet.level,
           quality: pet.quality.type,
@@ -85,8 +84,6 @@ function PetPreview({
       }
       setPetUser({ loading: false, data: petsOwned[j] });
     }
-    console.log(level25Pets);
-    console.log(petsOwned);
   }
 
   function checkRarity(rarity) {

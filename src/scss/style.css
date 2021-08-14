@@ -30026,10 +30026,10 @@
   height: 50px;
   margin: -4px -2px;
   border-radius: 500px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffbd00), to(#ca7900));
-  background: linear-gradient(#ffbd00, #ca7900);
-  -webkit-box-shadow: 0 1px 5px rgba(204, 139, 0, 0.3), -3px 25px 25px rgba(179, 122, 0, 0.5), -6px 50px 50px rgba(153, 105, 0, 0.3), -9px 65px 65px rgba(102, 70, 0, 0.3);
-          box-shadow: 0 1px 5px rgba(204, 139, 0, 0.3), -3px 25px 25px rgba(179, 122, 0, 0.5), -6px 50px 50px rgba(153, 105, 0, 0.3), -9px 65px 65px rgba(102, 70, 0, 0.3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#4a4161), to(#3c4268));
+  background: linear-gradient(#4a4161, #3c4268);
+  -webkit-box-shadow: 0 1px 5px rgba(91, 105, 185, 0.3), -3px 25px 25px rgba(101, 115, 189, 0.5), -6px 50px 50px rgba(127, 149, 189, 0.3), -9px 65px 65px rgba(146, 151, 221, 0.3);
+          box-shadow: 0 1px 5px rgba(91, 105, 185, 0.3), -3px 25px 25px rgba(101, 115, 189, 0.5), -6px 50px 50px rgba(127, 149, 189, 0.3), -9px 65px 65px rgba(146, 151, 221, 0.3);
 }
 
 .submitStrategy .toggleRNG .toggle {
@@ -30044,7 +30044,7 @@
           align-items: center;
   width: 120px;
   height: 55px;
-  background: #ffad00;
+  background: #4a4161;
   border-radius: 500px;
   border: solid 5px transparent;
   background-clip: padding-box;
@@ -30056,10 +30056,10 @@
   height: 30px;
   margin: -4px -5px;
   border-radius: 500px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#3c3747), to(rgba(214, 139, 0, 0.1)));
-  background: linear-gradient(#3c3747, rgba(214, 139, 0, 0.1));
-  -webkit-box-shadow: 0px 5px 1px 0 rgba(255, 186, 36, 0.7);
-          box-shadow: 0px 5px 1px 0 rgba(255, 186, 36, 0.7);
+  background: -webkit-gradient(linear, left top, left bottom, from(#3c3747), to(rgba(38, 50, 89, 0.1)));
+  background: linear-gradient(#3c3747, rgba(38, 50, 89, 0.1));
+  -webkit-box-shadow: 0px 5px 1px 0 rgba(40, 46, 62, 0.7);
+          box-shadow: 0px 5px 1px 0 rgba(40, 46, 62, 0.7);
 }
 
 .submitStrategy .toggleRNG .toggle__bg {
@@ -30610,6 +30610,28 @@
           transform-style: preserve-3d;
   -webkit-transform: translate3d(-50%, -50%, 0px);
           transform: translate3d(-50%, -50%, 0px);
+}
+
+.submitStrategy .optionalTips {
+  padding: 50px 0;
+  padding-left: 0px;
+}
+
+.submitStrategy .optionalTips label {
+  color: black;
+  font-family: "Raleway", sans-serif;
+  margin-right: 10px;
+}
+
+.submitStrategy .optionalTips input {
+  position: relative;
+  background-color: #3e4150;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 15px;
+  font-size: 0.8rem;
+  width: 400px;
+  border: none;
 }
 
 .submitStrategy .nextStep {
