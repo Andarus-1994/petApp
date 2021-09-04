@@ -1,87 +1,85 @@
 @import "../mixins/alignMiddle";
 @import "../abstracts/fonts";
 .headerTop {
-  position: relative;
-  height: 120px;
-  min-height: 100px;
-  width: 100%;
-  background-color: #242833;
-
-  .loginButtons {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
+    padding: 0px 0px;
+    margin: 0 auto;
+    margin-left: 130px;
+    margin-top: 40px;
+    width: 90%;
+    background: #242833;
+    border: 1.5px solid rgb(74, 98, 114);
     display: flex;
-    justify-content: end;
-    padding-top: 15px;
-    padding-right: 25px;
-    .logedUser {
-      font-family: $Roboto;
-      color: rgb(238, 230, 230);
-      span {
-        font-size: 1.3rem;
-        color: rgb(129, 177, 177);
-      }
+    align-items: center;
+    flex-direction: row;
+    height: 75px;
+    box-shadow: 0px 0px 5px 0px black;
 
-      a {
-        display: block;
-        color: rgb(117, 149, 170);
-        cursor: pointer;
-        text-decoration: underline;
-        text-align: right;
-      }
+    & a > img {
+        position: relative;
+        border-top-right-radius: 60px;
+        width: 150px;
+        top: -25px;
+        left: -5px;
+        width: 170px;
     }
-    & > a {
-      position: absolute;
-      cursor: pointer;
-      padding: 10px 25px;
-      background-color: transparent;
-      color: rgb(245, 245, 245);
-      border: 1px solid rgb(91, 91, 107);
-      border-radius: 35px;
-      font-family: $Roboto;
-      font-size: 1rem;
-      text-decoration: none;
-      letter-spacing: 0.5px;
-      transition: 0.4s;
-      &:hover {
-        background-color: rgb(39, 42, 48);
-        color: rgb(69, 67, 87);
-      }
-      &:active {
-        animation: shadowBox 0.1s;
-      }
-    }
-  }
+    .loginButtons {
+        position: relative;
+        top: 0;
+        right: 0;
+        height: 100%;
+        margin-right: 10px;
+        .logedUser {
+            font-family: $Roboto;
+            color: rgb(238, 230, 230);
+            span {
+                font-size: 1.3rem;
+                color: rgb(129, 177, 177);
+            }
 
-  h1 {
-    font-size: 2rem;
-    font-weight: 900;
-    font-family: $Sans;
-    padding-top: 10px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    letter-spacing: 3px;
-    @media screen and (max-width: 800px) {
-      font-size: 1rem;
+            a {
+                display: block;
+                color: rgb(117, 149, 170);
+                cursor: pointer;
+                text-decoration: underline;
+                text-align: right;
+            }
+        }
+        & > a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: $Raleway;
+            font-weight: 600;
+            letter-spacing: 0.9px;
+            color: rgb(221, 219, 219);
+            padding: 10px 20px;
+            margin: 0 0px;
+            transition: 0.4s;
+            height: 100%;
+            text-transform: uppercase;
+            border-right: 1px solid rgb(39, 49, 56);
+
+            &:hover {
+                color: rgb(255, 255, 255);
+                background-color: #2e323d;
+                text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
+            }
+            &:active {
+                animation: shadowBox 0.1s;
+            }
+        }
     }
-    span {
-      color: #f5f5f5;
-      -webkit-text-stroke: 1px rgb(51, 51, 56);
-      text-transform: uppercase;
-      font-size: 2.9rem;
-      @media screen and (max-width: 800px) {
-        font-size: 1.2rem;
-      }
-    }
-  }
 }
 
 @keyframes shadowBox {
-  0% {
-    box-shadow: 0px 0px 0px 0px black;
-  }
-  100% {
-    box-shadow: 0px 0px 10px 10px rgb(24, 25, 27);
-  }
+    0% {
+        box-shadow: 0px 0px 0px 0px black;
+    }
+    100% {
+        box-shadow: 0px 0px 10px 10px rgb(24, 25, 27);
+    }
 }

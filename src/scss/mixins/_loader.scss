@@ -1,36 +1,36 @@
 .spinnerProfile-1 {
-  box-sizing: border-box;
-  position: relative;
-  top: 20px;
-  left: 10%;
-  width: 60px;
-  height: 60px;
-  margin-top: -30px;
-  margin-left: -30px;
-  border-radius: 50%;
-  border: 3px solid lightgray;
-  border-top-color: rgb(49, 45, 43);
-  animation: spinner 0.7s linear infinite;
+    box-sizing: border-box;
+    position: absolute;
+    top: 40px;
+    left: -70px;
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    border-radius: 50%;
+    border: 3px solid lightgray;
+    border-top-color: rgb(49, 45, 43);
+    animation: spinner 0.7s linear infinite;
 }
 
 .spinnerPets-1 {
-  box-sizing: border-box;
-  position: absolute;
-  top: 20px;
-  left: 0;
-  right: 0;
-  width: 60px;
-  height: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50%;
-  border: 3px solid lightgray;
-  border-top-color: rgb(49, 45, 43);
-  animation: spinner 0.7s linear infinite;
+    box-sizing: border-box;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 3px solid lightgray;
+    border-top-color: rgb(49, 45, 43);
+    animation: spinner 0.7s linear infinite;
 }
 
 @keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
+    to {
+        transform: rotate(360deg);
+    }
 }

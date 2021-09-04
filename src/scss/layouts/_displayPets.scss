@@ -2,489 +2,483 @@
 @import "../mixins/animationCards";
 @import "../mixins/petTypeStyle";
 .App {
-  .rememberChar {
-    cursor: pointer;
-    background-color: rgb(192, 55, 55);
-    color: white;
-    font-family: $Roboto;
-    font-size: 0.85rem;
-    position: absolute;
-    padding: 7px 14px;
-    top: 220px;
-    left: 9%;
-    z-index: 5;
-    transition: 0.4s;
-
-    &:hover {
-      background-color: rgb(145, 34, 34);
-      box-shadow: 0px 0px 5px 1px black;
-    }
-    &:active {
-      top: 217px;
-    }
-  }
-  .favored {
-    cursor: auto;
-    color: rgb(216, 179, 179);
-    font-size: 0.8rem;
-    background-color: rgb(129, 35, 35);
-    box-shadow: inset 0px 0px 8px 4px rgb(0, 0, 0);
-    left: 10%;
-    &:active {
-      top: 220px;
-    }
-    &:hover {
-      pointer-events: none;
-      background-color: rgb(129, 35, 35);
-    }
-  }
-  .noFavorite {
-    position: absolute;
-    top: 60px;
-    left: 10%;
-    background: linear-gradient(60deg, rgb(156, 156, 151), rgb(209, 208, 208));
-    border: 1px solid rgb(2, 2, 2);
-    border-radius: 0.5rem;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: $Raleway;
-    @media screen and (max-width: 800px) {
-      display: none;
-    }
-  }
-
-  .petFilters {
-    display: flex;
-
-    .sort {
-      margin-left: 150px;
-      position: relative;
-      width: fit-content;
-      padding-top: 2px;
-      label {
-        position: absolute;
-        width: 150px;
-        top: 0.6rem;
-        left: -7.5rem;
-        pointer-events: none;
-        color: rgb(52, 57, 61);
-        position: absolute;
-        font-family: $Raleway;
-        letter-spacing: 0.5px;
-      }
-      & > select {
-        background-color: rgb(103, 110, 97);
+    .rememberChar {
+        cursor: pointer;
+        background-color: rgb(192, 55, 55);
         color: white;
-        border: none;
-        padding: 8px 10px;
-        appearance: none;
-      }
-    }
-
-    .search {
-      position: relative;
-      margin-left: 120px;
-      input {
-        background-color: rgb(135, 146, 124);
-        position: relative;
-        padding: 10px 12px;
-        font-family: $Raleway;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        border: none;
-        letter-spacing: 1px;
-        transition: 0.4s;
-        &:focus {
-          border-top-left-radius: 2rem;
-          border-bottom-left-radius: 2rem;
-          background-color: rgb(127, 141, 113);
-          box-shadow: 0px 0px 4px 0px black;
-          outline: none;
-          border: none;
-        }
-      }
-
-      input:focus + label,
-      input:not(:placeholder-shown) + label {
-        transform: scale(0.9) translateY(-2rem);
-        opacity: 1;
-      }
-      input::placeholder {
-        opacity: 0;
-      }
-      input::placeholder {
-        opacity: 0;
-      }
-      label {
-        pointer-events: none;
-        color: rgb(52, 57, 61);
-        left: 0.8rem;
-        top: 0.55rem;
-        position: absolute;
-        font-family: $Raleway;
-        letter-spacing: 0.5px;
-        transition: 0.4s;
-      }
-
-      button {
-        background-color: unset;
-        color: rgb(17, 17, 17);
-        position: absolute;
-        right: 0px;
-        font-size: 0.85rem;
-        padding: 0.55rem 1rem;
-        &:hover {
-          background-color: transparent !important;
-        }
-      }
-      label:nth-of-type(2) {
-        pointer-events: none;
-        color: rgb(52, 57, 61);
-        left: 0.8rem;
-        top: 2.45rem;
-        position: absolute;
-        font-size: 0.75rem;
-        font-family: $Raleway;
-        letter-spacing: 0.5px;
-        transition: 0.4s;
-      }
-    }
-    button {
-      position: relative;
-      font-size: 1rem;
-      background-color: rgb(124, 136, 113);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      cursor: pointer;
-      padding: 0.4rem 1.2rem;
-      border: none;
-      border-top-right-radius: 2rem;
-      border-bottom-right-radius: 2rem;
-      transition: 0.4s;
-      i {
-        color: rgb(37, 39, 41);
-      }
-    }
-    button:hover {
-      background-color: rgb(97, 107, 87);
-    }
-    .totalPets {
-      font-family: $Raleway;
-      font-size: 1.7rem;
-      color: rgb(35, 41, 48);
-      margin-left: auto;
-      margin-right: 22vh;
-    }
-  }
-  .emptyBarTotalPets {
-    position: absolute;
-
-    top: 108px;
-    left: 17%;
-    border: 1px solid rgb(116, 116, 139);
-    border-radius: 10px;
-    width: 120px;
-    height: 10px;
-    @media screen and (max-width: 800px) {
-      display: none;
-    }
-    p {
-      font-family: $Roboto;
-      font-weight: 100;
-      text-align: center;
-      color: rgb(22, 27, 22);
-      width: 170px;
-      margin-top: 5px;
-      margin-left: -10px;
-    }
-    .fillBarOwnedPets {
-      background: linear-gradient(
-        60deg,
-        rgb(42, 199, 21),
-        rgb(32, 92, 42),
-        rgb(42, 199, 21)
-      );
-      border-bottom-left-radius: 10px;
-      border-top-left-radius: 10px;
-      height: 9px;
-
-      @media screen and (max-width: 800px) {
-        display: none;
-      }
-    }
-
-    .fillBarOwnedPetsYellow {
-      background: linear-gradient(
-        60deg,
-        rgb(228, 225, 77),
-        rgb(201, 212, 95),
-        rgb(199, 166, 21)
-      );
-      border-bottom-left-radius: 10px;
-      border-top-left-radius: 10px;
-      height: 9px;
-
-      @media screen and (max-width: 800px) {
-        display: none;
-      }
-    }
-    .yellowText {
-      position: absolute;
-      top: -20px;
-      left: 17%;
-      color: rgb(171, 179, 71);
-      font-family: $Roboto;
-      font-weight: 100;
-      font-size: 1rem;
-      @media screen and (max-width: 800px) {
-        display: none;
-      }
-    }
-    h3 {
-      position: absolute;
-      top: -20px;
-      left: 17%;
-      color: rgb(99, 194, 65);
-      font-family: $Roboto;
-      font-weight: 100;
-      font-size: 1rem;
-    }
-  }
-  .profile {
-    position: absolute;
-    top: 60px;
-    left: 10%;
-    @media screen and (max-width: 800px) {
-      top: 10px;
-      left: 10px;
-    }
-    img {
-      position: relative;
-      border-radius: 0.5rem;
-      @media screen and (max-width: 800px) {
-        width: 40px;
-        height: 40px;
-      }
-    }
-
-    &:hover:not(h2) .hoverProfile {
-      display: inline;
-    }
-
-    .hoverProfile {
-      position: absolute;
-      left: 89px;
-      top: -20px;
-      display: none;
-      animation: appear 1s;
-    }
-    div {
-      display: flex;
-      font-family: $Raleway;
-      font-size: 1.5rem;
-      color: rgb(0, 0, 0);
-      position: absolute;
-      min-width: 350px;
-      top: 90px;
-      left: -40px;
-      @media screen and (max-width: 800px) {
-        font-size: 0.85rem;
-        top: 40px;
-        left: 0px;
-        color: white;
-      }
-      h2 {
-        font-size: 1.2rem;
-        padding: 5px 0;
-        font-weight: 300;
-        margin-left: 8px;
-        color: rgb(0, 0, 0);
-        &::first-letter {
-          display: inline;
-          text-transform: uppercase;
-        }
-        @media screen and (max-width: 800px) {
-          color: white;
-          font-size: 0.85rem;
-          margin-top: -4.5px;
-        }
-      }
-    }
-  }
-  .error {
-    color: black;
-    font-family: $Raleway;
-    font-size: 3rem;
-    text-align: center;
-    text-transform: uppercase;
-    p {
-      color: rgb(30, 43, 59);
-      font-size: 7rem;
-
-      margin-bottom: 5vh;
-    }
-  }
-  & > .displayPets {
-    position: relative;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min-content, 250px));
-    grid-column-gap: 50px;
-    grid-row-gap: 100px;
-    grid-auto-rows: 1fr;
-    min-height: 350px;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 8vh;
-    .zoomOutPet {
-      position: absolute;
-      height: 100vh;
-      width: 100vh;
-      z-index: 0;
-    }
-
-    @include glowAnimations("elemental");
-    @include glowAnimations("critter");
-    @include petTypes;
-
-    li {
-      position: relative;
-      background-color: rgb(240, 240, 240);
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid rgb(223, 223, 223);
-      text-align: center;
-      padding: 0.8rem 0;
-      padding-bottom: 0rem;
-      border-radius: 0.8rem;
-      transition: 1s;
-      line-height: 1.9rem;
-      z-index: 10;
-      animation: enterTop;
-      .blue {
-        color: rgb(28, 28, 129);
-        font-size: 0.85rem;
-        font-family: $Raleway;
-        &::first-letter {
-          text-transform: uppercase;
-        }
-      }
-      .green {
-        color: rgb(105, 165, 48);
-        font-size: 0.85rem;
-        font-family: $Raleway;
-        &::first-letter {
-          text-transform: uppercase;
-        }
-      }
-      .white {
-        color: rgb(240, 241, 238);
-        font-size: 0.85rem;
-        font-family: $Raleway;
-        &::first-letter {
-          text-transform: uppercase;
-        }
-      }
-      .grey {
-        color: rgb(167, 168, 165);
-        font-size: 0.85rem;
-        font-family: $Raleway;
-        &::first-letter {
-          text-transform: uppercase;
-        }
-      }
-      .petName {
         font-family: $Roboto;
-        font-size: 1rem;
-        line-height: 18px;
-        min-height: 33px;
-        margin-top: 10px;
-      }
-      .level {
-        margin-bottom: 5px;
-      }
-      .type {
-        margin: 0 auto;
-        margin-top: 40px;
-        color: rgb(27, 27, 27);
-        font-size: 0.65rem;
-        letter-spacing: 1.5px;
-      }
+        font-size: 0.85rem;
+        position: absolute;
+        padding: 7px 14px;
+        top: 220px;
+        left: 9%;
+        z-index: 5;
+        transition: 0.4s;
 
-      p {
-        text-align: center;
-        margin: 0 auto;
-        min-width: 110px;
+        &:hover {
+            background-color: rgb(145, 34, 34);
+            box-shadow: 0px 0px 5px 1px black;
+        }
+        &:active {
+            top: 217px;
+        }
+    }
+    .favored {
+        cursor: auto;
+        color: rgb(216, 179, 179);
+        font-size: 0.8rem;
+        background-color: rgb(129, 35, 35);
+        box-shadow: inset 0px 0px 8px 4px rgb(0, 0, 0);
+        left: 10%;
+        &:active {
+            top: 220px;
+        }
+        &:hover {
+            pointer-events: none;
+            background-color: rgb(129, 35, 35);
+        }
+    }
+    .noFavorite {
+        position: absolute;
+        top: -25px;
+        left: -110px;
+        background: linear-gradient(-60deg, rgb(48, 67, 83), rgb(209, 208, 208));
+        border: 1px solid rgb(2, 2, 2);
+        border-radius: 0.5rem;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-family: $Raleway;
-        font-size: 0.95rem;
-
-        .health {
-          color: rgb(194, 47, 47);
-          font-size: 1rem;
+        @media screen and (max-width: 800px) {
+            display: none;
         }
-        .power {
-          color: rgb(201, 121, 47);
+    }
 
-          font-size: 1rem;
-        }
-        .speed {
-          color: rgb(173, 165, 49);
-          font-size: 1rem;
-        }
-      }
+    .petFilters {
+        display: flex;
 
-      .iconPet {
-        position: relative;
-        width: 100%;
+        .sort {
+            margin-left: 150px;
+            position: relative;
+            width: fit-content;
+            padding-top: 2px;
+            label {
+                position: absolute;
+                width: 150px;
+                top: 0.6rem;
+                left: -7.5rem;
+                pointer-events: none;
+                color: rgb(52, 57, 61);
+                position: absolute;
+                font-family: $Raleway;
+                letter-spacing: 0.5px;
+            }
+            & > select {
+                background-color: rgb(103, 110, 97);
+                color: white;
+                border: none;
+                padding: 8px 10px;
+                appearance: none;
+            }
+        }
+
+        .search {
+            position: relative;
+            margin-left: 120px;
+            input {
+                background-color: rgb(135, 146, 124);
+                position: relative;
+                padding: 10px 12px;
+                font-family: $Raleway;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                border: none;
+                letter-spacing: 1px;
+                transition: 0.4s;
+                &:focus {
+                    border-top-left-radius: 2rem;
+                    border-bottom-left-radius: 2rem;
+                    background-color: rgb(127, 141, 113);
+                    box-shadow: 0px 0px 4px 0px black;
+                    outline: none;
+                    border: none;
+                }
+            }
+
+            input:focus + label,
+            input:not(:placeholder-shown) + label {
+                transform: scale(0.9) translateY(-2rem);
+                opacity: 1;
+            }
+            input::placeholder {
+                opacity: 0;
+            }
+            input::placeholder {
+                opacity: 0;
+            }
+            label {
+                pointer-events: none;
+                color: rgb(52, 57, 61);
+                left: 0.8rem;
+                top: 0.55rem;
+                position: absolute;
+                font-family: $Raleway;
+                letter-spacing: 0.5px;
+                transition: 0.4s;
+            }
+
+            button {
+                background-color: unset;
+                color: rgb(17, 17, 17);
+                position: absolute;
+                right: 0px;
+                font-size: 0.85rem;
+                padding: 0.55rem 1rem;
+                &:hover {
+                    background-color: transparent !important;
+                }
+            }
+            label:nth-of-type(2) {
+                pointer-events: none;
+                color: rgb(52, 57, 61);
+                left: 0.8rem;
+                top: 2.45rem;
+                position: absolute;
+                font-size: 0.75rem;
+                font-family: $Raleway;
+                letter-spacing: 0.5px;
+                transition: 0.4s;
+            }
+        }
+        button {
+            position: relative;
+            font-size: 1rem;
+            background-color: rgb(124, 136, 113);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            padding: 0.4rem 1.2rem;
+            border: none;
+            border-top-right-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            transition: 0.4s;
+            i {
+                color: rgb(37, 39, 41);
+            }
+        }
+        button:hover {
+            background-color: rgb(97, 107, 87);
+        }
+        .totalPets {
+            font-family: $Raleway;
+            font-size: 1.7rem;
+            color: rgb(35, 41, 48);
+            margin-left: auto;
+            margin-right: 22vh;
+        }
+    }
+    .emptyBarTotalPets {
+        position: absolute;
+        top: 110px;
+        left: -110px;
+        border: 1px solid rgb(116, 116, 139);
+        border-radius: 10px;
+        width: 120px;
         height: 10px;
 
-        img {
-          position: absolute;
-          top: -20px;
-          left: 50%;
-          right: 50%;
-          width: 50px;
-          border-radius: 0.2rem;
-          border: 0.5px solid rgb(196, 194, 194);
-          margin: 0 auto;
-          transform-style: preserve-3d;
-          transform: translate3d(-50%, -50%, 0px);
+        @media screen and (max-width: 800px) {
+            display: none;
         }
-      }
-    }
-  }
-  @keyframes enterTop {
-    0% {
-      opacity: 0;
-      transform: translateY(200px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+        p {
+            position: absolute;
+            font-family: $Roboto;
+            font-size: 14px;
+            font-weight: 100;
+            text-align: center;
+            color: rgb(22, 27, 22);
+            width: 200px;
+            top: -30px;
+            left: -25px;
+        }
+        .fillBarOwnedPets {
+            background: linear-gradient(60deg, rgb(42, 199, 21), rgb(32, 92, 42), rgb(42, 199, 21));
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            height: 9px;
 
-  @keyframes appear {
-    0% {
-      opacity: 0;
+            @media screen and (max-width: 800px) {
+                display: none;
+            }
+        }
+
+        .fillBarOwnedPetsYellow {
+            background: linear-gradient(60deg, rgb(228, 225, 77), rgb(201, 212, 95), rgb(199, 166, 21));
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            height: 9px;
+
+            @media screen and (max-width: 800px) {
+                display: none;
+            }
+        }
+        .yellowText {
+            position: absolute;
+            top: -15px;
+            left: 40px;
+            color: rgb(171, 179, 71);
+            font-family: $Roboto;
+            font-weight: 100;
+            font-size: 13px;
+            @media screen and (max-width: 800px) {
+                display: none;
+            }
+        }
+        h3 {
+            position: absolute;
+            top: -15px;
+            left: 40px;
+            color: rgb(97, 150, 78);
+            font-family: $Roboto;
+            font-weight: 100;
+            font-size: 13px;
+        }
     }
-    100% {
-      opacity: 1;
+    .profile {
+        position: absolute;
+        bottom: -8px;
+        left: -100px;
+        @media screen and (max-width: 800px) {
+            top: 10px;
+            left: 10px;
+        }
+        img {
+            position: relative;
+            border-radius: 0.5rem;
+            @media screen and (max-width: 800px) {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &:hover img ~ .hoverProfile {
+            display: inline;
+            z-index: 100;
+        }
+
+        .hoverProfile {
+            position: absolute;
+            left: 89px;
+            top: -20px;
+            display: none;
+            animation: appear 1s;
+        }
+        div {
+            display: flex;
+            font-family: $Raleway;
+            font-size: 1.5rem;
+            color: rgb(0, 0, 0);
+            position: absolute;
+            min-width: 350px;
+            top: -30px;
+            left: 0px;
+
+            @media screen and (max-width: 800px) {
+                font-size: 0.85rem;
+                top: 40px;
+                left: 0px;
+                color: white;
+            }
+            h2 {
+                font-size: 1.2rem;
+                padding: 5px 0;
+                font-weight: 300;
+                margin-left: 8px;
+                color: rgb(0, 0, 0);
+                &::first-letter {
+                    display: inline;
+                    text-transform: uppercase;
+                }
+                @media screen and (max-width: 800px) {
+                    color: white;
+                    font-size: 0.85rem;
+                    margin-top: -4.5px;
+                }
+            }
+        }
     }
-  }
-  @keyframes flyIn {
-    0% {
-      opacity: 0;
-      transform: translateY(150px);
+    .error {
+        color: black;
+        font-family: $Raleway;
+        font-size: 3rem;
+        text-align: center;
+        text-transform: uppercase;
+        p {
+            color: rgb(30, 43, 59);
+            font-size: 7rem;
+
+            margin-bottom: 5vh;
+        }
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
+    & > .displayPets {
+        position: relative;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min-content, 250px));
+        grid-column-gap: 50px;
+        grid-row-gap: 100px;
+        grid-auto-rows: 1fr;
+        min-height: 350px;
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 8vh;
+        .zoomOutPet {
+            position: absolute;
+            height: 100vh;
+            width: 100vh;
+            z-index: 0;
+        }
+
+        @include glowAnimations("elemental");
+        @include glowAnimations("critter");
+        @include petTypes;
+
+        li {
+            position: relative;
+            background-color: rgb(240, 240, 240);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgb(223, 223, 223);
+            text-align: center;
+            padding: 0.8rem 0;
+            padding-bottom: 0rem;
+            border-radius: 0.8rem;
+            transition: 1s;
+            line-height: 1.9rem;
+            z-index: 10;
+            animation: enterTop;
+            .blue {
+                color: rgb(28, 28, 129);
+                font-size: 0.85rem;
+                font-family: $Raleway;
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+            .green {
+                color: rgb(105, 165, 48);
+                font-size: 0.85rem;
+                font-family: $Raleway;
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+            .white {
+                color: rgb(240, 241, 238);
+                font-size: 0.85rem;
+                font-family: $Raleway;
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+            .grey {
+                color: rgb(167, 168, 165);
+                font-size: 0.85rem;
+                font-family: $Raleway;
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+            .petName {
+                font-family: $Roboto;
+                font-size: 1rem;
+                line-height: 18px;
+                min-height: 33px;
+                margin-top: 10px;
+            }
+            .level {
+                margin-bottom: 5px;
+            }
+            .type {
+                margin: 0 auto;
+                margin-top: 40px;
+                color: rgb(27, 27, 27);
+                font-size: 0.65rem;
+                letter-spacing: 1.5px;
+            }
+
+            p {
+                text-align: center;
+                margin: 0 auto;
+                min-width: 110px;
+                font-family: $Raleway;
+                font-size: 0.95rem;
+
+                .health {
+                    color: rgb(194, 47, 47);
+                    font-size: 1rem;
+                }
+                .power {
+                    color: rgb(201, 121, 47);
+
+                    font-size: 1rem;
+                }
+                .speed {
+                    color: rgb(173, 165, 49);
+                    font-size: 1rem;
+                }
+            }
+
+            .iconPet {
+                position: relative;
+                width: 100%;
+                height: 10px;
+
+                img {
+                    position: absolute;
+                    top: -20px;
+                    left: 50%;
+                    right: 50%;
+                    width: 50px;
+                    border-radius: 0.2rem;
+                    border: 0.5px solid rgb(196, 194, 194);
+                    margin: 0 auto;
+                    transform-style: preserve-3d;
+                    transform: translate3d(-50%, -50%, 0px);
+                }
+            }
+        }
     }
-  }
+    @keyframes enterTop {
+        0% {
+            opacity: 0;
+            transform: translateY(200px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes appear {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes flyIn {
+        0% {
+            opacity: 0;
+            transform: translateY(150px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }

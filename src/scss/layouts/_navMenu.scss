@@ -2,57 +2,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 
 .Routes {
-  & > nav {
-    position: absolute;
-    top: 83px;
-    right: 4%;
-    z-index: 10;
-    width: fit-content;
-    @media screen and (max-width: 800px) {
-      top: 86px;
-    }
-
-    ul {
-      list-style-type: none;
-      display: flex;
-      justify-content: center;
-
-      a {
+    .headerTop > nav {
         position: relative;
-        text-decoration: none;
-        font-size: 0.95rem;
-        font-family: $Raleway;
-        font-weight: 600;
-        letter-spacing: 0.2px;
-        color: rgb(112, 120, 134);
-        padding: 10px 10px;
-        margin: 0 8px;
-        transition: 0.4s;
-        &:hover {
-          background-color: rgb(247, 244, 244);
-          color: black;
-        }
-        .new {
-          position: relative;
-          top: 0;
-          &::after {
-            content: "*";
-            position: absolute;
-            font-size: 1.8rem;
-            color: rgb(214, 37, 37);
-            top: -8px;
-            right: -5px;
-          }
-        }
+        z-index: 10;
+        width: fit-content;
+        height: 100%;
+        width: 100%;
+        margin-left: 30px;
         @media screen and (max-width: 800px) {
-          font-size: 0.7rem;
+            top: 86px;
         }
-      }
 
-      .active {
-        color: rgb(0, 0, 0);
-        background-color: rgb(247, 244, 244);
-      }
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            .contact {
+                margin-left: auto;
+                background-color: #2c323d;
+                margin-right: 20px;
+                box-shadow: inset 0px 0px 5px 0px rgb(54, 58, 51);
+                font-style: italic;
+            }
+            a:first-child {
+                border-left: 1px solid rgb(39, 49, 56);
+            }
+            a {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                font-size: 14px;
+                font-family: $Raleway;
+                font-weight: 600;
+                letter-spacing: 0.9px;
+                color: rgb(201, 202, 204);
+                padding: 10px 10px;
+                margin: 0 0px;
+                transition: 0.4s;
+                height: 100%;
+
+                border-right: 1px solid rgb(39, 49, 56);
+
+                &:hover {
+                    color: rgb(255, 255, 255);
+                    background-color: #2e323d;
+                    text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
+                }
+                .new {
+                    position: relative;
+                    top: 0;
+                    &::after {
+                        content: "*";
+                        position: absolute;
+                        font-size: 1.8rem;
+                        color: rgb(214, 37, 37);
+                        top: -8px;
+                        right: -7px;
+                    }
+                }
+
+                @media screen and (max-width: 800px) {
+                    font-size: 0.7rem;
+                }
+            }
+
+            .active {
+                color: rgb(255, 255, 255);
+                background-color: #2e323d;
+                text-shadow: 0 0 1px #fff, 0 0 1px rgba(255, 255, 255, 0.3);
+            }
+        }
     }
-  }
 }

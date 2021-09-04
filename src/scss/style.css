@@ -4,42 +4,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
@@ -47,26 +54,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
 .headerTop {
   position: relative;
-  height: 120px;
-  min-height: 100px;
-  width: 100%;
-  background-color: #242833;
-}
-
-.headerTop .loginButtons {
-  position: absolute;
-  top: 0;
-  right: 0;
+  padding: 0px 0px;
+  margin: 0 auto;
+  margin-left: 130px;
+  margin-top: 40px;
+  width: 90%;
+  background: #242833;
+  border: 1.5px solid #4a6272;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  padding-top: 15px;
-  padding-right: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 75px;
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+          box-shadow: 0px 0px 5px 0px black;
+}
+
+.headerTop a > img {
+  position: relative;
+  border-top-right-radius: 60px;
+  width: 150px;
+  top: -25px;
+  left: -5px;
+  width: 170px;
+}
+
+.headerTop .loginButtons {
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 100%;
+  margin-right: 10px;
 }
 
 .headerTop .loginButtons .logedUser {
@@ -88,58 +115,40 @@
 }
 
 .headerTop .loginButtons > a {
-  position: absolute;
-  cursor: pointer;
-  padding: 10px 25px;
-  background-color: transparent;
-  color: whitesmoke;
-  border: 1px solid #5b5b6b;
-  border-radius: 35px;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-decoration: none;
-  letter-spacing: 0.5px;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.9px;
+  color: #dddbdb;
+  padding: 10px 20px;
+  margin: 0 0px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  height: 100%;
+  text-transform: uppercase;
+  border-right: 1px solid #273138;
 }
 
 .headerTop .loginButtons > a:hover {
-  background-color: #272a30;
-  color: #454357;
+  color: white;
+  background-color: #2e323d;
+  text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
 }
 
 .headerTop .loginButtons > a:active {
   -webkit-animation: shadowBox 0.1s;
           animation: shadowBox 0.1s;
-}
-
-.headerTop h1 {
-  font-size: 2rem;
-  font-weight: 900;
-  font-family: "PT Sans", sans-serif;
-  padding-top: 10px;
-  color: white;
-  text-align: center;
-  letter-spacing: 3px;
-}
-
-@media screen and (max-width: 800px) {
-  .headerTop h1 {
-    font-size: 1rem;
-  }
-}
-
-.headerTop h1 span {
-  color: #f5f5f5;
-  -webkit-text-stroke: 1px #333338;
-  text-transform: uppercase;
-  font-size: 2.9rem;
-}
-
-@media screen and (max-width: 800px) {
-  .headerTop h1 span {
-    font-size: 1.2rem;
-  }
 }
 
 @-webkit-keyframes shadowBox {
@@ -466,9 +475,9 @@
 
 .App .noFavorite {
   position: absolute;
-  top: 60px;
-  left: 10%;
-  background: linear-gradient(60deg, #9c9c97, #d1d0d0);
+  top: -25px;
+  left: -110px;
+  background: linear-gradient(-60deg, #304353, #d1d0d0);
   border: 1px solid #020202;
   border-radius: 0.5rem;
   width: 100px;
@@ -666,8 +675,8 @@
 
 .App .emptyBarTotalPets {
   position: absolute;
-  top: 108px;
-  left: 17%;
+  top: 110px;
+  left: -110px;
   border: 1px solid #74748b;
   border-radius: 10px;
   width: 120px;
@@ -681,13 +690,15 @@
 }
 
 .App .emptyBarTotalPets p {
+  position: absolute;
   font-family: "Roboto", sans-serif;
+  font-size: 14px;
   font-weight: 100;
   text-align: center;
   color: #161b16;
-  width: 170px;
-  margin-top: 5px;
-  margin-left: -10px;
+  width: 200px;
+  top: -30px;
+  left: -25px;
 }
 
 .App .emptyBarTotalPets .fillBarOwnedPets {
@@ -718,12 +729,12 @@
 
 .App .emptyBarTotalPets .yellowText {
   position: absolute;
-  top: -20px;
-  left: 17%;
+  top: -15px;
+  left: 40px;
   color: #abb347;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
-  font-size: 1rem;
+  font-size: 13px;
 }
 
 @media screen and (max-width: 800px) {
@@ -734,18 +745,18 @@
 
 .App .emptyBarTotalPets h3 {
   position: absolute;
-  top: -20px;
-  left: 17%;
-  color: #63c241;
+  top: -15px;
+  left: 40px;
+  color: #61964e;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
-  font-size: 1rem;
+  font-size: 13px;
 }
 
 .App .profile {
   position: absolute;
-  top: 60px;
-  left: 10%;
+  bottom: -8px;
+  left: -100px;
 }
 
 @media screen and (max-width: 800px) {
@@ -767,8 +778,9 @@
   }
 }
 
-.App .profile:hover:not(h2) .hoverProfile {
+.App .profile:hover img ~ .hoverProfile {
   display: inline;
+  z-index: 100;
 }
 
 .App .profile .hoverProfile {
@@ -789,8 +801,8 @@
   color: black;
   position: absolute;
   min-width: 350px;
-  top: 90px;
-  left: -40px;
+  top: -30px;
+  left: 0px;
 }
 
 @media screen and (max-width: 800px) {
@@ -1821,9 +1833,9 @@
 .spinnerProfile-1 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  position: relative;
-  top: 20px;
-  left: 10%;
+  position: absolute;
+  top: 40px;
+  left: -70px;
   width: 60px;
   height: 60px;
   margin-top: -30px;
@@ -2572,6 +2584,20 @@
   }
 }
 
+.workProgress {
+  width: 100%;
+  background: black;
+  padding: 5px 0;
+}
+
+.workProgress h1 {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 15px #fff, 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
 .copyRight {
   background-color: #303544;
   width: 100%;
@@ -2588,23 +2614,24 @@
   color: #3e7070;
 }
 
-.Routes > nav {
-  position: absolute;
-  top: 83px;
-  right: 4%;
+.Routes .headerTop > nav {
+  position: relative;
   z-index: 10;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: 100%;
+  width: 100%;
+  margin-left: 30px;
 }
 
 @media screen and (max-width: 800px) {
-  .Routes > nav {
+  .Routes .headerTop > nav {
     top: 86px;
   }
 }
 
-.Routes > nav ul {
+.Routes .headerTop > nav ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2612,50 +2639,78 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
-.Routes > nav ul a {
+.Routes .headerTop > nav ul .contact {
+  margin-left: auto;
+  background-color: #2c323d;
+  margin-right: 20px;
+  -webkit-box-shadow: inset 0px 0px 5px 0px #363a33;
+          box-shadow: inset 0px 0px 5px 0px #363a33;
+  font-style: italic;
+}
+
+.Routes .headerTop > nav ul a:first-child {
+  border-left: 1px solid #273138;
+}
+
+.Routes .headerTop > nav ul a {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 14px;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
-  letter-spacing: 0.2px;
-  color: #707886;
+  letter-spacing: 0.9px;
+  color: #c9cacc;
   padding: 10px 10px;
-  margin: 0 8px;
+  margin: 0 0px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  height: 100%;
+  border-right: 1px solid #273138;
 }
 
-.Routes > nav ul a:hover {
-  background-color: #f7f4f4;
-  color: black;
+.Routes .headerTop > nav ul a:hover {
+  color: white;
+  background-color: #2e323d;
+  text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
 }
 
-.Routes > nav ul a .new {
+.Routes .headerTop > nav ul a .new {
   position: relative;
   top: 0;
 }
 
-.Routes > nav ul a .new::after {
+.Routes .headerTop > nav ul a .new::after {
   content: "*";
   position: absolute;
   font-size: 1.8rem;
   color: #d62525;
   top: -8px;
-  right: -5px;
+  right: -7px;
 }
 
 @media screen and (max-width: 800px) {
-  .Routes > nav ul a {
+  .Routes .headerTop > nav ul a {
     font-size: 0.7rem;
   }
 }
 
-.Routes > nav ul .active {
-  color: black;
-  background-color: #f7f4f4;
+.Routes .headerTop > nav ul .active {
+  color: white;
+  background-color: #2e323d;
+  text-shadow: 0 0 1px #fff, 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
 .notFound {
