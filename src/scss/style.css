@@ -55,15 +55,19 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
+@font-face {
+  font-family: sf-pro-display-medium;
+  src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
+}
+
 .headerTop {
   position: relative;
   padding: 0px 0px;
   margin: 0 auto;
   margin-left: 130px;
-  margin-top: 40px;
+  margin-top: 20px;
   width: 90%;
-  background: #242833;
-  border: 1.5px solid #4a6272;
+  background: #242424;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,9 +78,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 75px;
-  -webkit-box-shadow: 0px 0px 5px 0px black;
-          box-shadow: 0px 0px 5px 0px black;
+  height: 60px;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(63, 63, 63, 0.932);
+          box-shadow: 0px 0px 2px 0px rgba(63, 63, 63, 0.932);
 }
 
 .headerTop a > img {
@@ -86,6 +90,8 @@
   top: -25px;
   left: -5px;
   width: 170px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .headerTop .loginButtons {
@@ -94,6 +100,16 @@
   right: 0;
   height: 100%;
   margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .headerTop .loginButtons .logedUser {
@@ -135,15 +151,16 @@
   margin: 0 0px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  height: 100%;
+  margin: auto auto;
   text-transform: uppercase;
-  border-right: 1px solid #273138;
+  border: 1px solid #4c4d4e;
 }
 
 .headerTop .loginButtons > a:hover {
   color: white;
-  background-color: #2e323d;
+  background-color: #1c1d1f;
   text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
+  letter-spacing: 1.7px;
 }
 
 .headerTop .loginButtons > a:active {
@@ -171,6 +188,11 @@
     -webkit-box-shadow: 0px 0px 10px 10px #18191b;
             box-shadow: 0px 0px 10px 10px #18191b;
   }
+}
+
+@font-face {
+  font-family: sf-pro-display-medium;
+  src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
 }
 
 .searchBar {
@@ -301,10 +323,15 @@
   color: #578592;
 }
 
+@font-face {
+  font-family: sf-pro-display-medium;
+  src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
+}
+
 .paginationButtons {
-  background-color: #ffffff;
-  -webkit-box-shadow: 0px 0px 4px 0px black;
-          box-shadow: 0px 0px 4px 0px black;
+  background-color: #1b1b1b;
+  -webkit-box-shadow: 0px 0px 4px 0px #1d1d1d;
+          box-shadow: 0px 0px 4px 0px #1d1d1d;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -337,7 +364,7 @@
   margin: 1rem;
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
-  color: #414163;
+  color: #636369;
   cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -345,7 +372,7 @@
 
 .paginationButtons a:hover {
   background-color: #28485e;
-  color: white;
+  color: #545c6d;
 }
 
 .paginationButtons .paginationActive a {
@@ -377,6 +404,11 @@
 
 .paginationButtons .paginationDisabled a:hover {
   background-color: none;
+}
+
+@font-face {
+  font-family: sf-pro-display-medium;
+  src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
 }
 
 @-webkit-keyframes spinner {
@@ -433,12 +465,13 @@
   cursor: pointer;
   background-color: #c03737;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium;
   font-size: 0.85rem;
+  letter-spacing: 0.5px;
   position: absolute;
   padding: 7px 14px;
-  top: 220px;
-  left: 9%;
+  top: 240px;
+  left: 40px;
   z-index: 5;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -456,12 +489,12 @@
 
 .App .favored {
   cursor: auto;
-  color: #d8b3b3;
+  color: #ebe8e8;
   font-size: 0.8rem;
-  background-color: #812323;
+  background-color: #c42e2e;
   -webkit-box-shadow: inset 0px 0px 8px 4px black;
           box-shadow: inset 0px 0px 8px 4px black;
-  left: 10%;
+  left: 40px;
 }
 
 .App .favored:active {
@@ -521,7 +554,7 @@
   top: 0.6rem;
   left: -7.5rem;
   pointer-events: none;
-  color: #34393d;
+  color: #a5abb1;
   position: absolute;
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.5px;
@@ -606,7 +639,7 @@
 
 .App .petFilters .search label {
   pointer-events: none;
-  color: #34393d;
+  color: #31404e;
   left: 0.8rem;
   top: 0.55rem;
   position: absolute;
@@ -631,7 +664,7 @@
 
 .App .petFilters .search label:nth-of-type(2) {
   pointer-events: none;
-  color: #34393d;
+  color: #a5abb1;
   left: 0.8rem;
   top: 2.45rem;
   position: absolute;
@@ -695,7 +728,7 @@
   font-size: 14px;
   font-weight: 100;
   text-align: center;
-  color: #161b16;
+  color: #f5eded;
   width: 200px;
   top: -30px;
   left: -25px;
@@ -757,6 +790,7 @@
   position: absolute;
   bottom: -8px;
   left: -100px;
+  font-family: sf-pro-display-medium;
 }
 
 @media screen and (max-width: 800px) {
@@ -796,9 +830,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: "Raleway", sans-serif;
+  font-family: sf-pro-display-medium;
   font-size: 1.5rem;
-  color: black;
+  color: #f7f7f7;
   position: absolute;
   min-width: 350px;
   top: -30px;
@@ -819,7 +853,7 @@
   padding: 5px 0;
   font-weight: 300;
   margin-left: 8px;
-  color: black;
+  color: white;
 }
 
 .App .profile div h2::first-letter {
@@ -1390,7 +1424,7 @@
 .App > .displayPets li .blue {
   color: #1c1c81;
   font-size: 0.85rem;
-  font-family: "Raleway", sans-serif;
+  font-family: sf-pro-display-medium;
 }
 
 .App > .displayPets li .blue::first-letter {
@@ -1400,7 +1434,7 @@
 .App > .displayPets li .green {
   color: #69a530;
   font-size: 0.85rem;
-  font-family: "Raleway", sans-serif;
+  font-family: sf-pro-display-medium;
 }
 
 .App > .displayPets li .green::first-letter {
@@ -1410,7 +1444,7 @@
 .App > .displayPets li .white {
   color: #f0f1ee;
   font-size: 0.85rem;
-  font-family: "Raleway", sans-serif;
+  font-family: sf-pro-display-medium;
 }
 
 .App > .displayPets li .white::first-letter {
@@ -1420,7 +1454,7 @@
 .App > .displayPets li .grey {
   color: #a7a8a5;
   font-size: 0.85rem;
-  font-family: "Raleway", sans-serif;
+  font-family: sf-pro-display-medium;
 }
 
 .App > .displayPets li .grey::first-letter {
@@ -1428,7 +1462,7 @@
 }
 
 .App > .displayPets li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium;
   font-size: 1rem;
   line-height: 18px;
   min-height: 33px;
@@ -1440,6 +1474,7 @@
 }
 
 .App > .displayPets li .type {
+  font-family: sf-pro-display-medium;
   margin: 0 auto;
   margin-top: 40px;
   color: #1b1b1b;
@@ -1451,7 +1486,7 @@
   text-align: center;
   margin: 0 auto;
   min-width: 110px;
-  font-family: "Raleway", sans-serif;
+  font-family: sf-pro-display-medium;
   font-size: 0.95rem;
 }
 
@@ -1828,6 +1863,11 @@
   font-family: "Raleway", sans-serif;
   color: #2c2424;
   margin-top: 50px;
+}
+
+@font-face {
+  font-family: sf-pro-display-medium;
+  src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
 }
 
 .spinnerProfile-1 {
@@ -2598,8 +2638,13 @@
   text-shadow: 0 0 15px #fff, 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
+@font-face {
+  font-family: sf-pro-display-medium;
+  src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
+}
+
 .copyRight {
-  background-color: #303544;
+  background-color: #1b1b1b;
   width: 100%;
   margin-top: 35vh;
   padding: 10px 0;
@@ -2607,11 +2652,16 @@
   font-family: "Raleway", sans-serif;
   font-size: 1.3rem;
   font-weight: 300;
-  color: black;
+  color: #817f7f;
 }
 
 .copyRight span {
   color: #3e7070;
+}
+
+@font-face {
+  font-family: sf-pro-display-medium;
+  src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
 }
 
 .Routes .headerTop > nav {
@@ -2645,15 +2695,16 @@
 
 .Routes .headerTop > nav ul .contact {
   margin-left: auto;
-  background-color: #2c323d;
+  background-color: #1b1a1a;
+  padding-left: 10px;
   margin-right: 20px;
   -webkit-box-shadow: inset 0px 0px 5px 0px #363a33;
           box-shadow: inset 0px 0px 5px 0px #363a33;
   font-style: italic;
 }
 
-.Routes .headerTop > nav ul a:first-child {
-  border-left: 1px solid #273138;
+.Routes .headerTop > nav ul .contact:hover {
+  padding-left: 10px;
 }
 
 .Routes .headerTop > nav ul a {
@@ -2674,17 +2725,59 @@
   letter-spacing: 0.9px;
   color: #c9cacc;
   padding: 10px 10px;
-  margin: 0 0px;
+  padding-left: 30px;
+  margin: 0 5px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   height: 100%;
-  border-right: 1px solid #273138;
+  text-transform: uppercase;
 }
 
 .Routes .headerTop > nav ul a:hover {
   color: white;
-  background-color: #2e323d;
+  background-color: #1b1a1a;
   text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
+  letter-spacing: 1.2px;
+  padding: 10px 5px;
+  padding-left: 30px;
+}
+
+.Routes .headerTop > nav ul a.levelUp img {
+  width: 50px;
+  position: absolute;
+  top: 15px;
+  left: -10px;
+  right: 0;
+}
+
+.Routes .headerTop > nav ul a.SL::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 30px;
+  height: 20px;
+  background-color: rgba(241, 240, 240, 0.253);
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 66% 46%, 56% 14%);
+          clip-path: polygon(25% 0%, 100% 0%, 66% 46%, 56% 14%);
+}
+
+.Routes .headerTop > nav ul a.SL img {
+  width: 50px;
+  position: absolute;
+  top: -10px;
+  left: -40px;
+  right: 0;
+}
+
+.Routes .headerTop > nav ul a img {
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  left: -10px;
+  right: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .Routes .headerTop > nav ul a .new {
@@ -2709,8 +2802,13 @@
 
 .Routes .headerTop > nav ul .active {
   color: white;
-  background-color: #2e323d;
+  background-color: #1b1a1a;
   text-shadow: 0 0 1px #fff, 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+@font-face {
+  font-family: sf-pro-display-medium;
+  src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
 }
 
 .notFound {
@@ -2872,7 +2970,7 @@
 }
 
 .levelingGuide > .containerLevelingGuide .FightRequirements > h3 {
-  color: black;
+  color: #f5f3f3;
   font-family: "Raleway", sans-serif;
   margin-top: 10px;
 }
@@ -3027,12 +3125,12 @@
 
 .shadowmoonDraenorLevelGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f0f0f0;
 }
 
 .shadowmoonDraenorLevelGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f5f3f3;
 }
 
 .shadowmoonDraenorLevelGuide .commentSection {
@@ -3463,12 +3561,12 @@
 
 .frostFireDraenorLevelGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f0f0f0;
 }
 
 .frostFireDraenorLevelGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f5f3f3;
 }
 
 .frostFireDraenorLevelGuide .commentSection {
@@ -3877,12 +3975,12 @@
 
 .nagrandDraenorLevelGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f0f0f0;
 }
 
 .nagrandDraenorLevelGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f5f3f3;
 }
 
 .nagrandDraenorLevelGuide .commentSection {
@@ -4705,12 +4803,12 @@
 
 .ThunderingPSKunLaiLevelGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f0f0f0;
 }
 
 .ThunderingPSKunLaiLevelGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f5f3f3;
 }
 
 .ThunderingPSKunLaiLevelGuide .commentSection {
@@ -5119,12 +5217,12 @@
 
 .WhisperingPSJadeForestLevelGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f0f0f0;
 }
 
 .WhisperingPSJadeForestLevelGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f5f3f3;
 }
 
 .WhisperingPSJadeForestLevelGuide .commentSection {
@@ -5531,8 +5629,8 @@
   text-align: center;
 }
 
-.defaultLevelGuide > h1 {
-  color: #2b312b;
+.defaultLevelGuide h1 {
+  color: #e0e2e0;
   font-size: 2.5rem;
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -5540,60 +5638,103 @@
 }
 
 @media screen and (max-width: 800px) {
-  .defaultLevelGuide > h1 {
+  .defaultLevelGuide h1 {
     font-size: 1.85rem;
   }
 }
 
-.defaultLevelGuide > h2 {
+.defaultLevelGuide .containerLevelGuide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.defaultLevelGuide .containerLeft {
+  width: 50%;
+  margin: 0 10px;
+}
+
+.defaultLevelGuide .containerLeft h2 {
   font-family: "Raleway", sans-serif;
+  font-weight: 100;
   font-size: 1.5rem;
-  color: #11110c;
+  color: #d7dbd7;
+  margin-bottom: 15px;
 }
 
 @media screen and (max-width: 800px) {
-  .defaultLevelGuide > h2 {
+  .defaultLevelGuide .containerLeft h2 {
     font-size: 1rem;
   }
 }
 
-.defaultLevelGuide > h3 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 100;
-  font-size: 1.5rem;
-  margin-top: 50px;
-  color: #060806;
-}
-
-@media screen and (max-width: 800px) {
-  .defaultLevelGuide > h3 {
-    font-size: 0.85rem;
-  }
-}
-
-.defaultLevelGuide > p {
+.defaultLevelGuide .containerLeft p {
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 100;
   font-size: 0.95rem;
   letter-spacing: 1px;
   text-indent: 2rem;
-  text-align: left;
-  width: 60%;
+  text-align: justify;
+  width: 90%;
   margin: 0 auto;
   margin-top: 10px;
-  color: #373e37;
+  color: #d8dad8;
 }
 
 @media screen and (max-width: 800px) {
-  .defaultLevelGuide > p {
+  .defaultLevelGuide .containerLeft p {
+    font-size: 0.8rem;
+    width: 95%;
+  }
+}
+
+.defaultLevelGuide .containerRight {
+  width: 50%;
+  margin: 0 10px;
+}
+
+.defaultLevelGuide .containerRight h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: #d7dbd7;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .defaultLevelGuide .containerRight h3 {
+    font-size: 0.85rem;
+  }
+}
+
+.defaultLevelGuide .containerRight p {
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 100;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-indent: 2rem;
+  text-align: justify;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #d8dad8;
+}
+
+@media screen and (max-width: 800px) {
+  .defaultLevelGuide .containerRight p {
     font-size: 0.8rem;
     width: 95%;
   }
 }
 
 .defaultLevelGuide > ul {
-  background-color: #202b36;
-  background: linear-gradient(10deg, #1c2e3a, #182129);
+  background: linear-gradient(10deg, #2e3133, #252525);
   position: relative;
   list-style-type: none;
   display: -ms-grid;
@@ -5627,7 +5768,7 @@
 }
 
 .defaultLevelGuide > ul .cogBackground {
-  color: #22303f;
+  color: #7e7f81;
   position: absolute;
   bottom: 0px;
   right: 0px;

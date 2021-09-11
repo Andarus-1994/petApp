@@ -5,10 +5,32 @@
 }
 
 body {
-    background-color: rgb(247, 244, 244);
+    background: #242424;
     position: relative;
     padding: 0;
     overflow-x: hidden;
     max-width: 1920px;
     margin: 0 auto;
+    color: white;
+}
+
+.titleWeb {
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    font-size: 44px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 900;
+    text-transform: capitalize;
+    margin-top: 15px;
+}
+.titleWeb span {
+    color: rgba(255, 255, 255, 0.705);
+    position: absolute;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    text-transform: capitalize;
+    bottom: -8px;
+    left: 0;
+    right: 0;
 }

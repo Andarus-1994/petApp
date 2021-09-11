@@ -3,12 +3,13 @@
   width: 100%;
   h1 {
     font-family: $Raleway;
-    color: rgb(22, 22, 22);
-  }
-  h2 {
+    color: $titleHeaderColor;
+}
+h2 {
     font-family: $Raleway;
-    color: rgb(22, 22, 22);
-  }
+    color: $secondTitleHeaderColor;
+}
+
   .commentSection {
     max-width: 1000px;
     margin: 0;

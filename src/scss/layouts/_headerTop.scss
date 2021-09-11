@@ -5,15 +5,14 @@
     padding: 0px 0px;
     margin: 0 auto;
     margin-left: 130px;
-    margin-top: 40px;
+    margin-top: 20px;
     width: 90%;
-    background: #242833;
-    border: 1.5px solid rgb(74, 98, 114);
+    background: #242424;
     display: flex;
     align-items: center;
     flex-direction: row;
-    height: 75px;
-    box-shadow: 0px 0px 5px 0px black;
+    height: 60px;
+    box-shadow: 0px 0px 2px 0px rgba(63, 63, 63, 0.932);
 
     & a > img {
         position: relative;
@@ -22,6 +21,7 @@
         top: -25px;
         left: -5px;
         width: 170px;
+        transition: 0.5s;
     }
     .loginButtons {
         position: relative;
@@ -29,6 +29,9 @@
         right: 0;
         height: 100%;
         margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .logedUser {
             font-family: $Roboto;
             color: rgb(238, 230, 230);
@@ -59,14 +62,16 @@
             padding: 10px 20px;
             margin: 0 0px;
             transition: 0.4s;
-            height: 100%;
+            margin: auto auto;
+
             text-transform: uppercase;
-            border-right: 1px solid rgb(39, 49, 56);
+            border: 1px solid rgb(76, 77, 78);
 
             &:hover {
                 color: rgb(255, 255, 255);
-                background-color: #2e323d;
+                background-color: #1c1d1f;
                 text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
+                letter-spacing: 1.7px;
             }
             &:active {
                 animation: shadowBox 0.1s;

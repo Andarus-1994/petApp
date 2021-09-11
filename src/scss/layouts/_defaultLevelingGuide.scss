@@ -1,148 +1,179 @@
 .defaultLevelGuide {
-  width: 100%;
-  text-align: center;
-  & > h1 {
-    color: rgb(43, 49, 43);
-    font-size: 2.5rem;
-    font-family: $Roboto;
+    width: 100%;
     text-align: center;
-    margin-bottom: 4vh;
-    @media screen and (max-width: 800px) {
-      font-size: 1.85rem;
-    }
-  }
-  & > h2 {
-    font-family: $Raleway;
-    font-size: 1.5rem;
-    color: rgb(17, 17, 12);
-    @media screen and (max-width: 800px) {
-      font-size: 1rem;
-    }
-  }
-
-  & > h3 {
-    font-family: $Raleway;
-    font-weight: 100;
-    font-size: 1.5rem;
-    margin-top: 50px;
-    color: rgb(6, 8, 6);
-    @media screen and (max-width: 800px) {
-      font-size: 0.85rem;
-    }
-  }
-
-  & > p {
-    font-family: $Merri;
-    font-weight: 100;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    text-indent: 2rem;
-    text-align: left;
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 10px;
-    color: hsl(120, 6%, 23%);
-    @media screen and (max-width: 800px) {
-      font-size: 0.8rem;
-      width: 95%;
-    }
-  }
-
-  & > ul {
-    background-color: rgb(32, 43, 54);
-    background: linear-gradient(10deg, rgb(28, 46, 58), rgb(24, 33, 41));
-    position: relative;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 190px);
-    grid-column-gap: 10px;
-    grid-row-gap: 50px;
-    grid-auto-rows: 40px;
-    justify-content: center;
-    width: 80%;
-    min-height: 400px;
-    padding: 50px 20px;
-    margin: 0 auto;
-    margin-top: 5vh;
-    border-radius: 20px;
-    @media screen and (max-width: 800px) {
-      grid-template-columns: repeat(auto-fill, 100px);
-      grid-column-gap: 10px;
-      grid-row-gap: 30px;
-      grid-auto-rows: 40px;
-      padding: 15px 5px;
-      width: 95%;
-    }
-    .cogBackground {
-      color: rgb(34, 48, 63);
-      position: absolute;
-      bottom: 0px;
-      right: 0px;
-      font-size: 5rem;
-      @media screen and (max-width: 800px) {
-        font-size: 3rem;
-      }
-    }
-    .defaultPet {
-      position: relative;
-      display: flex;
-      font-weight: 100;
-      font-family: $Roboto;
-      font-size: 0.85rem;
-      align-items: center;
-      border: 1px solid rgb(43, 48, 65);
-      border-radius: 30px;
-      padding: 35px 15px;
-      color: green;
-      z-index: 10;
-      transition: 0.4s;
-
-      .source {
-        display: none;
-        background-color: rgb(40, 47, 58);
-        color: rgb(37, 76, 100);
-        border: 1px solid rgb(45, 51, 53);
-        border-radius: 25px;
-        position: absolute;
-        width: 70%;
-        top: -40px;
-        left: 0;
-        right: 0;
-        padding: 15px 0px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      &:hover {
-        border: 1px solid rgb(71, 79, 102);
-        .source {
-          display: block;
-        }
-      }
-      img {
-        width: 40px;
-        height: 40px;
-
-        @media screen and (max-width: 800px) {
-          width: 20px;
-          height: 20px;
-        }
-      }
-      span {
-        width: 100px;
-        margin: 0 auto;
+    h1 {
+        color: rgb(224, 226, 224);
+        font-size: 2.5rem;
+        font-family: $Roboto;
         text-align: center;
-        color: rgb(211, 211, 211);
+        margin-bottom: 4vh;
         @media screen and (max-width: 800px) {
-          font-size: 0.75rem;
+            font-size: 1.85rem;
         }
-      }
-      .owned {
-        color: #26b409;
-      }
-      .notOwned {
-        color: red;
-      }
     }
-  }
+    & .containerLevelGuide {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: 0 auto;
+    }
+    & .containerLeft {
+        width: 50%;
+        margin: 0 10px;
+        h2 {
+            font-family: $Raleway;
+            font-weight: 100;
+            font-size: 1.5rem;
+            color: rgb(215, 219, 215);
+            margin-bottom: 15px;
+            @media screen and (max-width: 800px) {
+                font-size: 1rem;
+            }
+        }
+        p {
+            font-family: $Merri;
+            font-weight: 100;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-indent: 2rem;
+            text-align: justify;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 10px;
+            color: hsl(120, 3%, 85%);
+            @media screen and (max-width: 800px) {
+                font-size: 0.8rem;
+                width: 95%;
+            }
+        }
+    }
+
+    & .containerRight {
+        width: 50%;
+        margin: 0 10px;
+        h3 {
+            font-family: $Raleway;
+            font-weight: 100;
+            font-size: 1.5rem;
+            color: rgb(215, 219, 215);
+            margin-bottom: 15px;
+            @media screen and (max-width: 800px) {
+                font-size: 0.85rem;
+            }
+        }
+
+        p {
+            font-family: $Merri;
+            font-weight: 100;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-indent: 2rem;
+            text-align: justify;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 10px;
+            color: hsl(120, 3%, 85%);
+            @media screen and (max-width: 800px) {
+                font-size: 0.8rem;
+                width: 95%;
+            }
+        }
+    }
+
+    & > ul {
+        background: linear-gradient(10deg, rgb(46, 49, 51), rgb(37, 37, 37));
+        position: relative;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 190px);
+        grid-column-gap: 10px;
+        grid-row-gap: 50px;
+        grid-auto-rows: 40px;
+        justify-content: center;
+        width: 80%;
+        min-height: 400px;
+        padding: 50px 20px;
+        margin: 0 auto;
+        margin-top: 5vh;
+        border-radius: 20px;
+        @media screen and (max-width: 800px) {
+            grid-template-columns: repeat(auto-fill, 100px);
+            grid-column-gap: 10px;
+            grid-row-gap: 30px;
+            grid-auto-rows: 40px;
+            padding: 15px 5px;
+            width: 95%;
+        }
+        .cogBackground {
+            color: rgb(126, 127, 129);
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            font-size: 5rem;
+            @media screen and (max-width: 800px) {
+                font-size: 3rem;
+            }
+        }
+        .defaultPet {
+            position: relative;
+            display: flex;
+            font-weight: 100;
+            font-family: $Roboto;
+            font-size: 0.85rem;
+            align-items: center;
+            border: 1px solid rgb(43, 48, 65);
+            border-radius: 30px;
+            padding: 35px 15px;
+            color: green;
+            z-index: 10;
+            transition: 0.4s;
+
+            .source {
+                display: none;
+                background-color: rgb(40, 47, 58);
+                color: rgb(37, 76, 100);
+                border: 1px solid rgb(45, 51, 53);
+                border-radius: 25px;
+                position: absolute;
+                width: 70%;
+                top: -40px;
+                left: 0;
+                right: 0;
+                padding: 15px 0px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            &:hover {
+                border: 1px solid rgb(71, 79, 102);
+                .source {
+                    display: block;
+                }
+            }
+            img {
+                width: 40px;
+                height: 40px;
+
+                @media screen and (max-width: 800px) {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            span {
+                width: 100px;
+                margin: 0 auto;
+                text-align: center;
+                color: rgb(211, 211, 211);
+                @media screen and (max-width: 800px) {
+                    font-size: 0.75rem;
+                }
+            }
+            .owned {
+                color: #26b409;
+            }
+            .notOwned {
+                color: red;
+            }
+        }
+    }
 }

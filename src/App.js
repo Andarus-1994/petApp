@@ -15,6 +15,9 @@ function App() {
     return (
         <div className="App">
             <WorkProgress msg={"Petius - Work in progress..."} />
+            <h2 className="titleWeb">
+                Petius. <span>Pet Battle Guides</span>
+            </h2>
             <Nav />
         </div>
     );

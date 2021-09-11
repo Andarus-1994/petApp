@@ -6,12 +6,13 @@
         cursor: pointer;
         background-color: rgb(192, 55, 55);
         color: white;
-        font-family: $Roboto;
+        font-family: $Sf-Pro;
         font-size: 0.85rem;
+        letter-spacing: 0.5px;
         position: absolute;
         padding: 7px 14px;
-        top: 220px;
-        left: 9%;
+        top: 240px;
+        left: 40px;
         z-index: 5;
         transition: 0.4s;
 
@@ -25,11 +26,11 @@
     }
     .favored {
         cursor: auto;
-        color: rgb(216, 179, 179);
+        color: rgb(235, 232, 232);
         font-size: 0.8rem;
-        background-color: rgb(129, 35, 35);
+        background-color: rgb(196, 46, 46);
         box-shadow: inset 0px 0px 8px 4px rgb(0, 0, 0);
-        left: 10%;
+        left: 40px;
         &:active {
             top: 220px;
         }
@@ -70,7 +71,7 @@
                 top: 0.6rem;
                 left: -7.5rem;
                 pointer-events: none;
-                color: rgb(52, 57, 61);
+                color: rgb(165, 171, 177);
                 position: absolute;
                 font-family: $Raleway;
                 letter-spacing: 0.5px;
@@ -120,7 +121,7 @@
             }
             label {
                 pointer-events: none;
-                color: rgb(52, 57, 61);
+                color: rgb(49, 64, 78);
                 left: 0.8rem;
                 top: 0.55rem;
                 position: absolute;
@@ -142,7 +143,7 @@
             }
             label:nth-of-type(2) {
                 pointer-events: none;
-                color: rgb(52, 57, 61);
+                color: rgb(165, 171, 177);
                 left: 0.8rem;
                 top: 2.45rem;
                 position: absolute;
@@ -197,7 +198,7 @@
             font-size: 14px;
             font-weight: 100;
             text-align: center;
-            color: rgb(22, 27, 22);
+            color: rgb(245, 237, 237);
             width: 200px;
             top: -30px;
             left: -25px;
@@ -249,6 +250,7 @@
         position: absolute;
         bottom: -8px;
         left: -100px;
+        font-family: $Sf-Pro;
         @media screen and (max-width: 800px) {
             top: 10px;
             left: 10px;
@@ -276,9 +278,9 @@
         }
         div {
             display: flex;
-            font-family: $Raleway;
+            font-family: $Sf-Pro;
             font-size: 1.5rem;
-            color: rgb(0, 0, 0);
+            color: rgb(247, 247, 247);
             position: absolute;
             min-width: 350px;
             top: -30px;
@@ -295,7 +297,7 @@
                 padding: 5px 0;
                 font-weight: 300;
                 margin-left: 8px;
-                color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
                 &::first-letter {
                     display: inline;
                     text-transform: uppercase;
@@ -363,7 +365,7 @@
             .blue {
                 color: rgb(28, 28, 129);
                 font-size: 0.85rem;
-                font-family: $Raleway;
+                font-family: $Sf-Pro;
                 &::first-letter {
                     text-transform: uppercase;
                 }
@@ -371,7 +373,7 @@
             .green {
                 color: rgb(105, 165, 48);
                 font-size: 0.85rem;
-                font-family: $Raleway;
+                font-family: $Sf-Pro;
                 &::first-letter {
                     text-transform: uppercase;
                 }
@@ -379,7 +381,7 @@
             .white {
                 color: rgb(240, 241, 238);
                 font-size: 0.85rem;
-                font-family: $Raleway;
+                font-family: $Sf-Pro;
                 &::first-letter {
                     text-transform: uppercase;
                 }
@@ -387,13 +389,13 @@
             .grey {
                 color: rgb(167, 168, 165);
                 font-size: 0.85rem;
-                font-family: $Raleway;
+                font-family: $Sf-Pro;
                 &::first-letter {
                     text-transform: uppercase;
                 }
             }
             .petName {
-                font-family: $Roboto;
+                font-family: $Sf-Pro;
                 font-size: 1rem;
                 line-height: 18px;
                 min-height: 33px;
@@ -403,6 +405,7 @@
                 margin-bottom: 5px;
             }
             .type {
+                font-family: $Sf-Pro;
                 margin: 0 auto;
                 margin-top: 40px;
                 color: rgb(27, 27, 27);
@@ -414,7 +417,7 @@
                 text-align: center;
                 margin: 0 auto;
                 min-width: 110px;
-                font-family: $Raleway;
+                font-family: $Sf-Pro;
                 font-size: 0.95rem;
 
                 .health {

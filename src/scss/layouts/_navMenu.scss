@@ -21,14 +21,16 @@
             width: 100%;
             .contact {
                 margin-left: auto;
-                background-color: #2c323d;
+                background-color: #1b1a1a;
+                padding-left: 10px;
                 margin-right: 20px;
                 box-shadow: inset 0px 0px 5px 0px rgb(54, 58, 51);
                 font-style: italic;
+                &:hover {
+                    padding-left: 10px;
+                }
             }
-            a:first-child {
-                border-left: 1px solid rgb(39, 49, 56);
-            }
+
             a {
                 position: relative;
                 display: flex;
@@ -41,17 +43,54 @@
                 letter-spacing: 0.9px;
                 color: rgb(201, 202, 204);
                 padding: 10px 10px;
-                margin: 0 0px;
+                padding-left: 30px;
+                margin: 0 5px;
                 transition: 0.4s;
                 height: 100%;
-
-                border-right: 1px solid rgb(39, 49, 56);
+                text-transform: uppercase;
 
                 &:hover {
                     color: rgb(255, 255, 255);
-                    background-color: #2e323d;
+                    background-color: #1b1a1a;
                     text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
+                    letter-spacing: 1.2px;
+                    padding: 10px 5px;
+                    padding-left: 30px;
                 }
+
+                &.levelUp img {
+                    width: 50px;
+                    position: absolute;
+                    top: 15px;
+                    left: -10px;
+                    right: 0;
+                }
+                &.SL::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 15px;
+                    width: 30px;
+                    height: 20px;
+                    background-color: rgba(241, 240, 240, 0.253);
+                    clip-path: polygon(25% 0%, 100% 0%, 66% 46%, 56% 14%);
+                }
+                &.SL img {
+                    width: 50px;
+                    position: absolute;
+                    top: -10px;
+                    left: -40px;
+                    right: 0;
+                }
+                img {
+                    width: 50px;
+                    position: absolute;
+                    top: 0px;
+                    left: -10px;
+                    right: 0;
+                    transition: 0.8s;
+                }
+
                 .new {
                     position: relative;
                     top: 0;
@@ -72,7 +111,7 @@
 
             .active {
                 color: rgb(255, 255, 255);
-                background-color: #2e323d;
+                background-color: #1b1a1a;
                 text-shadow: 0 0 1px #fff, 0 0 1px rgba(255, 255, 255, 0.3);
             }
         }

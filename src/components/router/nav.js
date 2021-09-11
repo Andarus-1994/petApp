@@ -22,6 +22,9 @@ import LoginPage from "../loginPage.js";
 import RegisterPage from "../registerPage.js";
 import ValidateUser from "../validateUser.js";
 import PetiusLogo from "../../assets/icon.png";
+import PetIcon from "../../assets/iconPetsMenu.png";
+import LevelUp from "../../assets/levelUp.png";
+import SLMenuIcon from "../../assets/SLmenuicon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 function Nav() {
@@ -81,14 +84,20 @@ function Nav() {
                             <NavLink to="/" exact activeClassName="active" className="inactive">
                                 <li>
                                     {" "}
-                                    <FontAwesomeIcon className="paw" icon={faPaw} /> Your Pets{" "}
+                                    <img src={PetIcon} alt="none" /> Your Pets{" "}
                                 </li>
                             </NavLink>
-                            <NavLink to="/guidepetlevel" activeClassName="active" className="inactive">
-                                <li> Pet Power-Leveling </li>
+                            <NavLink to="/guidepetlevel" activeClassName="active" className="inactive levelUp">
+                                <li>
+                                    {" "}
+                                    <img src={LevelUp} alt="none" /> Pet Power-Leveling{" "}
+                                </li>
                             </NavLink>
-                            <NavLink to="/shadowlands/default" activeClassName="active" className="inactive">
-                                <li className="new">Shadowlands</li>
+                            <NavLink to="/shadowlands/default" activeClassName="active" className="inactive SL">
+                                <li className="new">
+                                    {" "}
+                                    <img src={SLMenuIcon} alt="none" /> Shadowlands
+                                </li>
                             </NavLink>
                             <NavLink to="/contact" activeClassName="active" className="inactive contact">
                                 <li>Contact</li>
