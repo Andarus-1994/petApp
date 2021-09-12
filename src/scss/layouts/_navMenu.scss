@@ -24,10 +24,13 @@
                 background-color: #1b1a1a;
                 padding-left: 10px;
                 margin-right: 20px;
-                box-shadow: inset 0px 0px 5px 0px rgb(54, 58, 51);
+                margin-top: auto;
+                margin-bottom: auto;
+                height: 70%;
                 font-style: italic;
                 &:hover {
                     padding-left: 10px;
+                    padding-right: 10px;
                 }
             }
 
@@ -55,7 +58,9 @@
                     text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
                     letter-spacing: 1.2px;
                     padding: 10px 5px;
+
                     padding-left: 30px;
+                    padding-right: 10px;
                 }
 
                 &.levelUp img {

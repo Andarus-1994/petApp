@@ -1,89 +1,89 @@
 .instructions {
-  position: relative;
-  width: 98%;
-  max-width: 900px;
-  background: rgb(32, 37, 48);
-  color: rgb(241, 237, 237);
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 40px 30px;
-  display: flex;
-  min-height: 400px;
-  flex-direction: column;
-  box-shadow: 0px 40px 40px -40px rgb(59, 19, 25);
-  animation: fadeIn 1s;
-
-  h1 {
-    color: white;
-    font-family: $Raleway;
-    margin-bottom: 50px;
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  h3 {
-    color: rgb(63, 75, 100);
-    font-family: $Merri;
-    font-weight: 100;
-    margin-top: 50px;
-    font-size: 0.95rem;
-  }
-
-  .tip {
-    margin-top: 5px;
-    font-family: $Roboto;
-    color: rgb(89, 103, 116);
-  }
-  .turn {
-    background: rgb(28, 32, 39);
-    padding: 10px 5px;
-    width: 90%;
+    position: relative;
+    width: 98%;
+    max-width: 900px;
+    background: #272626;
+    color: rgb(241, 237, 237);
     margin: 0 auto;
-    margin-top: 5px;
+    margin-top: 20px;
+    padding: 40px 30px;
     display: flex;
-    flex-direction: row;
-    font-family: $Merri;
-    font-family: 0.9rem;
-    &:nth-child(2n) {
-      background: rgb(19, 24, 34);
+    min-height: 400px;
+    flex-direction: column;
+    box-shadow: 0px 40px 40px -40px rgb(59, 19, 25);
+    animation: fadeIn 1s;
+
+    h1 {
+        color: white;
+        font-family: $Raleway;
+        margin-bottom: 50px;
+        font-size: 2rem;
+        text-align: center;
     }
 
-    p {
-      &:nth-child(1) {
-        margin-right: 5px;
-        max-width: 85px;
-      }
-      .hero {
-        color: brown;
-        a {
-          text-decoration: none;
-          color: brown;
-        }
-      }
-      span {
-        color: rgb(64, 132, 153);
-        a {
-          text-decoration: none;
-          color: rgb(64, 132, 153);
-        }
-      }
-      text-align: left;
-      min-width: 95px;
+    h3 {
+        color: rgb(63, 75, 100);
+        font-family: $Merri;
+        font-weight: 100;
+        margin-top: 50px;
+        font-size: 0.95rem;
     }
-    .important {
-      display: block;
-      color: yellow;
+
+    .tip {
+        margin-top: 5px;
+        font-family: $Roboto;
+        color: rgb(89, 103, 116);
     }
-  }
+    .turn {
+        background: #181818;
+        padding: 10px 5px;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 5px;
+        display: flex;
+        flex-direction: row;
+        font-family: $Merri;
+        font-family: 0.9rem;
+        &:nth-child(2n) {
+            background: #1f1e1e;
+        }
+
+        p {
+            &:nth-child(1) {
+                margin-right: 5px;
+                max-width: 85px;
+            }
+            .hero {
+                color: brown;
+                a {
+                    text-decoration: none;
+                    color: brown;
+                }
+            }
+            span {
+                color: rgb(64, 132, 153);
+                a {
+                    text-decoration: none;
+                    color: rgb(64, 132, 153);
+                }
+            }
+            text-align: left;
+            min-width: 95px;
+        }
+        .important {
+            display: block;
+            color: yellow;
+        }
+    }
 }
 
 @keyframes fade {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }

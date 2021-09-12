@@ -84,12 +84,13 @@
 }
 
 .headerTop a > img {
+  opacity: 0.5;
   position: relative;
   border-top-right-radius: 60px;
   width: 150px;
-  top: -25px;
+  top: -15px;
   left: -5px;
-  width: 170px;
+  width: 150px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -216,7 +217,7 @@
   font-family: "Raleway", sans-serif;
   border: 0;
   position: absolute;
-  background-color: #62687a;
+  background-color: #3d3d3d;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -270,7 +271,7 @@
 }
 
 .searchBar input {
-  background-color: #464d5f;
+  background-color: #383838;
   position: relative;
   color: white;
   font-size: 1.3rem;
@@ -287,7 +288,7 @@
 .searchBar input:focus {
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
-  background-color: #494d57;
+  background-color: #6c6e74;
   -webkit-box-shadow: 0px 0px 4px 0px black;
           box-shadow: 0px 0px 4px 0px black;
   outline: none;
@@ -296,7 +297,7 @@
 
 .searchBar button {
   font-size: 1rem;
-  background-color: #3d465a;
+  background-color: #504b4b;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
@@ -309,11 +310,11 @@
 }
 
 .searchBar button i {
-  color: #87b3d3;
+  color: #e4eaf0;
 }
 
 .searchBar button:hover {
-  background-color: #344d5e;
+  background-color: #383838;
 }
 
 .searchBar > label {
@@ -701,7 +702,7 @@
 .App .petFilters .totalPets {
   font-family: "Raleway", sans-serif;
   font-size: 1.7rem;
-  color: #232930;
+  color: #d9dde0;
   margin-left: auto;
   margin-right: 22vh;
 }
@@ -2698,13 +2699,15 @@
   background-color: #1b1a1a;
   padding-left: 10px;
   margin-right: 20px;
-  -webkit-box-shadow: inset 0px 0px 5px 0px #363a33;
-          box-shadow: inset 0px 0px 5px 0px #363a33;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 70%;
   font-style: italic;
 }
 
 .Routes .headerTop > nav ul .contact:hover {
   padding-left: 10px;
+  padding-right: 10px;
 }
 
 .Routes .headerTop > nav ul a {
@@ -2740,6 +2743,7 @@
   letter-spacing: 1.2px;
   padding: 10px 5px;
   padding-left: 30px;
+  padding-right: 10px;
 }
 
 .Routes .headerTop > nav ul a.levelUp img {
@@ -2871,10 +2875,12 @@
 }
 
 .levelingGuide > .containerLevelingGuide nav {
-  background: #242833;
+  background: #292828;
   position: relative;
   height: 100%;
   width: 250px;
+  -webkit-box-shadow: 0px 0px 6px 3px #353232;
+          box-shadow: 0px 0px 6px 3px #353232;
 }
 
 .levelingGuide > .containerLevelingGuide nav ul {
@@ -2899,7 +2905,7 @@
   letter-spacing: 0.2px;
   color: #d1d6db;
   padding: 10px 5px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #181717;
   text-align: center;
   margin: 0 0px;
   -webkit-transition: 0.4s;
@@ -2907,18 +2913,26 @@
 }
 
 .levelingGuide > .containerLevelingGuide nav ul a:hover {
-  background-color: #3a4058;
-  color: black;
+  background-color: black;
+  color: white;
+}
+
+.levelingGuide > .containerLevelingGuide nav ul a:nth-of-type(1) {
+  border-bottom: none;
+}
+
+.levelingGuide > .containerLevelingGuide nav ul a:last-of-type {
+  border-bottom: none;
 }
 
 .levelingGuide > .containerLevelingGuide nav ul .active {
   pointer-events: none;
-  color: black;
-  background-color: #3b415c;
+  background-color: #1a1919;
+  color: white;
 }
 
 .levelingGuide > .containerLevelingGuide nav ul .label {
-  background-color: #17181f;
+  background-color: #171718;
   color: #ece7e7;
 }
 
@@ -2970,7 +2984,7 @@
 }
 
 .levelingGuide > .containerLevelingGuide .FightRequirements > h3 {
-  color: #f5f3f3;
+  color: #e9e9e9;
   font-family: "Raleway", sans-serif;
   margin-top: 10px;
 }
@@ -3012,7 +3026,7 @@
 .levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions {
   width: 98%;
   max-width: 900px;
-  background: #202530;
+  background: #272626;
   border: 1px solid black;
   color: #f1eded;
   margin: 0 auto;
@@ -3051,7 +3065,7 @@
 }
 
 .levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn {
-  background: #1c2027;
+  background: #181818;
   padding: 10px 5px;
   width: 90%;
   margin: 0 auto;
@@ -3067,7 +3081,7 @@
 }
 
 .levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn:nth-child(2n) {
-  background: #131822;
+  background: #1f1e1e;
 }
 
 .levelingGuide > .containerLevelingGuide .FightRequirements .FightInstructions .turn p {
@@ -3130,7 +3144,7 @@
 
 .shadowmoonDraenorLevelGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #f5f3f3;
+  color: #e9e9e9;
 }
 
 .shadowmoonDraenorLevelGuide .commentSection {
@@ -3185,7 +3199,7 @@
 .shadowmoonDraenorLevelGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -3566,7 +3580,7 @@
 
 .frostFireDraenorLevelGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #f5f3f3;
+  color: #e9e9e9;
 }
 
 .frostFireDraenorLevelGuide .commentSection {
@@ -3621,7 +3635,7 @@
 .frostFireDraenorLevelGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -3980,7 +3994,7 @@
 
 .nagrandDraenorLevelGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #f5f3f3;
+  color: #e9e9e9;
 }
 
 .nagrandDraenorLevelGuide .commentSection {
@@ -4035,7 +4049,7 @@
 .nagrandDraenorLevelGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -4390,12 +4404,12 @@
 
 .YonKunLaiLevelGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f0f0f0;
 }
 
 .YonKunLaiLevelGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .YonKunLaiLevelGuide .commentSection {
@@ -4450,7 +4464,7 @@
 .YonKunLaiLevelGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -4808,7 +4822,7 @@
 
 .ThunderingPSKunLaiLevelGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #f5f3f3;
+  color: #e9e9e9;
 }
 
 .ThunderingPSKunLaiLevelGuide .commentSection {
@@ -4863,7 +4877,7 @@
 .ThunderingPSKunLaiLevelGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -5222,7 +5236,7 @@
 
 .WhisperingPSJadeForestLevelGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #f5f3f3;
+  color: #e9e9e9;
 }
 
 .WhisperingPSJadeForestLevelGuide .commentSection {
@@ -5277,7 +5291,7 @@
 .WhisperingPSJadeForestLevelGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -5861,15 +5875,14 @@
 .shadowlands {
   padding-top: 4rem;
   min-height: 50vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f7f4f4), color-stop(#b2bbb2), to(#262a33));
-  background: linear-gradient(#f7f4f4, #b2bbb2, #262a33);
+  background: #242424;
 }
 
 .shadowlands > h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 3rem;
-  color: #242724;
+  color: #f0f0f0;
   text-align: center;
   margin-bottom: 80px;
   -webkit-animation: fade 1s;
@@ -6627,8 +6640,7 @@
 
 .navRevendrethWQs nav .space {
   height: 50px;
-  background: -webkit-gradient(linear, left top, right top, from(#e2e0e0), to(#f7f4f4));
-  background: linear-gradient(90deg, #e2e0e0, #f7f4f4);
+  background: transparent;
 }
 
 .navRevendrethWQs nav ul {
@@ -6707,7 +6719,7 @@
 
 .navBastionWQs nav .space {
   height: 50px;
-  background: #edeeee;
+  background: transparent;
 }
 
 .navBastionWQs nav ul {
@@ -7087,7 +7099,7 @@
 .farylWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -7498,7 +7510,7 @@
 .rascalWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -7909,7 +7921,7 @@
 .nightfangWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -8320,7 +8332,7 @@
 .glitterdustWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -9114,7 +9126,7 @@
 .gorgemouthWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -9525,7 +9537,7 @@
 .rotgutWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -9936,7 +9948,7 @@
 .maximilianWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -10347,7 +10359,7 @@
 .dundleyWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -11147,12 +11159,12 @@
 
 .addiusWQGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .addiusWQGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .addiusWQGuide .difficulty {
@@ -11203,7 +11215,7 @@
 .addiusWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -11559,12 +11571,12 @@
 
 .scorchWQGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .scorchWQGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .scorchWQGuide .difficulty {
@@ -11615,7 +11627,7 @@
 .scorchWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -11971,12 +11983,12 @@
 
 .syllaWQGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .syllaWQGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .syllaWQGuide .difficulty {
@@ -12027,7 +12039,7 @@
 .syllaWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -12383,12 +12395,12 @@
 
 .eyegorWQGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .eyegorWQGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .eyegorWQGuide .difficulty {
@@ -12439,7 +12451,7 @@
 .eyegorWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -12794,7 +12806,7 @@
 }
 
 .revendrethDefault > h1 {
-  color: #2b312b;
+  color: #e9e9e9;
   font-size: 2.5rem;
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -12804,7 +12816,7 @@
 .revendrethDefault > h2 {
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
-  color: #11110c;
+  color: #e9e9e9;
 }
 
 .revendrethDefault > h3 {
@@ -12812,7 +12824,7 @@
   font-weight: 100;
   font-size: 1.5rem;
   margin-top: 50px;
-  color: #060806;
+  color: #e9e9e9;
 }
 
 .revendrethDefault > p {
@@ -12955,10 +12967,9 @@
 }
 
 .bastionWQs {
-  background: -webkit-gradient(linear, left top, left bottom, from(#edeeee), to(#f3f7d1));
-  background: linear-gradient(180deg, #edeeee, #f3f7d1);
-  -webkit-box-shadow: inset 0px -80px 50px 5px #e9e2a7;
-          box-shadow: inset 0px -80px 50px 5px #e9e2a7;
+  background: #242424;
+  -webkit-box-shadow: inset 0px -50px 40px 5px #e9e2a7;
+          box-shadow: inset 0px -50px 40px 5px #e9e2a7;
 }
 
 .bastionWQs > .containerBastionWQs {
@@ -13174,12 +13185,12 @@
 
 .jawboneWQGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .jawboneWQGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .jawboneWQGuide .difficulty {
@@ -13229,7 +13240,7 @@
 .jawboneWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -13585,12 +13596,12 @@
 
 .theniaWQGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .theniaWQGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .theniaWQGuide .difficulty {
@@ -13640,7 +13651,7 @@
 .theniaWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -13996,12 +14007,12 @@
 
 .zollaWQGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .zollaWQGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .zollaWQGuide .difficulty {
@@ -14051,7 +14062,7 @@
 .zollaWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -14407,12 +14418,12 @@
 
 .stratiosWQGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .stratiosWQGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .stratiosWQGuide .difficulty {
@@ -14462,7 +14473,7 @@
 .stratiosWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -14817,7 +14828,7 @@
 }
 
 .bastionDefault > h1 {
-  color: #2b312b;
+  color: #f0f0f0;
   font-size: 2.5rem;
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -14827,7 +14838,7 @@
 .bastionDefault > h2 {
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
-  color: #11110c;
+  color: #e9e9e9;
 }
 
 .bastionDefault > h3 {
@@ -14835,7 +14846,7 @@
   font-weight: 100;
   font-size: 1.5rem;
   margin-top: 50px;
-  color: #060806;
+  color: #e9e9e9;
 }
 
 .bastionDefault > p {
@@ -14848,11 +14859,11 @@
   width: 60%;
   margin: 0 auto;
   margin-top: 10px;
-  color: #373e37;
+  color: #e9e9e9;
 }
 
 .bastionDefault > p:nth-of-type(3) {
-  color: #8a8347;
+  color: #e9e9e9;
   text-align: center;
 }
 
@@ -15283,12 +15294,12 @@
 
 .undeadZollaGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .undeadZollaGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .undeadZollaGuide .difficulty {
@@ -15338,7 +15349,7 @@
 .undeadZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -15694,12 +15705,12 @@
 
 .dragonkinZollaGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .dragonkinZollaGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .dragonkinZollaGuide .difficulty {
@@ -15749,7 +15760,7 @@
 .dragonkinZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -16105,12 +16116,12 @@
 
 .crittersZollaGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .crittersZollaGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .crittersZollaGuide .difficulty {
@@ -16160,7 +16171,7 @@
 .crittersZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -16516,12 +16527,12 @@
 
 .flyingZollaGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .flyingZollaGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .flyingZollaGuide .difficulty {
@@ -16571,7 +16582,7 @@
 .flyingZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -16927,12 +16938,12 @@
 
 .elementalZollaGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .elementalZollaGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .elementalZollaGuide .difficulty {
@@ -16982,7 +16993,7 @@
 .elementalZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -17338,12 +17349,12 @@
 
 .beastsZollaGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .beastsZollaGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .beastsZollaGuide .difficulty {
@@ -17393,7 +17404,7 @@
 .beastsZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -17749,12 +17760,12 @@
 
 .magicZollaGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .magicZollaGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .magicZollaGuide .difficulty {
@@ -17804,7 +17815,7 @@
 .magicZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -18160,12 +18171,12 @@
 
 .humanoidZollaGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .humanoidZollaGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .humanoidZollaGuide .difficulty {
@@ -18215,7 +18226,7 @@
 .humanoidZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -18571,12 +18582,12 @@
 
 .mechanicalZollaGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .mechanicalZollaGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .mechanicalZollaGuide .difficulty {
@@ -18626,7 +18637,7 @@
 .mechanicalZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -18982,12 +18993,12 @@
 
 .aquaticZollaGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .aquaticZollaGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .aquaticZollaGuide .difficulty {
@@ -19037,7 +19048,7 @@
 .aquaticZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -19448,7 +19459,7 @@
 .aquaticStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -19859,7 +19870,7 @@
 .humanoidStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -20270,7 +20281,7 @@
 .flyingStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -20681,7 +20692,7 @@
 .crittersStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -21092,7 +21103,7 @@
 .dragonkinStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -21503,7 +21514,7 @@
 .elementalStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -21914,7 +21925,7 @@
 .undeadStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -22325,7 +22336,7 @@
 .magicStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -22736,7 +22747,7 @@
 .beastsStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -23147,7 +23158,7 @@
 .mechanicalStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -23558,7 +23569,7 @@
 .humanoidTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -23969,7 +23980,7 @@
 .flyingTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -24380,7 +24391,7 @@
 .beastsTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -24791,7 +24802,7 @@
 .crittersTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -25202,7 +25213,7 @@
 .dragonkinTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -25613,7 +25624,7 @@
 .aquaticTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -26024,7 +26035,7 @@
 .mechanicalTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -26435,7 +26446,7 @@
 .magicTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -26846,7 +26857,7 @@
 .elementalTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -27257,7 +27268,7 @@
 .undeadTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -27668,7 +27679,7 @@
 .humanoidSyllaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -28095,7 +28106,7 @@
 .dragonkinSyllaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -28522,7 +28533,7 @@
 .flyingSyllaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -28949,7 +28960,7 @@
 .crittersSyllaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #242424, #232324);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -29337,7 +29348,7 @@
   width: fit-content;
   color: #eaeaf0;
   font-size: 1rem;
-  background: linear-gradient(60deg, #1d1b1b, #182331);
+  background: linear-gradient(60deg, #313030, #3d3e41);
   border-top-left-radius: 17px;
   border-top-right-radius: 17px;
   padding: 5px 15px;
@@ -29349,7 +29360,7 @@
 }
 
 .containerAchiev nav ul {
-  background: linear-gradient(60deg, #1d1b1b, #182331);
+  background: linear-gradient(60deg, #313030, #3d3e41);
   border-radius: 27px;
   padding: 3px 17px;
   padding-top: 10px;
@@ -29424,7 +29435,7 @@
 }
 
 .containerAchiev .locationImages h2 {
-  color: #12141d;
+  color: #f0f0f0;
   font-family: "Raleway", sans-serif;
   text-align: center;
 }
@@ -29496,8 +29507,7 @@
 }
 
 .familiarAchiev {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#99a4ad));
-  background: linear-gradient(180deg, white, #99a4ad);
+  background: #242424;
   -webkit-box-shadow: inset 0px -80px 50px 5px #c5c6c9;
           box-shadow: inset 0px -80px 50px 5px #c5c6c9;
 }
@@ -31166,7 +31176,7 @@
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 1.7rem;
-  color: #19191d;
+  color: #e9e9e9;
   margin-top: 5vh;
 }
 
@@ -31197,7 +31207,7 @@
   font-family: "Raleway", sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
-  color: black;
+  color: #dbd8d8;
   margin-right: 5px;
   padding: 5px 8px;
 }
@@ -31270,9 +31280,9 @@
 }
 
 .strategiesPreview .flexRNGAuthor .author {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium;
   font-size: 1.3rem;
-  color: #1c1c1f;
+  color: #f0f0f0;
   text-align: end;
   margin-right: 5vh;
   -webkit-animation: 0.8s fadeEnter;
@@ -31691,62 +31701,65 @@
 
 .addComment button {
   cursor: pointer;
-  background-color: #2b2b38;
+  background-color: #242222;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 10px 10px;
   color: white;
-  font-family: "Raleway", sans-serif;
-  border: none;
+  font-family: sf-pro-display-medium;
+  letter-spacing: 0.7px;
+  font-size: 16px;
+  border: 1px solid #39393b;
   border-radius: 10px;
   margin-top: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .addComment button:hover {
-  background-color: #1e1e29;
+  background-color: #39393b;
   color: white;
 }
 
 .addComment div label {
   display: block;
-  font-family: "Raleway", sans-serif;
+  font-family: sf-pro-display-medium;
   min-width: 80px;
-  color: #1e1e22;
+  color: #dbdbdf;
 }
 
 .addComment div input {
-  background-color: #2b2b38;
+  background-color: #313131;
   color: white;
   width: 350px;
   padding: 10px 10px;
   font-family: "Raleway", sans-serif;
   border: none;
-  border-radius: 10px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .addComment div input:focus {
-  background-color: #181820;
+  background-color: #3b3737;
 }
 
 .addComment div textarea {
-  background-color: #2b2b38;
+  background-color: #313131;
   color: white;
   padding: 10px 10px;
   font-family: "Raleway", sans-serif;
   width: 350px;
   height: 150px;
   border: none;
-  border-radius: 10px;
+  border-radius: 0px;
   resize: none;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .addComment div textarea:focus {
-  background-color: #181820;
+  background-color: #29292c;
 }
 
 .commentSection {
@@ -31756,13 +31769,24 @@
 }
 
 .commentSection > h2 {
-  color: #1f1f22;
+  color: #dcdce2;
   margin-top: 1.5rem;
   text-align: end;
 }
 
 .commentSection > .empty {
   margin-top: 2rem;
+}
+
+.commentSection .containerComments {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.commentSection .containerComments > div {
+  margin-top: 20px;
+  padding: 0;
 }
 
 .containerComments {
@@ -31781,9 +31805,9 @@
 
 .containerComments .containerComment {
   position: relative;
-  background-color: #222a35;
+  background-color: #313131;
   width: 100%;
-  max-width: 650px;
+  min-width: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31796,8 +31820,7 @@
           justify-content: left;
   text-align: left;
   margin-left: 0px;
-  margin-top: 20px;
-  border-radius: 20px;
+  margin-top: 0px;
   padding: 25px 20px;
 }
 
@@ -31834,18 +31857,19 @@
 }
 
 .containerComments .containerComment .message {
-  color: #d6dadb;
+  color: #e7e8e9;
   font-family: "Roboto", sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 100;
   letter-spacing: 0.5px;
+  line-height: 17px;
   margin-top: 10px;
   padding: 5px 15px;
 }
 
 .containerComments .containerComment .time {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   right: 20px;
   color: #7c8591;
   font-family: "Roboto", sans-serif;
@@ -31868,9 +31892,9 @@
 
 .containerComments .containerCommentReply {
   position: relative;
-  background-color: #222a35;
+  background-color: #313131;
   width: 100%;
-  max-width: 450px;
+  max-width: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31882,9 +31906,9 @@
       -ms-flex-pack: left;
           justify-content: left;
   text-align: left;
-  margin-left: 200px;
-  margin-top: 5px;
-  border-radius: 20px;
+  margin-right: 0;
+  margin-left: 250px;
+  margin-top: 10px;
   padding: 25px 20px;
 }
 
@@ -31932,7 +31956,7 @@
 
 .containerComments .containerCommentReply .time {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   right: 20px;
   color: #7c8591;
   font-family: "Roboto", sans-serif;
@@ -31944,13 +31968,13 @@
 
 .containerStrategy > h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f0f0f0;
   text-align: center;
 }
 
 .containerStrategy > h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
   text-align: center;
 }
 
@@ -31958,7 +31982,7 @@
   position: relative;
   width: 98%;
   max-width: 900px;
-  background: #202530;
+  background: #272626;
   color: #f1eded;
   margin: 0 auto;
   margin-top: 20px;
@@ -32000,7 +32024,7 @@
 }
 
 .instructions .turn {
-  background: #1c2027;
+  background: #181818;
   padding: 10px 5px;
   width: 90%;
   margin: 0 auto;
@@ -32017,7 +32041,7 @@
 }
 
 .instructions .turn:nth-child(2n) {
-  background: #131822;
+  background: #1f1e1e;
 }
 
 .instructions .turn p {

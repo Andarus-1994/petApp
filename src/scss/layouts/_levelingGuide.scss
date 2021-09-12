@@ -10,11 +10,11 @@
         display: flex;
 
         nav {
-            background: #242833;
-
+            background: #292828;
             position: relative;
             height: 100%;
             width: 250px;
+            box-shadow: 0px 0px 6px 3px rgb(53, 50, 50);
             ul {
                 list-style-type: none;
                 display: flex;
@@ -29,22 +29,28 @@
                     letter-spacing: 0.2px;
                     color: rgb(209, 214, 219);
                     padding: 10px 5px;
-                    border-bottom: 1px solid black;
+                    border-bottom: 1px solid rgb(24, 23, 23);
                     text-align: center;
                     margin: 0 0px;
                     transition: 0.4s;
                     &:hover {
-                        background-color: rgb(58, 64, 88);
-                        color: black;
+                        background-color: black;
+                        color: white;
+                    }
+                    &:nth-of-type(1) {
+                        border-bottom: none;
+                    }
+                    &:last-of-type {
+                        border-bottom: none;
                     }
                 }
                 .active {
                     pointer-events: none;
-                    color: rgb(0, 0, 0);
-                    background-color: rgb(59, 65, 92);
+                    background-color: rgb(26, 25, 25);
+                    color: white;
                 }
                 .label {
-                    background-color: rgb(23, 24, 31);
+                    background-color: rgb(23, 23, 24);
                     color: #ece7e7;
                 }
             }
@@ -119,7 +125,7 @@
             .FightInstructions {
                 width: 98%;
                 max-width: 900px;
-                background: rgb(32, 37, 48);
+                background: #272626;
                 border: 1px solid black;
 
                 color: rgb(241, 237, 237);
@@ -151,7 +157,7 @@
                     color: rgb(89, 103, 116);
                 }
                 .turn {
-                    background: rgb(28, 32, 39);
+                    background: #181818;
                     padding: 10px 5px;
                     width: 90%;
                     margin: 0 auto;
@@ -160,7 +166,7 @@
                     flex-direction: row;
                     font-family: $Merri;
                     &:nth-child(2n) {
-                        background: rgb(19, 24, 34);
+                        background: #1f1e1e;
                     }
 
                     p {

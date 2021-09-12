@@ -1,81 +1,68 @@
 .navBastionWQs {
-  width: 250px;
-  nav {
-    position: relative;
-    width: 200px;
-    margin-top: 90px;
-    animation: fade 1s;
+    width: 250px;
+    nav {
+        position: relative;
+        width: 200px;
+        margin-top: 90px;
+        animation: fade 1s;
 
-    .space {
-      height: 50px;
-      background: rgb(237, 238, 238);
+        .space {
+            height: 50px;
+            background: transparent;
+        }
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &:nth-of-type(1) {
+                a:not(a:first-child) {
+                    background: linear-gradient(60deg, #948d5a, rgb(214, 199, 110));
+                    color: black;
+                    &:hover {
+                        color: rgb(255, 255, 255);
+                        background: linear-gradient(60deg, #66613f, rgb(117, 108, 52));
+                    }
+                }
+                .active {
+                    pointer-events: none;
+                    color: rgb(255, 255, 255) !important;
+                    background: linear-gradient(60deg, #66613f, rgb(117, 108, 52)) !important;
+                }
+            }
+            &:nth-of-type(2) {
+                background-image: url("./../assets/Shadowlands/shadowNav.jpg");
+                background-position: center;
+                background-size: cover;
+            }
+            a {
+                background-color: rgba(7, 7, 7, 0.39);
+                text-decoration: none;
+                font-size: 0.95rem;
+                font-family: $Raleway;
+                font-weight: 600;
+                letter-spacing: 0.2px;
+                color: rgb(248, 248, 248);
+                padding: 10px 5px;
+                border-bottom: 1px solid black;
+                text-align: center;
+                margin: 0 0px;
+                transition: 0.4s;
+                &:last-child {
+                    border-bottom: none;
+                }
+                &:hover {
+                    color: rgb(255, 255, 255);
+                    background-color: rgba(0, 0, 0, 0.623);
+                }
+            }
+
+            .label {
+                pointer-events: none;
+                background: linear-gradient(30deg, rgb(12, 12, 19), rgb(12, 12, 19), #383629, rgb(194, 194, 136), #383629, rgb(12, 12, 19), rgb(12, 12, 19));
+                color: #ffffff;
+            }
+        }
     }
-    ul {
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      &:nth-of-type(1) {
-        a:not(a:first-child) {
-          background: linear-gradient(60deg, #948d5a, rgb(214, 199, 110));
-          color: black;
-          &:hover {
-            color: rgb(255, 255, 255);
-            background: linear-gradient(60deg, #66613f, rgb(117, 108, 52));
-          }
-        }
-        .active {
-          pointer-events: none;
-          color: rgb(255, 255, 255) !important;
-          background: linear-gradient(
-            60deg,
-            #66613f,
-            rgb(117, 108, 52)
-          ) !important;
-        }
-      }
-      &:nth-of-type(2) {
-        background-image: url("./../assets/Shadowlands/shadowNav.jpg");
-        background-position: center;
-        background-size: cover;
-      }
-      a {
-        background-color: rgba(7, 7, 7, 0.39);
-        text-decoration: none;
-        font-size: 0.95rem;
-        font-family: $Raleway;
-        font-weight: 600;
-        letter-spacing: 0.2px;
-        color: rgb(248, 248, 248);
-        padding: 10px 5px;
-        border-bottom: 1px solid black;
-        text-align: center;
-        margin: 0 0px;
-        transition: 0.4s;
-        &:last-child {
-          border-bottom: none;
-        }
-        &:hover {
-          color: rgb(255, 255, 255);
-          background-color: rgba(0, 0, 0, 0.623);
-        }
-      }
-
-      .label {
-        pointer-events: none;
-        background: linear-gradient(
-          30deg,
-          rgb(12, 12, 19),
-          rgb(12, 12, 19),
-          #383629,
-          rgb(194, 194, 136),
-          #383629,
-          rgb(12, 12, 19),
-          rgb(12, 12, 19)
-        );
-        color: #ffffff;
-      }
-    }
-  }
 }

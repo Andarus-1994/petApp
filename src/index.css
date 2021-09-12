@@ -23,6 +23,7 @@ body {
     font-weight: 900;
     text-transform: capitalize;
     margin-top: 15px;
+    animation: fade 2s;
 }
 .titleWeb span {
     color: rgba(255, 255, 255, 0.705);

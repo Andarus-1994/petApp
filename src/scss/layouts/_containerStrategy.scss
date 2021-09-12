@@ -1,13 +1,13 @@
 .containerStrategy {
-  padding-top: 5vh;
-  & > h1 {
-    font-family: $Raleway;
-    color: rgb(22, 22, 22);
-    text-align: center;
-  }
-  & > h2 {
-    font-family: $Raleway;
-    color: rgb(22, 22, 22);
-    text-align: center;
-  }
+    padding-top: 5vh;
+    & > h1 {
+        font-family: $Raleway;
+        color: $titleHeaderColor;
+        text-align: center;
+    }
+    & > h2 {
+        font-family: $Raleway;
+        color: $secondTitleHeaderColor;
+        text-align: center;
+    }
 }

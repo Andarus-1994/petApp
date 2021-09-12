@@ -1,173 +1,130 @@
 .revendrethDefault {
-  padding-top: 5vh;
-  width: 100%;
-  text-align: center;
-  & > h1 {
-    color: rgb(43, 49, 43);
-    font-size: 2.5rem;
-    font-family: $Roboto;
+    padding-top: 5vh;
+    width: 100%;
     text-align: center;
-    margin-bottom: 4vh;
-  }
-  & > h2 {
-    font-family: $Raleway;
-    font-size: 1.5rem;
-    color: rgb(17, 17, 12);
-  }
-
-  & > h3 {
-    font-family: $Raleway;
-    font-weight: 100;
-    font-size: 1.5rem;
-    margin-top: 50px;
-    color: rgb(6, 8, 6);
-  }
-
-  & > p {
-    font-family: $Merri;
-    font-weight: 100;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    text-indent: 2rem;
-    text-align: left;
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 10px;
-    color: hsl(120, 6%, 23%);
-  }
-  & > p:nth-of-type(3) {
-    color: hsl(0, 32%, 43%);
-    width: 700px;
-    text-align: center;
-  }
-  & > h4 {
-    color: grey;
-  }
-  & > ul {
-    background: linear-gradient(
-      140deg,
-      black,
-      hsl(0, 74%, 15%),
-      hsl(0, 74%, 15%),
-      rgb(92, 11, 21),
-      hsl(0, 74%, 15%),
-      hsl(0, 74%, 15%),
-      black
-    );
-
-    position: relative;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 170px);
-    grid-column-gap: 10px;
-    grid-row-gap: 30px;
-    grid-auto-rows: 40px;
-    justify-content: center;
-
-    width: 80%;
-    min-height: 200px;
-    max-width: 900px;
-    padding: 50px 20px;
-    padding-top: 30px;
-    margin: 0 auto;
-    margin-top: 3vh;
-
-    &:nth-of-type(1) {
-      &::after {
-        top: 5%;
-        left: 0;
-        content: "";
-        width: 50px;
-        height: 50px;
-
-        background: linear-gradient(
-          90deg,
-          rgb(243, 243, 242),
-          rgb(58, 8, 8) 90%
-        );
-        clip-path: polygon(
-          0% 15%,
-          0 0,
-          24% 23%,
-          43% 42%,
-          57% 54%,
-          65% 63%,
-          44% 68%,
-          30% 60%,
-          19% 61%,
-          10% 58%,
-          5% 62%,
-          0% 85%
-        );
-        position: absolute;
-      }
-    }
-
-    &:nth-of-type(2) {
-      &::after {
-        top: 0;
-        right: 0;
-        content: "";
-        width: 50px;
-        height: 50px;
-
-        background: linear-gradient(
-          40deg,
-          rgb(114, 16, 16),
-          rgb(243, 243, 242)
-        );
-        clip-path: polygon(
-          38% 29%,
-          40% 0,
-          53% 0,
-          82% 0,
-          100% 0,
-          100% 15%,
-          100% 29%,
-          100% 37%,
-          100% 47%,
-          98% 65%,
-          87% 85%,
-          64% 37%
-        );
-
-        position: absolute;
-      }
-    }
-
-    .cogBackground {
-      color: rgb(48, 14, 19);
-      position: absolute;
-      bottom: 0px;
-      right: 0px;
-      font-size: 7rem;
-    }
-    .defaultPet {
-      display: flex;
-      font-weight: 100;
-      font-family: $Roboto;
-      font-size: 0.85rem;
-      align-items: center;
-
-      padding: 35px 15px;
-      color: rgb(29, 80, 29);
-      z-index: 10;
-      img {
-        width: 40px;
-        height: 40px;
-      }
-      span {
-        width: 100px;
-        margin: 0 auto;
+    & > h1 {
+        color: $secondTitleHeaderColor;
+        font-size: 2.5rem;
+        font-family: $Roboto;
         text-align: center;
-        color: rgb(211, 211, 211);
-      }
-      .owned {
-        color: rgb(50, 116, 43);
-      }
-      .notOwned {
-        color: rgb(255, 52, 52);
-      }
+        margin-bottom: 4vh;
     }
-  }
+    & > h2 {
+        font-family: $Raleway;
+        font-size: 1.5rem;
+        color: $secondTitleHeaderColor;
+    }
+
+    & > h3 {
+        font-family: $Raleway;
+        font-weight: 100;
+        font-size: 1.5rem;
+        margin-top: 50px;
+        color: $secondTitleHeaderColor;
+    }
+
+    & > p {
+        font-family: $Merri;
+        font-weight: 100;
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+        text-indent: 2rem;
+        text-align: left;
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 10px;
+        color: hsl(120, 6%, 23%);
+    }
+    & > p:nth-of-type(3) {
+        color: hsl(0, 32%, 43%);
+        width: 700px;
+        text-align: center;
+    }
+    & > h4 {
+        color: grey;
+    }
+    & > ul {
+        background: linear-gradient(140deg, black, hsl(0, 74%, 15%), hsl(0, 74%, 15%), rgb(92, 11, 21), hsl(0, 74%, 15%), hsl(0, 74%, 15%), black);
+
+        position: relative;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 170px);
+        grid-column-gap: 10px;
+        grid-row-gap: 30px;
+        grid-auto-rows: 40px;
+        justify-content: center;
+
+        width: 80%;
+        min-height: 200px;
+        max-width: 900px;
+        padding: 50px 20px;
+        padding-top: 30px;
+        margin: 0 auto;
+        margin-top: 3vh;
+
+        &:nth-of-type(1) {
+            &::after {
+                top: 5%;
+                left: 0;
+                content: "";
+                width: 50px;
+                height: 50px;
+
+                background: linear-gradient(90deg, rgb(243, 243, 242), rgb(58, 8, 8) 90%);
+                clip-path: polygon(0% 15%, 0 0, 24% 23%, 43% 42%, 57% 54%, 65% 63%, 44% 68%, 30% 60%, 19% 61%, 10% 58%, 5% 62%, 0% 85%);
+                position: absolute;
+            }
+        }
+
+        &:nth-of-type(2) {
+            &::after {
+                top: 0;
+                right: 0;
+                content: "";
+                width: 50px;
+                height: 50px;
+
+                background: linear-gradient(40deg, rgb(114, 16, 16), rgb(243, 243, 242));
+                clip-path: polygon(38% 29%, 40% 0, 53% 0, 82% 0, 100% 0, 100% 15%, 100% 29%, 100% 37%, 100% 47%, 98% 65%, 87% 85%, 64% 37%);
+
+                position: absolute;
+            }
+        }
+
+        .cogBackground {
+            color: rgb(48, 14, 19);
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            font-size: 7rem;
+        }
+        .defaultPet {
+            display: flex;
+            font-weight: 100;
+            font-family: $Roboto;
+            font-size: 0.85rem;
+            align-items: center;
+
+            padding: 35px 15px;
+            color: rgb(29, 80, 29);
+            z-index: 10;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+            span {
+                width: 100px;
+                margin: 0 auto;
+                text-align: center;
+                color: rgb(211, 211, 211);
+            }
+            .owned {
+                color: rgb(50, 116, 43);
+            }
+            .notOwned {
+                color: rgb(255, 52, 52);
+            }
+        }
+    }
 }

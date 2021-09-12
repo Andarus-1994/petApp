@@ -1,97 +1,97 @@
 @import "../abstracts/fonts";
 
 .searchBar {
-  position: relative;
-  width: 100%;
-  margin-top: 150px;
-  margin-bottom: 12vh;
-  display: flex;
-  justify-content: center;
-  font-family: $Raleway;
-  select {
-    color: rgb(216, 232, 236);
-    top: -3rem;
-    padding: 0.4rem 0.8rem;
+    position: relative;
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 12vh;
+    display: flex;
+    justify-content: center;
     font-family: $Raleway;
-    border: 0;
-    position: absolute;
-    background-color: #62687a;
-    appearance: none;
-  }
+    select {
+        color: rgb(216, 232, 236);
+        top: -3rem;
+        padding: 0.4rem 0.8rem;
+        font-family: $Raleway;
+        border: 0;
+        position: absolute;
+        background-color: #3d3d3d;
+        appearance: none;
+    }
 
-  .search {
-    position: relative;
-    .error {
-      position: absolute;
-      width: 300px;
-      left: 380px;
-      top: 10px;
-      font-family: $Raleway;
-      font-size: 0.85rem;
-      color: rgb(224, 53, 53);
+    .search {
+        position: relative;
+        .error {
+            position: absolute;
+            width: 300px;
+            left: 380px;
+            top: 10px;
+            font-family: $Raleway;
+            font-size: 0.85rem;
+            color: rgb(224, 53, 53);
+        }
+        label {
+            pointer-events: none;
+            color: rgb(128, 163, 173);
+            left: 0.5rem;
+            top: 1rem;
+            position: absolute;
+            transition: 0.4s;
+        }
+        input:focus + label,
+        input:not(:placeholder-shown) + label {
+            transform: scale(0.9) translateY(-2.5rem);
+            opacity: 1;
+        }
+        input::placeholder {
+            opacity: 0;
+        }
     }
-    label {
-      pointer-events: none;
-      color: rgb(128, 163, 173);
-      left: 0.5rem;
-      top: 1rem;
-      position: absolute;
-      transition: 0.4s;
-    }
-    input:focus + label,
-    input:not(:placeholder-shown) + label {
-      transform: scale(0.9) translateY(-2.5rem);
-      opacity: 1;
-    }
-    input::placeholder {
-      opacity: 0;
-    }
-  }
-  input {
-    background-color: #464d5f;
-    position: relative;
-    color: rgb(255, 255, 255);
-    font-size: 1.3rem;
-    padding: 0.6rem 0.8rem;
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-    border: none;
+    input {
+        background-color: #383838;
+        position: relative;
+        color: rgb(255, 255, 255);
+        font-size: 1.3rem;
+        padding: 0.6rem 0.8rem;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        border: none;
 
-    width: 300px;
-    letter-spacing: 1px;
-    transition: 0.4s;
-  }
-  input:focus {
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-    background-color: #494d57;
-    box-shadow: 0px 0px 4px 0px black;
-    outline: none;
-    border: none;
-  }
-  button {
-    font-size: 1rem;
-    background-color: #3d465a;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    padding: 0.4rem 1.2rem;
-    border: none;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    transition: 0.4s;
-    i {
-      color: rgb(135, 179, 211);
+        width: 300px;
+        letter-spacing: 1px;
+        transition: 0.4s;
     }
-  }
-  button:hover {
-    background-color: rgb(52, 77, 94);
-  }
+    input:focus {
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        background-color: rgb(108, 110, 116);
+        box-shadow: 0px 0px 4px 0px black;
+        outline: none;
+        border: none;
+    }
+    button {
+        font-size: 1rem;
+        background-color: #504b4b;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        cursor: pointer;
+        padding: 0.4rem 1.2rem;
+        border: none;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        transition: 0.4s;
+        i {
+            color: rgb(228, 234, 240);
+        }
+    }
+    button:hover {
+        background-color: #383838;
+    }
 
-  & > label {
-    font-size: 0.85rem;
-    top: 3.5rem;
-    position: absolute;
-    color: rgb(87, 133, 146);
-  }
+    & > label {
+        font-size: 0.85rem;
+        top: 3.5rem;
+        position: absolute;
+        color: rgb(87, 133, 146);
+    }
 }
