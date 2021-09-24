@@ -1,10 +1,4 @@
-import {
-	BrowserRouter as Router,
-	Route,
-	Switch,
-	NavLink,
-	useHistory,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, NavLink, useHistory } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboard, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
@@ -41,102 +35,62 @@ function Sylla() {
 					<nav>
 						<h2>Pet Family Types</h2>
 						<ul>
-							<NavLink
-								to="/shadowlands/familiarExorcist/sylla/aquatic"
-								activeClassName="active"
-								className="inactive"
-							>
+							<NavLink to="/shadowlands/familiarExorcist/sylla/aquatic" activeClassName="active" className="inactive">
 								<li>
 									{" "}
 									<img src={Aquatic} alt="icon"></img>
 								</li>
 							</NavLink>
-							<NavLink
-								to="/shadowlands/familiarExorcist/sylla/beast"
-								activeClassName="active"
-								className="inactive"
-							>
+							<NavLink to="/shadowlands/familiarExorcist/sylla/beast" activeClassName="active" className="inactive">
 								<li>
 									{" "}
 									<img src={Beast} alt="icon"></img>
 								</li>
 							</NavLink>
-							<NavLink
-								to="/shadowlands/familiarExorcist/sylla/critters"
-								activeClassName="active"
-								className="inactive"
-							>
+							<NavLink to="/shadowlands/familiarExorcist/sylla/critters" activeClassName="active" className="inactive">
 								<li>
 									{" "}
 									<img src={Critter} alt="icon"></img>
 								</li>
 							</NavLink>
 
-							<NavLink
-								to="/shadowlands/familiarExorcist/sylla/dragonkin"
-								activeClassName="active"
-								className="inactive"
-							>
+							<NavLink to="/shadowlands/familiarExorcist/sylla/dragonkin" activeClassName="active" className="inactive">
 								<li>
 									{" "}
 									<img src={Dragon} alt="icon"></img>
 								</li>
 							</NavLink>
-							<NavLink
-								to="/shadowlands/familiarExorcist/sylla/elemental"
-								activeClassName="active"
-								className="inactive"
-							>
+							<NavLink to="/shadowlands/familiarExorcist/sylla/elemental" activeClassName="active" className="inactive">
 								<li>
 									{" "}
 									<img src={Elemental} alt="icon"></img>
 								</li>
 							</NavLink>
-							<NavLink
-								to="/shadowlands/familiarExorcist/sylla/flying"
-								activeClassName="active"
-								className="inactive"
-							>
+							<NavLink to="/shadowlands/familiarExorcist/sylla/flying" activeClassName="active" className="inactive">
 								<li>
 									{" "}
 									<img src={Flying} alt="icon"></img>
 								</li>
 							</NavLink>
-							<NavLink
-								to="/shadowlands/familiarExorcist/sylla/humanoid"
-								activeClassName="active"
-								className="inactive"
-							>
+							<NavLink to="/shadowlands/familiarExorcist/sylla/humanoid" activeClassName="active" className="inactive">
 								<li>
 									{" "}
 									<img src={Humanoid} alt="icon"></img>
 								</li>
 							</NavLink>
-							<NavLink
-								to="/shadowlands/familiarExorcist/sylla/magic"
-								activeClassName="active"
-								className="inactive"
-							>
+							<NavLink to="/shadowlands/familiarExorcist/sylla/magic" activeClassName="active" className="inactive">
 								<li>
 									{" "}
 									<img src={Magic} alt="icon"></img>
 								</li>
 							</NavLink>
-							<NavLink
-								to="/shadowlands/familiarExorcist/sylla/mechanical"
-								activeClassName="active"
-								className="inactive"
-							>
+							<NavLink to="/shadowlands/familiarExorcist/sylla/mechanical" activeClassName="active" className="inactive">
 								<li>
 									{" "}
 									<img src={Mech} alt="icon"></img>
 								</li>
 							</NavLink>
-							<NavLink
-								to="/shadowlands/familiarExorcist/sylla/undead"
-								activeClassName="active"
-								className="inactive"
-							>
+							<NavLink to="/shadowlands/familiarExorcist/sylla/undead" activeClassName="active" className="inactive">
 								<li>
 									{" "}
 									<img src={Undead} alt="icon"></img>
@@ -163,7 +117,7 @@ function Sylla() {
 						<Route path="/shadowlands/familiarExorcist/sylla/elemental">
 							<ElementalSylla />
 						</Route>
-						<Route path="/shadowlands/familiarExorcist/sylla/flying ">
+						<Route path="/shadowlands/familiarExorcist/sylla/flying">
 							<FlyingSylla />
 						</Route>
 						<Route path="/shadowlands/familiarExorcist/sylla/humanoid">

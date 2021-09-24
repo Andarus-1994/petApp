@@ -86,13 +86,16 @@
 .headerTop a > img {
   opacity: 0.5;
   position: relative;
-  border-top-right-radius: 60px;
-  width: 150px;
-  top: -15px;
-  left: -5px;
-  width: 150px;
+  border-top-right-radius: 100px;
+  width: 250px;
+  top: -30px;
+  left: -7px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.headerTop a > img:hover {
+  opacity: 0.9;
 }
 
 .headerTop .loginButtons {
@@ -1052,8 +1055,8 @@
           animation-duration: 1.2s;
   background: linear-gradient(10deg, #643a18, #f5e65e);
   border: 1px solid #b4a270;
-  -webkit-box-shadow: 6px 8px 8px 1px #967722;
-          box-shadow: 6px 8px 8px 1px #967722;
+  -webkit-box-shadow: 0px 0px 8px 3px #967722;
+          box-shadow: 0px 0px 8px 3px #967722;
   color: #1f1e1e;
 }
 
@@ -2045,8 +2048,8 @@
           animation-duration: 1.2s;
   background: linear-gradient(10deg, #643a18, #f5e65e);
   border: 1px solid #b4a270;
-  -webkit-box-shadow: 6px 8px 8px 1px #967722;
-          box-shadow: 6px 8px 8px 1px #967722;
+  -webkit-box-shadow: 0px 0px 8px 3px #967722;
+          box-shadow: 0px 0px 8px 3px #967722;
   color: #1f1e1e;
 }
 
@@ -2705,11 +2708,6 @@
   font-style: italic;
 }
 
-.Routes .headerTop > nav ul .contact:hover {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 .Routes .headerTop > nav ul a {
   position: relative;
   display: -webkit-box;
@@ -2740,10 +2738,11 @@
   color: white;
   background-color: #1b1a1a;
   text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
-  letter-spacing: 1.2px;
-  padding: 10px 5px;
-  padding-left: 30px;
-  padding-right: 10px;
+}
+
+.Routes .headerTop > nav ul a:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .Routes .headerTop > nav ul a.levelUp img {
@@ -3199,7 +3198,7 @@
 .shadowmoonDraenorLevelGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -3207,6 +3206,12 @@
 
 .shadowmoonDraenorLevelGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.shadowmoonDraenorLevelGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .shadowmoonDraenorLevelGuide ul .loadingAbilities {
@@ -3224,6 +3229,14 @@
 
 .shadowmoonDraenorLevelGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.shadowmoonDraenorLevelGuide ul .mechanical .petName {
+  color: black;
+}
+
+.shadowmoonDraenorLevelGuide ul .mechanical p {
+  color: black;
 }
 
 .shadowmoonDraenorLevelGuide ul .mechanical .type {
@@ -3305,7 +3318,7 @@
 }
 
 .shadowmoonDraenorLevelGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -3361,10 +3374,10 @@
 .shadowmoonDraenorLevelGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .shadowmoonDraenorLevelGuide ul li p .health {
@@ -3635,7 +3648,7 @@
 .frostFireDraenorLevelGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -3643,6 +3656,12 @@
 
 .frostFireDraenorLevelGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.frostFireDraenorLevelGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .frostFireDraenorLevelGuide ul .loadingAbilities {
@@ -3660,6 +3679,14 @@
 
 .frostFireDraenorLevelGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.frostFireDraenorLevelGuide ul .mechanical .petName {
+  color: black;
+}
+
+.frostFireDraenorLevelGuide ul .mechanical p {
+  color: black;
 }
 
 .frostFireDraenorLevelGuide ul .mechanical .type {
@@ -3741,7 +3768,7 @@
 }
 
 .frostFireDraenorLevelGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -3797,10 +3824,10 @@
 .frostFireDraenorLevelGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .frostFireDraenorLevelGuide ul li p .health {
@@ -4049,7 +4076,7 @@
 .nagrandDraenorLevelGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -4057,6 +4084,12 @@
 
 .nagrandDraenorLevelGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.nagrandDraenorLevelGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .nagrandDraenorLevelGuide ul .loadingAbilities {
@@ -4074,6 +4107,14 @@
 
 .nagrandDraenorLevelGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.nagrandDraenorLevelGuide ul .mechanical .petName {
+  color: black;
+}
+
+.nagrandDraenorLevelGuide ul .mechanical p {
+  color: black;
 }
 
 .nagrandDraenorLevelGuide ul .mechanical .type {
@@ -4155,7 +4196,7 @@
 }
 
 .nagrandDraenorLevelGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -4211,10 +4252,10 @@
 .nagrandDraenorLevelGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .nagrandDraenorLevelGuide ul li p .health {
@@ -4464,7 +4505,7 @@
 .YonKunLaiLevelGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -4472,6 +4513,12 @@
 
 .YonKunLaiLevelGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.YonKunLaiLevelGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .YonKunLaiLevelGuide ul .loadingAbilities {
@@ -4489,6 +4536,14 @@
 
 .YonKunLaiLevelGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.YonKunLaiLevelGuide ul .mechanical .petName {
+  color: black;
+}
+
+.YonKunLaiLevelGuide ul .mechanical p {
+  color: black;
 }
 
 .YonKunLaiLevelGuide ul .mechanical .type {
@@ -4570,7 +4625,7 @@
 }
 
 .YonKunLaiLevelGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -4626,10 +4681,10 @@
 .YonKunLaiLevelGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .YonKunLaiLevelGuide ul li p .health {
@@ -4877,7 +4932,7 @@
 .ThunderingPSKunLaiLevelGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -4885,6 +4940,12 @@
 
 .ThunderingPSKunLaiLevelGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.ThunderingPSKunLaiLevelGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .ThunderingPSKunLaiLevelGuide ul .loadingAbilities {
@@ -4902,6 +4963,14 @@
 
 .ThunderingPSKunLaiLevelGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.ThunderingPSKunLaiLevelGuide ul .mechanical .petName {
+  color: black;
+}
+
+.ThunderingPSKunLaiLevelGuide ul .mechanical p {
+  color: black;
 }
 
 .ThunderingPSKunLaiLevelGuide ul .mechanical .type {
@@ -4983,7 +5052,7 @@
 }
 
 .ThunderingPSKunLaiLevelGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -5039,10 +5108,10 @@
 .ThunderingPSKunLaiLevelGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .ThunderingPSKunLaiLevelGuide ul li p .health {
@@ -5291,7 +5360,7 @@
 .WhisperingPSJadeForestLevelGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -5299,6 +5368,12 @@
 
 .WhisperingPSJadeForestLevelGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.WhisperingPSJadeForestLevelGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .WhisperingPSJadeForestLevelGuide ul .loadingAbilities {
@@ -5316,6 +5391,14 @@
 
 .WhisperingPSJadeForestLevelGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.WhisperingPSJadeForestLevelGuide ul .mechanical .petName {
+  color: black;
+}
+
+.WhisperingPSJadeForestLevelGuide ul .mechanical p {
+  color: black;
 }
 
 .WhisperingPSJadeForestLevelGuide ul .mechanical .type {
@@ -5397,7 +5480,7 @@
 }
 
 .WhisperingPSJadeForestLevelGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -5453,10 +5536,10 @@
 .WhisperingPSJadeForestLevelGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .WhisperingPSJadeForestLevelGuide ul li p .health {
@@ -5689,7 +5772,7 @@
 }
 
 .defaultLevelGuide .containerLeft p {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 100;
   font-size: 0.95rem;
   letter-spacing: 1px;
@@ -5728,7 +5811,7 @@
 }
 
 .defaultLevelGuide .containerRight p {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 100;
   font-size: 0.95rem;
   letter-spacing: 1px;
@@ -5766,6 +5849,7 @@
   padding: 50px 20px;
   margin: 0 auto;
   margin-top: 5vh;
+  border: 0.5px solid #51575a;
   border-radius: 20px;
 }
 
@@ -5782,7 +5866,7 @@
 }
 
 .defaultLevelGuide > ul .cogBackground {
-  color: #7e7f81;
+  color: #2c3136;
   position: absolute;
   bottom: 0px;
   right: 0px;
@@ -5806,8 +5890,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #2b3041;
-  border-radius: 30px;
+  border: 1px solid #4e5261;
+  border-radius: 3px;
   padding: 35px 15px;
   color: green;
   z-index: 10;
@@ -5829,6 +5913,8 @@
   padding: 15px 0px;
   margin-left: auto;
   margin-right: auto;
+  -webkit-animation: 0.6s fadeInToolTip;
+          animation: 0.6s fadeInToolTip;
 }
 
 .defaultLevelGuide > ul .defaultPet:hover {
@@ -5865,11 +5951,29 @@
 }
 
 .defaultLevelGuide > ul .defaultPet .owned {
-  color: #26b409;
+  color: #449234;
 }
 
 .defaultLevelGuide > ul .defaultPet .notOwned {
-  color: red;
+  color: #cf3535;
+}
+
+@-webkit-keyframes fadeInToolTip {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInToolTip {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .shadowlands {
@@ -7099,7 +7203,7 @@
 .farylWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -7107,6 +7211,12 @@
 
 .farylWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.farylWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .farylWQGuide ul .loadingAbilities {
@@ -7124,6 +7234,14 @@
 
 .farylWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.farylWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.farylWQGuide ul .mechanical p {
+  color: black;
 }
 
 .farylWQGuide ul .mechanical .type {
@@ -7205,7 +7323,7 @@
 }
 
 .farylWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -7261,10 +7379,10 @@
 .farylWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .farylWQGuide ul li p .health {
@@ -7510,7 +7628,7 @@
 .rascalWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -7518,6 +7636,12 @@
 
 .rascalWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.rascalWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .rascalWQGuide ul .loadingAbilities {
@@ -7535,6 +7659,14 @@
 
 .rascalWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.rascalWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.rascalWQGuide ul .mechanical p {
+  color: black;
 }
 
 .rascalWQGuide ul .mechanical .type {
@@ -7616,7 +7748,7 @@
 }
 
 .rascalWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -7672,10 +7804,10 @@
 .rascalWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .rascalWQGuide ul li p .health {
@@ -7921,7 +8053,7 @@
 .nightfangWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -7929,6 +8061,12 @@
 
 .nightfangWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.nightfangWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .nightfangWQGuide ul .loadingAbilities {
@@ -7946,6 +8084,14 @@
 
 .nightfangWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.nightfangWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.nightfangWQGuide ul .mechanical p {
+  color: black;
 }
 
 .nightfangWQGuide ul .mechanical .type {
@@ -8027,7 +8173,7 @@
 }
 
 .nightfangWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -8083,10 +8229,10 @@
 .nightfangWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .nightfangWQGuide ul li p .health {
@@ -8332,7 +8478,7 @@
 .glitterdustWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -8340,6 +8486,12 @@
 
 .glitterdustWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.glitterdustWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .glitterdustWQGuide ul .loadingAbilities {
@@ -8357,6 +8509,14 @@
 
 .glitterdustWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.glitterdustWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.glitterdustWQGuide ul .mechanical p {
+  color: black;
 }
 
 .glitterdustWQGuide ul .mechanical .type {
@@ -8438,7 +8598,7 @@
 }
 
 .glitterdustWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -8494,10 +8654,10 @@
 .glitterdustWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .glitterdustWQGuide ul li p .health {
@@ -9126,7 +9286,7 @@
 .gorgemouthWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -9134,6 +9294,12 @@
 
 .gorgemouthWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.gorgemouthWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .gorgemouthWQGuide ul .loadingAbilities {
@@ -9151,6 +9317,14 @@
 
 .gorgemouthWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.gorgemouthWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.gorgemouthWQGuide ul .mechanical p {
+  color: black;
 }
 
 .gorgemouthWQGuide ul .mechanical .type {
@@ -9232,7 +9406,7 @@
 }
 
 .gorgemouthWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -9288,10 +9462,10 @@
 .gorgemouthWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .gorgemouthWQGuide ul li p .health {
@@ -9537,7 +9711,7 @@
 .rotgutWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -9545,6 +9719,12 @@
 
 .rotgutWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.rotgutWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .rotgutWQGuide ul .loadingAbilities {
@@ -9562,6 +9742,14 @@
 
 .rotgutWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.rotgutWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.rotgutWQGuide ul .mechanical p {
+  color: black;
 }
 
 .rotgutWQGuide ul .mechanical .type {
@@ -9643,7 +9831,7 @@
 }
 
 .rotgutWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -9699,10 +9887,10 @@
 .rotgutWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .rotgutWQGuide ul li p .health {
@@ -9948,7 +10136,7 @@
 .maximilianWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -9956,6 +10144,12 @@
 
 .maximilianWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.maximilianWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .maximilianWQGuide ul .loadingAbilities {
@@ -9973,6 +10167,14 @@
 
 .maximilianWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.maximilianWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.maximilianWQGuide ul .mechanical p {
+  color: black;
 }
 
 .maximilianWQGuide ul .mechanical .type {
@@ -10054,7 +10256,7 @@
 }
 
 .maximilianWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -10110,10 +10312,10 @@
 .maximilianWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .maximilianWQGuide ul li p .health {
@@ -10359,7 +10561,7 @@
 .dundleyWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -10367,6 +10569,12 @@
 
 .dundleyWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.dundleyWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .dundleyWQGuide ul .loadingAbilities {
@@ -10384,6 +10592,14 @@
 
 .dundleyWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.dundleyWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.dundleyWQGuide ul .mechanical p {
+  color: black;
 }
 
 .dundleyWQGuide ul .mechanical .type {
@@ -10465,7 +10681,7 @@
 }
 
 .dundleyWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -10521,10 +10737,10 @@
 .dundleyWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .dundleyWQGuide ul li p .health {
@@ -11215,7 +11431,7 @@
 .addiusWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -11223,6 +11439,12 @@
 
 .addiusWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.addiusWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .addiusWQGuide ul .loadingAbilities {
@@ -11240,6 +11462,14 @@
 
 .addiusWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.addiusWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.addiusWQGuide ul .mechanical p {
+  color: black;
 }
 
 .addiusWQGuide ul .mechanical .type {
@@ -11321,7 +11551,7 @@
 }
 
 .addiusWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -11377,10 +11607,10 @@
 .addiusWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .addiusWQGuide ul li p .health {
@@ -11627,7 +11857,7 @@
 .scorchWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -11635,6 +11865,12 @@
 
 .scorchWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.scorchWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .scorchWQGuide ul .loadingAbilities {
@@ -11652,6 +11888,14 @@
 
 .scorchWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.scorchWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.scorchWQGuide ul .mechanical p {
+  color: black;
 }
 
 .scorchWQGuide ul .mechanical .type {
@@ -11733,7 +11977,7 @@
 }
 
 .scorchWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -11789,10 +12033,10 @@
 .scorchWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .scorchWQGuide ul li p .health {
@@ -12039,7 +12283,7 @@
 .syllaWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -12047,6 +12291,12 @@
 
 .syllaWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.syllaWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .syllaWQGuide ul .loadingAbilities {
@@ -12064,6 +12314,14 @@
 
 .syllaWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.syllaWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.syllaWQGuide ul .mechanical p {
+  color: black;
 }
 
 .syllaWQGuide ul .mechanical .type {
@@ -12145,7 +12403,7 @@
 }
 
 .syllaWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -12201,10 +12459,10 @@
 .syllaWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .syllaWQGuide ul li p .health {
@@ -12451,7 +12709,7 @@
 .eyegorWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -12459,6 +12717,12 @@
 
 .eyegorWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.eyegorWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .eyegorWQGuide ul .loadingAbilities {
@@ -12476,6 +12740,14 @@
 
 .eyegorWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.eyegorWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.eyegorWQGuide ul .mechanical p {
+  color: black;
 }
 
 .eyegorWQGuide ul .mechanical .type {
@@ -12557,7 +12829,7 @@
 }
 
 .eyegorWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -12613,10 +12885,10 @@
 .eyegorWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .eyegorWQGuide ul li p .health {
@@ -13240,7 +13512,7 @@
 .jawboneWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -13248,6 +13520,12 @@
 
 .jawboneWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.jawboneWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .jawboneWQGuide ul .loadingAbilities {
@@ -13265,6 +13543,14 @@
 
 .jawboneWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.jawboneWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.jawboneWQGuide ul .mechanical p {
+  color: black;
 }
 
 .jawboneWQGuide ul .mechanical .type {
@@ -13346,7 +13632,7 @@
 }
 
 .jawboneWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -13402,10 +13688,10 @@
 .jawboneWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .jawboneWQGuide ul li p .health {
@@ -13651,7 +13937,7 @@
 .theniaWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -13659,6 +13945,12 @@
 
 .theniaWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.theniaWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .theniaWQGuide ul .loadingAbilities {
@@ -13676,6 +13968,14 @@
 
 .theniaWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.theniaWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.theniaWQGuide ul .mechanical p {
+  color: black;
 }
 
 .theniaWQGuide ul .mechanical .type {
@@ -13757,7 +14057,7 @@
 }
 
 .theniaWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -13813,10 +14113,10 @@
 .theniaWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .theniaWQGuide ul li p .health {
@@ -14062,7 +14362,7 @@
 .zollaWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -14070,6 +14370,12 @@
 
 .zollaWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.zollaWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .zollaWQGuide ul .loadingAbilities {
@@ -14087,6 +14393,14 @@
 
 .zollaWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.zollaWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.zollaWQGuide ul .mechanical p {
+  color: black;
 }
 
 .zollaWQGuide ul .mechanical .type {
@@ -14168,7 +14482,7 @@
 }
 
 .zollaWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -14224,10 +14538,10 @@
 .zollaWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .zollaWQGuide ul li p .health {
@@ -14473,7 +14787,7 @@
 .stratiosWQGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -14481,6 +14795,12 @@
 
 .stratiosWQGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.stratiosWQGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .stratiosWQGuide ul .loadingAbilities {
@@ -14498,6 +14818,14 @@
 
 .stratiosWQGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.stratiosWQGuide ul .mechanical .petName {
+  color: black;
+}
+
+.stratiosWQGuide ul .mechanical p {
+  color: black;
 }
 
 .stratiosWQGuide ul .mechanical .type {
@@ -14579,7 +14907,7 @@
 }
 
 .stratiosWQGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -14635,10 +14963,10 @@
 .stratiosWQGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .stratiosWQGuide ul li p .health {
@@ -15349,7 +15677,7 @@
 .undeadZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -15357,6 +15685,12 @@
 
 .undeadZollaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.undeadZollaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .undeadZollaGuide ul .loadingAbilities {
@@ -15374,6 +15708,14 @@
 
 .undeadZollaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.undeadZollaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.undeadZollaGuide ul .mechanical p {
+  color: black;
 }
 
 .undeadZollaGuide ul .mechanical .type {
@@ -15455,7 +15797,7 @@
 }
 
 .undeadZollaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -15511,10 +15853,10 @@
 .undeadZollaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .undeadZollaGuide ul li p .health {
@@ -15760,7 +16102,7 @@
 .dragonkinZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -15768,6 +16110,12 @@
 
 .dragonkinZollaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.dragonkinZollaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .dragonkinZollaGuide ul .loadingAbilities {
@@ -15785,6 +16133,14 @@
 
 .dragonkinZollaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.dragonkinZollaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.dragonkinZollaGuide ul .mechanical p {
+  color: black;
 }
 
 .dragonkinZollaGuide ul .mechanical .type {
@@ -15866,7 +16222,7 @@
 }
 
 .dragonkinZollaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -15922,10 +16278,10 @@
 .dragonkinZollaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .dragonkinZollaGuide ul li p .health {
@@ -16171,7 +16527,7 @@
 .crittersZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -16179,6 +16535,12 @@
 
 .crittersZollaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.crittersZollaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .crittersZollaGuide ul .loadingAbilities {
@@ -16196,6 +16558,14 @@
 
 .crittersZollaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.crittersZollaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.crittersZollaGuide ul .mechanical p {
+  color: black;
 }
 
 .crittersZollaGuide ul .mechanical .type {
@@ -16277,7 +16647,7 @@
 }
 
 .crittersZollaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -16333,10 +16703,10 @@
 .crittersZollaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .crittersZollaGuide ul li p .health {
@@ -16582,7 +16952,7 @@
 .flyingZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -16590,6 +16960,12 @@
 
 .flyingZollaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.flyingZollaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .flyingZollaGuide ul .loadingAbilities {
@@ -16607,6 +16983,14 @@
 
 .flyingZollaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.flyingZollaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.flyingZollaGuide ul .mechanical p {
+  color: black;
 }
 
 .flyingZollaGuide ul .mechanical .type {
@@ -16688,7 +17072,7 @@
 }
 
 .flyingZollaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -16744,10 +17128,10 @@
 .flyingZollaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .flyingZollaGuide ul li p .health {
@@ -16993,7 +17377,7 @@
 .elementalZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -17001,6 +17385,12 @@
 
 .elementalZollaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.elementalZollaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .elementalZollaGuide ul .loadingAbilities {
@@ -17018,6 +17408,14 @@
 
 .elementalZollaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.elementalZollaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.elementalZollaGuide ul .mechanical p {
+  color: black;
 }
 
 .elementalZollaGuide ul .mechanical .type {
@@ -17099,7 +17497,7 @@
 }
 
 .elementalZollaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -17155,10 +17553,10 @@
 .elementalZollaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .elementalZollaGuide ul li p .health {
@@ -17404,7 +17802,7 @@
 .beastsZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -17412,6 +17810,12 @@
 
 .beastsZollaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.beastsZollaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .beastsZollaGuide ul .loadingAbilities {
@@ -17429,6 +17833,14 @@
 
 .beastsZollaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.beastsZollaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.beastsZollaGuide ul .mechanical p {
+  color: black;
 }
 
 .beastsZollaGuide ul .mechanical .type {
@@ -17510,7 +17922,7 @@
 }
 
 .beastsZollaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -17566,10 +17978,10 @@
 .beastsZollaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .beastsZollaGuide ul li p .health {
@@ -17815,7 +18227,7 @@
 .magicZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -17823,6 +18235,12 @@
 
 .magicZollaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.magicZollaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .magicZollaGuide ul .loadingAbilities {
@@ -17840,6 +18258,14 @@
 
 .magicZollaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.magicZollaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.magicZollaGuide ul .mechanical p {
+  color: black;
 }
 
 .magicZollaGuide ul .mechanical .type {
@@ -17921,7 +18347,7 @@
 }
 
 .magicZollaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -17977,10 +18403,10 @@
 .magicZollaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .magicZollaGuide ul li p .health {
@@ -18226,7 +18652,7 @@
 .humanoidZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -18234,6 +18660,12 @@
 
 .humanoidZollaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.humanoidZollaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .humanoidZollaGuide ul .loadingAbilities {
@@ -18251,6 +18683,14 @@
 
 .humanoidZollaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.humanoidZollaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.humanoidZollaGuide ul .mechanical p {
+  color: black;
 }
 
 .humanoidZollaGuide ul .mechanical .type {
@@ -18332,7 +18772,7 @@
 }
 
 .humanoidZollaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -18388,10 +18828,10 @@
 .humanoidZollaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .humanoidZollaGuide ul li p .health {
@@ -18637,7 +19077,7 @@
 .mechanicalZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -18645,6 +19085,12 @@
 
 .mechanicalZollaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.mechanicalZollaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .mechanicalZollaGuide ul .loadingAbilities {
@@ -18662,6 +19108,14 @@
 
 .mechanicalZollaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.mechanicalZollaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.mechanicalZollaGuide ul .mechanical p {
+  color: black;
 }
 
 .mechanicalZollaGuide ul .mechanical .type {
@@ -18743,7 +19197,7 @@
 }
 
 .mechanicalZollaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -18799,10 +19253,10 @@
 .mechanicalZollaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .mechanicalZollaGuide ul li p .health {
@@ -19048,7 +19502,7 @@
 .aquaticZollaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -19056,6 +19510,12 @@
 
 .aquaticZollaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.aquaticZollaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .aquaticZollaGuide ul .loadingAbilities {
@@ -19073,6 +19533,14 @@
 
 .aquaticZollaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.aquaticZollaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.aquaticZollaGuide ul .mechanical p {
+  color: black;
 }
 
 .aquaticZollaGuide ul .mechanical .type {
@@ -19154,7 +19622,7 @@
 }
 
 .aquaticZollaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -19210,10 +19678,10 @@
 .aquaticZollaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .aquaticZollaGuide ul li p .health {
@@ -19459,7 +19927,7 @@
 .aquaticStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -19467,6 +19935,12 @@
 
 .aquaticStratiosGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.aquaticStratiosGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .aquaticStratiosGuide ul .loadingAbilities {
@@ -19484,6 +19958,14 @@
 
 .aquaticStratiosGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.aquaticStratiosGuide ul .mechanical .petName {
+  color: black;
+}
+
+.aquaticStratiosGuide ul .mechanical p {
+  color: black;
 }
 
 .aquaticStratiosGuide ul .mechanical .type {
@@ -19565,7 +20047,7 @@
 }
 
 .aquaticStratiosGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -19621,10 +20103,10 @@
 .aquaticStratiosGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .aquaticStratiosGuide ul li p .health {
@@ -19870,7 +20352,7 @@
 .humanoidStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -19878,6 +20360,12 @@
 
 .humanoidStratiosGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.humanoidStratiosGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .humanoidStratiosGuide ul .loadingAbilities {
@@ -19895,6 +20383,14 @@
 
 .humanoidStratiosGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.humanoidStratiosGuide ul .mechanical .petName {
+  color: black;
+}
+
+.humanoidStratiosGuide ul .mechanical p {
+  color: black;
 }
 
 .humanoidStratiosGuide ul .mechanical .type {
@@ -19976,7 +20472,7 @@
 }
 
 .humanoidStratiosGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -20032,10 +20528,10 @@
 .humanoidStratiosGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .humanoidStratiosGuide ul li p .health {
@@ -20281,7 +20777,7 @@
 .flyingStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -20289,6 +20785,12 @@
 
 .flyingStratiosGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.flyingStratiosGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .flyingStratiosGuide ul .loadingAbilities {
@@ -20306,6 +20808,14 @@
 
 .flyingStratiosGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.flyingStratiosGuide ul .mechanical .petName {
+  color: black;
+}
+
+.flyingStratiosGuide ul .mechanical p {
+  color: black;
 }
 
 .flyingStratiosGuide ul .mechanical .type {
@@ -20387,7 +20897,7 @@
 }
 
 .flyingStratiosGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -20443,10 +20953,10 @@
 .flyingStratiosGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .flyingStratiosGuide ul li p .health {
@@ -20692,7 +21202,7 @@
 .crittersStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -20700,6 +21210,12 @@
 
 .crittersStratiosGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.crittersStratiosGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .crittersStratiosGuide ul .loadingAbilities {
@@ -20717,6 +21233,14 @@
 
 .crittersStratiosGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.crittersStratiosGuide ul .mechanical .petName {
+  color: black;
+}
+
+.crittersStratiosGuide ul .mechanical p {
+  color: black;
 }
 
 .crittersStratiosGuide ul .mechanical .type {
@@ -20798,7 +21322,7 @@
 }
 
 .crittersStratiosGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -20854,10 +21378,10 @@
 .crittersStratiosGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .crittersStratiosGuide ul li p .health {
@@ -21103,7 +21627,7 @@
 .dragonkinStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -21111,6 +21635,12 @@
 
 .dragonkinStratiosGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.dragonkinStratiosGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .dragonkinStratiosGuide ul .loadingAbilities {
@@ -21128,6 +21658,14 @@
 
 .dragonkinStratiosGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.dragonkinStratiosGuide ul .mechanical .petName {
+  color: black;
+}
+
+.dragonkinStratiosGuide ul .mechanical p {
+  color: black;
 }
 
 .dragonkinStratiosGuide ul .mechanical .type {
@@ -21209,7 +21747,7 @@
 }
 
 .dragonkinStratiosGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -21265,10 +21803,10 @@
 .dragonkinStratiosGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .dragonkinStratiosGuide ul li p .health {
@@ -21514,7 +22052,7 @@
 .elementalStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -21522,6 +22060,12 @@
 
 .elementalStratiosGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.elementalStratiosGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .elementalStratiosGuide ul .loadingAbilities {
@@ -21539,6 +22083,14 @@
 
 .elementalStratiosGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.elementalStratiosGuide ul .mechanical .petName {
+  color: black;
+}
+
+.elementalStratiosGuide ul .mechanical p {
+  color: black;
 }
 
 .elementalStratiosGuide ul .mechanical .type {
@@ -21620,7 +22172,7 @@
 }
 
 .elementalStratiosGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -21676,10 +22228,10 @@
 .elementalStratiosGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .elementalStratiosGuide ul li p .health {
@@ -21925,7 +22477,7 @@
 .undeadStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -21933,6 +22485,12 @@
 
 .undeadStratiosGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.undeadStratiosGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .undeadStratiosGuide ul .loadingAbilities {
@@ -21950,6 +22508,14 @@
 
 .undeadStratiosGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.undeadStratiosGuide ul .mechanical .petName {
+  color: black;
+}
+
+.undeadStratiosGuide ul .mechanical p {
+  color: black;
 }
 
 .undeadStratiosGuide ul .mechanical .type {
@@ -22031,7 +22597,7 @@
 }
 
 .undeadStratiosGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -22087,10 +22653,10 @@
 .undeadStratiosGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .undeadStratiosGuide ul li p .health {
@@ -22336,7 +22902,7 @@
 .magicStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -22344,6 +22910,12 @@
 
 .magicStratiosGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.magicStratiosGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .magicStratiosGuide ul .loadingAbilities {
@@ -22361,6 +22933,14 @@
 
 .magicStratiosGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.magicStratiosGuide ul .mechanical .petName {
+  color: black;
+}
+
+.magicStratiosGuide ul .mechanical p {
+  color: black;
 }
 
 .magicStratiosGuide ul .mechanical .type {
@@ -22442,7 +23022,7 @@
 }
 
 .magicStratiosGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -22498,10 +23078,10 @@
 .magicStratiosGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .magicStratiosGuide ul li p .health {
@@ -22747,7 +23327,7 @@
 .beastsStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -22755,6 +23335,12 @@
 
 .beastsStratiosGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.beastsStratiosGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .beastsStratiosGuide ul .loadingAbilities {
@@ -22772,6 +23358,14 @@
 
 .beastsStratiosGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.beastsStratiosGuide ul .mechanical .petName {
+  color: black;
+}
+
+.beastsStratiosGuide ul .mechanical p {
+  color: black;
 }
 
 .beastsStratiosGuide ul .mechanical .type {
@@ -22853,7 +23447,7 @@
 }
 
 .beastsStratiosGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -22909,10 +23503,10 @@
 .beastsStratiosGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .beastsStratiosGuide ul li p .health {
@@ -23158,7 +23752,7 @@
 .mechanicalStratiosGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -23166,6 +23760,12 @@
 
 .mechanicalStratiosGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.mechanicalStratiosGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .mechanicalStratiosGuide ul .loadingAbilities {
@@ -23183,6 +23783,14 @@
 
 .mechanicalStratiosGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.mechanicalStratiosGuide ul .mechanical .petName {
+  color: black;
+}
+
+.mechanicalStratiosGuide ul .mechanical p {
+  color: black;
 }
 
 .mechanicalStratiosGuide ul .mechanical .type {
@@ -23264,7 +23872,7 @@
 }
 
 .mechanicalStratiosGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -23320,10 +23928,10 @@
 .mechanicalStratiosGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .mechanicalStratiosGuide ul li p .health {
@@ -23569,7 +24177,7 @@
 .humanoidTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -23577,6 +24185,12 @@
 
 .humanoidTheniaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.humanoidTheniaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .humanoidTheniaGuide ul .loadingAbilities {
@@ -23594,6 +24208,14 @@
 
 .humanoidTheniaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.humanoidTheniaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.humanoidTheniaGuide ul .mechanical p {
+  color: black;
 }
 
 .humanoidTheniaGuide ul .mechanical .type {
@@ -23675,7 +24297,7 @@
 }
 
 .humanoidTheniaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -23731,10 +24353,10 @@
 .humanoidTheniaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .humanoidTheniaGuide ul li p .health {
@@ -23980,7 +24602,7 @@
 .flyingTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -23988,6 +24610,12 @@
 
 .flyingTheniaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.flyingTheniaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .flyingTheniaGuide ul .loadingAbilities {
@@ -24005,6 +24633,14 @@
 
 .flyingTheniaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.flyingTheniaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.flyingTheniaGuide ul .mechanical p {
+  color: black;
 }
 
 .flyingTheniaGuide ul .mechanical .type {
@@ -24086,7 +24722,7 @@
 }
 
 .flyingTheniaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -24142,10 +24778,10 @@
 .flyingTheniaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .flyingTheniaGuide ul li p .health {
@@ -24391,7 +25027,7 @@
 .beastsTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -24399,6 +25035,12 @@
 
 .beastsTheniaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.beastsTheniaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .beastsTheniaGuide ul .loadingAbilities {
@@ -24416,6 +25058,14 @@
 
 .beastsTheniaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.beastsTheniaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.beastsTheniaGuide ul .mechanical p {
+  color: black;
 }
 
 .beastsTheniaGuide ul .mechanical .type {
@@ -24497,7 +25147,7 @@
 }
 
 .beastsTheniaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -24553,10 +25203,10 @@
 .beastsTheniaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .beastsTheniaGuide ul li p .health {
@@ -24802,7 +25452,7 @@
 .crittersTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -24810,6 +25460,12 @@
 
 .crittersTheniaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.crittersTheniaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .crittersTheniaGuide ul .loadingAbilities {
@@ -24827,6 +25483,14 @@
 
 .crittersTheniaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.crittersTheniaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.crittersTheniaGuide ul .mechanical p {
+  color: black;
 }
 
 .crittersTheniaGuide ul .mechanical .type {
@@ -24908,7 +25572,7 @@
 }
 
 .crittersTheniaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -24964,10 +25628,10 @@
 .crittersTheniaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .crittersTheniaGuide ul li p .health {
@@ -25213,7 +25877,7 @@
 .dragonkinTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -25221,6 +25885,12 @@
 
 .dragonkinTheniaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.dragonkinTheniaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .dragonkinTheniaGuide ul .loadingAbilities {
@@ -25238,6 +25908,14 @@
 
 .dragonkinTheniaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.dragonkinTheniaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.dragonkinTheniaGuide ul .mechanical p {
+  color: black;
 }
 
 .dragonkinTheniaGuide ul .mechanical .type {
@@ -25319,7 +25997,7 @@
 }
 
 .dragonkinTheniaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -25375,10 +26053,10 @@
 .dragonkinTheniaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .dragonkinTheniaGuide ul li p .health {
@@ -25624,7 +26302,7 @@
 .aquaticTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -25632,6 +26310,12 @@
 
 .aquaticTheniaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.aquaticTheniaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .aquaticTheniaGuide ul .loadingAbilities {
@@ -25649,6 +26333,14 @@
 
 .aquaticTheniaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.aquaticTheniaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.aquaticTheniaGuide ul .mechanical p {
+  color: black;
 }
 
 .aquaticTheniaGuide ul .mechanical .type {
@@ -25730,7 +26422,7 @@
 }
 
 .aquaticTheniaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -25786,10 +26478,10 @@
 .aquaticTheniaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .aquaticTheniaGuide ul li p .health {
@@ -26035,7 +26727,7 @@
 .mechanicalTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -26043,6 +26735,12 @@
 
 .mechanicalTheniaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.mechanicalTheniaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .mechanicalTheniaGuide ul .loadingAbilities {
@@ -26060,6 +26758,14 @@
 
 .mechanicalTheniaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.mechanicalTheniaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.mechanicalTheniaGuide ul .mechanical p {
+  color: black;
 }
 
 .mechanicalTheniaGuide ul .mechanical .type {
@@ -26141,7 +26847,7 @@
 }
 
 .mechanicalTheniaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -26197,10 +26903,10 @@
 .mechanicalTheniaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .mechanicalTheniaGuide ul li p .health {
@@ -26446,7 +27152,7 @@
 .magicTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -26454,6 +27160,12 @@
 
 .magicTheniaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.magicTheniaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .magicTheniaGuide ul .loadingAbilities {
@@ -26471,6 +27183,14 @@
 
 .magicTheniaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.magicTheniaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.magicTheniaGuide ul .mechanical p {
+  color: black;
 }
 
 .magicTheniaGuide ul .mechanical .type {
@@ -26552,7 +27272,7 @@
 }
 
 .magicTheniaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -26608,10 +27328,10 @@
 .magicTheniaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .magicTheniaGuide ul li p .health {
@@ -26857,7 +27577,7 @@
 .elementalTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -26865,6 +27585,12 @@
 
 .elementalTheniaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.elementalTheniaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .elementalTheniaGuide ul .loadingAbilities {
@@ -26882,6 +27608,14 @@
 
 .elementalTheniaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.elementalTheniaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.elementalTheniaGuide ul .mechanical p {
+  color: black;
 }
 
 .elementalTheniaGuide ul .mechanical .type {
@@ -26963,7 +27697,7 @@
 }
 
 .elementalTheniaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -27019,10 +27753,10 @@
 .elementalTheniaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .elementalTheniaGuide ul li p .health {
@@ -27268,7 +28002,7 @@
 .undeadTheniaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -27276,6 +28010,12 @@
 
 .undeadTheniaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.undeadTheniaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .undeadTheniaGuide ul .loadingAbilities {
@@ -27293,6 +28033,14 @@
 
 .undeadTheniaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.undeadTheniaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.undeadTheniaGuide ul .mechanical p {
+  color: black;
 }
 
 .undeadTheniaGuide ul .mechanical .type {
@@ -27374,7 +28122,7 @@
 }
 
 .undeadTheniaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -27430,10 +28178,10 @@
 .undeadTheniaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .undeadTheniaGuide ul li p .health {
@@ -27679,7 +28427,7 @@
 .humanoidSyllaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -27687,6 +28435,12 @@
 
 .humanoidSyllaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.humanoidSyllaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .humanoidSyllaGuide ul .loadingAbilities {
@@ -27704,6 +28458,14 @@
 
 .humanoidSyllaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.humanoidSyllaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.humanoidSyllaGuide ul .mechanical p {
+  color: black;
 }
 
 .humanoidSyllaGuide ul .mechanical .type {
@@ -27785,7 +28547,7 @@
 }
 
 .humanoidSyllaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -27841,10 +28603,10 @@
 .humanoidSyllaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .humanoidSyllaGuide ul li p .health {
@@ -28106,7 +28868,7 @@
 .dragonkinSyllaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -28114,6 +28876,12 @@
 
 .dragonkinSyllaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.dragonkinSyllaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .dragonkinSyllaGuide ul .loadingAbilities {
@@ -28131,6 +28899,14 @@
 
 .dragonkinSyllaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.dragonkinSyllaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.dragonkinSyllaGuide ul .mechanical p {
+  color: black;
 }
 
 .dragonkinSyllaGuide ul .mechanical .type {
@@ -28212,7 +28988,7 @@
 }
 
 .dragonkinSyllaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -28268,10 +29044,10 @@
 .dragonkinSyllaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .dragonkinSyllaGuide ul li p .health {
@@ -28533,7 +29309,7 @@
 .flyingSyllaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -28541,6 +29317,12 @@
 
 .flyingSyllaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.flyingSyllaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .flyingSyllaGuide ul .loadingAbilities {
@@ -28558,6 +29340,14 @@
 
 .flyingSyllaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.flyingSyllaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.flyingSyllaGuide ul .mechanical p {
+  color: black;
 }
 
 .flyingSyllaGuide ul .mechanical .type {
@@ -28639,7 +29429,7 @@
 }
 
 .flyingSyllaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -28695,10 +29485,10 @@
 .flyingSyllaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .flyingSyllaGuide ul li p .health {
@@ -28960,7 +29750,7 @@
 .crittersSyllaGuide ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #242424, #232324);
+  background: linear-gradient(10deg, #282a30, #1b1b1d);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -28968,6 +29758,12 @@
 
 .crittersSyllaGuide ul .anyPet .iconPet {
   margin-bottom: 70px;
+}
+
+.crittersSyllaGuide ul .anyPet p {
+  font-family: sf-pro-display-medium !important;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .crittersSyllaGuide ul .loadingAbilities {
@@ -28985,6 +29781,14 @@
 
 .crittersSyllaGuide ul .undead .type {
   color: #dbd7d7;
+}
+
+.crittersSyllaGuide ul .mechanical .petName {
+  color: black;
+}
+
+.crittersSyllaGuide ul .mechanical p {
+  color: black;
 }
 
 .crittersSyllaGuide ul .mechanical .type {
@@ -29066,7 +29870,7 @@
 }
 
 .crittersSyllaGuide ul li .petName {
-  font-family: "Roboto", sans-serif;
+  font-family: sf-pro-display-medium !important;
   font-size: 0.85rem;
   line-height: 18px;
   min-height: 33px;
@@ -29122,10 +29926,10 @@
 .crittersSyllaGuide ul li p {
   text-align: center;
   margin: 0 auto;
-  line-height: 17px;
+  line-height: 18px;
   min-width: 110px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 0.8rem;
+  font-family: sf-pro-display-medium !important;
+  font-size: 0.9rem;
 }
 
 .crittersSyllaGuide ul li p .health {
@@ -29415,7 +30219,7 @@
 }
 
 .containerAchiev .containerContent > h1 {
-  color: #1b1b1b;
+  color: #f0f0f0;
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
   text-align: center;
@@ -29508,8 +30312,6 @@
 
 .familiarAchiev {
   background: #242424;
-  -webkit-box-shadow: inset 0px -80px 50px 5px #c5c6c9;
-          box-shadow: inset 0px -80px 50px 5px #c5c6c9;
 }
 
 .familiarAchiev > .containerFamiliar {
@@ -29844,8 +30646,8 @@
           animation-duration: 1.2s;
   background: linear-gradient(10deg, #643a18, #f5e65e);
   border: 1px solid #b4a270;
-  -webkit-box-shadow: 6px 8px 8px 1px #967722;
-          box-shadow: 6px 8px 8px 1px #967722;
+  -webkit-box-shadow: 0px 0px 8px 3px #967722;
+          box-shadow: 0px 0px 8px 3px #967722;
   color: #1f1e1e;
 }
 
@@ -30415,7 +31217,7 @@
 }
 
 .submitStrategy .inputAuthorTitle label {
-  color: #28272b;
+  color: #e9e8eb;
   font-family: "Raleway", sans-serif;
   font-size: 0.9rem;
   padding: 10px 15px;
@@ -30847,11 +31649,13 @@
   width: fit-content;
   margin: 0 auto;
   margin-top: 50px;
-  border: none;
-  font-family: "Raleway", sans-serif;
-  padding: 10px 5px;
-  background-color: #24252c;
-  color: white;
+  border: 1px solid #175dff;
+  font-family: sf-pro-display-medium;
+  letter-spacing: 0.7px;
+  font-size: 17px;
+  padding: 10px 12px;
+  background-color: transparent;
+  color: #175dff;
 }
 
 @-webkit-keyframes FlowIn {
@@ -31127,8 +31931,10 @@
 }
 
 .submitStrategy .disabledButton {
-  background-color: #485057;
-  color: #8f8888;
+  background-color: #3f3f3f;
+  color: #807a7a;
+  border: 1px solid #666666;
+  font-style: italic;
   pointer-events: none;
 }
 
@@ -31138,12 +31944,14 @@
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
-  margin-top: 3vh;
-  padding: 15px 10px;
-  font-family: "Raleway", sans-serif;
-  border: none;
-  background-color: #1e222b;
-  color: white;
+  margin-top: 50px;
+  border: 1px solid #175dff;
+  font-family: sf-pro-display-medium;
+  letter-spacing: 0.7px;
+  font-size: 17px;
+  padding: 10px 12px;
+  background-color: transparent;
+  color: #175dff;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   -webkit-animation: 0.8s FlowIn;
@@ -31180,6 +31988,10 @@
   margin-top: 5vh;
 }
 
+.strategiesPreview .empty {
+  margin-bottom: 300px;
+}
+
 .strategiesPreview .loadingSpinner {
   position: relative;
   border: 3px solid #22272c;
@@ -31201,6 +32013,7 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-top: 5px;
+  margin-right: 50px;
 }
 
 .strategiesPreview .strategyOptions label {
@@ -31218,8 +32031,9 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   font-size: 1rem;
+  font-family: "Roboto", sans-serif;
   width: 200px;
-  background-color: #323b46;
+  background-color: #30333a;
   background-image: linear-gradient(45deg, transparent 50%, black 50%), linear-gradient(135deg, black 50%, transparent 40%), radial-gradient(#465a72 70%, transparent 30%);
   background-position: calc(100% - 15px) calc(0em + 15px), calc(100% - 8px) calc(0em + 15px), calc(100% - 0.3em) 0.3em;
   background-size: 8px 8px, 8px 8px, 1.5em 1.5em;
@@ -31234,13 +32048,12 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #2b2a35;
+  background-color: #30333a;
   color: white;
   border: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
 }
 
@@ -31310,7 +32123,7 @@
 .strategiesPreview ul .anyPet {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  background: linear-gradient(10deg, #303541, #111220);
+  background: linear-gradient(10deg, #303541, #252630);
   -webkit-box-shadow: 0px 0px 8px 1px #13100a;
           box-shadow: 0px 0px 8px 1px #13100a;
   color: white;
@@ -31765,13 +32578,22 @@
 .commentSection {
   position: relative;
   max-width: 1000px;
-  margin: 0 auto;
+  margin-left: 50px;
 }
 
 .commentSection > h2 {
   color: #dcdce2;
   margin-top: 1.5rem;
   text-align: end;
+  font-family: "Raleway", sans-serif;
+}
+
+.commentSection h1 {
+  font-family: "Raleway", sans-serif;
+}
+
+.commentSection > h1 {
+  text-align: center;
 }
 
 .commentSection > .empty {
@@ -31807,7 +32629,7 @@
   position: relative;
   background-color: #313131;
   width: 100%;
-  min-width: 800px;
+  width: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32437,25 +33259,31 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 100%;
-  padding-right: 15px;
+  padding-right: 65px;
+  margin-bottom: 15px;
 }
 
 .containerStrategyButton .strategyButton {
   position: relative;
   cursor: pointer;
-  font-family: "Raleway", sans-serif;
-  font-size: 0.9rem;
+  font-family: sf-pro-display-medium;
+  font-size: 1rem;
+  letter-spacing: 0.7px;
   padding: 10px 15px;
-  background-color: #222630;
-  color: #dfe3e6;
-  border: none;
+  background-color: #30333a;
+  color: white;
+  border: 1px solid #5c6468;
+  border-radius: 0px;
+  -webkit-box-shadow: 0px 0px 3px 0px #4b5341;
+          box-shadow: 0px 0px 3px 0px #4b5341;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .containerStrategyButton .strategyButton:hover {
-  background-color: #13182b;
+  background-color: #3c404d;
   color: white;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  padding: 10px 13px;
 }
 /*# sourceMappingURL=style.css.map */

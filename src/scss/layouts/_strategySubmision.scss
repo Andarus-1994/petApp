@@ -1,787 +1,774 @@
 @import "../mixins/petTypeStyle";
 
 .submitStrategy {
-    display: flex;
-    flex-direction: column;
-    @include petTypes;
-    .locked {
-        pointer-events: none !important;
-        cursor: default !important;
-    }
-    & > h1 {
-        font-family: $Raleway;
-        font-size: 2.2rem;
-        font-weight: 600;
-        text-align: center;
-    }
-    .requiredFieldsError {
-        color: red;
-        font-family: $Raleway;
-        font-size: 0.9rem;
-        text-align: center;
-        margin-top: 5vh;
-    }
+	display: flex;
+	flex-direction: column;
+	@include petTypes;
+	.locked {
+		pointer-events: none !important;
+		cursor: default !important;
+	}
+	& > h1 {
+		font-family: $Raleway;
+		font-size: 2.2rem;
+		font-weight: 600;
+		text-align: center;
+	}
+	.requiredFieldsError {
+		color: red;
+		font-family: $Raleway;
+		font-size: 0.9rem;
+		text-align: center;
+		margin-top: 5vh;
+	}
 
-    .toggleRNG {
-        margin-left: auto;
-        margin-right: 5vh;
-        display: flex;
-        flex-direction: row;
-        & > label {
-            font-size: 1rem;
-            font-weight: 600;
-        }
-        form {
-            width: 120px;
-            height: 50px;
-            margin: -4px -2px;
-            border-radius: 500px;
-            background: linear-gradient(#4a4161, #3c4268);
-            box-shadow: 0 1px 5px hsla(231, 40%, 54%, 0.3),
-                -3px 25px 25px hsla(231, 40%, 57%, 0.5),
-                -6px 50px 50px hsla(219, 32%, 62%, 0.3),
-                -9px 65px 65px hsla(236, 53%, 72%, 0.3);
-        }
+	.toggleRNG {
+		margin-left: auto;
+		margin-right: 5vh;
+		display: flex;
+		flex-direction: row;
+		& > label {
+			font-size: 1rem;
+			font-weight: 600;
+		}
+		form {
+			width: 120px;
+			height: 50px;
+			margin: -4px -2px;
+			border-radius: 500px;
+			background: linear-gradient(#4a4161, #3c4268);
+			box-shadow: 0 1px 5px hsla(231, 40%, 54%, 0.3), -3px 25px 25px hsla(231, 40%, 57%, 0.5),
+				-6px 50px 50px hsla(219, 32%, 62%, 0.3), -9px 65px 65px hsla(236, 53%, 72%, 0.3);
+		}
 
-        .toggle {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 120px;
-            height: 55px;
-            background: #4a4161;
-            border-radius: 500px;
-            border: solid 5px transparent;
-            background-clip: padding-box;
-            cursor: pointer;
-        }
+		.toggle {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 120px;
+			height: 55px;
+			background: #4a4161;
+			border-radius: 500px;
+			border: solid 5px transparent;
+			background-clip: padding-box;
+			cursor: pointer;
+		}
 
-        .toggle__wrapper {
-            width: 60px;
-            height: 30px;
-            margin: -4px -5px;
-            border-radius: 500px;
-            background: linear-gradient(
-                rgb(60, 55, 71),
-                hsla(226, 40%, 25%, 0.1)
-            );
-            box-shadow: 0px 5px 1px 0 hsla(224, 22%, 20%, 0.7);
-        }
+		.toggle__wrapper {
+			width: 60px;
+			height: 30px;
+			margin: -4px -5px;
+			border-radius: 500px;
+			background: linear-gradient(rgb(60, 55, 71), hsla(226, 40%, 25%, 0.1));
+			box-shadow: 0px 5px 1px 0 hsla(224, 22%, 20%, 0.7);
+		}
 
-        .toggle__bg {
-            margin-top: -28px;
-            margin-left: -17px;
-            width: 100px;
-            height: 50px;
-            background: rgb(86, 150, 48);
-            background: linear-gradient(
-                to right,
-                rgb(86, 150, 48) 50%,
-                rgb(124, 110, 104) 50% 100%
-            );
-            background-size: 200% 100%;
-            background-position: 100%;
-            border-radius: 500px;
-            border: solid 5px transparent;
-            background-clip: padding-box;
-            box-shadow: inset 0px 0px 50px 15px hsla(0, 0%, 0%, 0.3);
-            transition: all 0.85s ease-in-out;
-        }
+		.toggle__bg {
+			margin-top: -28px;
+			margin-left: -17px;
+			width: 100px;
+			height: 50px;
+			background: rgb(86, 150, 48);
+			background: linear-gradient(to right, rgb(86, 150, 48) 50%, rgb(124, 110, 104) 50% 100%);
+			background-size: 200% 100%;
+			background-position: 100%;
+			border-radius: 500px;
+			border: solid 5px transparent;
+			background-clip: padding-box;
+			box-shadow: inset 0px 0px 50px 15px hsla(0, 0%, 0%, 0.3);
+			transition: all 0.85s ease-in-out;
+		}
 
-        .toggle__sphere {
-            position: relative;
-            height: 37px;
-            width: 39px;
-            background: rgb(124, 110, 104);
-            background: linear-gradient(
-                to right,
-                rgb(86, 150, 48) 50%,
-                rgb(124, 110, 104) 50% 100%
-            );
-            border-radius: 50%;
-            transform-origin: top left;
-            transform: translateY(1px);
-            box-shadow: 2px 0px 5px 1px hsla(18, 77%, 15%, 0.05),
-                0px 10px 10px 1px hsla(18, 77%, 15%, 0.2),
-                -3px 0px 3px 1px hsla(0, 0%, 0%, 0.75);
-            transition: all 0.85s ease-in-out;
-        }
+		.toggle__sphere {
+			position: relative;
+			height: 37px;
+			width: 39px;
+			background: rgb(124, 110, 104);
+			background: linear-gradient(to right, rgb(86, 150, 48) 50%, rgb(124, 110, 104) 50% 100%);
+			border-radius: 50%;
+			transform-origin: top left;
+			transform: translateY(1px);
+			box-shadow: 2px 0px 5px 1px hsla(18, 77%, 15%, 0.05), 0px 10px 10px 1px hsla(18, 77%, 15%, 0.2),
+				-3px 0px 3px 1px hsla(0, 0%, 0%, 0.75);
+			transition: all 0.85s ease-in-out;
+		}
 
-        .toggle__sphere:before,
-        .toggle__sphere:after {
-            content: "";
-            position: absolute;
-            left: calc(50% - 20px);
-            height: 1px;
-            width: 40px;
+		.toggle__sphere:before,
+		.toggle__sphere:after {
+			content: "";
+			position: absolute;
+			left: calc(50% - 20px);
+			height: 1px;
+			width: 40px;
 
-            border-radius: 50%;
-            box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.25);
-        }
+			border-radius: 50%;
+			box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.25);
+		}
 
-        .toggle__sphere:before {
-            top: -2px;
-        }
+		.toggle__sphere:before {
+			top: -2px;
+		}
 
-        .toggle__sphere:after {
-            bottom: -1px;
-        }
+		.toggle__sphere:after {
+			bottom: -1px;
+		}
 
-        .toggle__sphere-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            border-radius: 50%;
-            box-shadow: inset 0px -30px 30px 15px hsla(0, 0%, 0%, 0.1);
-        }
+		.toggle__sphere-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: transparent;
+			border-radius: 50%;
+			box-shadow: inset 0px -30px 30px 15px hsla(0, 0%, 0%, 0.1);
+		}
 
-        .toggle__sphere-bg {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            border-radius: 50%;
-            transition: transform 0.85s ease-in-out;
-        }
+		.toggle__sphere-bg {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			transform-style: preserve-3d;
+			border-radius: 50%;
+			transition: transform 0.85s ease-in-out;
+		}
 
-        .toggle__sphere-bg:before,
-        .toggle__sphere-bg:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-        }
+		.toggle__sphere-bg:before,
+		.toggle__sphere-bg:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
 
-        .toggle__sphere-bg:before {
-            background-color: rgb(124, 110, 104);
-            border-radius: 50%;
-        }
+		.toggle__sphere-bg:before {
+			background-color: rgb(124, 110, 104);
+			border-radius: 50%;
+		}
 
-        .toggle__sphere-bg:after {
-            background-color: rgb(86, 150, 48);
-            transform: rotateY(180deg);
-            border-radius: 50%;
-        }
+		.toggle__sphere-bg:after {
+			background-color: rgb(86, 150, 48);
+			transform: rotateY(180deg);
+			border-radius: 50%;
+		}
 
-        input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-            position: absolute;
-        }
+		input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+			position: absolute;
+		}
 
-        input:checked + .toggle__bg {
-            background-position: 25%;
-        }
+		input:checked + .toggle__bg {
+			background-position: 25%;
+		}
 
-        input:checked + .toggle__bg .toggle__sphere {
-            transform: translateX(50px) translateY(1px);
-            box-shadow: -2px 0px 5px 1px hsla(18, 77%, 15%, 0.05),
-                0px 10px 10px 1px hsla(18, 77%, 15%, 0.2),
-                3px 0px 3px 0px hsla(0, 0%, 0%, 0.75);
-        }
+		input:checked + .toggle__bg .toggle__sphere {
+			transform: translateX(50px) translateY(1px);
+			box-shadow: -2px 0px 5px 1px hsla(18, 77%, 15%, 0.05), 0px 10px 10px 1px hsla(18, 77%, 15%, 0.2),
+				3px 0px 3px 0px hsla(0, 0%, 0%, 0.75);
+		}
 
-        input:checked + .toggle__bg .toggle__sphere-bg {
-            transform: rotateY(180deg);
-        }
-    }
+		input:checked + .toggle__bg .toggle__sphere-bg {
+			transform: rotateY(180deg);
+		}
+	}
 
-    .successSubmit {
-        color: rgb(23, 95, 23);
-        font-family: $Raleway;
-        font-size: 1.1rem;
-        text-align: center;
-        margin-top: 2vh;
-    }
-    .inputAuthorTitle {
-        display: flex;
-        flex-direction: row;
-        margin: 5vh 0;
-        label {
-            color: rgb(40, 39, 43);
-            font-family: $Raleway;
-            font-size: 0.9rem;
-            padding: 10px 15px;
-            &:nth-of-type(2) {
-                margin-left: 30px;
-            }
-        }
-        input {
-            position: relative;
-            background-color: rgb(62, 65, 80);
-            color: rgb(255, 255, 255);
-            font-family: $Raleway;
-            padding: 10px 15px;
-            font-size: 0.8rem;
-            width: 170px;
+	.successSubmit {
+		color: rgb(23, 95, 23);
+		font-family: $Raleway;
+		font-size: 1.1rem;
+		text-align: center;
+		margin-top: 2vh;
+	}
+	.inputAuthorTitle {
+		display: flex;
+		flex-direction: row;
+		margin: 5vh 0;
+		label {
+			color: rgb(233, 232, 235);
+			font-family: $Raleway;
+			font-size: 0.9rem;
+			padding: 10px 15px;
+			&:nth-of-type(2) {
+				margin-left: 30px;
+			}
+		}
+		input {
+			position: relative;
+			background-color: rgb(62, 65, 80);
+			color: rgb(255, 255, 255);
+			font-family: $Raleway;
+			padding: 10px 15px;
+			font-size: 0.8rem;
+			width: 170px;
 
-            border: none;
-        }
-    }
-    ul {
-        position: relative;
-        list-style-type: none;
+			border: none;
+		}
+	}
+	ul {
+		position: relative;
+		list-style-type: none;
 
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 250px);
-        grid-column-gap: 30px;
-        grid-row-gap: 50px;
-        grid-auto-rows: 320px;
-        justify-content: center;
-        width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 250px);
+		grid-column-gap: 30px;
+		grid-row-gap: 50px;
+		grid-auto-rows: 320px;
+		justify-content: center;
+		width: 100%;
 
-        margin: 0 auto;
-        margin-top: 5vh;
+		margin: 0 auto;
+		margin-top: 5vh;
 
-        li {
-            position: relative;
-            background-color: rgb(34, 34, 39);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid rgb(31, 30, 30);
-            text-align: center;
-            padding: 0.8rem 0;
-            padding-bottom: 0rem;
-            border-radius: 0.8rem;
-            transition: 1s;
-            line-height: 1.9rem;
-            z-index: 10;
-            animation: 0.8s FlowIn;
+		li {
+			position: relative;
+			background-color: rgb(34, 34, 39);
+			color: white;
+			display: flex;
+			flex-direction: column;
+			border: 1px solid rgb(31, 30, 30);
+			text-align: center;
+			padding: 0.8rem 0;
+			padding-bottom: 0rem;
+			border-radius: 0.8rem;
+			transition: 1s;
+			line-height: 1.9rem;
+			z-index: 10;
+			animation: 0.8s FlowIn;
 
-            &:hover {
-                .source {
-                    display: block;
-                }
-            }
+			&:hover {
+				.source {
+					display: block;
+				}
+			}
 
-            .allPetIcons {
-                background-color: rgb(38, 38, 49);
-                color: white;
-                position: absolute;
-                width: fit-content;
-                height: 300px;
-                top: 20px;
-                padding: 0;
-                z-index: 50;
-                text-align: left;
-                .buttons {
-                    display: flex;
-                }
-                .allPets {
-                    display: flex;
-                    flex-direction: column;
-                    overflow-y: scroll;
-                    height: 220px;
-                    & > div {
-                        display: flex;
-                        width: fit-content;
-                        flex-direction: row;
-                    }
-                }
+			.allPetIcons {
+				background-color: rgb(38, 38, 49);
+				color: white;
+				position: absolute;
+				width: fit-content;
+				height: 300px;
+				top: 20px;
+				padding: 0;
+				z-index: 50;
+				text-align: left;
+				.buttons {
+					display: flex;
+				}
+				.allPets {
+					display: flex;
+					flex-direction: column;
+					overflow-y: scroll;
+					height: 220px;
+					& > div {
+						display: flex;
+						width: fit-content;
+						flex-direction: row;
+					}
+				}
 
-                .anypet {
-                    cursor: pointer;
-                    background-color: rgb(66, 80, 94);
-                    width: fit-content;
-                    margin: 0 10px;
-                    margin-bottom: 5px;
-                    padding: 5px 0px;
-                    transition: 0.4s;
-                    &:hover {
-                        background-color: rgb(36, 44, 51);
-                    }
-                }
-                & > div {
-                    margin-top: 15px;
-                }
-                input {
-                    position: relative;
-                    background-color: rgb(255, 255, 255);
-                    color: black;
-                    font-family: $Raleway;
-                    padding: 2px 5px;
-                    font-size: 0.8rem;
-                    width: 170px;
-                    left: 20%;
-                    transform: translate(0%, 0);
-                    border: none;
-                }
-                p {
-                    width: 200px;
-                }
-                img {
-                    cursor: pointer;
-                    width: 30px;
-                    height: 30px;
-                }
-            }
-            .source {
-                position: absolute;
-                width: 120px;
-                top: -70px;
-                right: 0px;
-                padding: 10px 15px;
-                font-family: $Raleway;
-                line-height: 20px;
-                border-radius: 5px;
-                border: 1px solid rgb(55, 61, 70);
-                background-color: rgb(42, 56, 70);
-                color: rgb(200, 223, 224);
-                z-index: 50;
-                display: none;
-                animation: 0.5s fadeEnter;
-                &::before {
-                    position: absolute;
-                    left: 10px;
-                    bottom: -20px;
-                    content: "";
-                    width: 30px;
-                    height: 30px;
-                    background-color: rgb(42, 56, 70);
-                    clip-path: polygon(0 0, 0 78%, 100% 0);
-                    z-index: 50;
-                }
-            }
-            .containerReq {
-                z-index: 10;
-            }
-            .petName {
-                font-family: $Roboto;
-                font-size: 0.85rem;
-                line-height: 18px;
-                min-height: 25px;
-            }
-            .required {
-                color: red;
-                margin-bottom: 0 !important;
-            }
-            .space {
-                height: 50px;
-            }
-            .level {
-                margin-bottom: 0px;
-            }
-            .type {
-                margin: 0 auto;
-                margin-top: 5px !important;
+				.anypet {
+					cursor: pointer;
+					background-color: rgb(66, 80, 94);
+					width: fit-content;
+					margin: 0 10px;
+					margin-bottom: 5px;
+					padding: 5px 0px;
+					transition: 0.4s;
+					&:hover {
+						background-color: rgb(36, 44, 51);
+					}
+				}
+				& > div {
+					margin-top: 15px;
+				}
+				input {
+					position: relative;
+					background-color: rgb(255, 255, 255);
+					color: black;
+					font-family: $Raleway;
+					padding: 2px 5px;
+					font-size: 0.8rem;
+					width: 170px;
+					left: 20%;
+					transform: translate(0%, 0);
+					border: none;
+				}
+				p {
+					width: 200px;
+				}
+				img {
+					cursor: pointer;
+					width: 30px;
+					height: 30px;
+				}
+			}
+			.source {
+				position: absolute;
+				width: 120px;
+				top: -70px;
+				right: 0px;
+				padding: 10px 15px;
+				font-family: $Raleway;
+				line-height: 20px;
+				border-radius: 5px;
+				border: 1px solid rgb(55, 61, 70);
+				background-color: rgb(42, 56, 70);
+				color: rgb(200, 223, 224);
+				z-index: 50;
+				display: none;
+				animation: 0.5s fadeEnter;
+				&::before {
+					position: absolute;
+					left: 10px;
+					bottom: -20px;
+					content: "";
+					width: 30px;
+					height: 30px;
+					background-color: rgb(42, 56, 70);
+					clip-path: polygon(0 0, 0 78%, 100% 0);
+					z-index: 50;
+				}
+			}
+			.containerReq {
+				z-index: 10;
+			}
+			.petName {
+				font-family: $Roboto;
+				font-size: 0.85rem;
+				line-height: 18px;
+				min-height: 25px;
+			}
+			.required {
+				color: red;
+				margin-bottom: 0 !important;
+			}
+			.space {
+				height: 50px;
+			}
+			.level {
+				margin-bottom: 0px;
+			}
+			.type {
+				margin: 0 auto;
+				margin-top: 5px !important;
 
-                color: rgb(235, 231, 231);
-                font-size: 0.55rem !important;
-                letter-spacing: 1.5px;
-            }
+				color: rgb(235, 231, 231);
+				font-size: 0.55rem !important;
+				letter-spacing: 1.5px;
+			}
 
-            .owned {
-                color: rgb(20, 95, 20);
-                margin-top: 5px;
-            }
-            .check {
-                color: rgb(32, 139, 32);
-                font-size: 2rem;
-                margin: 0 auto;
-                margin-bottom: 30px;
-            }
-            .notOwned {
-                color: rgb(207, 29, 29);
-            }
-            .notChecked {
-                color: rgb(207, 29, 29);
-                font-size: 2rem;
-                margin: 0 auto;
-            }
-            .stats {
-                margin-bottom: 0px;
-            }
+			.owned {
+				color: rgb(20, 95, 20);
+				margin-top: 5px;
+			}
+			.check {
+				color: rgb(32, 139, 32);
+				font-size: 2rem;
+				margin: 0 auto;
+				margin-bottom: 30px;
+			}
+			.notOwned {
+				color: rgb(207, 29, 29);
+			}
+			.notChecked {
+				color: rgb(207, 29, 29);
+				font-size: 2rem;
+				margin: 0 auto;
+			}
+			.stats {
+				margin-bottom: 0px;
+			}
 
-            .options {
-                font-size: 1rem;
-                font-family: $Roboto;
-                label {
-                    margin-right: 20px;
-                }
-                select {
-                    cursor: pointer;
-                    text-align: center;
-                    width: fit-content;
-                    margin: 0 auto;
-                    background-color: rgb(43, 42, 53);
-                    color: white;
-                    border: none;
-                    padding: 2px 5px;
-                    appearance: none;
-                    font-family: $Roboto;
-                    letter-spacing: 1px;
+			.options {
+				font-size: 1rem;
+				font-family: $Roboto;
+				label {
+					margin-right: 20px;
+				}
+				select {
+					cursor: pointer;
+					text-align: center;
+					width: fit-content;
+					margin: 0 auto;
+					background-color: rgb(43, 42, 53);
+					color: white;
+					border: none;
+					padding: 2px 5px;
+					appearance: none;
+					font-family: $Roboto;
+					letter-spacing: 1px;
 
-                    option {
-                        background-color: rgb(93, 91, 112);
-                    }
-                }
-            }
+					option {
+						background-color: rgb(93, 91, 112);
+					}
+				}
+			}
 
-            p {
-                text-align: center;
-                margin: 0 auto;
-                line-height: 17px;
-                min-width: 110px;
-                font-family: $Merri;
-                font-size: 0.8rem;
+			p {
+				text-align: center;
+				margin: 0 auto;
+				line-height: 17px;
+				min-width: 110px;
+				font-family: $Merri;
+				font-size: 0.8rem;
 
-                .health {
-                    color: rgb(194, 47, 47);
-                    font-size: 1rem;
-                }
-                .power {
-                    color: rgb(201, 121, 47);
+				.health {
+					color: rgb(194, 47, 47);
+					font-size: 1rem;
+				}
+				.power {
+					color: rgb(201, 121, 47);
 
-                    font-size: 1rem;
-                }
-                .speed {
-                    color: rgb(196, 185, 36);
-                    font-size: 1rem;
-                }
-            }
+					font-size: 1rem;
+				}
+				.speed {
+					color: rgb(196, 185, 36);
+					font-size: 1rem;
+				}
+			}
 
-            .spaceOwned {
-                margin-bottom: 50px;
-            }
+			.spaceOwned {
+				margin-bottom: 50px;
+			}
 
-            .abilities {
-                display: grid;
-                grid-template-columns: repeat(3, 80px);
-                grid-column-gap: 0px;
-                grid-row-gap: 0px;
-                grid-auto-rows: 70px;
-                margin-top: 5px;
-                & > div {
-                    display: flex;
-                    flex-direction: column;
-                    text-align: center;
+			.abilities {
+				display: grid;
+				grid-template-columns: repeat(3, 80px);
+				grid-column-gap: 0px;
+				grid-row-gap: 0px;
+				grid-auto-rows: 70px;
+				margin-top: 5px;
+				& > div {
+					display: flex;
+					flex-direction: column;
+					text-align: center;
 
-                    & > img {
-                        width: 30px;
-                        height: 30px;
-                        margin: 0 auto;
-                        filter: brightness(0.3);
-                        cursor: pointer;
-                        transition: 0.4s;
-                        &:hover {
-                            filter: brightness(1);
-                        }
-                    }
-                    .chosen {
-                        border: 2px solid rgb(59, 88, 35);
-                        width: 32px;
-                        height: 32px;
-                        filter: brightness(1);
-                        pointer-events: none;
-                        cursor: default;
-                        box-shadow: 0px 0px 5px 2px rgb(12, 80, 12);
-                    }
-                    p {
-                        min-width: 30px;
-                        width: 60px;
-                        color: rgb(210, 221, 210);
-                    }
-                }
-            }
+					& > img {
+						width: 30px;
+						height: 30px;
+						margin: 0 auto;
+						filter: brightness(0.3);
+						cursor: pointer;
+						transition: 0.4s;
+						&:hover {
+							filter: brightness(1);
+						}
+					}
+					.chosen {
+						border: 2px solid rgb(59, 88, 35);
+						width: 32px;
+						height: 32px;
+						filter: brightness(1);
+						pointer-events: none;
+						cursor: default;
+						box-shadow: 0px 0px 5px 2px rgb(12, 80, 12);
+					}
+					p {
+						min-width: 30px;
+						width: 60px;
+						color: rgb(210, 221, 210);
+					}
+				}
+			}
 
-            .iconPet {
-                position: relative;
-                width: 100%;
-                height: 20px;
+			.iconPet {
+				position: relative;
+				width: 100%;
+				height: 20px;
 
-                & > img {
-                    cursor: pointer;
-                    background-color: rgb(52, 52, 65);
-                    position: absolute;
-                    top: -25px;
-                    left: 50%;
-                    right: 50%;
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 0.2rem;
-                    border: 0.5px solid rgb(196, 194, 194);
-                    margin: 0 auto;
-                    transform-style: preserve-3d;
-                    transform: translate3d(-50%, -50%, 0px);
-                }
-                .noImg {
-                    background: linear-gradient(
-                        10deg,
-                        rgb(63, 57, 52),
-                        rgb(28, 45, 61)
-                    );
-                    position: absolute;
-                    top: -10px;
-                    left: 50%;
-                    right: 50%;
-                    width: 50px;
-                    height: 50px;
-                    padding: 5px;
-                    border-radius: 0.2rem;
-                    border: 0.5px solid rgb(196, 194, 194);
-                    margin: 0 auto;
-                    transform-style: preserve-3d;
-                    transform: translate3d(-50%, -50%, 0px);
-                }
-            }
-        }
-    }
-    .optionalTips {
-        padding: 50px 0;
-        padding-left: 0px;
-        label {
-            color: rgb(0, 0, 0);
-            font-family: $Raleway;
-            margin-right: 10px;
-        }
-        input {
-            position: relative;
-            background-color: rgb(62, 65, 80);
-            color: rgb(255, 255, 255);
-            font-family: $Raleway;
-            padding: 10px 15px;
-            font-size: 0.8rem;
-            width: 400px;
-            border: none;
-        }
-    }
-    .nextStep {
-        cursor: pointer;
-        width: fit-content;
-        margin: 0 auto;
-        margin-top: 50px;
-        border: none;
-        font-family: $Raleway;
-        padding: 10px 5px;
-        background-color: rgb(36, 37, 44);
-        color: white;
-    }
-    @keyframes FlowIn {
-        0% {
-            opacity: 0;
-            transform: translateY(30px) scale(0.8);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
-    }
-    .utilitiesUser {
-        position: relative;
-        background-color: rgb(53, 53, 71);
-        color: white;
-        width: 70%;
-        padding: 1rem;
-        margin: 0 auto;
-        margin-top: 3vh;
-        display: flex;
-        flex-wrap: wrap;
-        border-radius: 2rem;
-        box-shadow: 0px 0px 5px 0px black;
-        animation: 0.6s FlowIn;
-        & > div {
-            margin: 7px 10px;
-        }
-        .disabled {
-            color: rgb(88, 92, 94) !important;
-            border: 1px solid rgb(88, 88, 86) !important;
-            pointer-events: none;
-        }
-        .important {
-            position: relative;
-            cursor: pointer;
-            border: 1px solid rgb(197, 197, 39);
-            border-radius: 0.2rem;
-            color: rgb(143, 156, 160);
-            font-family: $Raleway;
-            font-weight: 600;
-            padding: 5px 10px;
-            letter-spacing: 1px;
-            transition: 0.4s;
-            box-shadow: inset -10px -10px 5px -10px black;
+				& > img {
+					cursor: pointer;
+					background-color: rgb(52, 52, 65);
+					position: absolute;
+					top: -25px;
+					left: 50%;
+					right: 50%;
+					width: 50px;
+					height: 50px;
+					border-radius: 0.2rem;
+					border: 0.5px solid rgb(196, 194, 194);
+					margin: 0 auto;
+					transform-style: preserve-3d;
+					transform: translate3d(-50%, -50%, 0px);
+				}
+				.noImg {
+					background: linear-gradient(10deg, rgb(63, 57, 52), rgb(28, 45, 61));
+					position: absolute;
+					top: -10px;
+					left: 50%;
+					right: 50%;
+					width: 50px;
+					height: 50px;
+					padding: 5px;
+					border-radius: 0.2rem;
+					border: 0.5px solid rgb(196, 194, 194);
+					margin: 0 auto;
+					transform-style: preserve-3d;
+					transform: translate3d(-50%, -50%, 0px);
+				}
+			}
+		}
+	}
+	.optionalTips {
+		padding: 50px 0;
+		padding-left: 0px;
+		label {
+			color: rgb(0, 0, 0);
+			font-family: $Raleway;
+			margin-right: 10px;
+		}
+		input {
+			position: relative;
+			background-color: rgb(62, 65, 80);
+			color: rgb(255, 255, 255);
+			font-family: $Raleway;
+			padding: 10px 15px;
+			font-size: 0.8rem;
+			width: 400px;
+			border: none;
+		}
+	}
+	.nextStep {
+		cursor: pointer;
+		width: fit-content;
+		margin: 0 auto;
+		margin-top: 50px;
+		border: 1px solid rgb(23, 93, 255);
+		font-family: $Sf-Pro;
+		letter-spacing: 0.7px;
+		font-size: 17px;
+		padding: 10px 12px;
+		background-color: transparent;
+		color: rgb(23, 93, 255);
+	}
+	@keyframes FlowIn {
+		0% {
+			opacity: 0;
+			transform: translateY(30px) scale(0.8);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
+	.utilitiesUser {
+		position: relative;
+		background-color: rgb(53, 53, 71);
+		color: white;
+		width: 70%;
+		padding: 1rem;
+		margin: 0 auto;
+		margin-top: 3vh;
+		display: flex;
+		flex-wrap: wrap;
+		border-radius: 2rem;
+		box-shadow: 0px 0px 5px 0px black;
+		animation: 0.6s FlowIn;
+		& > div {
+			margin: 7px 10px;
+		}
+		.disabled {
+			color: rgb(88, 92, 94) !important;
+			border: 1px solid rgb(88, 88, 86) !important;
+			pointer-events: none;
+		}
+		.important {
+			position: relative;
+			cursor: pointer;
+			border: 1px solid rgb(197, 197, 39);
+			border-radius: 0.2rem;
+			color: rgb(143, 156, 160);
+			font-family: $Raleway;
+			font-weight: 600;
+			padding: 5px 10px;
+			letter-spacing: 1px;
+			transition: 0.4s;
+			box-shadow: inset -10px -10px 5px -10px black;
 
-            & > span {
-                display: none;
-                background-color: rgb(211, 183, 61);
-                color: rgb(29, 30, 32);
-                pointer-events: none;
-                position: absolute;
-                padding: 5px 10px;
-                top: -89px;
-                left: -42px;
-                width: 200px;
-                text-align: center;
-                animation: fade 0.4s;
-                &::after {
-                    position: absolute;
-                    content: "";
-                    background-color: rgb(211, 183, 61);
-                    height: 30px;
-                    width: 30px;
-                    clip-path: polygon(100% 0, 0 0, 50% 70%);
-                    bottom: -30px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    left: 0;
-                    right: 0;
-                }
-            }
+			& > span {
+				display: none;
+				background-color: rgb(211, 183, 61);
+				color: rgb(29, 30, 32);
+				pointer-events: none;
+				position: absolute;
+				padding: 5px 10px;
+				top: -89px;
+				left: -42px;
+				width: 200px;
+				text-align: center;
+				animation: fade 0.4s;
+				&::after {
+					position: absolute;
+					content: "";
+					background-color: rgb(211, 183, 61);
+					height: 30px;
+					width: 30px;
+					clip-path: polygon(100% 0, 0 0, 50% 70%);
+					bottom: -30px;
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+			}
 
-            &:hover {
-                background-color: rgb(197, 197, 39);
-                & > span {
-                    display: inline;
-                }
-            }
-        }
+			&:hover {
+				background-color: rgb(197, 197, 39);
+				& > span {
+					display: inline;
+				}
+			}
+		}
 
-        .pet {
-            position: relative;
-            cursor: pointer;
-            border: 1px solid rgb(68, 92, 61);
-            border-radius: 0.2rem;
-            color: rgb(143, 156, 160);
-            font-family: $Raleway;
-            font-weight: 600;
-            padding: 5px 10px;
-            letter-spacing: 1px;
-            transition: 0.4s;
-            box-shadow: inset -10px -10px 5px -10px black;
-            &:hover {
-                background-color: rgb(81, 110, 86);
-            }
-        }
-        .ability {
-            position: relative;
-            cursor: pointer;
-            border: 1px solid rgb(44, 125, 145);
-            border-radius: 0.2rem;
-            color: rgb(143, 156, 160);
-            font-family: $Raleway;
-            font-weight: 600;
-            padding: 5px 10px;
-            letter-spacing: 1px;
-            transition: 0.4s;
-            box-shadow: inset -10px -10px 5px -10px black;
-            &:hover {
-                background-color: rgb(70, 81, 95);
-            }
-        }
-    }
-    .strategyInstructions {
-        background-color: rgb(35, 35, 46);
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 2vh;
-        min-height: 200px;
-        padding: 20px 25px;
-        color: white;
-        font-family: $Roboto;
-        display: flex;
-        flex-direction: column;
-        animation: 0.6s FlowIn;
-        max-height: 500px;
-        overflow-y: scroll;
-        h1 {
-            text-align: center;
-        }
-        .ColumnNames {
-            display: flex;
-            flex-direction: row;
-            .turn {
-                width: 170px;
-            }
-            .instruction {
-                margin-top: 0;
-            }
-        }
-        .instruction {
-            display: flex;
-            flex-direction: row;
-            height: fit-content;
-            margin-top: 5px;
-            input {
-                font-family: $Roboto;
-                font-size: 1rem;
-                color: black;
-                padding: 5px 7px;
-                height: fit-content;
-                border: none;
-                background-color: white;
-                margin: 5px 0;
-                margin-right: 20px;
-                animation: 0.4s FlowIn;
-            }
-            textarea {
-                font-family: $Roboto;
-                font-size: 1rem;
-                color: black;
-                padding: 5px 7px;
-                border: none;
-                min-height: 100px;
-                background-color: white;
-                margin: 5px 10px;
-                animation: 0.6s FlowIn;
-            }
-            .turn {
-                width: 140px;
-            }
-            .description {
-                width: 80%;
-            }
-            .chosen {
-                border: 2px solid rgb(89, 136, 175);
-                box-shadow: 0px 0px 5px 0px rgb(123, 156, 199);
-            }
-        }
-        .buttons {
-            width: fit-content;
-            margin: 0 auto;
-        }
+		.pet {
+			position: relative;
+			cursor: pointer;
+			border: 1px solid rgb(68, 92, 61);
+			border-radius: 0.2rem;
+			color: rgb(143, 156, 160);
+			font-family: $Raleway;
+			font-weight: 600;
+			padding: 5px 10px;
+			letter-spacing: 1px;
+			transition: 0.4s;
+			box-shadow: inset -10px -10px 5px -10px black;
+			&:hover {
+				background-color: rgb(81, 110, 86);
+			}
+		}
+		.ability {
+			position: relative;
+			cursor: pointer;
+			border: 1px solid rgb(44, 125, 145);
+			border-radius: 0.2rem;
+			color: rgb(143, 156, 160);
+			font-family: $Raleway;
+			font-weight: 600;
+			padding: 5px 10px;
+			letter-spacing: 1px;
+			transition: 0.4s;
+			box-shadow: inset -10px -10px 5px -10px black;
+			&:hover {
+				background-color: rgb(70, 81, 95);
+			}
+		}
+	}
+	.strategyInstructions {
+		background-color: rgb(35, 35, 46);
+		width: 80%;
+		margin: 0 auto;
+		margin-top: 2vh;
+		min-height: 200px;
+		padding: 20px 25px;
+		color: white;
+		font-family: $Roboto;
+		display: flex;
+		flex-direction: column;
+		animation: 0.6s FlowIn;
+		max-height: 500px;
+		overflow-y: scroll;
+		h1 {
+			text-align: center;
+		}
+		.ColumnNames {
+			display: flex;
+			flex-direction: row;
+			.turn {
+				width: 170px;
+			}
+			.instruction {
+				margin-top: 0;
+			}
+		}
+		.instruction {
+			display: flex;
+			flex-direction: row;
+			height: fit-content;
+			margin-top: 5px;
+			input {
+				font-family: $Roboto;
+				font-size: 1rem;
+				color: black;
+				padding: 5px 7px;
+				height: fit-content;
+				border: none;
+				background-color: white;
+				margin: 5px 0;
+				margin-right: 20px;
+				animation: 0.4s FlowIn;
+			}
+			textarea {
+				font-family: $Roboto;
+				font-size: 1rem;
+				color: black;
+				padding: 5px 7px;
+				border: none;
+				min-height: 100px;
+				background-color: white;
+				margin: 5px 10px;
+				animation: 0.6s FlowIn;
+			}
+			.turn {
+				width: 140px;
+			}
+			.description {
+				width: 80%;
+			}
+			.chosen {
+				border: 2px solid rgb(89, 136, 175);
+				box-shadow: 0px 0px 5px 0px rgb(123, 156, 199);
+			}
+		}
+		.buttons {
+			width: fit-content;
+			margin: 0 auto;
+		}
 
-        button {
-            cursor: pointer;
-            width: fit-content;
-            padding: 5px 10px;
-            background-color: rgb(12, 81, 201);
-            color: white;
-            border: none;
-            text-align: center;
-            margin: 0 20px;
-            margin-top: 3vh;
-        }
-    }
-    .disabledButton {
-        background-color: rgb(72, 80, 87);
-        color: rgb(143, 136, 136);
-        pointer-events: none;
-    }
-    & > button {
-        cursor: pointer;
-        width: fit-content;
-        margin: 0 auto;
-        margin-top: 3vh;
-        padding: 15px 10px;
-        font-family: $Raleway;
-        border: none;
-        background-color: rgb(30, 34, 43);
-        color: white;
-        transition: 0.4s;
-        animation: 0.8s FlowIn;
-        &:hover {
-            background-color: rgb(59, 64, 75);
-            color: rgb(223, 240, 247);
-        }
-    }
-    & > .disabledSubmit {
-        background-color: rgb(57, 60, 66);
-        color: rgb(150, 140, 140);
-        pointer-events: none;
-    }
+		button {
+			cursor: pointer;
+			width: fit-content;
+			padding: 5px 10px;
+			background-color: rgb(12, 81, 201);
+			color: white;
+			border: none;
+			text-align: center;
+			margin: 0 20px;
+			margin-top: 3vh;
+		}
+	}
+	.disabledButton {
+		background-color: rgb(63, 63, 63);
+		color: rgb(128, 122, 122);
+		border: 1px solid rgb(102, 102, 102);
+		font-style: italic;
+		pointer-events: none;
+	}
+	& > button {
+		cursor: pointer;
+		width: fit-content;
+		margin: 0 auto;
+		margin-top: 50px;
+		border: 1px solid rgb(23, 93, 255);
+		font-family: $Sf-Pro;
+		letter-spacing: 0.7px;
+		font-size: 17px;
+		padding: 10px 12px;
+		background-color: transparent;
+		color: rgb(23, 93, 255);
+		transition: 0.4s;
+		animation: 0.8s FlowIn;
+		&:hover {
+			background-color: rgb(59, 64, 75);
+			color: rgb(223, 240, 247);
+		}
+	}
+	& > .disabledSubmit {
+		background-color: rgb(57, 60, 66);
+		color: rgb(150, 140, 140);
+		pointer-events: none;
+	}
 }

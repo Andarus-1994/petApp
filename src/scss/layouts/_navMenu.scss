@@ -2,123 +2,117 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 
 .Routes {
-    .headerTop > nav {
-        position: relative;
-        z-index: 10;
-        width: fit-content;
-        height: 100%;
-        width: 100%;
-        margin-left: 30px;
-        @media screen and (max-width: 800px) {
-            top: 86px;
-        }
+	.headerTop > nav {
+		position: relative;
+		z-index: 10;
+		width: fit-content;
+		height: 100%;
+		width: 100%;
+		margin-left: 30px;
+		@media screen and (max-width: 800px) {
+			top: 86px;
+		}
 
-        ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
-            .contact {
-                margin-left: auto;
-                background-color: #1b1a1a;
-                padding-left: 10px;
-                margin-right: 20px;
-                margin-top: auto;
-                margin-bottom: auto;
-                height: 70%;
-                font-style: italic;
-                &:hover {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-            }
+		ul {
+			list-style-type: none;
+			display: flex;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+			.contact {
+				margin-left: auto;
+				background-color: #1b1a1a;
+				padding-left: 10px;
+				margin-right: 20px;
+				margin-top: auto;
+				margin-bottom: auto;
+				height: 70%;
+				font-style: italic;
+			}
 
-            a {
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-decoration: none;
-                font-size: 14px;
-                font-family: $Raleway;
-                font-weight: 600;
-                letter-spacing: 0.9px;
-                color: rgb(201, 202, 204);
-                padding: 10px 10px;
-                padding-left: 30px;
-                margin: 0 5px;
-                transition: 0.4s;
-                height: 100%;
-                text-transform: uppercase;
+			a {
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none;
+				font-size: 14px;
+				font-family: $Raleway;
+				font-weight: 600;
+				letter-spacing: 0.9px;
+				color: rgb(201, 202, 204);
+				padding: 10px 10px;
+				padding-left: 30px;
+				margin: 0 5px;
+				transition: 0.4s;
+				height: 100%;
+				text-transform: uppercase;
 
-                &:hover {
-                    color: rgb(255, 255, 255);
-                    background-color: #1b1a1a;
-                    text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
-                    letter-spacing: 1.2px;
-                    padding: 10px 5px;
+				&:hover {
+					color: rgb(255, 255, 255);
+					background-color: #1b1a1a;
+					text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
+				}
+				&:hover img {
+					transform: scale(1.2);
+				}
 
-                    padding-left: 30px;
-                    padding-right: 10px;
-                }
+				&.levelUp img {
+					width: 50px;
+					position: absolute;
+					top: 15px;
+					left: -10px;
+					right: 0;
+				}
+				&.SL::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					right: 15px;
+					width: 30px;
+					height: 20px;
+					background-color: rgba(241, 240, 240, 0.253);
+					clip-path: polygon(25% 0%, 100% 0%, 66% 46%, 56% 14%);
+				}
+				&.SL img {
+					width: 50px;
+					position: absolute;
+					top: -10px;
+					left: -40px;
+					right: 0;
+				}
+				img {
+					width: 50px;
+					position: absolute;
+					top: 0px;
+					left: -10px;
+					right: 0;
+					transition: 0.8s;
+				}
 
-                &.levelUp img {
-                    width: 50px;
-                    position: absolute;
-                    top: 15px;
-                    left: -10px;
-                    right: 0;
-                }
-                &.SL::after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    right: 15px;
-                    width: 30px;
-                    height: 20px;
-                    background-color: rgba(241, 240, 240, 0.253);
-                    clip-path: polygon(25% 0%, 100% 0%, 66% 46%, 56% 14%);
-                }
-                &.SL img {
-                    width: 50px;
-                    position: absolute;
-                    top: -10px;
-                    left: -40px;
-                    right: 0;
-                }
-                img {
-                    width: 50px;
-                    position: absolute;
-                    top: 0px;
-                    left: -10px;
-                    right: 0;
-                    transition: 0.8s;
-                }
+				.new {
+					position: relative;
+					top: 0;
+					&::after {
+						content: "*";
+						position: absolute;
+						font-size: 1.8rem;
+						color: rgb(214, 37, 37);
+						top: -8px;
+						right: -7px;
+					}
+				}
 
-                .new {
-                    position: relative;
-                    top: 0;
-                    &::after {
-                        content: "*";
-                        position: absolute;
-                        font-size: 1.8rem;
-                        color: rgb(214, 37, 37);
-                        top: -8px;
-                        right: -7px;
-                    }
-                }
+				@media screen and (max-width: 800px) {
+					font-size: 0.7rem;
+				}
+			}
 
-                @media screen and (max-width: 800px) {
-                    font-size: 0.7rem;
-                }
-            }
-
-            .active {
-                color: rgb(255, 255, 255);
-                background-color: #1b1a1a;
-                text-shadow: 0 0 1px #fff, 0 0 1px rgba(255, 255, 255, 0.3);
-            }
-        }
-    }
+			.active {
+				color: rgb(255, 255, 255);
+				background-color: #1b1a1a;
+				text-shadow: 0 0 1px #fff, 0 0 1px rgba(255, 255, 255, 0.3);
+			}
+		}
+	}
 }

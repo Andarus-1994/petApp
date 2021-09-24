@@ -17,14 +17,14 @@ function MagicSylla() {
 							setSubmitWindow(!submitWindow);
 						}}
 					>
-						{submitWindow ? "Close" : "New Strategy"}
+						{submitWindow ? "Close" : "Add New Strategy"}
 					</button>
 				</div>
 			}
 			{submitWindow ? (
-				<StrategySubmision location={location} />
+				<StrategySubmision baseLocation="shadowlands/familiar/" location={location} />
 			) : (
-				<StrategiesPreview location={location} />
+				<StrategiesPreview baseLocation="shadowlands/familiar/" location={location} />
 			)}
 		</div>
 	);

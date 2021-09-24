@@ -1,23 +1,28 @@
 .containerStrategyButton {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 100%;
-  padding-right: 15px;
-  .strategyButton {
-    position: relative;
-    cursor: pointer;
-    font-family: $Raleway;
-    font-size: 0.9rem;
-    padding: 10px 15px;
-    background-color: rgb(34, 38, 48);
-    color: rgb(223, 227, 230);
-    border: none;
-    transition: 0.4s;
-    &:hover {
-      background-color: rgb(19, 24, 43);
-      color: rgb(255, 255, 255);
-      letter-spacing: 0.5px;
-    }
-  }
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 100%;
+	padding-right: 65px;
+	margin-bottom: 15px;
+	.strategyButton {
+		position: relative;
+		cursor: pointer;
+		font-family: $Sf-Pro;
+		font-size: 1rem;
+		letter-spacing: 0.7px;
+		padding: 10px 15px;
+		background-color: #30333a;
+		color: rgb(255, 255, 255);
+		border: 1px solid rgb(92, 100, 104);
+		border-radius: 0px;
+		box-shadow: 0px 0px 3px 0px rgb(75, 83, 65);
+		transition: 0.4s;
+		&:hover {
+			background-color: rgb(60, 64, 77);
+			color: rgb(255, 255, 255);
+			letter-spacing: 1px;
+			padding: 10px 13px;
+		}
+	}
 }

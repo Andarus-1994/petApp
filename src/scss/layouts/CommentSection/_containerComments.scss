@@ -1,21 +1,28 @@
 .commentSection {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    & > h2 {
-        color: rgb(220, 220, 226);
-        margin-top: 1.5rem;
-        text-align: end;
-    }
-    & > .empty {
-        margin-top: 2rem;
-    }
+	position: relative;
+	max-width: 1000px;
+	margin-left: 50px;
+	& > h2 {
+		color: rgb(220, 220, 226);
+		margin-top: 1.5rem;
+		text-align: end;
+		font-family: $Raleway;
+	}
+	h1 {
+		font-family: $Raleway;
+	}
+	& > h1 {
+		text-align: center;
+	}
+	& > .empty {
+		margin-top: 2rem;
+	}
 
-    .containerComments {
-        width: fit-content;
-        & > div {
-            margin-top: 20px;
-            padding: 0;
-        }
-    }
+	.containerComments {
+		width: fit-content;
+		& > div {
+			margin-top: 20px;
+			padding: 0;
+		}
+	}
 }
