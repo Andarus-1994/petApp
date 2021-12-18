@@ -1,16 +1,16 @@
 import axios from "axios";
 /*const token = "EUaqHPkRrZ9xEnxvd2iVKSjT649wt2lYY2"; */
-const clientID = "f684f07f82ac41aaabafaa42fa9a067f";
-const clientSecret = "eUE5pg86dF2V0vz1iubJv84ecWMNDTNd";
+const clientID = process.env.REACT_APP_clientID;
+const clientSecret = process.env.REACT_APP_clientSecret;
 
 var formData = new FormData();
 
 formData.append("grant_type", "client_credentials");
 formData.append("redirect_uri", "http://localhost:3000/");
-formData.append("scope", "wow.profile");
-formData.append("client_id", clientID);
-
+formData.append("scope", "wow.profile public");
+formData.append("response_type", "code");
 export const retriveToken = () => {
+  console.log("test", clientID);
   return (dispatch) => {
     dispatch({
       type: "FETCH_TOKEN_REQUEST",
