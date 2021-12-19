@@ -73,7 +73,7 @@ function Home() {
     setLoad(true);
     // getPetDetails(petsChar.pets.pets, selected);
     getDetailsPets(selected);
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 400);
   };
 
   function displayModal() {

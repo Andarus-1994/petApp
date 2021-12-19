@@ -10,7 +10,6 @@ formData.append("redirect_uri", "http://localhost:3000/");
 formData.append("scope", "wow.profile public");
 formData.append("response_type", "code");
 export const retriveToken = () => {
-  console.log("test", clientID);
   return (dispatch) => {
     dispatch({
       type: "FETCH_TOKEN_REQUEST",

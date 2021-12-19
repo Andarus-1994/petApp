@@ -1,390 +1,398 @@
 .strategiesPreview {
-	display: flex;
-	flex-direction: column;
-	padding-right: 15px;
-	h2 {
-		text-align: center;
-		font-family: $Roboto;
-		font-size: 1.7rem;
-		color: $secondTitleHeaderColor;
-		margin-top: 5vh;
-	}
-	.empty {
-		margin-bottom: 300px;
-	}
-	.loadingSpinner {
-		position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+  h2 {
+    text-align: center;
+    font-family: $Roboto;
+    font-size: 1.7rem;
+    color: $secondTitleHeaderColor;
+    margin-top: 5vh;
+  }
+  .empty {
+    margin-bottom: 300px;
+  }
+  .loadingSpinner {
+    position: relative;
 
-		border: 3px solid rgb(34, 39, 44);
-		border-top: 1px solid rgb(226, 224, 224);
-		border-right: 0px;
-		border-radius: 50%;
+    border: 3px solid rgb(34, 39, 44);
+    border-top: 1px solid rgb(226, 224, 224);
+    border-right: 0px;
+    border-radius: 50%;
 
-		width: 40px;
-		height: 40px;
-		margin: 0 auto;
-		animation: spinner 0.7s linear infinite;
-	}
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    animation: spinner 0.7s linear infinite;
+  }
 
-	.strategyOptions {
-		display: flex;
-		justify-content: flex-end;
-		margin-top: 5px;
-		margin-right: 50px;
-		label {
-			font-family: $Raleway;
-			font-size: 1.1rem;
-			font-weight: 600;
-			color: rgb(219, 216, 216);
-			margin-right: 5px;
-			padding: 5px 8px;
-		}
-		.CustomSelect {
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-			-webkit-appearance: none;
-			-moz-appearance: none;
-			font-size: 1rem;
-			font-family: $Roboto;
-			width: 200px;
-			background-color: #30333a;
-			background-image: linear-gradient(45deg, transparent 50%, rgb(0, 0, 0) 50%),
-				linear-gradient(135deg, rgb(0, 0, 0) 50%, transparent 40%), radial-gradient(#465a72 70%, transparent 30%);
-			background-position: calc(100% - 15px) calc(0em + 15px), calc(100% - 8px) calc(0em + 15px), calc(100% - 0.3em) 0.3em;
-			background-size: 8px 8px, 8px 8px, 1.5em 1.5em;
-			background-repeat: no-repeat;
-			color: white;
-			border: none;
-			padding: 5px 8px;
-		}
-		select {
-			cursor: pointer;
+  .strategyOptions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+    margin-right: 50px;
+    label {
+      font-family: $Raleway;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: rgb(219, 216, 216);
+      margin-right: 5px;
+      padding: 5px 8px;
+    }
+    .CustomSelect {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      font-size: 1rem;
+      font-family: $Roboto;
+      width: fit-content;
 
-			width: fit-content;
+      background-color: #30333a;
+      background-image: linear-gradient(
+          45deg,
+          transparent 50%,
+          rgb(0, 0, 0) 50%
+        ),
+        linear-gradient(135deg, rgb(0, 0, 0) 50%, transparent 40%),
+        radial-gradient(#465a72 70%, transparent 30%);
+      background-position: calc(100% - 15px) calc(0em + 15px),
+        calc(100% - 8px) calc(0em + 15px), calc(100% - 0.3em) 0.3em;
+      background-size: 8px 8px, 8px 8px, 1.5em 1.5em;
+      background-repeat: no-repeat;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      padding-right: 26px;
+    }
+    select {
+      cursor: pointer;
 
-			background-color: #30333a;
-			color: white;
-			border: none;
+      width: fit-content;
 
-			appearance: none;
+      background-color: #30333a;
+      color: white;
+      border: none;
 
-			letter-spacing: 1px;
-		}
-		.OwnedPetsSelect {
-			color: rgb(27, 155, 27) !important;
-			&:hover {
-				color: green !important;
-			}
-		}
-	}
-	.flexRNGAuthor {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin-top: 3vh;
-		.rngSign {
-			background-color: rgb(235, 42, 42);
-			padding: 10px 15px;
-			border-radius: 20px;
-			margin-left: 50px;
-			font-family: $Raleway;
-			letter-spacing: 1px;
-			box-shadow: 0px 0px 5px 1px rgb(116, 23, 23);
-			animation: 0.8s fadeEnter;
-		}
-		.author {
-			font-family: $Sf-Pro;
-			font-size: 1.3rem;
-			color: $titleHeaderColor;
-			text-align: end;
-			margin-right: 5vh;
-			animation: 0.8s fadeEnter;
-		}
-	}
+      appearance: none;
 
-	ul {
-		position: relative;
-		list-style-type: none;
+      letter-spacing: 1px;
+    }
+    .OwnedPetsSelect {
+      color: rgb(27, 155, 27) !important;
+      &:hover {
+        color: green !important;
+      }
+    }
+  }
+  .flexRNGAuthor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3vh;
+    .rngSign {
+      background-color: rgb(235, 42, 42);
+      padding: 10px 15px;
+      border-radius: 20px;
+      margin-left: 50px;
+      font-family: $Raleway;
+      letter-spacing: 1px;
+      box-shadow: 0px 0px 5px 1px rgb(116, 23, 23);
+      animation: 0.8s fadeEnter;
+    }
+    .author {
+      font-family: $Sf-Pro;
+      font-size: 1.3rem;
+      color: $titleHeaderColor;
+      text-align: end;
+      margin-right: 5vh;
+      animation: 0.8s fadeEnter;
+    }
+  }
 
-		display: grid;
-		grid-template-columns: repeat(auto-fill, 250px);
-		grid-column-gap: 30px;
-		grid-row-gap: 50px;
-		grid-auto-rows: 320px;
-		justify-content: center;
-		width: 100%;
+  ul {
+    position: relative;
+    list-style-type: none;
 
-		margin: 0 auto;
-		margin-top: 5vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+    grid-auto-rows: 320px;
+    justify-content: center;
+    width: 100%;
 
-		.anyPet {
-			animation-duration: 0.8s;
-			background: linear-gradient(10deg, rgb(48, 53, 65), rgb(37, 38, 48));
+    margin: 0 auto;
+    margin-top: 5vh;
 
-			box-shadow: 0px 0px 8px 1px rgb(19, 16, 10);
-			color: white;
-			.iconPet {
-				margin-bottom: 70px;
-				img {
-					width: 50px;
-					height: 50px;
-					background-color: rgb(45, 45, 61);
-					padding-top: 8px;
-				}
-			}
-		}
+    .anyPet {
+      animation-duration: 0.8s;
+      background: linear-gradient(10deg, rgb(48, 53, 65), rgb(37, 38, 48));
 
-		.loadingAbilities {
-			position: relative;
+      box-shadow: 0px 0px 8px 1px rgb(19, 16, 10);
+      color: white;
+      .iconPet {
+        margin-bottom: 70px;
+        img {
+          width: 50px;
+          height: 50px;
+          background-color: rgb(45, 45, 61);
+          padding-top: 8px;
+        }
+      }
+    }
 
-			border: 3px solid rgb(165, 28, 28);
-			border-top: 1px solid rgb(226, 224, 224);
-			border-right: 0px;
-			border-radius: 50%;
+    .loadingAbilities {
+      position: relative;
 
-			width: 40px;
-			height: 40px;
-			margin: 0 auto;
-			animation: spinner 0.7s linear infinite;
-		}
+      border: 3px solid rgb(165, 28, 28);
+      border-top: 1px solid rgb(226, 224, 224);
+      border-right: 0px;
+      border-radius: 50%;
 
-		.undead {
-			.type {
-				color: rgb(219, 215, 215);
-			}
-		}
-		.mechanical {
-			.type {
-				color: black;
-			}
-		}
-		.flying {
-			.type {
-				color: black;
-			}
-		}
+      width: 40px;
+      height: 40px;
+      margin: 0 auto;
+      animation: spinner 0.7s linear infinite;
+    }
 
-		.aquatic {
-			.owned {
-				color: rgb(6, 36, 6);
-			}
-			.required {
-				color: rgb(143, 7, 7);
-			}
-		}
+    .undead {
+      .type {
+        color: rgb(219, 215, 215);
+      }
+    }
+    .mechanical {
+      .type {
+        color: black;
+      }
+    }
+    .flying {
+      .type {
+        color: black;
+      }
+    }
 
-		li {
-			position: relative;
-			background-color: rgb(240, 240, 240);
-			display: flex;
-			flex-direction: column;
-			border: 1px solid rgb(31, 30, 30);
-			text-align: center;
-			padding: 0.8rem 0;
-			padding-bottom: 0rem;
-			border-radius: 0.8rem;
-			transition: 1s;
-			line-height: 1.9rem;
-			z-index: 10;
-			animation: fadeIn 0.7s;
-			&:hover {
-				.source {
-					display: block;
-				}
-			}
-			.source {
-				position: absolute;
-				width: 120px;
-				top: -70px;
-				right: 0px;
-				padding: 10px 15px;
-				font-family: $Raleway;
-				line-height: 20px;
-				border-radius: 5px;
-				border: 1px solid rgb(55, 61, 70);
-				background-color: rgb(42, 56, 70);
-				color: rgb(200, 223, 224);
-				z-index: 50;
-				display: none;
-				animation: 0.5s fadeEnter;
-				&::before {
-					position: absolute;
-					left: 10px;
-					bottom: -20px;
-					content: "";
-					width: 30px;
-					height: 30px;
-					background-color: rgb(42, 56, 70);
-					clip-path: polygon(0 0, 0 78%, 100% 0);
-					z-index: 50;
-				}
-			}
-			.containerReq {
-				z-index: 10;
-			}
-			.petName {
-				font-family: $Roboto;
-				font-size: 0.85rem;
-				line-height: 18px;
-				min-height: 33px;
-			}
-			.required {
-				color: red;
-				margin-bottom: 0 !important;
-			}
-			.space {
-				height: 50px;
-			}
-			.level {
-				margin-bottom: 0px;
-			}
-			.type {
-				margin: 0 auto;
-				margin-top: auto;
-				color: rgb(235, 231, 231);
-				font-size: 0.55rem;
-				letter-spacing: 1.5px;
-			}
+    .aquatic {
+      .owned {
+        color: rgb(6, 36, 6);
+      }
+      .required {
+        color: rgb(143, 7, 7);
+      }
+    }
 
-			.owned {
-				color: rgb(20, 95, 20);
-				margin-top: 5px;
-			}
-			.check {
-				color: rgb(32, 139, 32);
-				font-size: 2rem;
-				margin: 0 auto;
-				margin-bottom: 30px;
-			}
-			.notOwned {
-				color: rgb(207, 29, 29);
-			}
-			.notChecked {
-				color: rgb(207, 29, 29);
-				font-size: 2rem;
-				margin: 0 auto;
-			}
-			.stats {
-				margin-bottom: 0px;
-			}
+    li {
+      position: relative;
+      background-color: rgb(240, 240, 240);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgb(31, 30, 30);
+      text-align: center;
+      padding: 0.8rem 0;
+      padding-bottom: 0rem;
+      border-radius: 0.8rem;
+      transition: 1s;
+      line-height: 1.9rem;
+      z-index: 10;
+      animation: fadeIn 0.7s;
+      &:hover {
+        .source {
+          display: block;
+        }
+      }
+      .source {
+        position: absolute;
+        width: 120px;
+        top: -70px;
+        right: 0px;
+        padding: 10px 15px;
+        font-family: $Raleway;
+        line-height: 20px;
+        border-radius: 5px;
+        border: 1px solid rgb(55, 61, 70);
+        background-color: rgb(42, 56, 70);
+        color: rgb(200, 223, 224);
+        z-index: 50;
+        display: none;
+        animation: 0.5s fadeEnter;
+        &::before {
+          position: absolute;
+          left: 10px;
+          bottom: -20px;
+          content: "";
+          width: 30px;
+          height: 30px;
+          background-color: rgb(42, 56, 70);
+          clip-path: polygon(0 0, 0 78%, 100% 0);
+          z-index: 50;
+        }
+      }
+      .containerReq {
+        z-index: 10;
+      }
+      .petName {
+        font-family: $Roboto;
+        font-size: 0.85rem;
+        line-height: 18px;
+        min-height: 33px;
+      }
+      .required {
+        color: red;
+        margin-bottom: 0 !important;
+      }
+      .space {
+        height: 50px;
+      }
+      .level {
+        margin-bottom: 0px;
+      }
+      .type {
+        margin: 0 auto;
+        margin-top: auto;
+        color: rgb(235, 231, 231);
+        font-size: 0.55rem;
+        letter-spacing: 1.5px;
+      }
 
-			p {
-				text-align: center;
-				margin: 0 auto;
-				line-height: 17px;
-				min-width: 110px;
-				font-family: $Merri;
-				font-size: 0.8rem;
+      .owned {
+        color: rgb(20, 95, 20);
+        margin-top: 5px;
+      }
+      .check {
+        color: rgb(32, 139, 32);
+        font-size: 2rem;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+      .notOwned {
+        color: rgb(207, 29, 29);
+      }
+      .notChecked {
+        color: rgb(207, 29, 29);
+        font-size: 2rem;
+        margin: 0 auto;
+      }
+      .stats {
+        margin-bottom: 0px;
+      }
 
-				.health {
-					color: rgb(194, 47, 47);
-					font-size: 1rem;
-				}
-				.power {
-					color: rgb(201, 121, 47);
+      p {
+        text-align: center;
+        margin: 0 auto;
+        line-height: 17px;
+        min-width: 110px;
+        font-family: $Merri;
+        font-size: 0.8rem;
 
-					font-size: 1rem;
-				}
-				.speed {
-					color: rgb(196, 185, 36);
-					font-size: 1rem;
-				}
-			}
+        .health {
+          color: rgb(194, 47, 47);
+          font-size: 1rem;
+        }
+        .power {
+          color: rgb(201, 121, 47);
 
-			.spaceOwned {
-				margin-bottom: 50px;
-			}
+          font-size: 1rem;
+        }
+        .speed {
+          color: rgb(196, 185, 36);
+          font-size: 1rem;
+        }
+      }
 
-			.abilities {
-				position: relative;
-				list-style-type: none;
-				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				grid-column-gap: 0px;
-				grid-row-gap: 0px;
+      .spaceOwned {
+        margin-bottom: 50px;
+      }
 
-				width: 240px;
+      .abilities {
+        position: relative;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
 
-				margin: 0 auto;
-				margin-top: 20px;
-				margin-bottom: 0px;
-				z-index: 10;
-				& > div {
-					display: flex;
-					flex-direction: column;
-					padding: 0;
-					margin: 0 auto;
-					font-size: 0.7rem;
-					font-family: $Roboto;
-					line-height: 15px;
+        width: 240px;
 
-					img {
-						width: 30px;
-						margin: 0 auto;
-					}
-				}
-			}
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        z-index: 10;
+        & > div {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+          margin: 0 auto;
+          font-size: 0.7rem;
+          font-family: $Roboto;
+          line-height: 15px;
 
-			.iconPet {
-				position: relative;
-				width: 100%;
-				height: 20px;
+          img {
+            width: 30px;
+            margin: 0 auto;
+          }
+        }
+      }
 
-				img {
-					position: absolute;
-					top: -10px;
-					left: 50%;
-					right: 50%;
-					width: 50px;
-					border-radius: 0.2rem;
-					border: 0.5px solid rgb(196, 194, 194);
-					margin: 0 auto;
-					transform-style: preserve-3d;
-					transform: translate3d(-50%, -50%, 0px);
-				}
-				.noImg {
-					background: linear-gradient(10deg, rgb(63, 57, 52), rgb(28, 45, 61));
-					position: absolute;
-					top: -10px;
-					left: 50%;
-					right: 50%;
-					width: 50px;
-					height: 50px;
-					padding: 5px;
-					border-radius: 0.2rem;
-					border: 0.5px solid rgb(196, 194, 194);
-					margin: 0 auto;
-					transform-style: preserve-3d;
-					transform: translate3d(-50%, -50%, 0px);
-				}
-			}
-		}
-	}
+      .iconPet {
+        position: relative;
+        width: 100%;
+        height: 20px;
+
+        img {
+          position: absolute;
+          top: -10px;
+          left: 50%;
+          right: 50%;
+          width: 50px;
+          border-radius: 0.2rem;
+          border: 0.5px solid rgb(196, 194, 194);
+          margin: 0 auto;
+          transform-style: preserve-3d;
+          transform: translate3d(-50%, -50%, 0px);
+        }
+        .noImg {
+          background: linear-gradient(10deg, rgb(63, 57, 52), rgb(28, 45, 61));
+          position: absolute;
+          top: -10px;
+          left: 50%;
+          right: 50%;
+          width: 50px;
+          height: 50px;
+          padding: 5px;
+          border-radius: 0.2rem;
+          border: 0.5px solid rgb(196, 194, 194);
+          margin: 0 auto;
+          transform-style: preserve-3d;
+          transform: translate3d(-50%, -50%, 0px);
+        }
+      }
+    }
+  }
 }
 
 @keyframes spinner {
-	to {
-		transform: rotate(360deg);
-	}
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fadeIn {
-	0% {
-		opacity: 0;
-		transform: translate(-50px, 170px) rotate(-7deg);
-	}
-	100% {
-		opacity: 1;
-		transform: translate(0px) rotate(0);
-	}
+  0% {
+    opacity: 0;
+    transform: translate(-50px, 170px) rotate(-7deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px) rotate(0);
+  }
 }
 
 @keyframes fadeEnter {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

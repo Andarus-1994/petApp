@@ -66,7 +66,9 @@
   margin: 0 auto;
   margin-left: 130px;
   margin-top: 20px;
+  margin-bottom: 15px;
   width: 90%;
+  border: 1px solid rgba(63, 63, 63, 0.555);
   background: #242424;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,12 +80,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 60px;
-  -webkit-box-shadow: 0px 0px 2px 0px rgba(63, 63, 63, 0.932);
-          box-shadow: 0px 0px 2px 0px rgba(63, 63, 63, 0.932);
+  height: 50px;
+  -webkit-box-shadow: 0px 5px 5px 1px rgba(66, 66, 66, 0.178);
+          box-shadow: 0px 5px 5px 1px rgba(66, 66, 66, 0.178);
 }
 
 .headerTop a > img {
+  display: none;
   opacity: 0.5;
   position: relative;
   border-top-right-radius: 100px;
@@ -99,9 +102,9 @@
 }
 
 .headerTop .loginButtons {
-  position: relative;
-  top: 0;
-  right: 0;
+  position: absolute;
+  top: -80px;
+  right: -10px;
   height: 100%;
   margin-right: 10px;
   display: -webkit-box;
@@ -119,6 +122,16 @@
 .headerTop .loginButtons .logedUser {
   font-family: "Roboto", sans-serif;
   color: #eee6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .headerTop .loginButtons .logedUser span {
@@ -128,8 +141,9 @@
 
 .headerTop .loginButtons .logedUser a {
   display: block;
-  color: #7595aa;
+  color: #94beb5;
   cursor: pointer;
+  font-size: 13px;
   text-decoration: underline;
   text-align: right;
 }
@@ -146,17 +160,17 @@
       -ms-flex-pack: center;
           justify-content: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   letter-spacing: 0.9px;
   color: #dddbdb;
-  padding: 10px 20px;
+  padding: 6px 10px;
   margin: 0 0px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   margin: auto auto;
-  text-transform: uppercase;
+  border-radius: 4px;
   border: 1px solid #4c4d4e;
 }
 
@@ -164,7 +178,6 @@
   color: white;
   background-color: #1c1d1f;
   text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
-  letter-spacing: 1.7px;
 }
 
 .headerTop .loginButtons > a:active {
@@ -558,7 +571,7 @@
   top: 0.6rem;
   left: -7.5rem;
   pointer-events: none;
-  color: #a5abb1;
+  color: #c5cfb9;
   position: absolute;
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.5px;
@@ -643,7 +656,7 @@
 
 .App .petFilters .search label {
   pointer-events: none;
-  color: #31404e;
+  color: #4c5d6b;
   left: 0.8rem;
   top: 0.55rem;
   position: absolute;
@@ -705,7 +718,7 @@
 .App .petFilters .totalPets {
   font-family: "Raleway", sans-serif;
   font-size: 1.7rem;
-  color: #d9dde0;
+  color: #c5cfb9;
   margin-left: auto;
   margin-right: 22vh;
 }
@@ -2748,7 +2761,7 @@
 .Routes .headerTop > nav ul a.levelUp img {
   width: 50px;
   position: absolute;
-  top: 15px;
+  top: 10px;
   left: -10px;
   right: 0;
 }
@@ -2776,7 +2789,7 @@
 .Routes .headerTop > nav ul a img {
   width: 50px;
   position: absolute;
-  top: 0px;
+  top: -6px;
   left: -10px;
   right: 0;
   -webkit-transition: 0.8s;
@@ -3154,7 +3167,8 @@
 .shadowmoonDraenorLevelGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -3167,7 +3181,8 @@
   position: absolute;
   height: 10px;
   width: 95%;
-  background-color: #37a733;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .shadowmoonDraenorLevelGuide .difficulty p {
@@ -3604,7 +3619,8 @@
 .frostFireDraenorLevelGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -3616,8 +3632,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 75%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .frostFireDraenorLevelGuide .difficulty p {
@@ -4032,7 +4049,8 @@
 .nagrandDraenorLevelGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -4044,8 +4062,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 90%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .nagrandDraenorLevelGuide .difficulty p {
@@ -4461,7 +4480,8 @@
 .YonKunLaiLevelGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -4474,7 +4494,8 @@
   position: absolute;
   height: 10px;
   width: 95%;
-  background-color: #37a733;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .YonKunLaiLevelGuide .difficulty p {
@@ -4888,7 +4909,8 @@
 .ThunderingPSKunLaiLevelGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -4900,8 +4922,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 70%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .ThunderingPSKunLaiLevelGuide .difficulty p {
@@ -5316,7 +5339,8 @@
 .WhisperingPSJadeForestLevelGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -5328,8 +5352,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 92%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .WhisperingPSJadeForestLevelGuide .difficulty p {
@@ -7159,7 +7184,8 @@
 .farylWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -7171,8 +7197,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 90%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .farylWQGuide .difficulty p {
@@ -7584,7 +7611,8 @@
 .rascalWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -7596,8 +7624,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 94%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .rascalWQGuide .difficulty p {
@@ -8009,7 +8038,8 @@
 .nightfangWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -8021,8 +8051,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 98.5%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .nightfangWQGuide .difficulty p {
@@ -8434,7 +8465,8 @@
 .glitterdustWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -8446,8 +8478,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 92%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .glitterdustWQGuide .difficulty p {
@@ -9242,7 +9275,8 @@
 .gorgemouthWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -9255,7 +9289,8 @@
   position: absolute;
   height: 10px;
   width: 95%;
-  background-color: #37a733;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .gorgemouthWQGuide .difficulty p {
@@ -9667,7 +9702,8 @@
 .rotgutWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -9679,8 +9715,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 67%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .rotgutWQGuide .difficulty p {
@@ -10092,7 +10129,8 @@
 .maximilianWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -10104,8 +10142,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 75%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .maximilianWQGuide .difficulty p {
@@ -10517,7 +10556,8 @@
 .dundleyWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -10530,7 +10570,8 @@
   position: absolute;
   height: 10px;
   width: 95%;
-  background-color: #37a733;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .dundleyWQGuide .difficulty p {
@@ -11386,7 +11427,8 @@
 .addiusWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -11398,9 +11440,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 97%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#2a792a), to(#3cb12c));
-  background: linear-gradient(0deg, #2a792a, #3cb12c);
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .addiusWQGuide .difficulty p {
@@ -11812,7 +11854,8 @@
 .scorchWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -11825,8 +11868,8 @@
   position: absolute;
   height: 10px;
   width: 95%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#2a792a), to(#3cb12c));
-  background: linear-gradient(0deg, #2a792a, #3cb12c);
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .scorchWQGuide .difficulty p {
@@ -12238,7 +12281,8 @@
 .syllaWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -12250,9 +12294,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 87%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#2a792a), to(#3cb12c));
-  background: linear-gradient(0deg, #2a792a, #3cb12c);
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .syllaWQGuide .difficulty p {
@@ -12664,7 +12708,8 @@
 .eyegorWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -12676,9 +12721,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 77%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#2a792a), to(#3cb12c));
-  background: linear-gradient(0deg, #2a792a, #3cb12c);
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .eyegorWQGuide .difficulty p {
@@ -13468,7 +13513,8 @@
 .jawboneWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -13480,8 +13526,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 99%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .jawboneWQGuide .difficulty p {
@@ -13893,7 +13940,8 @@
 .theniaWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -13905,8 +13953,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 99%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .theniaWQGuide .difficulty p {
@@ -14318,7 +14367,8 @@
 .zollaWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -14330,8 +14380,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 99%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .zollaWQGuide .difficulty p {
@@ -14743,7 +14794,8 @@
 .stratiosWQGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -14755,8 +14807,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 99%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .stratiosWQGuide .difficulty p {
@@ -15633,7 +15686,8 @@
 .undeadZollaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -15645,8 +15699,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 89%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .undeadZollaGuide .difficulty p {
@@ -16058,7 +16113,8 @@
 .dragonkinZollaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -16070,8 +16126,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 83%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .dragonkinZollaGuide .difficulty p {
@@ -16483,7 +16540,8 @@
 .crittersZollaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -16495,8 +16553,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 86%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .crittersZollaGuide .difficulty p {
@@ -16908,7 +16967,8 @@
 .flyingZollaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -16920,8 +16980,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 75%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .flyingZollaGuide .difficulty p {
@@ -17333,7 +17394,8 @@
 .elementalZollaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -17345,8 +17407,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 93%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .elementalZollaGuide .difficulty p {
@@ -17758,7 +17821,8 @@
 .beastsZollaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -17770,8 +17834,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 70%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .beastsZollaGuide .difficulty p {
@@ -18183,7 +18248,8 @@
 .magicZollaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -18196,7 +18262,8 @@
   position: absolute;
   height: 10px;
   width: 95%;
-  background-color: #37a733;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .magicZollaGuide .difficulty p {
@@ -18608,7 +18675,8 @@
 .humanoidZollaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -18620,8 +18688,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 98%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .humanoidZollaGuide .difficulty p {
@@ -19033,7 +19102,8 @@
 .mechanicalZollaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -19045,8 +19115,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 88%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .mechanicalZollaGuide .difficulty p {
@@ -19458,7 +19529,8 @@
 .aquaticZollaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -19470,8 +19542,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 90%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .aquaticZollaGuide .difficulty p {
@@ -19872,18 +19945,19 @@
 
 .aquaticStratiosGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f0f0f0;
 }
 
 .aquaticStratiosGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .aquaticStratiosGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -19896,7 +19970,8 @@
   position: absolute;
   height: 10px;
   width: 95%;
-  background-color: #37a733;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .aquaticStratiosGuide .difficulty p {
@@ -20297,18 +20372,19 @@
 
 .humanoidStratiosGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f0f0f0;
 }
 
 .humanoidStratiosGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .humanoidStratiosGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -20320,8 +20396,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 85%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .humanoidStratiosGuide .difficulty p {
@@ -20722,18 +20799,19 @@
 
 .flyingStratiosGuide h1 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #f0f0f0;
 }
 
 .flyingStratiosGuide h2 {
   font-family: "Raleway", sans-serif;
-  color: #161616;
+  color: #e9e9e9;
 }
 
 .flyingStratiosGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -20745,8 +20823,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 82%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .flyingStratiosGuide .difficulty p {
@@ -21158,7 +21237,8 @@
 .crittersStratiosGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -21170,8 +21250,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 65%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .crittersStratiosGuide .difficulty p {
@@ -21583,7 +21664,8 @@
 .dragonkinStratiosGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -21595,8 +21677,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 87%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .dragonkinStratiosGuide .difficulty p {
@@ -22008,7 +22091,8 @@
 .elementalStratiosGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -22020,8 +22104,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 85%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .elementalStratiosGuide .difficulty p {
@@ -22433,7 +22518,8 @@
 .undeadStratiosGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -22445,8 +22531,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 85%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .undeadStratiosGuide .difficulty p {
@@ -22858,7 +22945,8 @@
 .magicStratiosGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -22870,8 +22958,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 93%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .magicStratiosGuide .difficulty p {
@@ -23283,7 +23372,8 @@
 .beastsStratiosGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -23295,8 +23385,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 80%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .beastsStratiosGuide .difficulty p {
@@ -23708,7 +23799,8 @@
 .mechanicalStratiosGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -23720,8 +23812,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 90%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .mechanicalStratiosGuide .difficulty p {
@@ -24133,7 +24226,8 @@
 .humanoidTheniaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -24145,8 +24239,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 90%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .humanoidTheniaGuide .difficulty p {
@@ -24558,7 +24653,8 @@
 .flyingTheniaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -24570,8 +24666,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 80%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .flyingTheniaGuide .difficulty p {
@@ -24983,7 +25080,8 @@
 .beastsTheniaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -24995,8 +25093,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 90%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .beastsTheniaGuide .difficulty p {
@@ -25408,7 +25507,8 @@
 .crittersTheniaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -25420,8 +25520,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 70%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .crittersTheniaGuide .difficulty p {
@@ -25833,7 +25934,8 @@
 .dragonkinTheniaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -25845,8 +25947,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 93%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .dragonkinTheniaGuide .difficulty p {
@@ -26258,7 +26361,8 @@
 .aquaticTheniaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -26270,8 +26374,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 86%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .aquaticTheniaGuide .difficulty p {
@@ -26683,7 +26788,8 @@
 .mechanicalTheniaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -26695,8 +26801,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 92%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .mechanicalTheniaGuide .difficulty p {
@@ -27108,7 +27215,8 @@
 .magicTheniaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -27120,8 +27228,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 84%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .magicTheniaGuide .difficulty p {
@@ -27533,7 +27642,8 @@
 .elementalTheniaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -27545,8 +27655,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 86%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .elementalTheniaGuide .difficulty p {
@@ -27958,7 +28069,8 @@
 .undeadTheniaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -27970,8 +28082,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 98%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .undeadTheniaGuide .difficulty p {
@@ -28383,7 +28496,8 @@
 .humanoidSyllaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -28395,8 +28509,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 93%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .humanoidSyllaGuide .difficulty p {
@@ -28824,7 +28939,8 @@
 .dragonkinSyllaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -28837,7 +28953,8 @@
   position: absolute;
   height: 10px;
   width: 95%;
-  background-color: #37a733;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .dragonkinSyllaGuide .difficulty p {
@@ -29265,7 +29382,8 @@
 .flyingSyllaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -29277,8 +29395,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 88%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .flyingSyllaGuide .difficulty p {
@@ -29706,7 +29825,8 @@
 .crittersSyllaGuide .difficulty {
   position: relative;
   margin-left: 60px;
-  background-color: #e20f2b;
+  background: -webkit-gradient(linear, left top, right top, from(#c0b843), color-stop(#ee8641), to(#ff120a));
+  background: linear-gradient(90deg, #c0b843, #ee8641, #ff120a);
   border-radius: 5px;
   width: 300px;
   height: 10px;
@@ -29718,8 +29838,9 @@
   border-bottom-left-radius: 5px;
   position: absolute;
   height: 10px;
-  width: 90%;
-  background-color: #37a733;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#16aa16), color-stop(#7bb44c), to(#d6e64a));
+  background: linear-gradient(90deg, #16aa16, #7bb44c, #d6e64a);
 }
 
 .crittersSyllaGuide .difficulty p {
@@ -32032,7 +32153,9 @@
   -moz-appearance: none;
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
-  width: 200px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: #30333a;
   background-image: linear-gradient(45deg, transparent 50%, black 50%), linear-gradient(135deg, black 50%, transparent 40%), radial-gradient(#465a72 70%, transparent 30%);
   background-position: calc(100% - 15px) calc(0em + 15px), calc(100% - 8px) calc(0em + 15px), calc(100% - 0.3em) 0.3em;
@@ -32041,6 +32164,7 @@
   color: white;
   border: none;
   padding: 5px 8px;
+  padding-right: 26px;
 }
 
 .strategiesPreview .strategyOptions select {
@@ -32913,8 +33037,8 @@
 }
 
 .loginPage {
-  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(#7a7a8b), to(white));
-  background: linear-gradient(0, #7a7a8b, white);
+  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(#7a7a8b), to(#242424));
+  background: linear-gradient(0, #7a7a8b, #242424);
   overflow: hidden;
   min-height: 80vh;
   z-index: 0;
@@ -33082,8 +33206,8 @@
 }
 
 .registerPage {
-  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(#7a7a8b), to(white));
-  background: linear-gradient(0, #7a7a8b, white);
+  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(#7a7a8b), to(#242424));
+  background: linear-gradient(0, #7a7a8b, #242424);
   overflow: hidden;
   min-height: 80vh;
   z-index: 0;

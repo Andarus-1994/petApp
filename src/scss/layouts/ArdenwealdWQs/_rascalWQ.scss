@@ -14,7 +14,12 @@
   .difficulty {
     position: relative;
     margin-left: 60px;
-    background-color: rgb(226, 15, 43);
+    background: linear-gradient(
+      90deg,
+      rgb(192, 184, 67),
+      rgb(238, 134, 65),
+      rgb(255, 18, 10)
+    );
     border-radius: 5px;
     width: 300px;
     height: 10px;
@@ -24,8 +29,13 @@
       border-bottom-left-radius: 5px;
       position: absolute;
       height: 10px;
-      width: 94%;
-      background-color: rgb(55, 167, 51);
+      width: 95%;
+      background: linear-gradient(
+        90deg,
+        rgb(22, 170, 22),
+        rgb(123, 180, 76),
+        rgb(214, 230, 74)
+      );
     }
     p {
       font-family: $Roboto;
