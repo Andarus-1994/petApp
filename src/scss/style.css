@@ -47,6 +47,13 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap");
@@ -60,6 +67,214 @@
   src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: cohaerentia-italic;
+  src: local("MyFont2"), url("../assets/fonts/Cohaerentia-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia;
+  src: local("MyFont3"), url("../assets/fonts/Cohaerentia-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-smallcaps;
+  src: local("MyFont4"), url("../assets/fonts/Cohaerentia-SmallCaps-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cal_sans;
+  src: local("MyFont5"), url("../assets/fonts/CalSans-SemiBold.ttf") format("truetype");
+}
+
+.homePage {
+  min-height: 120vh;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.homePage .mainBanner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 60vh;
+}
+
+.homePage .mainBanner .leftSide {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 10%;
+}
+
+.homePage .mainBanner .leftSide h2 {
+  color: #d8d8d8;
+  font-family: cal_sans;
+  font-weight: 300;
+  font-size: 52px;
+  margin-bottom: 0;
+  width: 500px;
+}
+
+.homePage .mainBanner .leftSide h2 span {
+  color: #bdbdbd;
+  font-size: 24px;
+  display: block;
+  margin-top: -15px;
+}
+
+.homePage .mainBanner .leftSide p {
+  width: 400px;
+  color: #868672;
+  font-size: 16px;
+  font-family: cal_sans;
+  margin-top: 10px;
+}
+
+.homePage .mainBanner .leftSide button {
+  cursor: pointer;
+  background-color: transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  color: #d8d8d8;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  padding: 17px 30px;
+  margin-top: 70px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.homePage .mainBanner .leftSide button:hover {
+  background-color: #e2e1e1;
+  color: black;
+}
+
+.homePage .mainBanner .rightSide {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homePage .mainBanner .rightSide img {
+  min-width: 600px;
+  width: 30%;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.192);
+          box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.192);
+  margin-top: 50px;
+}
+
+.homePage .mainBanner .rightSide h4 {
+  color: #868672;
+  font-family: "Raleway", sans-serif;
+  width: 600px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.homePage .gridTypes {
+  padding: 170px 0;
+  text-align: center;
+  font-family: cal_sans;
+}
+
+.homePage .gridTypes h3 {
+  font-size: 38px;
+  color: #dfdfdf;
+}
+
+.homePage .gridTypes h3 span {
+  color: #466b46;
+}
+
+.homePage .gridTypes .gridPetsTypes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 2px;
+  margin-top: 100px;
+}
+
+.homePage .gridTypes .gridPetsTypes .type {
+  padding: 50px;
+  width: 350px;
+  word-wrap: break-word;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.homePage .gridTypes .gridPetsTypes .type p {
+  font-family: sf-pro-display-medium;
+  font-size: 17px;
+  margin-top: 15px;
+  color: #dfdfdf;
+}
+
+.homePage .gridTypes .gridPetsTypes .type .description {
+  font-size: 13px;
+  font-family: sf-pro-display-medium;
+  margin-top: 17px;
+  color: #bdbdbd;
+}
+
+@font-face {
+  font-family: sf-pro-display-medium;
+  src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-italic;
+  src: local("MyFont2"), url("../assets/fonts/Cohaerentia-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia;
+  src: local("MyFont3"), url("../assets/fonts/Cohaerentia-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-smallcaps;
+  src: local("MyFont4"), url("../assets/fonts/Cohaerentia-SmallCaps-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cal_sans;
+  src: local("MyFont5"), url("../assets/fonts/CalSans-SemiBold.ttf") format("truetype");
+}
+
 .headerTop {
   position: relative;
   padding: 0px 0px;
@@ -68,7 +283,6 @@
   margin-top: 20px;
   margin-bottom: 15px;
   width: 90%;
-  border: 1px solid rgba(63, 63, 63, 0.555);
   background: #242424;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,8 +295,6 @@
       -ms-flex-direction: row;
           flex-direction: row;
   height: 50px;
-  -webkit-box-shadow: 0px 5px 5px 1px rgba(66, 66, 66, 0.178);
-          box-shadow: 0px 5px 5px 1px rgba(66, 66, 66, 0.178);
 }
 
 .headerTop a > img {
@@ -210,6 +422,26 @@
 @font-face {
   font-family: sf-pro-display-medium;
   src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-italic;
+  src: local("MyFont2"), url("../assets/fonts/Cohaerentia-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia;
+  src: local("MyFont3"), url("../assets/fonts/Cohaerentia-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-smallcaps;
+  src: local("MyFont4"), url("../assets/fonts/Cohaerentia-SmallCaps-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cal_sans;
+  src: local("MyFont5"), url("../assets/fonts/CalSans-SemiBold.ttf") format("truetype");
 }
 
 .searchBar {
@@ -345,6 +577,26 @@
   src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: cohaerentia-italic;
+  src: local("MyFont2"), url("../assets/fonts/Cohaerentia-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia;
+  src: local("MyFont3"), url("../assets/fonts/Cohaerentia-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-smallcaps;
+  src: local("MyFont4"), url("../assets/fonts/Cohaerentia-SmallCaps-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cal_sans;
+  src: local("MyFont5"), url("../assets/fonts/CalSans-SemiBold.ttf") format("truetype");
+}
+
 .paginationButtons {
   background-color: #1b1b1b;
   -webkit-box-shadow: 0px 0px 4px 0px #1d1d1d;
@@ -426,6 +678,26 @@
 @font-face {
   font-family: sf-pro-display-medium;
   src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-italic;
+  src: local("MyFont2"), url("../assets/fonts/Cohaerentia-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia;
+  src: local("MyFont3"), url("../assets/fonts/Cohaerentia-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-smallcaps;
+  src: local("MyFont4"), url("../assets/fonts/Cohaerentia-SmallCaps-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cal_sans;
+  src: local("MyFont5"), url("../assets/fonts/CalSans-SemiBold.ttf") format("truetype");
 }
 
 @-webkit-keyframes spinner {
@@ -1887,6 +2159,26 @@
   src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: cohaerentia-italic;
+  src: local("MyFont2"), url("../assets/fonts/Cohaerentia-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia;
+  src: local("MyFont3"), url("../assets/fonts/Cohaerentia-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-smallcaps;
+  src: local("MyFont4"), url("../assets/fonts/Cohaerentia-SmallCaps-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cal_sans;
+  src: local("MyFont5"), url("../assets/fonts/CalSans-SemiBold.ttf") format("truetype");
+}
+
 .spinnerProfile-1 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2660,6 +2952,26 @@
   src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: cohaerentia-italic;
+  src: local("MyFont2"), url("../assets/fonts/Cohaerentia-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia;
+  src: local("MyFont3"), url("../assets/fonts/Cohaerentia-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-smallcaps;
+  src: local("MyFont4"), url("../assets/fonts/Cohaerentia-SmallCaps-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cal_sans;
+  src: local("MyFont5"), url("../assets/fonts/CalSans-SemiBold.ttf") format("truetype");
+}
+
 .copyRight {
   background-color: #1b1b1b;
   width: 100%;
@@ -2679,6 +2991,26 @@
 @font-face {
   font-family: sf-pro-display-medium;
   src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-italic;
+  src: local("MyFont2"), url("../assets/fonts/Cohaerentia-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia;
+  src: local("MyFont3"), url("../assets/fonts/Cohaerentia-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-smallcaps;
+  src: local("MyFont4"), url("../assets/fonts/Cohaerentia-SmallCaps-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cal_sans;
+  src: local("MyFont5"), url("../assets/fonts/CalSans-SemiBold.ttf") format("truetype");
 }
 
 .Routes .headerTop > nav {
@@ -2711,9 +3043,10 @@
 }
 
 .Routes .headerTop > nav ul .contact {
-  margin-left: auto;
+  margin-left: 20px;
   background-color: #1b1a1a;
-  padding-left: 10px;
+  border-radius: 8px;
+  padding: 10px 20px !important;
   margin-right: 20px;
   margin-top: auto;
   margin-bottom: auto;
@@ -2738,18 +3071,19 @@
   font-weight: 600;
   letter-spacing: 0.9px;
   color: #c9cacc;
-  padding: 10px 10px;
+  padding: 10px 20px;
   padding-left: 30px;
   margin: 0 5px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   height: 100%;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .Routes .headerTop > nav ul a:hover {
   color: white;
   background-color: #1b1a1a;
+  border-radius: 10px;
   text-shadow: 0 0 2px #fff, 0 0 2px rgba(255, 255, 255, 0.3);
 }
 
@@ -2818,13 +3152,32 @@
 
 .Routes .headerTop > nav ul .active {
   color: white;
-  background-color: #1b1a1a;
   text-shadow: 0 0 1px #fff, 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
 @font-face {
   font-family: sf-pro-display-medium;
   src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-italic;
+  src: local("MyFont2"), url("../assets/fonts/Cohaerentia-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia;
+  src: local("MyFont3"), url("../assets/fonts/Cohaerentia-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cohaerentia-smallcaps;
+  src: local("MyFont4"), url("../assets/fonts/Cohaerentia-SmallCaps-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: cal_sans;
+  src: local("MyFont5"), url("../assets/fonts/CalSans-SemiBold.ttf") format("truetype");
 }
 
 .notFound {
@@ -6005,6 +6358,10 @@
   padding-top: 4rem;
   min-height: 50vh;
   background: #242424;
+}
+
+.shadowlands .maldraxxusNav a {
+  background-color: rgba(7, 7, 7, 0.39);
 }
 
 .shadowlands > h1 {
@@ -15531,6 +15888,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #3a4e3e;
 }
 
 .navBastionAchievement nav:nth-child(3) ul .disabled {
@@ -15540,13 +15898,13 @@
 }
 
 .navBastionAchievement nav:nth-child(3) ul a:not(a:first-child) {
-  background: linear-gradient(60deg, #a01919, #d4122c, #a01919);
-  color: black;
+  background: rgba(7, 7, 7, 0.39);
+  color: white;
 }
 
 .navBastionAchievement nav:nth-child(3) ul a:not(a:first-child):hover {
   color: white;
-  background: linear-gradient(60deg, #a01919, #a8192c, #a01919);
+  background: linear-gradient(60deg, #1f534f, #1e5050, #246e2a);
 }
 
 .navBastionAchievement nav:nth-child(3) ul a:not(a:first-child) .active {
@@ -15558,7 +15916,7 @@
 .navBastionAchievement nav:nth-child(3) ul .active {
   pointer-events: none;
   color: white !important;
-  background: linear-gradient(60deg, #702929, #630713, #830f0f) !important;
+  background: linear-gradient(60deg, #224d4a, #28533c, #33645a) !important;
 }
 
 .navBastionAchievement nav:nth-child(3) ul a {
@@ -30258,6 +30616,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.containerAchiev .Maldraxxus h2 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#335a42), color-stop(#2f6354), to(#23473d));
+  background: linear-gradient(0deg, #335a42, #2f6354, #23473d);
+}
+
+.containerAchiev .Maldraxxus ul {
+  background: linear-gradient(60deg, #1e5246, #335a42, #1d4136);
 }
 
 .containerAchiev nav {

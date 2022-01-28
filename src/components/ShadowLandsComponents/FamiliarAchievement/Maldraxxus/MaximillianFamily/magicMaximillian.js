@@ -1,13 +1,13 @@
 import { useState } from "react";
 import StrategiesPreview from "../../../../strategiesPreview.js";
 import StrategySubmision from "../../../../strategySubmision.js";
-function AquaticSylla() {
+function MagicMaximillian() {
   const [submitWindow, setSubmitWindow] = useState(false);
-  const location = "aquaticSylla";
+  const location = "magicMaximillian";
   return (
     <div className="containerStrategy">
-      <h1>Sylla Aquatic Pet Battle Guide</h1>
-      <h2>Revendreth (Shadowlands)</h2>
+      <h1>Maximillian Magic Pet Battle Guide</h1>
+      <h2>Maldraxxus (Shadowlands)</h2>
       {
         <div className="containerStrategyButton">
           <button
@@ -34,4 +34,4 @@ function AquaticSylla() {
     </div>
   );
 }
-export default AquaticSylla;
+export default MagicMaximillian;

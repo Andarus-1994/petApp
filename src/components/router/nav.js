@@ -39,6 +39,7 @@ import LevelUp from "../../assets/levelUp.png";
 import SLMenuIcon from "../../assets/SLmenuicon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
+import HomePage from "../homePage.js";
 function Nav() {
   const allPets = useSelector((state) => state.allPets);
   const profile = useSelector((state) => state.profile);
@@ -106,6 +107,14 @@ function Nav() {
                 to="/"
                 exact
                 activeClassName="active"
+                className="inactive home"
+              >
+                <li> Home</li>
+              </NavLink>
+              <NavLink
+                to="/pets"
+                exact
+                activeClassName="active"
                 className="inactive"
               >
                 <li>
@@ -113,6 +122,7 @@ function Nav() {
                   <img src={PetIcon} alt="none" /> Your Pets{" "}
                 </li>
               </NavLink>
+
               <NavLink
                 to="/guidepetlevel"
                 activeClassName="active"
@@ -207,8 +217,11 @@ function Nav() {
             <Route exact path="/validateUser">
               <ValidateUser />
             </Route>
-            <Route exact path="/">
+            <Route exact path="/pets">
               <Home />
+            </Route>
+            <Route exact path="/">
+              <HomePage />
             </Route>
             <Route component={NotFound} />
           </Switch>

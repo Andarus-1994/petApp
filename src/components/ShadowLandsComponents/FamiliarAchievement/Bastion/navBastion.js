@@ -3,16 +3,18 @@ import {
   Route,
   Switch,
   NavLink,
-  useHistory,
+  useLocation,
 } from "react-router-dom";
 import ScrollTop from "../../../router/scrollTop.js";
+import Maximillian from "../Maldraxxus/navMaximiillian.js";
+import Addius from "../Revendreth/navAddius.js";
+import Eyegor from "../Revendreth/navEyegor.js";
 import Sylla from "../Revendreth/navSylla.js";
 import Stratios from "./navStratios.js";
 import Thenia from "./navThenia.js";
 import Zolla from "./navZolla.js";
 
 function NavBastion() {
-  let history = useHistory();
   return (
     <Router>
       <div className="navBastionAchievement">
@@ -67,16 +69,13 @@ function NavBastion() {
               to="/shadowlands/familiarExorcist/eyegor/default"
               activeClassName="active"
               className="inactive"
-              className="disabled"
             >
               <li> Eyegor</li>
             </NavLink>
-
             <NavLink
               to="/shadowlands/familiarExorcist/addius/default"
               activeClassName="active"
               className="inactive"
-              className="disabled"
             >
               <li> Addius the Tormentor</li>
             </NavLink>
@@ -94,7 +93,6 @@ function NavBastion() {
               to="/shadowlands/familiarExorcist/maximillian/default"
               activeClassName="active"
               className="inactive"
-              className="disabled"
             >
               <li>Caregiver Maximillian</li>
             </NavLink>
@@ -169,6 +167,24 @@ function NavBastion() {
           </Route>
           <Route path="/shadowlands/familiarExorcist/sylla/default">
             <Sylla />
+          </Route>
+          <Route path="/shadowlands/familiarExorcist/eyegor/">
+            <Eyegor />
+          </Route>
+          <Route path="/shadowlands/familiarExorcist/eyegor/default">
+            <Eyegor />
+          </Route>
+          <Route path="/shadowlands/familiarExorcist/addius/">
+            <Addius />
+          </Route>
+          <Route path="/shadowlands/familiarExorcist/addius/default">
+            <Addius />
+          </Route>
+          <Route path="/shadowlands/familiarExorcist/maximillian/">
+            <Maximillian />
+          </Route>
+          <Route path="/shadowlands/familiarExorcist/maximillian/default">
+            <Maximillian />
           </Route>
         </Switch>
       </ScrollTop>

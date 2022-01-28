@@ -6,8 +6,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
 @font-face {
-    font-family: sf-pro-display-medium;
-    src: local("MyFont"), url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
+  font-family: sf-pro-display-medium;
+  src: local("MyFont"),
+    url("../assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: cohaerentia-italic;
+  src: local("MyFont2"),
+    url("../assets/fonts/Cohaerentia-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: cohaerentia;
+  src: local("MyFont3"),
+    url("../assets/fonts/Cohaerentia-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: cohaerentia-smallcaps;
+  src: local("MyFont4"),
+    url("../assets/fonts/Cohaerentia-SmallCaps-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: cal_sans;
+  src: local("MyFont5"),
+    url("../assets/fonts/CalSans-SemiBold.ttf") format("truetype");
 }
 
 $HeaderFont: "Catamaran", sans-serif;
@@ -17,3 +39,5 @@ $Sans: "PT Sans", sans-serif;
 $Merri: "Merriweather Sans", sans-serif;
 $Kumbh: "Kumbh Sans", sans-serif;
 $Sf-Pro: sf-pro-display-medium;
+$cohaerentia: cohaerentia;
+$calsans: cal_sans;

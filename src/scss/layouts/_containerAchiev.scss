@@ -1,113 +1,130 @@
 .containerAchiev {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  .Maldraxxus {
+    h2 {
+      background: linear-gradient(
+        0deg,
+        rgb(51, 90, 66),
+        rgb(47, 99, 84),
+        rgb(35, 71, 61)
+      );
+    }
+    ul {
+      background: linear-gradient(
+        60deg,
+        rgb(30, 82, 70),
+        rgb(51, 90, 66),
+        rgb(29, 65, 54)
+      );
+    }
+  }
+  nav {
+    width: fit-content;
+    margin: 0 auto;
 
-	nav {
-		width: fit-content;
-		margin: 0 auto;
+    h2 {
+      width: fit-content;
+      color: rgb(234, 234, 240);
+      font-size: 1rem;
+      background: linear-gradient(60deg, rgb(49, 48, 48), rgb(61, 62, 65));
+      border-top-left-radius: 17px;
+      border-top-right-radius: 17px;
+      padding: 5px 15px;
+      font-family: $Sans;
+      margin: 0 auto;
+      margin-top: 5px;
+      animation: fade 0.9s;
+    }
+    ul {
+      background: linear-gradient(60deg, rgb(49, 48, 48), rgb(61, 62, 65));
+      border-radius: 27px;
+      padding: 3px 17px;
+      padding-top: 10px;
+      display: flex;
+      margin: 0 auto;
+      list-style-type: none;
+      animation: fade 1s;
+      .disabled {
+        pointer-events: none;
+        filter: brightness(0.2);
+      }
+      a {
+        margin: 5px 10px;
 
-		h2 {
-			width: fit-content;
-			color: rgb(234, 234, 240);
-			font-size: 1rem;
-			background: linear-gradient(60deg, rgb(49, 48, 48), rgb(61, 62, 65));
-			border-top-left-radius: 17px;
-			border-top-right-radius: 17px;
-			padding: 5px 15px;
-			font-family: $Sans;
-			margin: 0 auto;
-			margin-top: 5px;
-			animation: fade 0.9s;
-		}
-		ul {
-			background: linear-gradient(60deg, rgb(49, 48, 48), rgb(61, 62, 65));
-			border-radius: 27px;
-			padding: 3px 17px;
-			padding-top: 10px;
-			display: flex;
-			margin: 0 auto;
-			list-style-type: none;
-			animation: fade 1s;
-			.disabled {
-				pointer-events: none;
-				filter: brightness(0.2);
-			}
-			a {
-				margin: 5px 10px;
+        img {
+          width: 30px;
+          height: 30px;
+          transition: 0.4s;
+        }
+        &:hover {
+          img {
+            opacity: 0.5;
+          }
+        }
+      }
+      .active {
+        pointer-events: none;
+        img {
+          filter: brightness(0.4);
+        }
+      }
+    }
+  }
 
-				img {
-					width: 30px;
-					height: 30px;
-					transition: 0.4s;
-				}
-				&:hover {
-					img {
-						opacity: 0.5;
-					}
-				}
-			}
-			.active {
-				pointer-events: none;
-				img {
-					filter: brightness(0.4);
-				}
-			}
-		}
-	}
-
-	.containerContent {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		& > h1 {
-			color: $titleHeaderColor;
-			font-family: $Raleway;
-			font-size: 1.5rem;
-			text-align: center;
-			margin-top: 50px;
-		}
-	}
-	.locationImages {
-		display: flex;
-		flex-direction: column;
-		margin-top: 10vh;
-		margin-right: 2vh;
-		h2 {
-			color: $titleHeaderColor;
-			font-family: $Raleway;
-			text-align: center;
-		}
-		button {
-			background-color: rgb(89, 114, 134);
-			color: rgb(204, 217, 218);
-			border: none;
-			cursor: pointer;
-			width: fit-content;
-			padding: 10px 10px;
-			margin: 0 auto;
-			margin-top: 3vh;
-			margin-bottom: 2vh;
-			font-size: 0.75rem;
-			font-family: $Roboto;
-			letter-spacing: 1px;
-			transition: 0.4s;
-			&:hover {
-				background-color: rgb(43, 63, 80);
-				color: rgb(250, 250, 250);
-			}
-		}
-		img {
-			width: 300px;
-			height: 230px;
-			object-fit: cover;
-			margin-top: 15px;
-			border-radius: 15px;
-			transition: 0.4s;
-			&:hover {
-				cursor: pointer;
-				transform: scale(1.2);
-			}
-		}
-	}
+  .containerContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    & > h1 {
+      color: $titleHeaderColor;
+      font-family: $Raleway;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 50px;
+    }
+  }
+  .locationImages {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    margin-right: 2vh;
+    h2 {
+      color: $titleHeaderColor;
+      font-family: $Raleway;
+      text-align: center;
+    }
+    button {
+      background-color: rgb(89, 114, 134);
+      color: rgb(204, 217, 218);
+      border: none;
+      cursor: pointer;
+      width: fit-content;
+      padding: 10px 10px;
+      margin: 0 auto;
+      margin-top: 3vh;
+      margin-bottom: 2vh;
+      font-size: 0.75rem;
+      font-family: $Roboto;
+      letter-spacing: 1px;
+      transition: 0.4s;
+      &:hover {
+        background-color: rgb(43, 63, 80);
+        color: rgb(250, 250, 250);
+      }
+    }
+    img {
+      width: 300px;
+      height: 230px;
+      object-fit: cover;
+      margin-top: 15px;
+      border-radius: 15px;
+      transition: 0.4s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+    }
+  }
 }

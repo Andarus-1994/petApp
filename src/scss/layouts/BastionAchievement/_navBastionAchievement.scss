@@ -185,7 +185,7 @@ $navFontSize: 0.75rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
-
+      background-color: #3a4e3e;
       .disabled {
         pointer-events: none;
         background: rgb(61, 66, 68) !important;
@@ -193,16 +193,11 @@ $navFontSize: 0.75rem;
       }
 
       a:not(a:first-child) {
-        background: linear-gradient(60deg, #a01919, rgb(212, 18, 44), #a01919);
-        color: black;
+        background: rgba(7, 7, 7, 0.39);
+        color: white;
         &:hover {
           color: rgb(255, 255, 255);
-          background: linear-gradient(
-            60deg,
-            #a01919,
-            rgb(168, 25, 44),
-            #a01919
-          );
+          background: linear-gradient(60deg, #1f534f, rgb(30, 80, 80), #246e2a);
         }
 
         .active {
@@ -221,9 +216,9 @@ $navFontSize: 0.75rem;
         color: rgb(255, 255, 255) !important;
         background: linear-gradient(
           60deg,
-          #702929,
-          rgb(99, 7, 19),
-          #830f0f
+          #224d4a,
+          rgb(40, 83, 60),
+          #33645a
         ) !important;
       }
       a {
