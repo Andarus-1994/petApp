@@ -1,5 +1,5 @@
 import axios from "axios";
-/*const token = "EUaqHPkRrZ9xEnxvd2iVKSjT649wt2lYY2"; */
+
 const clientID = process.env.REACT_APP_clientID;
 const clientSecret = process.env.REACT_APP_clientSecret;
 
@@ -15,7 +15,7 @@ export const retriveToken = () => {
       type: "FETCH_TOKEN_REQUEST",
     });
     axios
-      .post("https://eu.battle.net/oauth/token", formData, {
+      .post("https://oauth.battle.net/token", formData, {
         auth: {
           username: clientID,
           password: clientSecret,
