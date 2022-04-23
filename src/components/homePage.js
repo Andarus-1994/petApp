@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-import petImage from "../assets/WhisperingPS/WhisperingPandarenSpirit.jpg";
+import petImage from "../assets/homePage.jpg";
 import elementalImage from "../assets/FamilyIcons/elemental.png";
 import beastImage from "../assets/FamilyIcons/beast.png";
 import aquaticImage from "../assets/FamilyIcons/aquatic.png";

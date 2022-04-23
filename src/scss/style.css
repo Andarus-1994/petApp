@@ -323,7 +323,7 @@
 
 .homePage .mainBanner .rightSide img {
   min-width: 600px;
-  width: 30%;
+  width: 70%;
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.192);
           box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.192);
@@ -3172,7 +3172,22 @@
   }
 }
 
+.Routes .headerTop > nav .feedbackButton {
+  background-color: #1b1a1a;
+  position: static;
+  padding: 5px 15px;
+  margin: 0;
+  font-style: italic;
+  color: #7eac4b;
+}
+
+.Routes .headerTop > nav .feedbackButton.active {
+  background-color: #4f703c;
+  color: #f8f1f1;
+}
+
 .Routes .headerTop > nav ul {
+  position: relative;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33914,6 +33929,31 @@
 .validateUser .errorAlone {
   margin-top: 20vh;
   margin-bottom: 70vh;
+}
+
+.FeedbackPage {
+  width: 80%;
+  min-height: 80vh;
+  background-color: #485738;
+  border-left: 4px solid #378064;
+  -webkit-box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.39);
+          box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.39);
+  padding: 60px;
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: cal_sans;
+}
+
+.FeedbackPage h3 {
+  font-size: 44px;
 }
 
 .containerStrategyButton {

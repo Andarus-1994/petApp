@@ -38,9 +38,10 @@ import PetIcon from "../../assets/iconPetsMenu.png";
 import LevelUp from "../../assets/levelUp.png";
 import SLMenuIcon from "../../assets/SLmenuicon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaw } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelopeOpenText } from "@fortawesome/free-solid-svg-icons";
 import HomePage from "../homePage.js";
 import Copyright from "../copyright.js";
+import Feedback from "../feedback.js";
 function Nav() {
   const allPets = useSelector((state) => state.allPets);
   const profile = useSelector((state) => state.profile);
@@ -104,6 +105,17 @@ function Nav() {
           <Profile />
           <nav>
             <ul className="nav-links">
+              <NavLink
+                to="/feedback"
+                exact
+                activeClassName="active"
+                className="inactive feedbackButton"
+              >
+                <li>
+                  Write feedback {<FontAwesomeIcon icon={faEnvelopeOpenText} />}{" "}
+                  !
+                </li>
+              </NavLink>
               <NavLink
                 to="/"
                 exact
@@ -220,6 +232,10 @@ function Nav() {
             </Route>
             <Route exact path="/pets">
               <Home />
+            </Route>
+            <Route exact path="/feedback">
+              <Feedback />
+              <Copyright />
             </Route>
             <Route exact path="/">
               <HomePage />

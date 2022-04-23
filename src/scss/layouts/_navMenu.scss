@@ -12,8 +12,20 @@
     @media screen and (max-width: 800px) {
       top: 86px;
     }
-
+    .feedbackButton {
+      background-color: #1b1a1a;
+      position: static;
+      padding: 5px 15px;
+      margin: 0;
+      font-style: italic;
+      color: rgb(126, 172, 75);
+    }
+    .feedbackButton.active {
+      background-color: rgb(79, 112, 60);
+      color: rgb(248, 241, 241);
+    }
     ul {
+      position: relative;
       list-style-type: none;
       display: flex;
       justify-content: center;

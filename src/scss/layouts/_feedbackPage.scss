@@ -1,0 +1,16 @@
+.FeedbackPage {
+  width: 80%;
+  min-height: 80vh;
+  background-color: rgb(72, 87, 56);
+  border-left: 4px solid rgb(55, 128, 100);
+  box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.39);
+  padding: 60px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $calsans;
+  h3 {
+    font-size: 44px;
+  }
+}
