@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-import petImage from "../assets/petHomeImage.jpg";
+import petImage from "../assets/WhisperingPS/WhisperingPandarenSpirit.jpg";
 import elementalImage from "../assets/FamilyIcons/elemental.png";
 import beastImage from "../assets/FamilyIcons/beast.png";
 import aquaticImage from "../assets/FamilyIcons/aquatic.png";
@@ -10,6 +10,7 @@ import humanoidImage from "../assets/FamilyIcons/humanoid.png";
 import magicImage from "../assets/FamilyIcons/magic.png";
 import mechanicalImage from "../assets/FamilyIcons/mechanical.png";
 import undeadImage from "../assets/FamilyIcons/undead.png";
+import CatImage from "../assets/cat.png";
 function HomePage() {
   let history = useHistory();
 
@@ -20,6 +21,7 @@ function HomePage() {
     <div className="homePage">
       <div className="mainBanner">
         <div className="leftSide">
+          <img className="catHomePage" src={CatImage} alt="cat" />
           <h2>
             Petius. <span>Your pet battles Website.</span>
           </h2>
@@ -33,7 +35,9 @@ function HomePage() {
         </div>
         <div className="rightSide">
           <img src={petImage} alt="noHomeImg" />
-          <h4>Always choose the best options for you!</h4>
+          <h4>
+            Always choose the best options for <span>YOU</span>!
+          </h4>
         </div>
       </div>
       <div className="gridTypes">

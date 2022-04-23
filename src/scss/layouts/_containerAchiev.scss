@@ -20,6 +20,24 @@
       );
     }
   }
+  .Ardenweald {
+    h2 {
+      background: linear-gradient(
+        0deg,
+        rgb(51, 58, 90),
+        rgb(87, 47, 99),
+        rgb(35, 55, 71)
+      );
+    }
+    ul {
+      background: linear-gradient(
+        60deg,
+        rgb(51, 58, 90),
+        rgb(87, 47, 99),
+        rgb(35, 55, 71)
+      );
+    }
+  }
   nav {
     width: fit-content;
     margin: 0 auto;

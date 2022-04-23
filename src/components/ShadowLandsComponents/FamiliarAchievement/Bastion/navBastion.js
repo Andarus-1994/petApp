@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import ScrollTop from "../../../router/scrollTop.js";
+import Glitterdust from "../Ardenweald/navGlitterdust.js";
 import Maximillian from "../Maldraxxus/navMaximiillian.js";
 import Addius from "../Revendreth/navAddius.js";
 import Eyegor from "../Revendreth/navEyegor.js";
@@ -127,7 +128,6 @@ function NavBastion() {
               to="/shadowlands/familiarExorcist/glitterdust/default"
               activeClassName="active"
               className="inactive"
-              className="disabled"
             >
               <li>Glitterdust</li>
             </NavLink>
@@ -135,7 +135,6 @@ function NavBastion() {
               to="/shadowlands/familiarExorcist/faryl/default"
               activeClassName="active"
               className="inactive"
-              className="disabled"
             >
               <li> Faryl</li>
             </NavLink>
@@ -185,6 +184,9 @@ function NavBastion() {
           </Route>
           <Route path="/shadowlands/familiarExorcist/maximillian/default">
             <Maximillian />
+          </Route>
+          <Route path="/shadowlands/familiarExorcist/glitterdust/default">
+            <Glitterdust />
           </Route>
         </Switch>
       </ScrollTop>

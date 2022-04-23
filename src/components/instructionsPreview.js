@@ -27,7 +27,7 @@ function InstructionsPreview({ location, idStrategy }) {
         ) : (
           instructions.data.map((instruction, index) => (
             <div className="turn" key={index}>
-              <p>{instruction.turn}</p>
+              <p>Turn {instruction.turn}</p>
 
               <p> {parse(instruction.instruction)}</p>
             </div>

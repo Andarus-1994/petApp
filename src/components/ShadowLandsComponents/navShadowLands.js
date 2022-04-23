@@ -48,9 +48,9 @@ function NavSL() {
               <li> Revendreth WQ</li>
             </NavLink>
             <NavLink
-              to="/shadowlands/revendrethdAchievement"
+              to="/shadowlands/familiarExorcist/sylla/default"
               activeClassName="active"
-              className="inactive disabled"
+              className="inactive"
             >
               <li> Revendreth Achievements</li>
             </NavLink>
@@ -94,9 +94,9 @@ function NavSL() {
               <li> Maldraxxus WQ</li>
             </NavLink>
             <NavLink
-              to="/shadowlands/maldraxxusAchievement"
+              to="/shadowlands/familiarExorcist/maximillian/default"
               activeClassName="active"
-              className="inactive disabled"
+              className="inactive"
             >
               <li> Maldraxxus Achievements</li>
             </NavLink>

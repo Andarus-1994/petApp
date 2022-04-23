@@ -1,132 +1,135 @@
 .containerComments {
-	display: flex;
-	flex-direction: column;
-	justify-content: left;
-	text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
 
-	.containerComment {
-		position: relative;
-		background-color: rgb(49, 49, 49);
-		width: 100%;
-		width: 800px;
+  .containerComment {
+    position: relative;
+    background-color: rgb(49, 49, 49);
+    border-top: 5px solid rgb(95, 94, 109);
+    width: 100%;
+    width: 800px;
 
-		display: flex;
-		flex-direction: row;
-		justify-content: left;
-		text-align: left;
-		margin-left: 0px;
-		margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    text-align: left;
+    margin-left: 0px;
+    margin-top: 0px;
 
-		padding: 25px 20px;
-		.actualComment {
-			display: flex;
-			flex-direction: column;
-			padding: 0px 10px;
-			padding-top: 10px;
-		}
+    padding: 25px 20px;
+    .actualComment {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 10px;
+      padding-top: 10px;
+    }
 
-		& > img {
-			width: 50px;
-			height: 50px;
-			border-radius: 50%;
-		}
+    & > img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
 
-		.charName {
-			color: rgb(255, 255, 255);
-			font-family: $Roboto;
-			font-size: 1.3rem;
-			letter-spacing: 0.5px;
-			display: flex;
+    .charName {
+      color: rgb(255, 255, 255);
+      font-family: $Roboto;
+      font-size: 1.3rem;
+      letter-spacing: 0.5px;
+      display: flex;
 
-			&::first-letter {
-				text-transform: uppercase;
-			}
-		}
-		.message {
-			color: rgb(231, 232, 233);
-			font-family: $Roboto;
-			font-size: 0.9rem;
-			font-weight: 100;
-			letter-spacing: 0.5px;
-			line-height: 17px;
-			margin-top: 10px;
-			padding: 5px 15px;
-		}
-		.time {
-			position: absolute;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    .message {
+      color: rgb(231, 232, 233);
+      font-family: $Roboto;
+      font-size: 0.9rem;
+      font-weight: 100;
+      letter-spacing: 0.5px;
+      line-height: 17px;
+      margin-top: 10px;
+      padding: 5px 15px;
+    }
+    .time {
+      position: absolute;
 
-			bottom: 10px;
-			right: 20px;
-			color: rgb(124, 133, 145);
-			font-family: $Roboto;
-		}
-		.reply {
-			cursor: pointer;
-			position: absolute;
-			top: 0.5rem;
-			right: 1rem;
-			color: rgb(202, 233, 233);
-			font-family: $Raleway;
-			transition: 0.4s;
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
+      bottom: 10px;
+      right: 20px;
+      color: rgb(124, 133, 145);
+      font-family: $Roboto;
+    }
+    .reply {
+      cursor: pointer;
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      color: rgb(202, 233, 233);
+      font-family: $Raleway;
+      transition: 0.4s;
+      &:hover {
+        color: rgb(124, 233, 129);
+        text-decoration: underline;
+      }
+    }
+  }
 
-	.containerCommentReply {
-		position: relative;
-		background-color: rgb(49, 49, 49);
-		width: 100%;
-		max-width: 550px;
-		display: flex;
-		flex-direction: row;
-		justify-content: left;
-		text-align: left;
-		margin-right: 0;
-		margin-left: 250px;
-		margin-top: 10px;
-		padding: 25px 20px;
-		.actualCommentReply {
-			display: flex;
-			flex-direction: column;
-			padding: 0px 10px;
-			padding-top: 10px;
-		}
+  .containerCommentReply {
+    position: relative;
+    background-color: rgb(49, 49, 49);
+    border-top: 3px solid rgb(108, 128, 109);
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    text-align: left;
+    margin-right: 0;
+    margin-left: 250px;
+    margin-top: 10px;
+    padding: 25px 20px;
+    .actualCommentReply {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 10px;
+      padding-top: 10px;
+    }
 
-		& > img {
-			width: 50px;
-			height: 50px;
-			border-radius: 50%;
-		}
+    & > img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
 
-		.charName {
-			color: rgb(255, 255, 255);
-			font-family: $Roboto;
-			font-size: 1.3rem;
-			letter-spacing: 0.5px;
-			display: flex;
+    .charName {
+      color: rgb(255, 255, 255);
+      font-family: $Roboto;
+      font-size: 1.3rem;
+      letter-spacing: 0.5px;
+      display: flex;
 
-			&::first-letter {
-				text-transform: uppercase;
-			}
-		}
-		.message {
-			color: rgb(214, 218, 219);
-			font-family: $Roboto;
-			font-size: 0.85rem;
-			font-weight: 100;
-			letter-spacing: 0.5px;
-			margin-top: 10px;
-			padding: 5px 15px;
-		}
-		.time {
-			position: absolute;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    .message {
+      color: rgb(214, 218, 219);
+      font-family: $Roboto;
+      font-size: 0.85rem;
+      font-weight: 100;
+      letter-spacing: 0.5px;
+      margin-top: 10px;
+      padding: 5px 15px;
+    }
+    .time {
+      position: absolute;
 
-			bottom: 10px;
-			right: 20px;
-			color: rgb(124, 133, 145);
-			font-family: $Roboto;
-		}
-	}
+      bottom: 10px;
+      right: 20px;
+      color: rgb(124, 133, 145);
+      font-family: $Roboto;
+    }
+  }
 }

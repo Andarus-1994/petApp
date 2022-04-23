@@ -40,6 +40,7 @@ import SLMenuIcon from "../../assets/SLmenuicon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import HomePage from "../homePage.js";
+import Copyright from "../copyright.js";
 function Nav() {
   const allPets = useSelector((state) => state.allPets);
   const profile = useSelector((state) => state.profile);
@@ -222,6 +223,7 @@ function Nav() {
             </Route>
             <Route exact path="/">
               <HomePage />
+              <Copyright />
             </Route>
             <Route component={NotFound} />
           </Switch>
