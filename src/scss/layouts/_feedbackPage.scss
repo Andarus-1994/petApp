@@ -6,11 +6,104 @@
   box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.39);
   padding: 60px;
   margin: 50px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   font-family: $calsans;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   h3 {
     font-size: 44px;
+  }
+  .messageList {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: 1fr;
+    column-gap: 30px;
+    grid-row-gap: 30px;
+    .messageBox {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      background: rgb(79, 138, 40);
+      color: rgb(226, 229, 231);
+      padding: 15px;
+      min-height: 150px;
+      box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.329);
+      .detailsMessage {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .user {
+          color: rgb(28, 250, 8);
+          cursor: not-allowed;
+        }
+      }
+      .titleMessage {
+        text-align: center;
+        font-size: 24px;
+      }
+      .message {
+        background: rgb(93, 148, 56);
+        margin: 0 10px;
+        padding: 10px;
+        min-height: 100px;
+      }
+    }
+  }
+  .createMessage {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 150px auto 50px;
+    background: rgb(91, 112, 68);
+    padding: 15px;
+    h4 {
+      font-family: $Raleway;
+      font-size: 34px;
+    }
+    textarea {
+      width: 70%;
+      min-width: 400px;
+      margin: 20px auto;
+      border: none;
+      resize: none;
+      font-size: 17px;
+      padding: 10px;
+      font-family: $Raleway;
+      background-color: rgb(93, 148, 56);
+      border-radius: 5px;
+    }
+    button {
+      cursor: pointer;
+      width: fit-content;
+      padding: 5px 15px;
+      border: none;
+      font-family: $calsans;
+      border-radius: 10px;
+      margin: 0 auto;
+      background-color: rgb(93, 148, 56);
+      transition: 0.8s;
+      &:hover {
+        background-color: rgb(67, 136, 67);
+        color: white;
+      }
+    }
+    .titleUserMessage {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 35px;
+      input {
+        font-size: 17px;
+        padding: 10px;
+        margin: 0 10px;
+        font-family: $Raleway;
+        color: black;
+        background-color: rgb(93, 148, 56);
+        border: none;
+      }
+    }
   }
 }

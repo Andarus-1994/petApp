@@ -33940,20 +33940,161 @@
           box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.39);
   padding: 60px;
   margin: 50px auto;
+  text-align: center;
+  font-family: cal_sans;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: cal_sans;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .FeedbackPage h3 {
   font-size: 44px;
+}
+
+.FeedbackPage .messageList {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+.FeedbackPage .messageList .messageBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+  background: #4f8a28;
+  color: #e2e5e7;
+  padding: 15px;
+  min-height: 150px;
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.329);
+          box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.329);
+}
+
+.FeedbackPage .messageList .messageBox .detailsMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.FeedbackPage .messageList .messageBox .detailsMessage .user {
+  color: #1cfa08;
+  cursor: not-allowed;
+}
+
+.FeedbackPage .messageList .messageBox .titleMessage {
+  text-align: center;
+  font-size: 24px;
+}
+
+.FeedbackPage .messageList .messageBox .message {
+  background: #5d9438;
+  margin: 0 10px;
+  padding: 10px;
+  min-height: 100px;
+}
+
+.FeedbackPage .createMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  margin: 150px auto 50px;
+  background: #5b7044;
+  padding: 15px;
+}
+
+.FeedbackPage .createMessage h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 34px;
+}
+
+.FeedbackPage .createMessage textarea {
+  width: 70%;
+  min-width: 400px;
+  margin: 20px auto;
+  border: none;
+  resize: none;
+  font-size: 17px;
+  padding: 10px;
+  font-family: "Raleway", sans-serif;
+  background-color: #5d9438;
+  border-radius: 5px;
+}
+
+.FeedbackPage .createMessage button {
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 15px;
+  border: none;
+  font-family: cal_sans;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: #5d9438;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.FeedbackPage .createMessage button:hover {
+  background-color: #438843;
+  color: white;
+}
+
+.FeedbackPage .createMessage .titleUserMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 35px;
+}
+
+.FeedbackPage .createMessage .titleUserMessage input {
+  font-size: 17px;
+  padding: 10px;
+  margin: 0 10px;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  background-color: #5d9438;
+  border: none;
 }
 
 .containerStrategyButton {
